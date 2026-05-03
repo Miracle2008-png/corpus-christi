@@ -14,9 +14,8 @@ declare global {
 const PAYSTACK_PUBLIC_KEY = process.env.NEXT_PUBLIC_PAYSTACK_KEY || "pk_live_REPLACE_WITH_YOUR_KEY";
 
 const purposes = [
-  { id: "platform", label: "Platform Maintenance", desc: "Keep this platform free, fast, and growing for all Catholics worldwide.", presets: [3, 7, 15, 25] },
-  { id: "church", label: "Church Support", desc: "Support operational costs — servers, content creation, and development.", presets: [5, 10, 25, 50] },
-  { id: "charity", label: "Catholic Charity", desc: "Fund Catholic charitable initiatives: feeding the poor and supporting missionaries.", presets: [10, 25, 50, 100] },
+  { id: "church", label: "Church Support", desc: "Support operational costs — servers, content creation, and development.", presets: [500, 1000, 2500, 5000] },
+  { id: "charity", label: "Catholic Charity", desc: "Fund Catholic charitable initiatives: feeding the poor and supporting missionaries.", presets: [1000, 2500, 5000, 10000] },
 ];
 
 export default function DonatePage() {
@@ -30,7 +29,7 @@ export default function DonatePage() {
 
   function pay() {
     if (!name.trim() || !email.trim() || !amount) { setError("Please fill in all fields and choose an amount."); return; }
-    if (typeof amount !== "number" || amount < 1) { setError("Minimum donation is $1."); return; }
+    if (typeof amount !== "number" || amount < 100) { setError("Minimum donation is ₦100."); return; }
     setError("");
     setLoading(true);
 
@@ -38,7 +37,7 @@ export default function DonatePage() {
       key: PAYSTACK_PUBLIC_KEY,
       email,
       amount: Math.round((amount as number) * 100), // Paystack takes kobo/cents
-      currency: "USD",
+      currency: "NGN",
       metadata: { custom_fields: [{ display_name: "Donor Name", variable_name: "donor_name", value: name }, { display_name: "Purpose", variable_name: "purpose", value: purpose.label }] },
       callback: (response: { reference: string }) => {
         setLoading(false);
@@ -56,7 +55,7 @@ export default function DonatePage() {
           <div style={{ fontSize: "4rem", color: "var(--gold)", marginBottom: "1rem" }}>+</div>
           <h2 style={{ fontFamily: "var(--font-serif)", color: "#fff", fontSize: "2rem", marginBottom: "1rem" }}>God bless you, {name}.</h2>
           <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: "480px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
-            Your gift of <strong style={{ color: "var(--gold)" }}>${amount}</strong> to <strong style={{ color: "var(--gold)" }}>{purpose.label}</strong> has been received. A receipt has been sent to {email}. Thank you for supporting this mission.
+            Your gift of <strong style={{ color: "var(--gold)" }}>₦{amount?.toLocaleString()}</strong> to <strong style={{ color: "var(--gold)" }}>{purpose.label}</strong> has been received. A receipt has been sent to {email}. Thank you for supporting this mission.
           </p>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--gold)", marginBottom: "2rem" }}>
             &ldquo;Give, and it will be given to you.&rdquo; — Luke 6:38
@@ -135,7 +134,7 @@ export default function DonatePage() {
                       background: amount === a ? "linear-gradient(135deg,var(--gold-dark),var(--gold))" : "#fff",
                       color: amount === a ? "var(--navy-dark)" : "var(--navy)",
                     }}>
-                      ${a}
+                      ₦{a.toLocaleString()}
                     </button>
                   ))}
                 </div>
@@ -144,7 +143,7 @@ export default function DonatePage() {
               {/* Custom amount */}
               <div style={{ marginBottom: "1.25rem" }}>
                 <label htmlFor="donate-amount" style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.4rem" }}>
-                  Or Enter Custom Amount (USD)
+                  Or Enter Custom Amount (₦ Naira)
                 </label>
                 <input
                   id="donate-amount"
@@ -185,7 +184,7 @@ export default function DonatePage() {
                   letterSpacing: "0.04em", transition: "all 0.2s",
                 }}
               >
-                {loading ? "Processing..." : `Donate ${amount ? `$${amount}` : ""} Securely`}
+                 {loading ? "Processing..." : `Donate ${amount ? `₦${Number(amount).toLocaleString()}` : ""} Securely`}
               </button>
 
               <p style={{ color: "var(--text-muted)", fontSize: "0.75rem", textAlign: "center", marginTop: "0.75rem" }}>
