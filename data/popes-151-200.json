@@ -1,52 +1,452 @@
 [
-  { "n": 151, "name": "St. Leo IX", "reign": "1049–1054", "nat": "Alsatian (France/Germany)", "saint": true, "img": null, "note": "The first great reform pope. Travelled across Europe on reform synods, personally deposing simoniacal bishops. His pontificate ended in catastrophe: he led a military expedition against the Normans, was captured, and died in captivity. During his imprisonment, the Great Schism of 1054 occurred between Rome and Constantinople — the most significant ecclesiastical rupture in history, dividing Christianity into Catholic and Orthodox to this day." },
-  { "n": 152, "name": "Victor II", "reign": "1055–1057", "nat": "German (Swabia)", "saint": false, "img": null, "note": "Last pope appointed directly by a German emperor (Henry III). Close personal friend of Henry III, who died in his arms. Continued the reform programme rigorously." },
-  { "n": 153, "name": "Stephen X (IX)", "reign": "1057–1058", "nat": "Lorraine (France)", "saint": false, "img": null, "note": "First pope elected solely by the cardinals without imperial involvement — a crucial step toward the independent papacy. Brother of Duke Godfrey of Lorraine. Reformed the college of cardinals significantly." },
-  { "n": 154, "name": "Nicholas II", "reign": "1059–1061", "nat": "Burgundian (France)", "saint": false, "img": null, "note": "The Papal Election Decree of 1059 — his most lasting achievement — vested the right to elect popes exclusively in the College of Cardinals. This revolutionary change removed the laity and emperors from the process and is the foundation of how popes are elected today. He also allied the papacy with the Norman rulers of Sicily." },
-  { "n": 155, "name": "Alexander II", "reign": "1061–1073", "nat": "Lombard (Italy)", "saint": false, "img": null, "note": "His election provoked a schism — Emperor Henry IV supported an antipope for years. Supported William the Conqueror's invasion of England (1066). Condemned anti-Jewish pogroms — a notable act of protection for Jewish communities." },
-  { "n": 156, "name": "St. Gregory VII", "reign": "1073–1085", "nat": "Italian (Tuscany)", "saint": true, "img": null, "note": "One of the most revolutionary popes in history. Launched the Gregorian Reform: banned lay investiture (emperors appointing bishops), mandated celibacy for clergy, and attacked simony across the Church. His conflict with Emperor Henry IV climaxed at Canossa (1077), where Henry stood barefoot in the snow for three days to obtain absolution — the most dramatic moment of the medieval struggle between Church and State. Gregory died in exile, saying: 'I have loved justice and hated iniquity — therefore I die in exile.'" },
-  { "n": 157, "name": "Bl. Victor III", "reign": "1086–1087", "nat": "Italian (Benevento)", "saint": true, "img": null, "note": "Abbot of Monte Cassino — the famous Benedictine motherhouse — before becoming pope. Extremely reluctant to accept election. Reigned barely a year before dying. Beatified by Leo XIII." },
-  { "n": 158, "name": "Bl. Urban II", "reign": "1088–1099", "nat": "French (Champagne)", "saint": true, "img": null, "note": "Called the First Crusade at the Council of Clermont in 1095 — one of the most consequential speeches in history. His call mobilised hundreds of thousands of Europeans toward Jerusalem. He died two weeks after Jerusalem fell to the Crusaders in 1099, not knowing of the city's capture. Beatified by Leo XIII in 1881." },
-  { "n": 159, "name": "Paschal II", "reign": "1099–1118", "nat": "Italian (Romagna)", "saint": false, "img": null, "note": "Nineteen-year pontificate wracked by the Investiture Controversy. Under duress from Emperor Henry V, he made humiliating concessions; he later retracted them and was widely condemned for weakness. The struggle over church appointments remained unresolved until the Concordat of Worms (1122) under his successor." },
-  { "n": 160, "name": "Gelasius II", "reign": "1118–1119", "nat": "Italian (Gaeta)", "saint": false, "img": null, "note": "Seized and beaten by the Frangipani family immediately after his election. Fled Rome and died in exile at Cluny, France. His pontificate was a casualty of the Investiture Controversy's violence." },
-  { "n": 161, "name": "Callixtus II", "reign": "1119–1124", "nat": "Burgundian (France)", "saint": false, "img": null, "note": "Ended the Investiture Controversy with the Concordat of Worms (1122) — a compromise allowing the church to elect bishops freely while emperors retained political investiture. One of the most consequential diplomatic achievements of the medieval papacy." },
-  { "n": 162, "name": "Honorius II", "reign": "1124–1130", "nat": "Italian (Bologna)", "saint": false, "img": null, "note": "Approved the Knights Templar (1128) and the Premonstratensian Order. Brief schism at his election — but generally stable pontificate. Managed the competing interests of powerful Norman rulers." },
-  { "n": 163, "name": "Innocent II", "reign": "1130–1143", "nat": "Roman", "saint": false, "img": null, "note": "His election produced a schism — Antipope Anacletus II controlled Rome for most of the 1130s, forcing Innocent to govern from France and Germany. St. Bernard of Clairvaux rallied Europe to his cause. The Second Lateran Council (1139) under Innocent was a major reform council." },
-  { "n": 164, "name": "Celestine II", "reign": "1143–1144", "nat": "Italian (Umbria)", "saint": false, "img": null, "note": "Brief pontificate of approximately 5 months. The first pope elected solely by the cardinals without lay participation. Lifted the papal interdict on France." },
-  { "n": 165, "name": "Lucius II", "reign": "1144–1145", "nat": "Italian (Bologna)", "saint": false, "img": null, "note": "During a popular uprising in Rome, Lucius was struck on the head by a stone thrown from the battlements of the Capitoline Hill. He died of his wounds shortly after — the only pope killed by a stone in battle." },
-  { "n": 166, "name": "Bl. Eugene III", "reign": "1145–1153", "nat": "Italian (Pisa)", "saint": true, "img": null, "note": "A Cistercian monk and disciple of St. Bernard of Clairvaux. Proclaimed the Second Crusade. His mentor Bernard wrote to him: 'You were elected not to be lorded over, but to serve.' Beatified in 1872." },
-  { "n": 167, "name": "Anastasius IV", "reign": "1153–1154", "nat": "Roman", "saint": false, "img": null, "note": "Brief pontificate of approximately 16 months. Elderly at election. Resolved several schisms in the German church. Generally peaceful pontificate." },
-  { "n": 168, "name": "Adrian IV", "reign": "1154–1159", "nat": "English (Hertfordshire)", "saint": false, "img": null, "note": "The only English pope in history. Nicholas Breakspear, born a poor Englishman, rose through the church to become pope. Granted Ireland to the English King Henry II by the bull Laudabiliter (1155). Crowned Emperor Frederick Barbarossa. Died of a hiccupping fit, having swallowed a fly with his wine." },
-  { "n": 169, "name": "Alexander III", "reign": "1159–1181", "nat": "Italian (Siena)", "saint": false, "img": null, "note": "A towering jurist who endured an 18-year schism (four imperial antipopes). Faced Emperor Frederick Barbarossa's campaigns into Italy. The Third Lateran Council (1179) under Alexander established that a two-thirds majority of cardinals was required to elect a pope — still the rule today. Canonised Thomas Becket. Survived a shipwreck. One of the greatest legal minds ever to occupy the papal throne." },
-  { "n": 170, "name": "Lucius III", "reign": "1181–1185", "nat": "Italian (Lucca)", "saint": false, "img": null, "note": "Issued the decree Ad abolendam (1184) with Emperor Frederick Barbarossa, creating the first systematic legal framework for pursuing heresy — the precursor to the Inquisition. Never able to return to Rome due to factional violence." },
-  { "n": 171, "name": "Urban III", "reign": "1185–1187", "nat": "Italian (Milan)", "saint": false, "img": null, "note": "Died reportedly of grief upon hearing that Saladin had captured Jerusalem in 1187 — a loss that shocked Christendom and triggered the Third Crusade." },
-  { "n": 172, "name": "Gregory VIII", "reign": "Oct–Dec 1187", "nat": "Italian (Benevento)", "saint": false, "img": null, "note": "Pontificate of only 57 days. Immediately called the Third Crusade to recover Jerusalem from Saladin. His crusading bull Audita tremendi interpreted Jerusalem's fall as divine punishment for Christian sin. Died before he could lead the response." },
-  { "n": 173, "name": "Clement III", "reign": "1187–1191", "nat": "Roman", "saint": false, "img": null, "note": "Secured the return of the papacy to Rome after decades of exile. Organised the Third Crusade, which was led by Richard I of England, Philip II of France, and Frederick Barbarossa. Jerusalem was not recovered, but Crusader access to holy sites was negotiated." },
-  { "n": 174, "name": "Celestine III", "reign": "1191–1198", "nat": "Roman", "saint": false, "img": null, "note": "Elected at age 85. Crowned Henry VI emperor. His most controversial act was affirming the right of a spouse to remarry if their partner was an apostate — a decision later reversed. Tried to abdicate in favour of a younger man but was persuaded to continue." },
-  { "n": 175, "name": "Innocent III", "reign": "1198–1216", "nat": "Italian (Anagni)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Lotario_dei_Conti_di_Segni_%28Innocent_III%29.jpg/400px-Lotario_dei_Conti_di_Segni_%28Innocent_III%29.jpg", "note": "The most powerful pope in history. Elected at age 37, he brought the medieval papacy to its absolute zenith. Proclaimed himself 'Vicar of Christ' (rather than merely Vicar of Peter). Directed four Crusades. Presided over the Fourth Lateran Council (1215) — the most important council of the Middle Ages, which defined transubstantiation, mandated annual Confession, and set rules for Jewish dress and moneylending. Approved the Franciscan and Dominican orders. Deposed and crowned kings across Europe. Launched the Albigensian Crusade against Catharism in France. A man of towering intellect and absolute conviction." },
-  { "n": 176, "name": "Honorius III", "reign": "1216–1227", "nat": "Roman", "saint": false, "img": null, "note": "Confirmed the Franciscan Rule (1223) and the Dominican Order. Called the Fifth Crusade. Crowned Frederick II emperor (1220) — a decision he would regret, as Frederick proved a constant adversary of the papacy. A prolific writer and liturgical scholar." },
-  { "n": 177, "name": "Gregory IX", "reign": "1227–1241", "nat": "Italian (Anagni)", "saint": false, "img": null, "note": "Excommunicated Emperor Frederick II three times. Established the Papal Inquisition (1231), entrusting it to the Dominican Order. Canonised Francis of Assisi (1228) and Dominic (1234). Codified canon law with the Decretals of Gregory IX — the foundation of church law for centuries. A friend of St. Francis." },
-  { "n": 178, "name": "Celestine IV", "reign": "Oct–Nov 1241", "nat": "Italian (Milan)", "saint": false, "img": null, "note": "Pontificate of only 17 days — died before consecration. His election took place in atrocious conditions: the cardinals were locked in the Septizodium in Rome in summer heat without adequate food or water, with a senator threatening to exhume Gregory IX's corpse if they delayed. One cardinal died during the conclave." },
-  { "n": 179, "name": "Innocent IV", "reign": "1243–1254", "nat": "Italian (Genoa)", "saint": false, "img": null, "note": "A brilliant canon lawyer who waged a relentless political and legal war against Emperor Frederick II, whom he deposed at the First Council of Lyon (1245). Extended the Inquisition and issued the first explicit authorisation of torture in inquisitorial proceedings (1252). Sent missions to the Mongols to seek alliance against Islam." },
-  { "n": 180, "name": "Alexander IV", "reign": "1254–1261", "nat": "Italian (Anagni)", "saint": false, "img": null, "note": "Nephew of Gregory IX. Failed to organise an effective response to the Mongol invasions that were devastating Eastern Europe and the Middle East. Mendicant controversies (between Franciscans/Dominicans and the Paris university) dominated his pontificate." },
-  { "n": 181, "name": "Urban IV", "reign": "1261–1264", "nat": "French (Troyes)", "saint": false, "img": null, "note": "First pope never to set foot in Rome after election. Instituted the Feast of Corpus Christi (1264) — the great feast of the Eucharist — commissioning St. Thomas Aquinas to compose the magnificent liturgical texts, including the Tantum Ergo and Pange Lingua, still sung today." },
-  { "n": 182, "name": "Clement IV", "reign": "1265–1268", "nat": "French (Languedoc)", "saint": false, "img": null, "note": "Gave the Kingdom of Sicily to Charles of Anjou, reshaping Italian politics. Under his pontificate, St. Thomas Aquinas completed the Summa Theologiae — the greatest work of Catholic theology. A former royal official and married father before entering the church." },
-  { "n": 183, "name": "Bl. Gregory X", "reign": "1271–1276", "nat": "Italian (Piacenza)", "saint": true, "img": null, "note": "Elected after a vacancy of nearly three years — the longest in history — because the cardinals could not agree. He responded by establishing the Conclave system at the Second Council of Lyon (1274): cardinals are locked in together, with food gradually reduced, until they elect a pope. This system, with modifications, remains in place today." },
-  { "n": 184, "name": "Bl. Innocent V", "reign": "Jan–Jun 1276", "nat": "French (Savoy)", "saint": true, "img": null, "note": "First Dominican pope. A student of St. Albert the Great and a friend of St. Thomas Aquinas. Brilliant theologian and philosopher. Reigned only approximately 5 months — the first of three popes to die in 1276." },
-  { "n": 185, "name": "Adrian V", "reign": "Jul–Aug 1276", "nat": "Genoese (Italy)", "saint": false, "img": null, "note": "Brief pontificate of approximately 38 days. Died before consecration as bishop — he was never actually ordained pope in the full canonical sense. Suspended the harsh conclave rules of Gregory X. Dante placed him in Purgatory (Canto XIX)." },
-  { "n": 186, "name": "John XXI", "reign": "1276–1277", "nat": "Portuguese (Lisbon)", "saint": false, "img": null, "note": "The only Portuguese pope. A distinguished physician and philosopher — his 'Summulae Logicales' was a standard logic textbook for centuries. Killed when the ceiling of his newly built study at Viterbo collapsed on him while he was reading — perhaps the strangest papal death in history." },
-  { "n": 187, "name": "Nicholas III", "reign": "1277–1280", "nat": "Roman (Orsini)", "saint": false, "img": null, "note": "First pope to make the Vatican his permanent residence. Issued the decree Exiit qui seminat on Franciscan poverty. Accused of nepotism by his contemporaries — Dante placed him in Hell (Canto XIX) for simony." },
-  { "n": 188, "name": "Martin IV", "reign": "1281–1285", "nat": "French (Champagne)", "saint": false, "img": null, "note": "Completely under French influence. Excommunicated the Byzantine Emperor, ending the brief reunion of the churches achieved at the Second Council of Lyon. His support for the Angevin rulers provoked the Sicilian Vespers (1282) — a massacre of French troops that began the War of the Sicilian Vespers." },
-  { "n": 189, "name": "Honorius IV", "reign": "1285–1287", "nat": "Roman (Savelli)", "saint": false, "img": null, "note": "So crippled by gout that he could only celebrate Mass while seated. Yet he governed effectively, promoted the Carmelite and Augustinian Hermit orders, and encouraged the study of Oriental languages for missionary purposes." },
-  { "n": 190, "name": "Nicholas IV", "reign": "1288–1292", "nat": "Italian (Ascoli)", "saint": false, "img": null, "note": "First Franciscan pope. Sent missionaries to China and Persia. The fall of the last Crusader strongholds in the Holy Land (Acre fell in 1291) occurred during his pontificate — effectively ending the Crusading era." },
-  { "n": 191, "name": "St. Celestine V", "reign": "Jul–Dec 1294", "nat": "Italian (Molise)", "saint": true, "img": null, "note": "An 84-year-old hermit dragged from his cave to become pope. He was completely unfit for the political demands of the papacy and resigned after only 5 months — the most famous papal abdication in history until Benedict XVI's in 2013. Dante placed him in Hell. His successor had him imprisoned to prevent him from being used as a rival; he died in captivity. Canonised in 1313. His resignation is cited as the precedent for Benedict XVI's." },
-  { "n": 192, "name": "Boniface VIII", "reign": "1294–1303", "nat": "Italian (Anagni)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boniface_VIII_portrait.jpg/400px-Boniface_VIII_portrait.jpg", "note": "Issued Unam Sanctam (1302) — the most extreme statement of papal supremacy ever made: 'It is altogether necessary to salvation for every human creature to be subject to the Roman Pontiff.' His conflict with King Philip IV of France ended catastrophically: Philip's agents seized Boniface at Anagni and reportedly slapped him in the face. Boniface died of shock one month later. Dante placed him in Hell." },
-  { "n": 193, "name": "Bl. Benedict XI", "reign": "1303–1304", "nat": "Italian (Treviso)", "saint": true, "img": null, "note": "A Dominican friar known for gentleness and humility. Reversed Boniface VIII's most extreme positions. Died after approximately eight months — possibly poisoned, as he died suddenly after eating a dish of figs. Beatified in 1736." },
-  { "n": 194, "name": "Clement V", "reign": "1305–1314", "nat": "French (Gascony)", "saint": false, "img": null, "note": "The first Avignon pope — he never set foot in Rome, establishing the papacy at Avignon in France under French royal influence. Dissolved the Knights Templar under pressure from Philip IV of France and presided over their brutal destruction, including the burning of Grand Master Jacques de Molay. Issued Clementinae — important additions to canon law." },
-  { "n": 195, "name": "John XXII", "reign": "1316–1334", "nat": "French (Cahors)", "saint": false, "img": null, "note": "Second longest-reigning Avignon pope. His personal sermons suggesting the beatific vision was not immediate after death caused a massive theological storm. He recanted on his deathbed. Had a furious conflict with Emperor Ludwig of Bavaria and the Franciscan Spirituals. Accused of accumulating enormous wealth." },
-  { "n": 196, "name": "Benedict XII", "reign": "1334–1342", "nat": "French (Saverdun)", "saint": false, "img": null, "note": "A stern Cistercian reformer — so rigorous he was nicknamed 'old white wine.' Definitively resolved John XXII's theological controversy with the constitution Benedictus Deus (1336), definitively stating that the beatific vision is immediate after death for the purified soul. Reformed religious orders." },
-  { "n": 197, "name": "Clement VI", "reign": "1342–1352", "nat": "French (Corrèze)", "saint": false, "img": null, "note": "The most lavish of the Avignon popes — his court was the most brilliant in Europe. During the Black Death (1348), which killed a third of Europe, he issued two bulls protecting Jewish people from persecution by mobs who blamed them for the plague. He purchased the city of Avignon outright in 1348." },
-  { "n": 198, "name": "Innocent VI", "reign": "1352–1362", "nat": "French (Maumont)", "saint": false, "img": null, "note": "Tried to reform the Avignon curia's notorious corruption. Sent Cardinal Albornoz to reconquer the Papal States in Italy — a largely successful military campaign. Reduced excessive privileges of religious orders." },
-  { "n": 199, "name": "Bl. Urban V", "reign": "1362–1370", "nat": "French (Languedoc)", "saint": true, "img": null, "note": "Returned the papacy to Rome in 1367 — the first Avignon pope to do so. But political instability in Italy forced him back to Avignon in 1370, over the tearful protests of St. Bridget of Sweden, who prophesied he would die if he left Rome. He died three months after returning to Avignon. Beatified in 1870." },
-  { "n": 200, "name": "Gregory XI", "reign": "1370–1378", "nat": "French (Corrèze)", "saint": false, "img": null, "note": "The last Avignon pope and last non-Italian pope until John Paul II (1978). Persuaded by the insistent letters of St. Catherine of Siena — a young, illiterate laywoman who called him 'our sweet Christ on earth' and scolded his weakness — he finally returned the papacy to Rome in 1377, ending the 70-year Avignon period. He died in Rome the following year, triggering the Great Western Schism." }
+  {
+    "n": 151,
+    "name": "St. Leo IX",
+    "reign": "1049–1054",
+    "nat": "Alsatian (France/Germany)",
+    "saint": true,
+    "img": null,
+    "note": "The first great reform pope. Travelled across Europe on reform synods, personally deposing simoniacal bishops. His pontificate ended in catastrophe: he led a military expedition against the Normans, was captured, and died in captivity. During his imprisonment, the Great Schism of 1054 occurred between Rome and Constantinople — the most significant ecclesiastical rupture in history, dividing Christianity into Catholic and Orthodox to this day."
+  },
+  {
+    "n": 152,
+    "name": "Victor II",
+    "reign": "1055–1057",
+    "nat": "German (Swabia)",
+    "saint": false,
+    "img": null,
+    "note": "Last pope appointed directly by a German emperor (Henry III). Close personal friend of Henry III, who died in his arms. Continued the reform programme rigorously."
+  },
+  {
+    "n": 153,
+    "name": "Stephen X (IX)",
+    "reign": "1057–1058",
+    "nat": "Lorraine (France)",
+    "saint": false,
+    "img": null,
+    "note": "First pope elected solely by the cardinals without imperial involvement — a crucial step toward the independent papacy. Brother of Duke Godfrey of Lorraine. Reformed the college of cardinals significantly."
+  },
+  {
+    "n": 154,
+    "name": "Nicholas II",
+    "reign": "1059–1061",
+    "nat": "Burgundian (France)",
+    "saint": false,
+    "img": null,
+    "note": "The Papal Election Decree of 1059 — his most lasting achievement — vested the right to elect popes exclusively in the College of Cardinals. This revolutionary change removed the laity and emperors from the process and is the foundation of how popes are elected today. He also allied the papacy with the Norman rulers of Sicily."
+  },
+  {
+    "n": 155,
+    "name": "Alexander II",
+    "reign": "1061–1073",
+    "nat": "Lombard (Italy)",
+    "saint": false,
+    "img": null,
+    "note": "His election provoked a schism — Emperor Henry IV supported an antipope for years. Supported William the Conqueror's invasion of England (1066). Condemned anti-Jewish pogroms — a notable act of protection for Jewish communities."
+  },
+  {
+    "n": 156,
+    "name": "St. Gregory VII",
+    "reign": "1073–1085",
+    "nat": "Italian (Tuscany)",
+    "saint": true,
+    "img": null,
+    "note": "One of the most revolutionary popes in history. Launched the Gregorian Reform: banned lay investiture (emperors appointing bishops), mandated celibacy for clergy, and attacked simony across the Church. His conflict with Emperor Henry IV climaxed at Canossa (1077), where Henry stood barefoot in the snow for three days to obtain absolution — the most dramatic moment of the medieval struggle between Church and State. Gregory died in exile, saying: 'I have loved justice and hated iniquity — therefore I die in exile.'"
+  },
+  {
+    "n": 157,
+    "name": "Bl. Victor III",
+    "reign": "1086–1087",
+    "nat": "Italian (Benevento)",
+    "saint": true,
+    "img": null,
+    "note": "Abbot of Monte Cassino — the famous Benedictine motherhouse — before becoming pope. Extremely reluctant to accept election. Reigned barely a year before dying. Beatified by Leo XIII."
+  },
+  {
+    "n": 158,
+    "name": "Bl. Urban II",
+    "reign": "1088–1099",
+    "nat": "French (Champagne)",
+    "saint": true,
+    "img": null,
+    "note": "Called the First Crusade at the Council of Clermont in 1095 — one of the most consequential speeches in history. His call mobilised hundreds of thousands of Europeans toward Jerusalem. He died two weeks after Jerusalem fell to the Crusaders in 1099, not knowing of the city's capture. Beatified by Leo XIII in 1881."
+  },
+  {
+    "n": 159,
+    "name": "Paschal II",
+    "reign": "1099–1118",
+    "nat": "Italian (Romagna)",
+    "saint": false,
+    "img": null,
+    "note": "Nineteen-year pontificate wracked by the Investiture Controversy. Under duress from Emperor Henry V, he made humiliating concessions; he later retracted them and was widely condemned for weakness. The struggle over church appointments remained unresolved until the Concordat of Worms (1122) under his successor."
+  },
+  {
+    "n": 160,
+    "name": "Gelasius II",
+    "reign": "1118–1119",
+    "nat": "Italian (Gaeta)",
+    "saint": false,
+    "img": null,
+    "note": "Seized and beaten by the Frangipani family immediately after his election. Fled Rome and died in exile at Cluny, France. His pontificate was a casualty of the Investiture Controversy's violence."
+  },
+  {
+    "n": 161,
+    "name": "Callixtus II",
+    "reign": "1119–1124",
+    "nat": "Burgundian (France)",
+    "saint": false,
+    "img": null,
+    "note": "Ended the Investiture Controversy with the Concordat of Worms (1122) — a compromise allowing the church to elect bishops freely while emperors retained political investiture. One of the most consequential diplomatic achievements of the medieval papacy."
+  },
+  {
+    "n": 162,
+    "name": "Honorius II",
+    "reign": "1124–1130",
+    "nat": "Italian (Bologna)",
+    "saint": false,
+    "img": null,
+    "note": "Approved the Knights Templar (1128) and the Premonstratensian Order. Brief schism at his election — but generally stable pontificate. Managed the competing interests of powerful Norman rulers."
+  },
+  {
+    "n": 163,
+    "name": "Innocent II",
+    "reign": "1130–1143",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "His election produced a schism — Antipope Anacletus II controlled Rome for most of the 1130s, forcing Innocent to govern from France and Germany. St. Bernard of Clairvaux rallied Europe to his cause. The Second Lateran Council (1139) under Innocent was a major reform council."
+  },
+  {
+    "n": 164,
+    "name": "Celestine II",
+    "reign": "1143–1144",
+    "nat": "Italian (Umbria)",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 5 months. The first pope elected solely by the cardinals without lay participation. Lifted the papal interdict on France."
+  },
+  {
+    "n": 165,
+    "name": "Lucius II",
+    "reign": "1144–1145",
+    "nat": "Italian (Bologna)",
+    "saint": false,
+    "img": null,
+    "note": "During a popular uprising in Rome, Lucius was struck on the head by a stone thrown from the battlements of the Capitoline Hill. He died of his wounds shortly after — the only pope killed by a stone in battle."
+  },
+  {
+    "n": 166,
+    "name": "Bl. Eugene III",
+    "reign": "1145–1153",
+    "nat": "Italian (Pisa)",
+    "saint": true,
+    "img": null,
+    "note": "A Cistercian monk and disciple of St. Bernard of Clairvaux. Proclaimed the Second Crusade. His mentor Bernard wrote to him: 'You were elected not to be lorded over, but to serve.' Beatified in 1872."
+  },
+  {
+    "n": 167,
+    "name": "Anastasius IV",
+    "reign": "1153–1154",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 16 months. Elderly at election. Resolved several schisms in the German church. Generally peaceful pontificate."
+  },
+  {
+    "n": 168,
+    "name": "Adrian IV",
+    "reign": "1154–1159",
+    "nat": "English (Hertfordshire)",
+    "saint": false,
+    "img": null,
+    "note": "The only English pope in history. Nicholas Breakspear, born a poor Englishman, rose through the church to become pope. Granted Ireland to the English King Henry II by the bull Laudabiliter (1155). Crowned Emperor Frederick Barbarossa. Died of a hiccupping fit, having swallowed a fly with his wine."
+  },
+  {
+    "n": 169,
+    "name": "Alexander III",
+    "reign": "1159–1181",
+    "nat": "Italian (Siena)",
+    "saint": false,
+    "img": null,
+    "note": "A towering jurist who endured an 18-year schism (four imperial antipopes). Faced Emperor Frederick Barbarossa's campaigns into Italy. The Third Lateran Council (1179) under Alexander established that a two-thirds majority of cardinals was required to elect a pope — still the rule today. Canonised Thomas Becket. Survived a shipwreck. One of the greatest legal minds ever to occupy the papal throne."
+  },
+  {
+    "n": 170,
+    "name": "Lucius III",
+    "reign": "1181–1185",
+    "nat": "Italian (Lucca)",
+    "saint": false,
+    "img": null,
+    "note": "Issued the decree Ad abolendam (1184) with Emperor Frederick Barbarossa, creating the first systematic legal framework for pursuing heresy — the precursor to the Inquisition. Never able to return to Rome due to factional violence."
+  },
+  {
+    "n": 171,
+    "name": "Urban III",
+    "reign": "1185–1187",
+    "nat": "Italian (Milan)",
+    "saint": false,
+    "img": null,
+    "note": "Died reportedly of grief upon hearing that Saladin had captured Jerusalem in 1187 — a loss that shocked Christendom and triggered the Third Crusade."
+  },
+  {
+    "n": 172,
+    "name": "Gregory VIII",
+    "reign": "Oct–Dec 1187",
+    "nat": "Italian (Benevento)",
+    "saint": false,
+    "img": null,
+    "note": "Pontificate of only 57 days. Immediately called the Third Crusade to recover Jerusalem from Saladin. His crusading bull Audita tremendi interpreted Jerusalem's fall as divine punishment for Christian sin. Died before he could lead the response."
+  },
+  {
+    "n": 173,
+    "name": "Clement III",
+    "reign": "1187–1191",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Secured the return of the papacy to Rome after decades of exile. Organised the Third Crusade, which was led by Richard I of England, Philip II of France, and Frederick Barbarossa. Jerusalem was not recovered, but Crusader access to holy sites was negotiated."
+  },
+  {
+    "n": 174,
+    "name": "Celestine III",
+    "reign": "1191–1198",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Elected at age 85. Crowned Henry VI emperor. His most controversial act was affirming the right of a spouse to remarry if their partner was an apostate — a decision later reversed. Tried to abdicate in favour of a younger man but was persuaded to continue."
+  },
+  {
+    "n": 175,
+    "name": "Innocent III",
+    "reign": "1198–1216",
+    "nat": "Italian (Anagni)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Lotario_dei_Conti_di_Segni_%28Innocent_III%29.jpg",
+    "note": "The most powerful pope in history. Elected at age 37, he brought the medieval papacy to its absolute zenith. Proclaimed himself 'Vicar of Christ' (rather than merely Vicar of Peter). Directed four Crusades. Presided over the Fourth Lateran Council (1215) — the most important council of the Middle Ages, which defined transubstantiation, mandated annual Confession, and set rules for Jewish dress and moneylending. Approved the Franciscan and Dominican orders. Deposed and crowned kings across Europe. Launched the Albigensian Crusade against Catharism in France. A man of towering intellect and absolute conviction."
+  },
+  {
+    "n": 176,
+    "name": "Honorius III",
+    "reign": "1216–1227",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Confirmed the Franciscan Rule (1223) and the Dominican Order. Called the Fifth Crusade. Crowned Frederick II emperor (1220) — a decision he would regret, as Frederick proved a constant adversary of the papacy. A prolific writer and liturgical scholar."
+  },
+  {
+    "n": 177,
+    "name": "Gregory IX",
+    "reign": "1227–1241",
+    "nat": "Italian (Anagni)",
+    "saint": false,
+    "img": null,
+    "note": "Excommunicated Emperor Frederick II three times. Established the Papal Inquisition (1231), entrusting it to the Dominican Order. Canonised Francis of Assisi (1228) and Dominic (1234). Codified canon law with the Decretals of Gregory IX — the foundation of church law for centuries. A friend of St. Francis."
+  },
+  {
+    "n": 178,
+    "name": "Celestine IV",
+    "reign": "Oct–Nov 1241",
+    "nat": "Italian (Milan)",
+    "saint": false,
+    "img": null,
+    "note": "Pontificate of only 17 days — died before consecration. His election took place in atrocious conditions: the cardinals were locked in the Septizodium in Rome in summer heat without adequate food or water, with a senator threatening to exhume Gregory IX's corpse if they delayed. One cardinal died during the conclave."
+  },
+  {
+    "n": 179,
+    "name": "Innocent IV",
+    "reign": "1243–1254",
+    "nat": "Italian (Genoa)",
+    "saint": false,
+    "img": null,
+    "note": "A brilliant canon lawyer who waged a relentless political and legal war against Emperor Frederick II, whom he deposed at the First Council of Lyon (1245). Extended the Inquisition and issued the first explicit authorisation of torture in inquisitorial proceedings (1252). Sent missions to the Mongols to seek alliance against Islam."
+  },
+  {
+    "n": 180,
+    "name": "Alexander IV",
+    "reign": "1254–1261",
+    "nat": "Italian (Anagni)",
+    "saint": false,
+    "img": null,
+    "note": "Nephew of Gregory IX. Failed to organise an effective response to the Mongol invasions that were devastating Eastern Europe and the Middle East. Mendicant controversies (between Franciscans/Dominicans and the Paris university) dominated his pontificate."
+  },
+  {
+    "n": 181,
+    "name": "Urban IV",
+    "reign": "1261–1264",
+    "nat": "French (Troyes)",
+    "saint": false,
+    "img": null,
+    "note": "First pope never to set foot in Rome after election. Instituted the Feast of Corpus Christi (1264) — the great feast of the Eucharist — commissioning St. Thomas Aquinas to compose the magnificent liturgical texts, including the Tantum Ergo and Pange Lingua, still sung today."
+  },
+  {
+    "n": 182,
+    "name": "Clement IV",
+    "reign": "1265–1268",
+    "nat": "French (Languedoc)",
+    "saint": false,
+    "img": null,
+    "note": "Gave the Kingdom of Sicily to Charles of Anjou, reshaping Italian politics. Under his pontificate, St. Thomas Aquinas completed the Summa Theologiae — the greatest work of Catholic theology. A former royal official and married father before entering the church."
+  },
+  {
+    "n": 183,
+    "name": "Bl. Gregory X",
+    "reign": "1271–1276",
+    "nat": "Italian (Piacenza)",
+    "saint": true,
+    "img": null,
+    "note": "Elected after a vacancy of nearly three years — the longest in history — because the cardinals could not agree. He responded by establishing the Conclave system at the Second Council of Lyon (1274): cardinals are locked in together, with food gradually reduced, until they elect a pope. This system, with modifications, remains in place today."
+  },
+  {
+    "n": 184,
+    "name": "Bl. Innocent V",
+    "reign": "Jan–Jun 1276",
+    "nat": "French (Savoy)",
+    "saint": true,
+    "img": null,
+    "note": "First Dominican pope. A student of St. Albert the Great and a friend of St. Thomas Aquinas. Brilliant theologian and philosopher. Reigned only approximately 5 months — the first of three popes to die in 1276."
+  },
+  {
+    "n": 185,
+    "name": "Adrian V",
+    "reign": "Jul–Aug 1276",
+    "nat": "Genoese (Italy)",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 38 days. Died before consecration as bishop — he was never actually ordained pope in the full canonical sense. Suspended the harsh conclave rules of Gregory X. Dante placed him in Purgatory (Canto XIX)."
+  },
+  {
+    "n": 186,
+    "name": "John XXI",
+    "reign": "1276–1277",
+    "nat": "Portuguese (Lisbon)",
+    "saint": false,
+    "img": null,
+    "note": "The only Portuguese pope. A distinguished physician and philosopher — his 'Summulae Logicales' was a standard logic textbook for centuries. Killed when the ceiling of his newly built study at Viterbo collapsed on him while he was reading — perhaps the strangest papal death in history."
+  },
+  {
+    "n": 187,
+    "name": "Nicholas III",
+    "reign": "1277–1280",
+    "nat": "Roman (Orsini)",
+    "saint": false,
+    "img": null,
+    "note": "First pope to make the Vatican his permanent residence. Issued the decree Exiit qui seminat on Franciscan poverty. Accused of nepotism by his contemporaries — Dante placed him in Hell (Canto XIX) for simony."
+  },
+  {
+    "n": 188,
+    "name": "Martin IV",
+    "reign": "1281–1285",
+    "nat": "French (Champagne)",
+    "saint": false,
+    "img": null,
+    "note": "Completely under French influence. Excommunicated the Byzantine Emperor, ending the brief reunion of the churches achieved at the Second Council of Lyon. His support for the Angevin rulers provoked the Sicilian Vespers (1282) — a massacre of French troops that began the War of the Sicilian Vespers."
+  },
+  {
+    "n": 189,
+    "name": "Honorius IV",
+    "reign": "1285–1287",
+    "nat": "Roman (Savelli)",
+    "saint": false,
+    "img": null,
+    "note": "So crippled by gout that he could only celebrate Mass while seated. Yet he governed effectively, promoted the Carmelite and Augustinian Hermit orders, and encouraged the study of Oriental languages for missionary purposes."
+  },
+  {
+    "n": 190,
+    "name": "Nicholas IV",
+    "reign": "1288–1292",
+    "nat": "Italian (Ascoli)",
+    "saint": false,
+    "img": null,
+    "note": "First Franciscan pope. Sent missionaries to China and Persia. The fall of the last Crusader strongholds in the Holy Land (Acre fell in 1291) occurred during his pontificate — effectively ending the Crusading era."
+  },
+  {
+    "n": 191,
+    "name": "St. Celestine V",
+    "reign": "Jul–Dec 1294",
+    "nat": "Italian (Molise)",
+    "saint": true,
+    "img": null,
+    "note": "An 84-year-old hermit dragged from his cave to become pope. He was completely unfit for the political demands of the papacy and resigned after only 5 months — the most famous papal abdication in history until Benedict XVI's in 2013. Dante placed him in Hell. His successor had him imprisoned to prevent him from being used as a rival; he died in captivity. Canonised in 1313. His resignation is cited as the precedent for Benedict XVI's."
+  },
+  {
+    "n": 192,
+    "name": "Boniface VIII",
+    "reign": "1294–1303",
+    "nat": "Italian (Anagni)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Boniface_VIII_portrait.jpg",
+    "note": "Issued Unam Sanctam (1302) — the most extreme statement of papal supremacy ever made: 'It is altogether necessary to salvation for every human creature to be subject to the Roman Pontiff.' His conflict with King Philip IV of France ended catastrophically: Philip's agents seized Boniface at Anagni and reportedly slapped him in the face. Boniface died of shock one month later. Dante placed him in Hell."
+  },
+  {
+    "n": 193,
+    "name": "Bl. Benedict XI",
+    "reign": "1303–1304",
+    "nat": "Italian (Treviso)",
+    "saint": true,
+    "img": null,
+    "note": "A Dominican friar known for gentleness and humility. Reversed Boniface VIII's most extreme positions. Died after approximately eight months — possibly poisoned, as he died suddenly after eating a dish of figs. Beatified in 1736."
+  },
+  {
+    "n": 194,
+    "name": "Clement V",
+    "reign": "1305–1314",
+    "nat": "French (Gascony)",
+    "saint": false,
+    "img": null,
+    "note": "The first Avignon pope — he never set foot in Rome, establishing the papacy at Avignon in France under French royal influence. Dissolved the Knights Templar under pressure from Philip IV of France and presided over their brutal destruction, including the burning of Grand Master Jacques de Molay. Issued Clementinae — important additions to canon law."
+  },
+  {
+    "n": 195,
+    "name": "John XXII",
+    "reign": "1316–1334",
+    "nat": "French (Cahors)",
+    "saint": false,
+    "img": null,
+    "note": "Second longest-reigning Avignon pope. His personal sermons suggesting the beatific vision was not immediate after death caused a massive theological storm. He recanted on his deathbed. Had a furious conflict with Emperor Ludwig of Bavaria and the Franciscan Spirituals. Accused of accumulating enormous wealth."
+  },
+  {
+    "n": 196,
+    "name": "Benedict XII",
+    "reign": "1334–1342",
+    "nat": "French (Saverdun)",
+    "saint": false,
+    "img": null,
+    "note": "A stern Cistercian reformer — so rigorous he was nicknamed 'old white wine.' Definitively resolved John XXII's theological controversy with the constitution Benedictus Deus (1336), definitively stating that the beatific vision is immediate after death for the purified soul. Reformed religious orders."
+  },
+  {
+    "n": 197,
+    "name": "Clement VI",
+    "reign": "1342–1352",
+    "nat": "French (Corrèze)",
+    "saint": false,
+    "img": null,
+    "note": "The most lavish of the Avignon popes — his court was the most brilliant in Europe. During the Black Death (1348), which killed a third of Europe, he issued two bulls protecting Jewish people from persecution by mobs who blamed them for the plague. He purchased the city of Avignon outright in 1348."
+  },
+  {
+    "n": 198,
+    "name": "Innocent VI",
+    "reign": "1352–1362",
+    "nat": "French (Maumont)",
+    "saint": false,
+    "img": null,
+    "note": "Tried to reform the Avignon curia's notorious corruption. Sent Cardinal Albornoz to reconquer the Papal States in Italy — a largely successful military campaign. Reduced excessive privileges of religious orders."
+  },
+  {
+    "n": 199,
+    "name": "Bl. Urban V",
+    "reign": "1362–1370",
+    "nat": "French (Languedoc)",
+    "saint": true,
+    "img": null,
+    "note": "Returned the papacy to Rome in 1367 — the first Avignon pope to do so. But political instability in Italy forced him back to Avignon in 1370, over the tearful protests of St. Bridget of Sweden, who prophesied he would die if he left Rome. He died three months after returning to Avignon. Beatified in 1870."
+  },
+  {
+    "n": 200,
+    "name": "Gregory XI",
+    "reign": "1370–1378",
+    "nat": "French (Corrèze)",
+    "saint": false,
+    "img": null,
+    "note": "The last Avignon pope and last non-Italian pope until John Paul II (1978). Persuaded by the insistent letters of St. Catherine of Siena — a young, illiterate laywoman who called him 'our sweet Christ on earth' and scolded his weakness — he finally returned the papacy to Rome in 1377, ending the 70-year Avignon period. He died in Rome the following year, triggering the Great Western Schism."
+  }
 ]

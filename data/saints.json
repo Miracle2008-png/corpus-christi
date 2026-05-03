@@ -9,9 +9,20 @@
     "canonized_by_pope": "Pope Gregory IX",
     "category": "confessor",
     "known_for": "Poverty, love of nature, founding the Franciscan Order, stigmata",
-    "patron_of": ["Italy", "animals", "ecology", "merchants", "stowaways"],
+    "patron_of": [
+      "Italy",
+      "animals",
+      "ecology",
+      "merchants",
+      "stowaways"
+    ],
     "biography_long": "Giovanni di Pietro di Bernardone, known as Francis of Assisi, was born to a wealthy cloth merchant in Umbria, Italy. As a young man, he pursued a life of pleasure and dreamed of military glory. After being taken prisoner during a war between Assisi and Perugia, and suffering a serious illness, Francis underwent a profound spiritual transformation. He heard Christ speaking to him from the crucifix at the chapel of San Damiano: 'Francis, go and repair my house, which you see is falling into ruin.' Renouncing his inheritance and wealth dramatically in the public square before the bishop, Francis embraced radical poverty and began caring for lepers. He attracted followers who formed the first Friars Minor — a community committed to gospel poverty, fraternity, and preaching. Francis received the stigmata — the wounds of Christ — in September 1224, the first recorded stigmatist in history. He composed the 'Canticle of the Sun,' one of the earliest works of Italian literature, praising God through creation. He died singing Psalm 141 as requested.",
-    "miracles": ["Receiving the stigmata on Mount La Verna in 1224", "Taming the wolf of Gubbio", "Preaching to the birds who listened without moving", "Multiplying bread and fish for his friars"],
+    "miracles": [
+      "Receiving the stigmata on Mount La Verna in 1224",
+      "Taming the wolf of Gubbio",
+      "Preaching to the birds who listened without moving",
+      "Multiplying bread and fish for his friars"
+    ],
     "quotes": [
       "Start by doing what is necessary; then do what is possible; and suddenly you are doing the impossible.",
       "Lord, make me an instrument of your peace.",
@@ -19,7 +30,7 @@
       "Preach the Gospel at all times. When necessary, use words.",
       "He who works with his hands is a laborer. He who works with his hands and his head is a craftsman. He who works with his hands and his head and his heart is an artist."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Francisco_de_Zurbar%C3%A1n_-_San_Francisco_de_As%C3%ADs_seg%C3%BAn_el_hermano_Le%C3%B3_-_Google_Art_Project.jpg/800px-Francisco_de_Zurbar%C3%A1n_-_San_Francisco_de_As%C3%ADs_seg%C3%BAn_el_hermano_Le%C3%B3_-_Google_Art_Project.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Francisco_de_Zurbar%C3%A1n_-_San_Francisco_de_As%C3%ADs_seg%C3%BAn_el_hermano_Le%C3%B3_-_Google_Art_Project.jpg"
   },
   {
     "name": "Saint Teresa of Ávila",
@@ -31,9 +42,18 @@
     "canonized_by_pope": "Pope Gregory XV",
     "category": "doctor",
     "known_for": "Mystical prayer, reform of the Carmelites, Doctor of the Church, Interior Castle",
-    "patron_of": ["Spain", "chess players", "headache sufferers", "lacemakers"],
+    "patron_of": [
+      "Spain",
+      "chess players",
+      "headache sufferers",
+      "lacemakers"
+    ],
     "biography_long": "Teresa of Cepeda y Ahumada was born in Ávila, Spain, to a family of converso background. Entering the Carmelite Monastery of the Incarnation at age 20, she spent nearly 20 years in spiritual mediocrity before a profound conversion experience at age 39. She then experienced mystical graces including interior locutions, visions, and levitations. Teresa reformed the Carmelite Order, founding the first Discalced Carmelite monastery in Ávila in 1562 and eventually establishing 17 more foundations despite fierce opposition. Her major works — 'The Interior Castle,' 'The Way of Perfection,' and her autobiography — remain spiritual masterpieces. In 1970, Pope Paul VI declared her the first female Doctor of the Church, along with Catherine of Siena.",
-    "miracles": ["Multiple documented levitations during prayer", "Bilocations reported by witnesses", "Miraculous cure of her own paralysis through intercession of St. Joseph"],
+    "miracles": [
+      "Multiple documented levitations during prayer",
+      "Bilocations reported by witnesses",
+      "Miraculous cure of her own paralysis through intercession of St. Joseph"
+    ],
     "quotes": [
       "Let nothing disturb you, let nothing frighten you. All things are passing away: God never changes.",
       "Prayer is an act of love; words are not needed.",
@@ -41,7 +61,7 @@
       "It is love alone that gives worth to all things.",
       "Christ has no body now but yours. No hands, no feet on earth but yours."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/SANTA_TERESA_DE_JES%C3%9AS_%28RIBERA%29.jpg/800px-SANTA_TERESA_DE_JES%C3%9AS_%28RIBERA%29.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/SANTA_TERESA_DE_JES%C3%9AS_%28RIBERA%29.jpg"
   },
   {
     "name": "Saint Thomas Aquinas",
@@ -53,9 +73,19 @@
     "canonized_by_pope": "Pope John XXII",
     "category": "doctor",
     "known_for": "Scholastic theology, Summa Theologica, Five Ways proofs for God, Doctor Angelicus",
-    "patron_of": ["students", "Catholic schools and universities", "academics", "philosophers", "Italy"],
+    "patron_of": [
+      "students",
+      "Catholic schools and universities",
+      "academics",
+      "philosophers",
+      "Italy"
+    ],
     "biography_long": "Thomas Aquinas was born to a noble family in Aquino, Italy. Against his family's wishes, he joined the Dominican Order, even being kidnapped by his brothers and held for a year. He studied under St. Albert the Great in Cologne and Paris. Thomas became the greatest theologian-philosopher of the medieval Church. His Summa Theologica synthesized Aristotelian philosophy with Christian theology and remains a foundational text of Catholic thought. He composed the Corpus Christi liturgy, including the hymns Pange Lingua and Tantum Ergo. Near the end of his life, he had a mystical experience during Mass after which he declared: 'All that I have written seems to me like straw compared to what I have seen.' He died en route to the Second Council of Lyon.",
-    "miracles": ["Levitation during prayer witnessed by fellow Dominicans", "Vision of the Crucified Christ who spoke: 'You have written well of Me, Thomas'", "After his death, the town of Fossanova was filled with fragrance"],
+    "miracles": [
+      "Levitation during prayer witnessed by fellow Dominicans",
+      "Vision of the Crucified Christ who spoke: 'You have written well of Me, Thomas'",
+      "After his death, the town of Fossanova was filled with fragrance"
+    ],
     "quotes": [
       "The things that we love tell us what we are.",
       "To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",
@@ -63,7 +93,7 @@
       "There is nothing on this earth more to be prized than true friendship.",
       "The highest manifestation of life consists in this: that a being governs its own actions."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Saint_Thomas_Aquinas_CL_edited.jpg/800px-Saint_Thomas_Aquinas_CL_edited.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Saint_Thomas_Aquinas_CL_edited.jpg"
   },
   {
     "name": "Saint Joan of Arc",
@@ -75,9 +105,19 @@
     "canonized_by_pope": "Pope Benedict XV",
     "category": "virgin",
     "known_for": "Voices from God, leading French army, martyrdom at the stake, national heroine of France",
-    "patron_of": ["France", "soldiers", "prisoners", "people ridiculed for their piety", "women who serve in the military"],
+    "patron_of": [
+      "France",
+      "soldiers",
+      "prisoners",
+      "people ridiculed for their piety",
+      "women who serve in the military"
+    ],
     "biography_long": "Jeanne d'Arc was born to a peasant family in Domrémy, France, during the Hundred Years' War. From age 13, she reported receiving visions and voices of St. Michael the Archangel, St. Catherine, and St. Margaret, who told her to support Charles VII and recover France from English domination. Despite her youth and peasant origins, she convinced the Dauphin to let her accompany the French army. Wearing white armor, she led the French to victory at Orléans in 1429, a turning point in the war. After Charles VII's coronation at Reims, Joan was captured by Burgundian forces, sold to the English, and tried for heresy and witchcraft by a church court corrupted by English political pressure. She was burned at the stake at age 19 in Rouen. A posthumous retrial in 1456 declared her innocent. Pope Pius X beatified her in 1909.",
-    "miracles": ["Victory at Orléans against overwhelming odds, deemed miraculous by contemporaries", "Predicted her own capture, wound, and victory at Orléans", "Locating a sword hidden behind an altar at Sainte-Catherine-de-Fierbois without prior knowledge"],
+    "miracles": [
+      "Victory at Orléans against overwhelming odds, deemed miraculous by contemporaries",
+      "Predicted her own capture, wound, and victory at Orléans",
+      "Locating a sword hidden behind an altar at Sainte-Catherine-de-Fierbois without prior knowledge"
+    ],
     "quotes": [
       "I am not afraid. I was born to do this.",
       "One life is all we have and we live it as we believe in living it. But to sacrifice what you are and to live without belief, that is a fate more terrible than dying.",
@@ -85,7 +125,7 @@
       "Get up tomorrow early in the morning, and earlier than you did today, and do the best that you can.",
       "All battles are first won or lost in the mind."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Joan_of_Arc_on_horseback.jpg/800px-Joan_of_Arc_on_horseback.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Joan_of_Arc_on_horseback.jpg"
   },
   {
     "name": "Saint Augustine of Hippo",
@@ -97,9 +137,20 @@
     "canonized_by_pope": "Pre-Congregation",
     "category": "doctor",
     "known_for": "Confessions, City of God, theology of grace and predestination, Bishop of Hippo",
-    "patron_of": ["brewers", "printers", "theologians", "sore eyes", "Algeria", "philosophers"],
+    "patron_of": [
+      "brewers",
+      "printers",
+      "theologians",
+      "sore eyes",
+      "Algeria",
+      "philosophers"
+    ],
     "biography_long": "Aurelius Augustinus Hipponensis was born in Thagaste, North Africa, to Patricius, a pagan, and Monica, a devout Christian. He lived a life of intellectual searching and moral restlessness, taking a concubine with whom he had a son, Adeodatus. He followed Manichaeism for nine years before Neoplatonism and, ultimately, the preaching of St. Ambrose in Milan led him to Christianity. His conversion in a garden in Milan — 'Take up and read' (Tolle, lege) — after reading Romans 13:13-14 is one of the most celebrated in Christian history. Baptized by Ambrose in 387, he returned to Africa, was ordained a priest, and became Bishop of Hippo in 395. His Confessions, the first spiritual autobiography, and City of God, written after the sack of Rome, are among the most influential works in Western literature. His theological insights on original sin, free will, grace, and predestination shaped Western Christianity profoundly.",
-    "miracles": ["His mother Monica's prayers for his conversion over 17 years, described as miraculous by Ambrose", "Healing of a blind man, Innocentius, in Carthage", "Multiple healings of the sick reported in Hippo near the relics of St. Stephen"],
+    "miracles": [
+      "His mother Monica's prayers for his conversion over 17 years, described as miraculous by Ambrose",
+      "Healing of a blind man, Innocentius, in Carthage",
+      "Multiple healings of the sick reported in Hippo near the relics of St. Stephen"
+    ],
     "quotes": [
       "Our heart is restless, until it repose in Thee.",
       "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
@@ -107,7 +158,7 @@
       "To fall in love with God is the greatest romance; to seek him, the greatest adventure; to find him, the greatest human achievement.",
       "Our soul is restless until it rests in you, O Lord."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sandro_Botticelli_-_St_Augustine_in_His_Cell.jpg/800px-Sandro_Botticelli_-_St_Augustine_in_His_Cell.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Sandro_Botticelli_-_St_Augustine_in_His_Cell.jpg"
   },
   {
     "name": "Saint Catherine of Siena",
@@ -119,9 +170,20 @@
     "canonized_by_pope": "Pope Pius II",
     "category": "doctor",
     "known_for": "Mystical marriage with Christ, stigmata, persuading Pope Gregory XI to return to Rome, Doctor of the Church",
-    "patron_of": ["Italy", "Europe", "nurses", "sick people", "fire prevention"],
+    "patron_of": [
+      "Italy",
+      "Europe",
+      "nurses",
+      "sick people",
+      "fire prevention"
+    ],
     "biography_long": "Caterina di Giacomo di Benincasa was born in Siena as the 23rd of 25 children. From childhood she had visions and at age 7 consecrated her virginity to Christ. She joined the Dominican tertiary order and lived a life of austere penance and prayer. At age 21, she experienced a 'mystical marriage' with Christ. She began active ministry: caring for the sick and poor, converting sinners, and corresponding with powerful figures including popes. She bore the invisible stigmata. Most remarkably, this illiterate laywoman persuaded Pope Gregory XI to return the papacy from Avignon to Rome in 1377, ending the Avignon captivity. Her Dialogue is a mystical masterpiece. She died at 33, worn out by her penances and spiritual labors. Named Doctor of the Church in 1970 by Paul VI.",
-    "miracles": ["Mystical marriage with Christ witnessed by her confessor Bl. Raymond of Capua", "Stigmata (invisible during her lifetime)", "Ability to exist on no food except the Eucharist for extended periods", "Miraculous healings of plague victims"],
+    "miracles": [
+      "Mystical marriage with Christ witnessed by her confessor Bl. Raymond of Capua",
+      "Stigmata (invisible during her lifetime)",
+      "Ability to exist on no food except the Eucharist for extended periods",
+      "Miraculous healings of plague victims"
+    ],
     "quotes": [
       "Be who God meant you to be and you will set the world on fire.",
       "Proclaim the truth and do not be silent through fear.",
@@ -129,7 +191,7 @@
       "The soul that is united to God and to one another in charity is with God now and will be with Him in heaven.",
       "If you are what you should be, you will set the whole world ablaze."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/St_Catherine_of_Siena_by_Battistello_Caracciolo.jpg/800px-St_Catherine_of_Siena_by_Battistello_Caracciolo.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/St_Catherine_of_Siena_by_Battistello_Caracciolo.jpg"
   },
   {
     "name": "Saint Ignatius of Loyola",
@@ -141,9 +203,18 @@
     "canonized_by_pope": "Pope Gregory XV",
     "category": "confessor",
     "known_for": "Founding the Society of Jesus (Jesuits), Spiritual Exercises, Ad Majorem Dei Gloriam",
-    "patron_of": ["Jesuits", "soldiers", "retreats", "spiritual exercises"],
+    "patron_of": [
+      "Jesuits",
+      "soldiers",
+      "retreats",
+      "spiritual exercises"
+    ],
     "biography_long": "Íñigo López de Oñaz y Loyola was born to a noble Basque family and spent his early life as a courtier and soldier. A cannonball shattered his leg at the Battle of Pamplona in 1521. During his long convalescence, reading the Life of Christ and Lives of the Saints transformed him. He experienced profound spiritual movements — desolations and consolations — that became the foundation of his Spiritual Exercises. After a year of penance at Manresa, he traveled to Jerusalem and then studied philosophy and theology in Spain and Paris. In Paris he gathered the companions who would become the Society of Jesus, approved by Pope Paul III in 1540. Ignatius served as the first Superior General until his death. The Jesuits became the intellectual vanguard of the Counter-Reformation, establishing universities and missions worldwide.",
-    "miracles": ["Levitation during Mass witnessed by companions", "Vision of the Trinity as three persons in one essence", "Healing of Francisco de Borja from a mortal illness"],
+    "miracles": [
+      "Levitation during Mass witnessed by companions",
+      "Vision of the Trinity as three persons in one essence",
+      "Healing of Francisco de Borja from a mortal illness"
+    ],
     "quotes": [
       "Go forth and set the world on fire.",
       "Act as if everything depended on you; trust as if everything depended on God.",
@@ -151,7 +222,7 @@
       "If God causes you to suffer much, it is a sign that He has great designs for you.",
       "Few souls understand what God would accomplish in them if they were to abandon themselves unreservedly to Him."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ignatius_of_Loyola_%28heroically_depicted%29.jpg/800px-Ignatius_of_Loyola_%28heroically_depicted%29.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Ignatius_of_Loyola_%28heroically_depicted%29.jpg"
   },
   {
     "name": "Saint John Paul II",
@@ -163,9 +234,16 @@
     "canonized_by_pope": "Pope Francis",
     "category": "pope",
     "known_for": "Longest-reigning modern pope, World Youth Day, Theology of the Body, fall of communism",
-    "patron_of": ["World Youth Day", "families", "youth"],
+    "patron_of": [
+      "World Youth Day",
+      "families",
+      "youth"
+    ],
     "biography_long": "Karol Józef Wojtyła was born in Wadowice, Poland. He lost his mother at age 9, his brother at 12, and his father at 20. During World War II he worked in a quarry and chemical factory to avoid deportation. He was ordained a priest in 1946 and became Archbishop of Kraków in 1964. Elected pope on October 16, 1978, he was the first non-Italian pope in 455 years and the first Polish pope in history. His 27-year pontificate was the third longest in history. He traveled to 129 countries. He survived an assassination attempt on May 13, 1981, attributing his survival to Our Lady of Fátima. His support of the Solidarity movement in Poland was pivotal in the peaceful fall of communism in Eastern Europe. He canonized 482 saints and beatified 1,340 — more than all his predecessors combined. His Theology of the Body revolutionized Catholic understanding of human sexuality and marriage.",
-    "miracles": ["Miraculous healing of Sister Marie Simon-Pierre of Parkinson's disease after his death", "Healing of Floribeth Mora of a fatal brain aneurysm through his intercession"],
+    "miracles": [
+      "Miraculous healing of Sister Marie Simon-Pierre of Parkinson's disease after his death",
+      "Healing of Floribeth Mora of a fatal brain aneurysm through his intercession"
+    ],
     "quotes": [
       "Do not be afraid.",
       "Have no fear of moving into the unknown.",
@@ -173,7 +251,7 @@
       "The future starts today, not tomorrow.",
       "Do not abandon yourselves to despair. We are the Easter people and hallelujah is our song."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/John_Paul_II_Election_Oct_1978.jpg/800px-John_Paul_II_Election_Oct_1978.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/John_Paul_II_Election_Oct_1978.jpg"
   },
   {
     "name": "Saint Thérèse of Lisieux",
@@ -185,9 +263,20 @@
     "canonized_by_pope": "Pope Pius XI",
     "category": "virgin",
     "known_for": "Little Way of spiritual childhood, Story of a Soul, Doctor of the Church, showering roses from heaven",
-    "patron_of": ["missions", "France", "Russia", "AIDS sufferers", "florists", "aviators"],
+    "patron_of": [
+      "missions",
+      "France",
+      "Russia",
+      "AIDS sufferers",
+      "florists",
+      "aviators"
+    ],
     "biography_long": "Marie-Françoise-Thérèse Martin was born the youngest of five daughters in Alençon, France. Her mother died when Thérèse was four. She entered the Carmel of Lisieux at age 15, after a special papal audience with Pope Leo XIII to obtain permission. She died of tuberculosis at age 24. Her autobiography, Story of a Soul, written under obedience, became one of the bestselling Catholic books of all time. Her 'Little Way' — doing small things with great love — was not spiritual minimalism but a radical surrender to God's merciful love. She promised: 'I will spend my heaven doing good on earth. I will let fall a shower of roses.' Pope John Paul II declared her a Doctor of the Church in 1997.",
-    "miracles": ["Miraculous cure of Bl. Anne of Jesus (witnessed by Sister Agnès)", "Thousands of reported cures through her intercession worldwide after her death", "The 'shower of roses' — fragrance of roses reported at her beatification"],
+    "miracles": [
+      "Miraculous cure of Bl. Anne of Jesus (witnessed by Sister Agnès)",
+      "Thousands of reported cures through her intercession worldwide after her death",
+      "The 'shower of roses' — fragrance of roses reported at her beatification"
+    ],
     "quotes": [
       "Miss no single opportunity of making some small sacrifice, here by a smiling look, there by a kindly word.",
       "You cannot be half a saint; you must be a whole saint or no saint at all.",
@@ -195,7 +284,7 @@
       "The only way I can prove my love is by scattering flowers and these flowers are every little sacrifice, every glance and word, and the doing of the least actions for love.",
       "Jesus does not demand great actions from us but simply surrender and gratitude."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Therese_von_Lisieux.jpg/800px-Therese_von_Lisieux.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Therese_von_Lisieux.jpg"
   },
   {
     "name": "Saint Peter the Apostle",
@@ -207,15 +296,26 @@
     "canonized_by_pope": "Pre-Congregation",
     "category": "apostle",
     "known_for": "First Pope, Rock of the Church, Fisherman, crucified upside down",
-    "patron_of": ["popes", "fishermen", "net makers", "shipbuilders", "Rome"],
+    "patron_of": [
+      "popes",
+      "fishermen",
+      "net makers",
+      "shipbuilders",
+      "Rome"
+    ],
     "biography_long": "Simon bar-Jonah was a fisherman from Bethsaida, working with his brother Andrew when Jesus called them. Jesus renamed him Cephas (Aramaic) / Petros (Greek) — meaning Rock. Despite his impetuous nature and three denials of Christ during the Passion, Peter was the first to profess Jesus as 'the Christ, the Son of the Living God' (Matthew 16:16), for which Christ declared him the Rock upon which He would build His Church. After the Resurrection, the Risen Christ restored Peter three times: 'Feed my lambs... Feed my sheep.' Peter presided over the Jerusalem community, performed miracles, and eventually established his See in Rome. During the Neronian persecution, Peter was crucified — reportedly upside down, at his own request, feeling unworthy to die as his Lord had. His tomb is beneath the high altar of St. Peter's Basilica in Rome.",
-    "miracles": ["Healing of the lame man at the Beautiful Gate of the Temple (Acts 3)", "Raising Tabitha (Dorcas) from the dead (Acts 9:40)", "His shadow healing the sick in Jerusalem (Acts 5:15)", "Miraculous escape from prison by an angel (Acts 12)"],
+    "miracles": [
+      "Healing of the lame man at the Beautiful Gate of the Temple (Acts 3)",
+      "Raising Tabitha (Dorcas) from the dead (Acts 9:40)",
+      "His shadow healing the sick in Jerusalem (Acts 5:15)",
+      "Miraculous escape from prison by an angel (Acts 12)"
+    ],
     "quotes": [
       "Lord, to whom shall we go? You have the words of eternal life.",
       "Cast all your anxiety on him because he cares for you.",
       "But sanctify the Lord God in your hearts: and be ready always to give an answer to every man that asketh you a reason of the hope that is in you.",
       "Above all, love each other deeply, because love covers over a multitude of sins."
     ],
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Saint_Peter_by_Peter_Paul_Rubens.jpg/800px-Saint_Peter_by_Peter_Paul_Rubens.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Saint_Peter_by_Peter_Paul_Rubens.jpg"
   }
 ]
