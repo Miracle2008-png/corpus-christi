@@ -140,7 +140,7 @@ export default function StationsPage() {
           {/* Left: Painting */}
           <div style={{ position: "relative", overflow: "hidden" }}>
             <img
-              src={station.image_url}
+              src={`/api/img?u=${encodeURIComponent(station.image_url)}`}
               alt={`${station.title} — James Tissot`}
               style={{
                 width: "100%", height: "100%",

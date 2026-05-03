@@ -65,7 +65,7 @@ export default function RosaryPage() {
       {/* Hero with Mary image */}
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         <img
-          src={MARY_IMAGE}
+          src={`/api/img?u=${encodeURIComponent(MARY_IMAGE)}`}
           alt="Virgin of the Rosary by Bartolomé Esteban Murillo, c. 1650"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.35) saturate(0.8)" }}
         />
