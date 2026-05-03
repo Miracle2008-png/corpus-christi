@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Learn about all 7 Catholic sacraments: Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony — with theological explanations and Bible references.",
 };
 
-const sacramentIcons = ["💧", "🕊", "🍞", "🙏", "🫒", "⛪", "💍"];
+const sacramentIcons = ["I", "II", "III", "IV", "V", "VI", "VII"];
 
 export default function SacramentsPage() {
   return (
@@ -56,7 +56,7 @@ export default function SacramentsPage() {
                   {sacramentIcons[i]}
                 </div>
                 <div>
-                  <p style={{ color: "rgba(201,168,76,0.6)", fontSize: "0.65rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.25rem" }}>
+                  <p style={{ fontFamily: "var(--font-serif)", color: "rgba(201,168,76,0.8)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.25rem" }}>
                     Sacrament {sacrament.number}
                   </p>
                   <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--white)", fontSize: "1.5rem", lineHeight: 1.2 }}>
