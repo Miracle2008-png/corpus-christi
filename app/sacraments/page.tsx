@@ -70,15 +70,13 @@ export default function SacramentsPage() {
                 <img 
                   src={`/images/sacraments/sacrament-${i + 1}.jpg`} 
                   alt={`${sacrament.name} - Nicolas Poussin`}
+                  className="hover-zoom"
                   style={{ 
                     width: "100%", height: "100%", 
                     objectFit: "cover", 
                     display: "block",
                     filter: "brightness(0.85) sepia(0.15) contrast(1.1)",
-                    transition: "transform 0.5s ease"
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.02)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
                   loading="lazy"
                 />
               </div>
