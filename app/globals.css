@@ -1,0 +1,544 @@
+@import "tailwindcss";
+
+/* ============================================
+   CORPUS CHRISTI — SACRED DESIGN SYSTEM
+   ============================================ */
+
+/* ============================================
+   FOOTER CSS CLASSES (Server Component safe)
+   ============================================ */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-heading {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--gold);
+}
+
+/* Donation button hover (server component safe) */
+.donate-amount-btn {
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid rgba(201,168,76,0.4);
+  background: transparent;
+  color: var(--navy);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.donate-amount-btn:hover {
+  background: var(--gold);
+  color: var(--navy-dark);
+  border-color: var(--gold);
+}
+
+/* Pope card hover (server component safe) */
+.pope-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(26,39,68,0.08);
+  box-shadow: 0 2px 12px rgba(26,39,68,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pope-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(26,39,68,0.14);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+:root {
+  /* Sacred Color Palette */
+  --gold: #C9A84C;
+  --gold-light: #F0D060;
+  --gold-dark: #A07830;
+  --gold-glow: rgba(201, 168, 76, 0.3);
+  --ivory: #FAF7F0;
+  --ivory-dark: #EDE8DC;
+  --navy: #1A2744;
+  --navy-light: #243564;
+  --navy-dark: #0F1A30;
+  --crimson: #8B1A1A;
+  --crimson-light: #B02020;
+  --cream: #F5F0E8;
+  --parchment: #E8E0CC;
+  --text-primary: #1A1A2E;
+  --text-muted: #6B6B80;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Shadows */
+  --shadow-gold: 0 4px 24px rgba(201, 168, 76, 0.25);
+  --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   GLOBAL RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ivory);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.font-serif {
+  font-family: var(--font-serif) !important;
+}
+
+h1, h2, h3, .heading-serif {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+}
+
+/* ============================================
+   SACRED GRADIENT BACKGROUNDS
+   ============================================ */
+.bg-sacred-dark {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+}
+
+.bg-sacred-gold {
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+}
+
+.bg-parchment {
+  background-color: var(--ivory);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ============================================
+   COMPONENT STYLES
+   ============================================ */
+
+/* Sacred Card */
+.sacred-card {
+  background: var(--white);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sacred-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+/* Gold Divider */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent 100%);
+  border: none;
+  margin: 2rem 0;
+}
+
+/* Sacred Button */
+.btn-sacred {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+  color: var(--navy-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 12px var(--gold-glow);
+}
+
+.btn-sacred:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--gold-glow);
+}
+
+.btn-outline-sacred {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: transparent;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-sacred:hover {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+/* Cross Ornament */
+.cross-ornament::before {
+  content: '✝';
+  color: var(--gold);
+  font-size: 1.2em;
+  margin-right: 0.5rem;
+}
+
+/* Badge */
+.badge-sacred {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.badge-category {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.badge-martyr { color: var(--crimson); border-color: var(--crimson); background: rgba(139,26,26,0.08); }
+.badge-doctor { color: #1565C0; border-color: #1565C0; background: rgba(21,101,192,0.08); }
+.badge-confessor { color: #2E7D32; border-color: #2E7D32; background: rgba(46,125,50,0.08); }
+.badge-virgin { color: #6A1B9A; border-color: #6A1B9A; background: rgba(106,27,154,0.08); }
+.badge-bishop { color: var(--gold-dark); border-color: var(--gold-dark); background: rgba(160,120,48,0.08); }
+.badge-apostle { color: #E65100; border-color: #E65100; background: rgba(230,81,0,0.08); }
+.badge-pope { color: var(--navy); border-color: var(--navy); background: rgba(26,39,68,0.08); }
+.badge-other { color: var(--text-muted); border-color: var(--text-muted); background: rgba(107,107,128,0.08); }
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 39, 68, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-sacred {
+  background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 40%, #2A1F4A 70%, var(--navy-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-sacred::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(201,168,76,0.15)'/%3E%3C/svg%3E") repeat;
+  animation: shimmer 20s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(100px) translateY(100px); }
+}
+
+/* ============================================
+   STATIONS OF THE CROSS — IMMERSIVE
+   ============================================ */
+.station-scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--navy-dark);
+}
+
+.station-panel {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.station-number-display {
+  font-family: var(--font-serif);
+  font-size: clamp(6rem, 20vw, 16rem);
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(201, 168, 76, 0.08);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ============================================
+   ROSARY GUIDE
+   ============================================ */
+.rosary-bead {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.rosary-bead:hover, .rosary-bead.active {
+  transform: scale(1.3);
+  box-shadow: 0 0 12px var(--gold-glow), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.rosary-bead.pater {
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle at 35% 35%, #FFF5E0, var(--gold-dark));
+}
+
+/* ============================================
+   READING CARD
+   ============================================ */
+.reading-section {
+  border-left: 4px solid var(--gold);
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.reading-section h3 {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--gold) 10%, var(--gold) 90%, transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--navy);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+/* ============================================
+   ADMIN TABLE
+   ============================================ */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.admin-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  font-size: 0.9rem;
+}
+
+.admin-table tr:hover td {
+  background: rgba(201, 168, 76, 0.05);
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+.sacred-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border: 1.5px solid rgba(201, 168, 76, 0.3);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.sacred-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+/* ============================================
+   GLASS CARD
+   ============================================ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 16px;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+.container-sacred {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section spacing */
+.section-sacred {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-sacred { padding: 3rem 0; }
+  .container-sacred { padding: 0 1rem; }
+}
+
+/* ============================================
+   LOADING SKELETON
+   ============================================ */
+.skeleton {
+  background: linear-gradient(90deg, var(--ivory-dark) 25%, var(--parchment) 50%, var(--ivory-dark) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--navy-dark); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .navbar, footer, .btn-sacred { display: none; }
+  body { background: white; color: black; }
+}

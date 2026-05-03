@@ -1,0 +1,193 @@
+[
+  {
+    "name": "Baptism",
+    "number": 1,
+    "slug": "baptism",
+    "explanation": "Baptism is the first and most fundamental sacrament. It initiates a person into the Christian life, washing away original sin and all personal sins, incorporating the baptized into the Body of Christ (the Church), and conferring the Holy Spirit.",
+    "theological_meaning": "Baptism is a participation in the death and resurrection of Christ (Romans 6:3-4). The water symbolizes cleansing from sin and the new birth in the Holy Spirit. It marks the person as belonging to God and is the gateway to all other sacraments.",
+    "steps": [
+      "The candidate (or parents/godparents for infants) declares faith in Christ and the Church",
+      "Water is poured three times over the head (or full immersion) in the Trinitarian formula",
+      "The minister says: 'I baptize you in the name of the Father, and of the Son, and of the Holy Spirit'",
+      "The white garment is given as a symbol of new life in Christ",
+      "The baptismal candle is lit from the Easter candle",
+      "The Ephphetha rite (ears and mouth touched) may be performed"
+    ],
+    "minister": "Ordinary minister: bishop, priest, or deacon. In emergency, any person can baptize with water and Trinitarian formula.",
+    "recipient": "Any unbaptized person",
+    "effects": [
+      "Forgiveness of original sin and all personal sins",
+      "Incorporation into the Body of Christ",
+      "Reception of the Holy Spirit",
+      "Becomes a child of God",
+      "Permanent spiritual mark (character) on the soul",
+      "Member of the Catholic Church"
+    ],
+    "bible_references": ["Matthew 28:19", "John 3:5", "Romans 6:3-4", "Acts 2:38", "1 Peter 3:21"]
+  },
+  {
+    "name": "Confirmation",
+    "number": 2,
+    "slug": "confirmation",
+    "explanation": "Confirmation completes Baptism and strengthens the grace received. The candidate receives the fullness of the Holy Spirit, becoming a mature, confirmed member of the Church, sealed as a soldier of Christ.",
+    "theological_meaning": "Confirmation is the completion of baptismal grace. By the sacrament, the baptized are more perfectly bound to the Church, enriched with a special strength of the Holy Spirit, and are obliged to spread and defend the faith by word and deed.",
+    "steps": [
+      "The candidate chooses a Confirmation name (traditionally a saint's name)",
+      "The bishop or delegated priest extends hands over the candidates in silent prayer",
+      "The sacred chrism (oil) is anointed on the forehead with the laying on of hands",
+      "The minister says: 'Be sealed with the Gift of the Holy Spirit'",
+      "The newly confirmed responds: 'Amen'",
+      "The sign of peace is exchanged"
+    ],
+    "minister": "Bishop (ordinary); priest (with special faculty from bishop)",
+    "recipient": "Baptized Catholics who have reached the age of reason (typically 7+)",
+    "effects": [
+      "Deepening of baptismal grace",
+      "Rooting in divine filiation",
+      "Stronger union with Christ",
+      "Increase of gifts of the Holy Spirit",
+      "Permanent spiritual seal (character)",
+      "Special strength to witness to the faith"
+    ],
+    "bible_references": ["Acts 8:17", "Acts 19:6", "Hebrews 6:2", "John 14:16-17", "Isaiah 11:2-3"]
+  },
+  {
+    "name": "Eucharist",
+    "number": 3,
+    "slug": "eucharist",
+    "explanation": "The Eucharist is the source and summit of the Christian life. In this sacrament, bread and wine truly become the Body and Blood of Jesus Christ through the power of the Holy Spirit and the words of consecration. It is the perpetual re-presentation of Christ's sacrifice on Calvary.",
+    "theological_meaning": "The Eucharist is not merely a symbol. By transubstantiation, the substance of bread and wine is wholly converted into the substance of Christ's Body and Blood, while the appearances (accidents) remain. This is the Real Presence — Jesus, fully present: Body, Blood, Soul, and Divinity.",
+    "steps": [
+      "The Liturgy of the Word: Scriptures proclaimed and homily given",
+      "Preparation of the altar and gifts (offertory)",
+      "Eucharistic Prayer begins — Preface and Sanctus",
+      "Epiclesis: priest invokes the Holy Spirit over the gifts",
+      "Words of Institution: 'This is my Body... This is my Blood'",
+      "Consecration: transubstantiation occurs",
+      "Mysterium Fidei: 'The Mystery of Faith'",
+      "Lord's Prayer and Sign of Peace",
+      "Lamb of God (Agnus Dei) — breaking of the host",
+      "Communion distributed under both kinds"
+    ],
+    "minister": "Validly ordained priest or bishop",
+    "recipient": "Catholics who are in a state of grace and have fasted for one hour",
+    "effects": [
+      "Intimate union with Christ",
+      "Preserves, increases, and renews grace",
+      "Cleanses from venial sin",
+      "Preserves from future mortal sin",
+      "Strengthens charity and virtues",
+      "Pledge of future glory and resurrection"
+    ],
+    "bible_references": ["John 6:51-58", "Luke 22:19-20", "1 Corinthians 11:23-26", "Matthew 26:26-28", "John 6:35"]
+  },
+  {
+    "name": "Penance (Confession)",
+    "number": 4,
+    "slug": "penance",
+    "explanation": "Also called Confession or Reconciliation, this sacrament restores the relationship between the sinner and God broken by grave sin. Through sincere contrition, confession of sins, and the priest's absolution, the penitent receives forgiveness and peace.",
+    "theological_meaning": "Christ gave His Apostles the power to forgive sins (John 20:22-23), a power passed through apostolic succession to priests today. The sacrament heals the soul wounded by sin, reconciles with God and the Church, and grants spiritual peace.",
+    "steps": [
+      "Examination of conscience (reflecting on sins committed)",
+      "Act of contrition — genuine sorrow for sins",
+      "Enter the confessional (face-to-face or behind screen)",
+      "Make the Sign of the Cross and greet the priest",
+      "Confess your sins completely and honestly",
+      "Listen to the priest's counsel and penance",
+      "Say the Act of Contrition aloud",
+      "Receive absolution: 'I absolve you from your sins...'",
+      "Complete the assigned penance"
+    ],
+    "minister": "Validly ordained priest or bishop with faculties",
+    "recipient": "Any baptized Catholic who has sinned",
+    "effects": [
+      "Forgiveness of mortal and venial sins",
+      "Restoration of sanctifying grace",
+      "Reconciliation with God and the Church",
+      "Remission of eternal punishment due to sin",
+      "Peace and serenity of conscience",
+      "Increase of spiritual strength for future"
+    ],
+    "bible_references": ["John 20:22-23", "Luke 15:11-32", "James 5:16", "1 John 1:9", "2 Corinthians 5:18"]
+  },
+  {
+    "name": "Anointing of the Sick",
+    "number": 5,
+    "slug": "anointing-of-the-sick",
+    "explanation": "This sacrament gives strength, peace, and courage to those seriously ill or in danger of death. It is not just for the dying — it is for any Catholic who is seriously ill, facing surgery, or weakened by age or illness.",
+    "theological_meaning": "Christ Himself showed special care for the sick during His ministry. Through this sacrament, the Church continues His healing mission. The anointing unites the sick person's sufferings with Christ's Passion, for the good of themselves and the whole Church.",
+    "steps": [
+      "The priest or bishop visits the sick person",
+      "Brief liturgy of the Word is read",
+      "The priest lays hands on the sick person in silence",
+      "The oil of the sick (blessed by bishop) is anointed on the forehead and hands",
+      "Prayer: 'Through this holy anointing may the Lord in his love and mercy help you with the grace of the Holy Spirit'",
+      "Communion may be given (Viaticum if near death)"
+    ],
+    "minister": "Priest or bishop",
+    "recipient": "Any Catholic who is seriously ill, elderly, or facing major surgery",
+    "effects": [
+      "Union with Christ's Passion for the good of the Church",
+      "Strength, peace, and courage in suffering",
+      "Forgiveness of sins (if unable to receive Confession)",
+      "Restoration of health if beneficial for salvation",
+      "Preparation for passing to eternal life (Viaticum)"
+    ],
+    "bible_references": ["James 5:14-15", "Mark 6:13", "Luke 10:34", "1 Corinthians 12:9", "Matthew 10:8"]
+  },
+  {
+    "name": "Holy Orders",
+    "number": 6,
+    "slug": "holy-orders",
+    "explanation": "Holy Orders is the sacrament through which the mission entrusted by Christ to His Apostles continues to be exercised in the Church. It has three degrees: deacon, priest, and bishop.",
+    "theological_meaning": "Through Holy Orders, ordained men are configured to Christ the Head of the Church. Bishops receive the fullness of the sacrament, priests participate in the one priesthood of Christ, and deacons are ordained for service. A permanent spiritual mark is imprinted on the soul.",
+    "steps": [
+      "The candidate presents himself and is elected by the Church",
+      "The bishop (with other bishops for episcopal ordination) lays hands on the candidate in silence",
+      "The prayer of consecration is sung over the candidate",
+      "The newly ordained receives vestments appropriate to his order",
+      "The bishop anoints the new priest's hands with holy chrism",
+      "The new priest receives the chalice and paten",
+      "The newly ordained concelebrates Mass with the bishop"
+    ],
+    "minister": "Bishop (only a bishop can ordain)",
+    "recipient": "Baptized men, meeting requirements of their diocese or religious order",
+    "effects": [
+      "Permanent sacramental character on the soul",
+      "Configuration to Christ the Priest",
+      "Grace of the Holy Spirit for mission",
+      "Power to celebrate the sacraments (priests)",
+      "Authority to govern, sanctify, and teach (bishops)",
+      "Service to the People of God (deacons)"
+    ],
+    "bible_references": ["John 20:21-23", "Luke 22:19", "1 Timothy 4:14", "2 Timothy 1:6-7", "Acts 6:6", "Hebrews 5:1"]
+  },
+  {
+    "name": "Matrimony",
+    "number": 7,
+    "slug": "matrimony",
+    "explanation": "Christian marriage is a covenant by which a man and woman establish between themselves a partnership of the whole of life. It is ordered by its nature to the good of the spouses and to the procreation and education of children.",
+    "theological_meaning": "In the sacrament of Matrimony, the spouses themselves are the ministers of the sacrament — they confer it upon each other through the exchange of consent. Marriage reflects the union between Christ and His Church. It is indissoluble: what God has joined together, no man can put asunder.",
+    "steps": [
+      "Pre-marriage preparation (typically 6 months) with the parish",
+      "Banns of marriage announced at the parish",
+      "The wedding Mass or Liturgy of the Word begins",
+      "The priest asks the couple's intentions: freedom, fidelity, children",
+      "Exchange of consent: 'I take you... to have and to hold, from this day forward...'",
+      "The priest receives the consent: 'What God has joined together, let no one put asunder'",
+      "Exchange and blessing of rings",
+      "Prayer of the Faithful, Nuptial Blessing"
+    ],
+    "minister": "The spouses themselves (the priest is the official Church witness)",
+    "recipient": "One baptized man and one baptized woman, free to marry",
+    "effects": [
+      "Permanent, exclusive bond between husband and wife",
+      "Sanctifying grace for the spousal vocation",
+      "Ordered to good of spouses and procreation of children",
+      "Sharing in Christ's spousal love for the Church",
+      "Graces for fidelity, chastity, and sacrificial love",
+      "Domestic Church — the family becomes a sign of God's love"
+    ],
+    "bible_references": ["Genesis 2:24", "Matthew 19:6", "Ephesians 5:25-32", "John 2:1-11", "1 Corinthians 7:3-4"]
+  }
+]

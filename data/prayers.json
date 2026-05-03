@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "our-father",
+    "title": "Our Father (Lord's Prayer)",
+    "category": "general",
+    "latin_text": "Pater noster, qui es in caelis,\nsanctificetur nomen tuum.\nAdveniat regnum tuum.\nFiat voluntas tua,\nsicut in caelo et in terra.\nPanem nostrum quotidianum da nobis hodie,\net dimitte nobis debita nostra\nsicut et nos dimittimus debitoribus nostris.\nEt ne nos inducas in tentationem,\nsed libera nos a malo.\nAmen.",
+    "english_text": "Our Father, who art in heaven,\nhallowed be thy name;\nthy kingdom come,\nthy will be done\non earth as it is in heaven.\nGive us this day our daily bread,\nand forgive us our trespasses,\nas we forgive those who trespass against us;\nand lead us not into temptation,\nbut deliver us from evil.\nAmen.",
+    "explanation": "The Lord's Prayer was given by Jesus to His disciples when they asked Him to teach them how to pray (Luke 11:1-4, Matthew 6:9-13). It is the foundational prayer of Christianity, addressing God as Father, praying for His kingdom, asking for daily bread, forgiveness, and protection from evil.",
+    "occasion": "All occasions; used at every Mass"
+  },
+  {
+    "slug": "hail-mary",
+    "title": "Hail Mary",
+    "category": "rosary",
+    "latin_text": "Ave Maria, gratia plena,\nDominus tecum.\nBenedicta tu in mulieribus,\net benedictus fructus ventris tui, Iesus.\nSancta Maria, Mater Dei,\nora pro nobis peccatoribus,\nnunc et in hora mortis nostrae.\nAmen.",
+    "english_text": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou among women,\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\nAmen.",
+    "explanation": "The first part of the Hail Mary is drawn from the angel Gabriel's salutation to Mary (Luke 1:28) and Elizabeth's greeting (Luke 1:42). The second part is a petition added by the Church, asking Mary's intercession as Mother of God.",
+    "occasion": "Rosary; Angelus; any time"
+  },
+  {
+    "slug": "glory-be",
+    "title": "Glory Be (Gloria Patri)",
+    "category": "rosary",
+    "latin_text": "Gloria Patri, et Filio,\net Spiritui Sancto.\nSicut erat in principio,\net nunc et semper,\net in saecula saeculorum.\nAmen.",
+    "english_text": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end.\nAmen.",
+    "explanation": "The Gloria Patri is a doxology — a short hymn of praise to the Holy Trinity. It is said at the end of each decade of the Rosary and at the end of each psalm in the Liturgy of the Hours.",
+    "occasion": "Rosary; end of each psalm in Liturgy of the Hours"
+  },
+  {
+    "slug": "apostles-creed",
+    "title": "Apostles' Creed",
+    "category": "general",
+    "latin_text": "Credo in Deum Patrem omnipotentem,\nCreatorem caeli et terrae.\nEt in Iesum Christum, Filium eius unicum,\nDominum nostrum;\nqui conceptus est de Spiritu Sancto,\nnatus ex Maria Virgine,\npassus sub Pontio Pilato,\ncrucifixus, mortuus, et sepultus;\ndescendit ad inferna;\ntertia die resurrexit a mortuis;\nascendit ad caelos;\nsedet ad dexteram Dei Patris omnipotentis;\ninde venturus est iudicare vivos et mortuos.\nCredo in Spiritum Sanctum,\nsanctam Ecclesiam catholicam,\nsanctorum communionem,\nremissionem peccatorum,\ncarnis resurrectionem,\nvitam aeternam.\nAmen.",
+    "english_text": "I believe in God, the Father almighty,\nCreator of heaven and earth,\nand in Jesus Christ, his only Son, our Lord,\nwho was conceived by the Holy Spirit,\nborn of the Virgin Mary,\nsuffered under Pontius Pilate,\nwas crucified, died and was buried;\nhe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy Catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting.\nAmen.",
+    "explanation": "The Apostles' Creed is one of the oldest professions of faith, traditionally attributed to the Twelve Apostles. It summarizes the essential truths of the Christian faith. It is prayed at the beginning of the Rosary.",
+    "occasion": "Beginning of the Rosary; Baptism"
+  },
+  {
+    "slug": "act-of-contrition",
+    "title": "Act of Contrition",
+    "category": "confession",
+    "english_text": "O my God,\nI am heartily sorry for having offended Thee,\nand I detest all my sins\nbecause I dread the loss of heaven and the pains of hell;\nbut most of all because they offend Thee, my God,\nwho art all good and deserving of all my love.\nI firmly resolve, with the help of Thy grace,\nto confess my sins, to do penance,\nand to amend my life.\nAmen.",
+    "explanation": "The Act of Contrition is the prayer of sorrow and resolution prayed during the Sacrament of Penance (Confession). True contrition — genuine sorrow for sin — is essential for the sacrament. Perfect contrition (sorrow out of love for God) is the highest form.",
+    "occasion": "During Confession; examination of conscience; night prayer"
+  },
+  {
+    "slug": "hail-holy-queen",
+    "title": "Hail, Holy Queen (Salve Regina)",
+    "category": "rosary",
+    "latin_text": "Salve, Regina, mater misericordiae,\nvita, dulcedo et spes nostra, salve.\nAd te clamamus, exsules filii Evae.\nAd te suspiramus gementes et flentes\nin hac lacrimarum valle.\nEia ergo, advocata nostra,\nillos tuos misericordes oculos ad nos converte.\nEt Iesum, benedictum fructum ventris tui,\nnobis post hoc exsilium ostende.\nO clemens, o pia, o dulcis Virgo Maria.",
+    "english_text": "Hail, holy Queen, Mother of Mercy!\nOur life, our sweetness, and our hope!\nTo thee do we cry, poor banished children of Eve;\nto thee do we send up our sighs,\nmourning and weeping in this valley of tears.\nTurn, then, most gracious advocate,\nthine eyes of mercy toward us;\nand after this, our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\nO clement, O loving, O sweet Virgin Mary.",
+    "explanation": "The Salve Regina is a Marian antiphon traditionally attributed to Hermann of Reichenau (11th century). It is prayed at the end of the Rosary and at Compline (Night Prayer) in the Liturgy of the Hours.",
+    "occasion": "End of the Rosary; Night Prayer"
+  },
+  {
+    "slug": "memorare",
+    "title": "The Memorare",
+    "category": "general",
+    "latin_text": "Memorare, O piissima Virgo Maria,\nnon esse auditum a saeculo,\nquemquam ad tua currentem praesidia,\ntua implorantem auxilia,\ntua petentem suffragia esse derelictum.\nEgo tali animatus confidentia,\nad te, Virgo Virginum, Mater, curro;\nad te venio; coram te gemens peccator assisto.\nNoli, Mater Verbi, verba mea despicere;\nsed audi propitia et exaudi.\nAmen.",
+    "english_text": "Remember, O most gracious Virgin Mary,\nthat never was it known\nthat anyone who fled to thy protection,\nimplored thy help,\nor sought thy intercession\nwas left unaided.\nInspired with this confidence,\nI fly to thee, O Virgin of virgins, my Mother;\nto thee do I come, before thee I stand,\nsinful and sorrowful.\nO Mother of the Word Incarnate,\ndespise not my petitions,\nbut in thy mercy hear and answer me.\nAmen.",
+    "explanation": "The Memorare is a cherished Catholic prayer attributed to St. Bernard of Clairvaux (though its medieval origins are debated). It appeals to Our Lady's known faithfulness to all who seek her intercession.",
+    "occasion": "Times of urgent need; Marian devotion"
+  },
+  {
+    "slug": "anima-christi",
+    "title": "Anima Christi (Soul of Christ)",
+    "category": "mass",
+    "latin_text": "Anima Christi, sanctifica me.\nCorpus Christi, salva me.\nSanguis Christi, inebria me.\nAqua lateris Christi, lava me.\nPassio Christi, conforta me.\nO bone Iesu, exaudi me.\nIntra tua vulnera absconde me.\nNe permittas me separari a te.\nAb hoste maligno defende me.\nIn hora mortis meae voca me.\nEt iube me venire ad te,\nUt cum Sanctis tuis laudem te\nIn saecula saeculorum.\nAmen.",
+    "english_text": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin your wounds, hide me.\nDo not allow me to be separated from you.\nFrom the malicious enemy, defend me.\nAt the hour of my death, call me.\nAnd bid me come to you,\nThat with your saints I may praise you\nForever and ever.\nAmen.",
+    "explanation": "The Anima Christi is a medieval prayer of unknown origin, first appearing in the early 14th century. St. Ignatius of Loyola placed it at the beginning of his Spiritual Exercises. It is traditionally prayed after receiving Holy Communion.",
+    "occasion": "After receiving Holy Communion"
+  }
+]
