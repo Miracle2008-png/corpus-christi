@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const MARY_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Murillo_-_Virgin_of_the_Rosary_-_ca._1650-60.jpg/800px-Murillo_-_Virgin_of_the_Rosary_-_ca._1650-60.jpg";
+const MARY_IMAGE = "https://en.wikipedia.org/wiki/Special:FilePath/Murillo_Inmaculada_Soult.jpg";
 
 const mysteries = [
   { set: "Joyful Mysteries", days: "Monday & Saturday", list: [
