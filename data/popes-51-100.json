@@ -1,452 +1,52 @@
 [
-  {
-    "n": 51,
-    "name": "St. Symmachus",
-    "reign": "498–514",
-    "nat": "Sardinian",
-    "saint": true,
-    "img": null,
-    "note": "His election was immediately contested by Antipope Laurentius — the Laurentian Schism lasted until 506. He built or restored many Roman churches and was the first pope to wear the pallium. Defended by Theodoric the Great."
-  },
-  {
-    "n": 52,
-    "name": "St. Hormisdas",
-    "reign": "514–523",
-    "nat": "Italian",
-    "saint": true,
-    "img": null,
-    "note": "Ended the Acacian Schism (519) — a 35-year split between Rome and Constantinople. The 'Formula of Hormisdas,' signed by the Eastern Patriarch and over 2,500 bishops, remains one of the most significant affirmations of Roman primacy in history. Father of Pope Silverius."
-  },
-  {
-    "n": 53,
-    "name": "St. John I",
-    "reign": "523–526",
-    "nat": "Italian (Tuscany)",
-    "saint": true,
-    "img": null,
-    "note": "First pope to travel to Constantinople. Sent by Theodoric the Gothic king to negotiate with Emperor Justin. Crowned Justin in the Hagia Sophia. On his return, Theodoric imprisoned him; he died in prison — the first pope to die in captivity."
-  },
-  {
-    "n": 54,
-    "name": "St. Felix IV",
-    "reign": "526–530",
-    "nat": "Italian (Samnium)",
-    "saint": true,
-    "img": null,
-    "note": "Appointed directly by Theodoric the Great, breaking from election norms. Built the Church of SS. Cosmas and Damian in Rome — one of the finest early Christian mosaics survives there. Designated his successor before death, which caused a disputed election."
-  },
-  {
-    "n": 55,
-    "name": "Boniface II",
-    "reign": "530–532",
-    "nat": "Roman (Gothic descent)",
-    "saint": false,
-    "img": null,
-    "note": "First Germanic pope. His election was contested by Dioscorus. After Dioscorus died, Boniface attempted to designate his own successor — the Roman clergy forced him to publicly burn the document."
-  },
-  {
-    "n": 56,
-    "name": "John II",
-    "reign": "533–535",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "First pope to change his name upon election (his birth name was Mercurius — the name of a pagan god). This began the tradition of papal name changes, now universal."
-  },
-  {
-    "n": 57,
-    "name": "St. Agapetus I",
-    "reign": "535–536",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "Travelled to Constantinople to negotiate with Emperor Justinian. Deposed the Monophysite Patriarch Anthimus. Founded a library in Rome, anticipating the monastic preservation of learning. Died in Constantinople."
-  },
-  {
-    "n": 58,
-    "name": "St. Silverius",
-    "reign": "536–537",
-    "nat": "Italian (Campania)",
-    "saint": true,
-    "img": null,
-    "note": "Son of Pope Hormisdas. The Empress Theodora had him deposed and exiled to the island of Ponza, where he died from mistreatment — possibly murdered. He is venerated as a martyr. His successor Vigilius had conspired with Theodora for the papal throne."
-  },
-  {
-    "n": 59,
-    "name": "Vigilius",
-    "reign": "537–555",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "A deeply compromised pontificate. Vigilius had promised Empress Theodora to support Monophysitism in exchange for the papal throne. He was later arrested by Emperor Justinian, dragged from a church in Constantinople while clinging to the altar, and held captive for years over the Three Chapters controversy. He capitulated to the emperor, dividing the Western church."
-  },
-  {
-    "n": 60,
-    "name": "Pelagius I",
-    "reign": "556–561",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Appointed directly by Emperor Justinian without a proper election. His acceptance of the Fifth Ecumenical Council caused a schism with much of the Western church. Worked hard to restore churches in Rome devastated by the Gothic Wars."
-  },
-  {
-    "n": 61,
-    "name": "John III",
-    "reign": "561–574",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Reigned during the devastating Lombard invasion of Italy. Sought imperial military support from Constantinople, which proved inadequate. Rome was reduced to desperate poverty. John buried the papal dead in the catacombs personally."
-  },
-  {
-    "n": 62,
-    "name": "Benedict I",
-    "reign": "575–579",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Reigned through severe famine and the plague of Justinian, which decimated Rome's population. The Lombard siege of Rome was lifted briefly during his pontificate. He died during the siege."
-  },
-  {
-    "n": 63,
-    "name": "Pelagius II",
-    "reign": "579–590",
-    "nat": "Roman (Gothic descent)",
-    "saint": false,
-    "img": null,
-    "note": "First pope consecrated without imperial confirmation — a step toward papal independence. Sent the young deacon Gregory (the future Gregory the Great) to Constantinople as his representative. Died of plague during a catastrophic flooding of the Tiber."
-  },
-  {
-    "n": 64,
-    "name": "St. Gregory I — The Great",
-    "reign": "590–604",
-    "nat": "Roman",
-    "saint": true,
-    "img": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Gregory_the_Great_%28manuscript%29.jpg",
-    "note": "One of only two popes called 'the Great' — the other being Leo I. A Roman nobleman who gave away his fortune, founded monasteries, and became a monk before being elected pope against his will. Sent St. Augustine of Canterbury to evangelize England (596). Reformed the liturgy and chant (Gregorian chant bears his name). Wrote the Dialogues, the Moralia, and the Pastoral Rule — masterworks of spiritual literature that shaped medieval Christianity. Negotiated with the Lombards, organised food distribution for starving Romans, and managed an empire effectively after imperial authority had collapsed. Among the most consequential humans in Western history."
-  },
-  {
-    "n": 65,
-    "name": "Sabinianus",
-    "reign": "604–606",
-    "nat": "Italian (Tuscany)",
-    "saint": false,
-    "img": null,
-    "note": "Successor to Gregory the Great. Reversed several of Gregory's charitable practices and reportedly sold grain at market prices during famine. Roman tradition claimed Gregory's ghost appeared and rebuked him. He died before the Romans could physically assault him."
-  },
-  {
-    "n": 66,
-    "name": "Boniface III",
-    "reign": "Feb–Nov 607",
-    "nat": "Roman (Greek descent)",
-    "saint": false,
-    "img": null,
-    "note": "Very brief pontificate of approximately 8 months. Secured from Emperor Phocas the declaration that Rome, not Constantinople, was 'the head of all the churches' — a politically significant though not universally accepted statement."
-  },
-  {
-    "n": 67,
-    "name": "St. Boniface IV",
-    "reign": "608–615",
-    "nat": "Italian (Valeria)",
-    "saint": true,
-    "img": null,
-    "note": "Converted the Pantheon — the great pagan temple in Rome — into a Christian church dedicated to Mary and All Martyrs. It remains in use to this day as the Church of Santa Maria ad Martyres, the best-preserved ancient building in the world."
-  },
-  {
-    "n": 68,
-    "name": "St. Deusdedit",
-    "reign": "615–618",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "First pope in a century born in Rome of a Roman family. Known for immense charity to the clergy and poor. Died during the plague. Also known as Adeodatus I."
-  },
-  {
-    "n": 69,
-    "name": "Boniface V",
-    "reign": "619–625",
-    "nat": "Italian (Naples)",
-    "saint": false,
-    "img": null,
-    "note": "Strongly supported the evangelization of England begun by Gregory the Great. Decreed that churches were places of asylum that civil authorities could not violate — an important medieval legal protection."
-  },
-  {
-    "n": 70,
-    "name": "Honorius I",
-    "reign": "625–638",
-    "nat": "Italian (Campania)",
-    "saint": false,
-    "img": null,
-    "note": "A deeply controversial figure. His letters to the Patriarch of Constantinople appeared to endorse the Monothelite heresy (that Christ had only one will). After his death, the Third Council of Constantinople (681) formally condemned him as a heretic — the only pope condemned by an ecumenical council. The episode became a major argument in debates about papal infallibility at Vatican I."
-  },
-  {
-    "n": 71,
-    "name": "Severinus",
-    "reign": "May–Aug 640",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Pontificate of only two months. His election was delayed for 18 months while the imperial Exarch plundered the Lateran treasury. Died before he could accomplish much."
-  },
-  {
-    "n": 72,
-    "name": "John IV",
-    "reign": "640–642",
-    "nat": "Dalmatian",
-    "saint": false,
-    "img": null,
-    "note": "A Dalmatian, he immediately defended his homeland by ransoming Christian captives from the Avars. Condemned Monothelitism. Defended Honorius I by claiming his predecessor's letters had been misinterpreted."
-  },
-  {
-    "n": 73,
-    "name": "Theodore I",
-    "reign": "642–649",
-    "nat": "Greek (Jerusalem)",
-    "saint": false,
-    "img": null,
-    "note": "A Greek from Jerusalem, continuing the Eastern influence on the papacy. Excommunicated the Monothelite Patriarch of Constantinople. Strong defender of Chalcedonian orthodoxy."
-  },
-  {
-    "n": 74,
-    "name": "St. Martin I",
-    "reign": "649–655",
-    "nat": "Italian (Umbria)",
-    "saint": true,
-    "img": null,
-    "note": "Convened the Lateran Council (649), which condemned Monothelitism in defiance of Emperor Constans II. The Emperor had him arrested, brought in chains to Constantinople, publicly humiliated, exiled to Crimea, and left to starve. He died in 655 from mistreatment — the last pope venerated as a martyr."
-  },
-  {
-    "n": 75,
-    "name": "St. Eugene I",
-    "reign": "654–657",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "Elected while Martin I was still alive in exile. A gentle, universally loved figure. Refused to accept a Monothelite compromise from Constantinople. Died peacefully."
-  },
-  {
-    "n": 76,
-    "name": "St. Vitalian",
-    "reign": "657–672",
-    "nat": "Italian (Campania)",
-    "saint": true,
-    "img": null,
-    "note": "Restored relations with Constantinople and with the English church. Sent St. Theodore of Tarsus to be Archbishop of Canterbury — one of the most consequential appointments in English Church history. Theodore organised the English church into a proper structure."
-  },
-  {
-    "n": 77,
-    "name": "Adeodatus II",
-    "reign": "672–676",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "A Benedictine monk — the first pope definitely known to come from monastic life, a pattern that would dominate the medieval papacy. Charitable and learned. Natural death."
-  },
-  {
-    "n": 78,
-    "name": "Donus",
-    "reign": "676–678",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Brief pontificate. Restored relations with the Ravenna church, which had been schismatic. Began repairs on many Roman churches damaged by the long wars."
-  },
-  {
-    "n": 79,
-    "name": "St. Agatho",
-    "reign": "678–681",
-    "nat": "Greek (Sicily)",
-    "saint": true,
-    "img": null,
-    "note": "Prepared the Third Council of Constantinople (681), which definitively condemned Monothelitism and the memory of Honorius I. His synodal letter was read at the Council as doctrinally authoritative — a strong assertion of papal teaching authority. Reportedly 100 years old at his election."
-  },
-  {
-    "n": 80,
-    "name": "St. Leo II",
-    "reign": "682–683",
-    "nat": "Sicilian (Greek)",
-    "saint": true,
-    "img": null,
-    "note": "Confirmed the decrees of the Third Council of Constantinople. Introduced antiphonal chanting into the Roman liturgy. Translated Greek documents into Latin. Brief pontificate of approximately 11 months."
-  },
-  {
-    "n": 81,
-    "name": "St. Benedict II",
-    "reign": "684–685",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "Secured from Emperor Constantine IV the right of the Roman clergy to elect the pope without requiring imperial approval — a significant step toward papal independence. Known for personal holiness and charity."
-  },
-  {
-    "n": 82,
-    "name": "John V",
-    "reign": "685–686",
-    "nat": "Syrian",
-    "saint": false,
-    "img": null,
-    "note": "First Syrian pope. Elected by popular acclamation. Brief pontificate of approximately 11 months. The Syrian and Greek influence on the 7th century papacy was profound."
-  },
-  {
-    "n": 83,
-    "name": "Conon",
-    "reign": "686–687",
-    "nat": "Thracian (Greek)",
-    "saint": false,
-    "img": null,
-    "note": "Elected as a compromise candidate — old, infirm, and expected to reign briefly. He did. Reigned approximately 11 months. The factional conflicts following his death led to yet another disputed election."
-  },
-  {
-    "n": 84,
-    "name": "St. Sergius I",
-    "reign": "687–701",
-    "nat": "Syrian (Antioch)",
-    "saint": true,
-    "img": null,
-    "note": "Refused to sign the Quinisext Council's canons (which contradicted Roman practice) despite Emperor Justinian II sending soldiers to arrest him. The Roman populace defended him and the soldiers fled. He added the Agnus Dei to the Mass and introduced four Marian feasts into the Roman calendar. Baptised the pagan King of the Saxons, Cædwalla."
-  },
-  {
-    "n": 85,
-    "name": "John VI",
-    "reign": "701–705",
-    "nat": "Greek",
-    "saint": false,
-    "img": null,
-    "note": "Defended Italy from the Byzantine Exarch's excessive taxation by negotiating a settlement. Ransomed Lombard captives. Brief pontificate of approximately 3 years."
-  },
-  {
-    "n": 86,
-    "name": "John VII",
-    "reign": "705–707",
-    "nat": "Greek",
-    "saint": false,
-    "img": null,
-    "note": "Son of a Byzantine official. An accomplished builder; commissioned important mosaics in Rome (some surviving in Santa Maria Antiqua). When Emperor Justinian II sent him the Quinisext Council canons for a second review, he returned them unsigned without comment — a diplomatic non-answer."
-  },
-  {
-    "n": 87,
-    "name": "Sisinnius",
-    "reign": "Jan–Feb 708",
-    "nat": "Syrian",
-    "saint": false,
-    "img": null,
-    "note": "Pontificate of only 20 days — one of the shortest in history. He was so ill with gout that he could not feed himself. Managed to order the repair of Rome's walls before his death."
-  },
-  {
-    "n": 88,
-    "name": "Constantine",
-    "reign": "708–715",
-    "nat": "Syrian",
-    "saint": false,
-    "img": null,
-    "note": "The last pope to visit Constantinople for nearly 1,300 years — until John Paul II in 1979. Emperor Justinian II prostrated himself before the pope and kissed his feet — an extraordinary gesture from a Byzantine emperor. Secured important ecclesiastical rights for the Roman church."
-  },
-  {
-    "n": 89,
-    "name": "St. Gregory II",
-    "reign": "715–731",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "A decisive pope who opposed the Iconoclast heresy of Emperor Leo III, who ordered the destruction of religious images. Gregory refused, rallied the Western church against the Emperor, and effectively ended Byzantine control over papal elections by relying on Lombard protection. Supported St. Boniface's mission to the Germans."
-  },
-  {
-    "n": 90,
-    "name": "St. Gregory III",
-    "reign": "731–741",
-    "nat": "Syrian",
-    "saint": true,
-    "img": null,
-    "note": "Last non-European pope until John Paul II (1978). Convened a synod that formally condemned Iconoclasm. When Emperor Leo III retaliated by seizing papal properties in Sicily and southern Italy, Gregory turned to the Frankish leader Charles Martel for protection — beginning the fateful alliance between the papacy and the Franks."
-  },
-  {
-    "n": 91,
-    "name": "St. Zachary",
-    "reign": "741–752",
-    "nat": "Greek (Calabria)",
-    "saint": true,
-    "img": null,
-    "note": "Last Greek pope. Skilled diplomat — negotiated multiple truces with the Lombards, sparing Rome from repeated sieges. Approved the deposition of the last Merovingian king and the anointing of Pepin the Short as King of the Franks — a momentous decision that created the Carolingian dynasty and reshaped European history."
-  },
-  {
-    "n": 92,
-    "name": "Stephen II",
-    "reign": "752 (3 days)",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Elected pope but died of a stroke three days later before being consecrated bishop. Whether he counts as a true pope has been debated for centuries — he appears in some historical lists and not others. His brief existence created the numbering confusion between Stephen II and Stephen III."
-  },
-  {
-    "n": 93,
-    "name": "Stephen III (II)",
-    "reign": "752–757",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "The first pope to cross the Alps. Travelled to the Frankish court of Pepin the Short, anointed Pepin and his sons, and secured the 'Donation of Pepin' — a grant of central Italian territories that became the Papal States, which lasted until 1870. This journey fundamentally changed the papacy from a Roman institution into a Western one."
-  },
-  {
-    "n": 94,
-    "name": "St. Paul I",
-    "reign": "757–768",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "Brother of Stephen III. The first pope to be elected without any imperial involvement. Maintained the Frankish alliance. Faced continued Lombard aggression. Known for personal piety and charity."
-  },
-  {
-    "n": 95,
-    "name": "Stephen IV (III)",
-    "reign": "768–772",
-    "nat": "Sicilian",
-    "saint": false,
-    "img": null,
-    "note": "The Lateran Council of 769, convened under Stephen, ruled that only cardinals could be elected pope — the first formal restriction on papal elections. Excluded the laity from the electoral process."
-  },
-  {
-    "n": 96,
-    "name": "Adrian I",
-    "reign": "772–795",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Twenty-three year pontificate — one of the longest in history at that time. Built a close alliance with Charlemagne, who defeated the Lombards and confirmed the Papal States. Together they shaped medieval Christendom. Charlemagne wept openly when he heard of Adrian's death."
-  },
-  {
-    "n": 97,
-    "name": "St. Leo III",
-    "reign": "795–816",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "Crowned Charlemagne Holy Roman Emperor on Christmas Day, 800 — in the basilica of St. Peter's. This coronation created the political framework of Christian Europe for the next millennium. Leo had been violently attacked and mutilated by enemies in Rome; Charlemagne restored him to the papal throne."
-  },
-  {
-    "n": 98,
-    "name": "Stephen V (IV)",
-    "reign": "816–817",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "Crowned Emperor Louis the Pious at Rheims — the first papal coronation of a Frankish emperor on Frankish soil. Reigned only approximately one year."
-  },
-  {
-    "n": 99,
-    "name": "St. Paschal I",
-    "reign": "817–824",
-    "nat": "Roman",
-    "saint": true,
-    "img": null,
-    "note": "Built several important churches in Rome and decorated them with mosaics, many of which survive. Sheltered monks fleeing Byzantine Iconoclasm. His reign was troubled by violent factions in Rome."
-  },
-  {
-    "n": 100,
-    "name": "Eugene II",
-    "reign": "824–827",
-    "nat": "Roman",
-    "saint": false,
-    "img": null,
-    "note": "The Constitutio Romana of 824, agreed with Emperor Louis the Pious, placed the papacy under increased Frankish oversight — requiring the pope-elect to take an oath of loyalty before consecration. A step backward for papal independence."
-  }
+  { "n": 51, "name": "St. Symmachus", "reign": "498–514", "nat": "Sardinian", "saint": true, "img": null, "note": "His election was immediately contested by Antipope Laurentius — the Laurentian Schism lasted until 506. He built or restored many Roman churches and was the first pope to wear the pallium. Defended by Theodoric the Great." },
+  { "n": 52, "name": "St. Hormisdas", "reign": "514–523", "nat": "Italian", "saint": true, "img": null, "note": "Ended the Acacian Schism (519) — a 35-year split between Rome and Constantinople. The 'Formula of Hormisdas,' signed by the Eastern Patriarch and over 2,500 bishops, remains one of the most significant affirmations of Roman primacy in history. Father of Pope Silverius." },
+  { "n": 53, "name": "St. John I", "reign": "523–526", "nat": "Italian (Tuscany)", "saint": true, "img": null, "note": "First pope to travel to Constantinople. Sent by Theodoric the Gothic king to negotiate with Emperor Justin. Crowned Justin in the Hagia Sophia. On his return, Theodoric imprisoned him; he died in prison — the first pope to die in captivity." },
+  { "n": 54, "name": "St. Felix IV", "reign": "526–530", "nat": "Italian (Samnium)", "saint": true, "img": null, "note": "Appointed directly by Theodoric the Great, breaking from election norms. Built the Church of SS. Cosmas and Damian in Rome — one of the finest early Christian mosaics survives there. Designated his successor before death, which caused a disputed election." },
+  { "n": 55, "name": "Boniface II", "reign": "530–532", "nat": "Roman (Gothic descent)", "saint": false, "img": null, "note": "First Germanic pope. His election was contested by Dioscorus. After Dioscorus died, Boniface attempted to designate his own successor — the Roman clergy forced him to publicly burn the document." },
+  { "n": 56, "name": "John II", "reign": "533–535", "nat": "Roman", "saint": false, "img": null, "note": "First pope to change his name upon election (his birth name was Mercurius — the name of a pagan god). This began the tradition of papal name changes, now universal." },
+  { "n": 57, "name": "St. Agapetus I", "reign": "535–536", "nat": "Roman", "saint": true, "img": null, "note": "Travelled to Constantinople to negotiate with Emperor Justinian. Deposed the Monophysite Patriarch Anthimus. Founded a library in Rome, anticipating the monastic preservation of learning. Died in Constantinople." },
+  { "n": 58, "name": "St. Silverius", "reign": "536–537", "nat": "Italian (Campania)", "saint": true, "img": null, "note": "Son of Pope Hormisdas. The Empress Theodora had him deposed and exiled to the island of Ponza, where he died from mistreatment — possibly murdered. He is venerated as a martyr. His successor Vigilius had conspired with Theodora for the papal throne." },
+  { "n": 59, "name": "Vigilius", "reign": "537–555", "nat": "Roman", "saint": false, "img": null, "note": "A deeply compromised pontificate. Vigilius had promised Empress Theodora to support Monophysitism in exchange for the papal throne. He was later arrested by Emperor Justinian, dragged from a church in Constantinople while clinging to the altar, and held captive for years over the Three Chapters controversy. He capitulated to the emperor, dividing the Western church." },
+  { "n": 60, "name": "Pelagius I", "reign": "556–561", "nat": "Roman", "saint": false, "img": null, "note": "Appointed directly by Emperor Justinian without a proper election. His acceptance of the Fifth Ecumenical Council caused a schism with much of the Western church. Worked hard to restore churches in Rome devastated by the Gothic Wars." },
+  { "n": 61, "name": "John III", "reign": "561–574", "nat": "Roman", "saint": false, "img": null, "note": "Reigned during the devastating Lombard invasion of Italy. Sought imperial military support from Constantinople, which proved inadequate. Rome was reduced to desperate poverty. John buried the papal dead in the catacombs personally." },
+  { "n": 62, "name": "Benedict I", "reign": "575–579", "nat": "Roman", "saint": false, "img": null, "note": "Reigned through severe famine and the plague of Justinian, which decimated Rome's population. The Lombard siege of Rome was lifted briefly during his pontificate. He died during the siege." },
+  { "n": 63, "name": "Pelagius II", "reign": "579–590", "nat": "Roman (Gothic descent)", "saint": false, "img": null, "note": "First pope consecrated without imperial confirmation — a step toward papal independence. Sent the young deacon Gregory (the future Gregory the Great) to Constantinople as his representative. Died of plague during a catastrophic flooding of the Tiber." },
+  { "n": 64, "name": "St. Gregory I — The Great", "reign": "590–604", "nat": "Roman", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Gregory_the_Great_%28manuscript%29.jpg/400px-Gregory_the_Great_%28manuscript%29.jpg", "note": "One of only two popes called 'the Great' — the other being Leo I. A Roman nobleman who gave away his fortune, founded monasteries, and became a monk before being elected pope against his will. Sent St. Augustine of Canterbury to evangelize England (596). Reformed the liturgy and chant (Gregorian chant bears his name). Wrote the Dialogues, the Moralia, and the Pastoral Rule — masterworks of spiritual literature that shaped medieval Christianity. Negotiated with the Lombards, organised food distribution for starving Romans, and managed an empire effectively after imperial authority had collapsed. Among the most consequential humans in Western history." },
+  { "n": 65, "name": "Sabinianus", "reign": "604–606", "nat": "Italian (Tuscany)", "saint": false, "img": null, "note": "Successor to Gregory the Great. Reversed several of Gregory's charitable practices and reportedly sold grain at market prices during famine. Roman tradition claimed Gregory's ghost appeared and rebuked him. He died before the Romans could physically assault him." },
+  { "n": 66, "name": "Boniface III", "reign": "Feb–Nov 607", "nat": "Roman (Greek descent)", "saint": false, "img": null, "note": "Very brief pontificate of approximately 8 months. Secured from Emperor Phocas the declaration that Rome, not Constantinople, was 'the head of all the churches' — a politically significant though not universally accepted statement." },
+  { "n": 67, "name": "St. Boniface IV", "reign": "608–615", "nat": "Italian (Valeria)", "saint": true, "img": null, "note": "Converted the Pantheon — the great pagan temple in Rome — into a Christian church dedicated to Mary and All Martyrs. It remains in use to this day as the Church of Santa Maria ad Martyres, the best-preserved ancient building in the world." },
+  { "n": 68, "name": "St. Deusdedit", "reign": "615–618", "nat": "Roman", "saint": true, "img": null, "note": "First pope in a century born in Rome of a Roman family. Known for immense charity to the clergy and poor. Died during the plague. Also known as Adeodatus I." },
+  { "n": 69, "name": "Boniface V", "reign": "619–625", "nat": "Italian (Naples)", "saint": false, "img": null, "note": "Strongly supported the evangelization of England begun by Gregory the Great. Decreed that churches were places of asylum that civil authorities could not violate — an important medieval legal protection." },
+  { "n": 70, "name": "Honorius I", "reign": "625–638", "nat": "Italian (Campania)", "saint": false, "img": null, "note": "A deeply controversial figure. His letters to the Patriarch of Constantinople appeared to endorse the Monothelite heresy (that Christ had only one will). After his death, the Third Council of Constantinople (681) formally condemned him as a heretic — the only pope condemned by an ecumenical council. The episode became a major argument in debates about papal infallibility at Vatican I." },
+  { "n": 71, "name": "Severinus", "reign": "May–Aug 640", "nat": "Roman", "saint": false, "img": null, "note": "Pontificate of only two months. His election was delayed for 18 months while the imperial Exarch plundered the Lateran treasury. Died before he could accomplish much." },
+  { "n": 72, "name": "John IV", "reign": "640–642", "nat": "Dalmatian", "saint": false, "img": null, "note": "A Dalmatian, he immediately defended his homeland by ransoming Christian captives from the Avars. Condemned Monothelitism. Defended Honorius I by claiming his predecessor's letters had been misinterpreted." },
+  { "n": 73, "name": "Theodore I", "reign": "642–649", "nat": "Greek (Jerusalem)", "saint": false, "img": null, "note": "A Greek from Jerusalem, continuing the Eastern influence on the papacy. Excommunicated the Monothelite Patriarch of Constantinople. Strong defender of Chalcedonian orthodoxy." },
+  { "n": 74, "name": "St. Martin I", "reign": "649–655", "nat": "Italian (Umbria)", "saint": true, "img": null, "note": "Convened the Lateran Council (649), which condemned Monothelitism in defiance of Emperor Constans II. The Emperor had him arrested, brought in chains to Constantinople, publicly humiliated, exiled to Crimea, and left to starve. He died in 655 from mistreatment — the last pope venerated as a martyr." },
+  { "n": 75, "name": "St. Eugene I", "reign": "654–657", "nat": "Roman", "saint": true, "img": null, "note": "Elected while Martin I was still alive in exile. A gentle, universally loved figure. Refused to accept a Monothelite compromise from Constantinople. Died peacefully." },
+  { "n": 76, "name": "St. Vitalian", "reign": "657–672", "nat": "Italian (Campania)", "saint": true, "img": null, "note": "Restored relations with Constantinople and with the English church. Sent St. Theodore of Tarsus to be Archbishop of Canterbury — one of the most consequential appointments in English Church history. Theodore organised the English church into a proper structure." },
+  { "n": 77, "name": "Adeodatus II", "reign": "672–676", "nat": "Roman", "saint": false, "img": null, "note": "A Benedictine monk — the first pope definitely known to come from monastic life, a pattern that would dominate the medieval papacy. Charitable and learned. Natural death." },
+  { "n": 78, "name": "Donus", "reign": "676–678", "nat": "Roman", "saint": false, "img": null, "note": "Brief pontificate. Restored relations with the Ravenna church, which had been schismatic. Began repairs on many Roman churches damaged by the long wars." },
+  { "n": 79, "name": "St. Agatho", "reign": "678–681", "nat": "Greek (Sicily)", "saint": true, "img": null, "note": "Prepared the Third Council of Constantinople (681), which definitively condemned Monothelitism and the memory of Honorius I. His synodal letter was read at the Council as doctrinally authoritative — a strong assertion of papal teaching authority. Reportedly 100 years old at his election." },
+  { "n": 80, "name": "St. Leo II", "reign": "682–683", "nat": "Sicilian (Greek)", "saint": true, "img": null, "note": "Confirmed the decrees of the Third Council of Constantinople. Introduced antiphonal chanting into the Roman liturgy. Translated Greek documents into Latin. Brief pontificate of approximately 11 months." },
+  { "n": 81, "name": "St. Benedict II", "reign": "684–685", "nat": "Roman", "saint": true, "img": null, "note": "Secured from Emperor Constantine IV the right of the Roman clergy to elect the pope without requiring imperial approval — a significant step toward papal independence. Known for personal holiness and charity." },
+  { "n": 82, "name": "John V", "reign": "685–686", "nat": "Syrian", "saint": false, "img": null, "note": "First Syrian pope. Elected by popular acclamation. Brief pontificate of approximately 11 months. The Syrian and Greek influence on the 7th century papacy was profound." },
+  { "n": 83, "name": "Conon", "reign": "686–687", "nat": "Thracian (Greek)", "saint": false, "img": null, "note": "Elected as a compromise candidate — old, infirm, and expected to reign briefly. He did. Reigned approximately 11 months. The factional conflicts following his death led to yet another disputed election." },
+  { "n": 84, "name": "St. Sergius I", "reign": "687–701", "nat": "Syrian (Antioch)", "saint": true, "img": null, "note": "Refused to sign the Quinisext Council's canons (which contradicted Roman practice) despite Emperor Justinian II sending soldiers to arrest him. The Roman populace defended him and the soldiers fled. He added the Agnus Dei to the Mass and introduced four Marian feasts into the Roman calendar. Baptised the pagan King of the Saxons, Cædwalla." },
+  { "n": 85, "name": "John VI", "reign": "701–705", "nat": "Greek", "saint": false, "img": null, "note": "Defended Italy from the Byzantine Exarch's excessive taxation by negotiating a settlement. Ransomed Lombard captives. Brief pontificate of approximately 3 years." },
+  { "n": 86, "name": "John VII", "reign": "705–707", "nat": "Greek", "saint": false, "img": null, "note": "Son of a Byzantine official. An accomplished builder; commissioned important mosaics in Rome (some surviving in Santa Maria Antiqua). When Emperor Justinian II sent him the Quinisext Council canons for a second review, he returned them unsigned without comment — a diplomatic non-answer." },
+  { "n": 87, "name": "Sisinnius", "reign": "Jan–Feb 708", "nat": "Syrian", "saint": false, "img": null, "note": "Pontificate of only 20 days — one of the shortest in history. He was so ill with gout that he could not feed himself. Managed to order the repair of Rome's walls before his death." },
+  { "n": 88, "name": "Constantine", "reign": "708–715", "nat": "Syrian", "saint": false, "img": null, "note": "The last pope to visit Constantinople for nearly 1,300 years — until John Paul II in 1979. Emperor Justinian II prostrated himself before the pope and kissed his feet — an extraordinary gesture from a Byzantine emperor. Secured important ecclesiastical rights for the Roman church." },
+  { "n": 89, "name": "St. Gregory II", "reign": "715–731", "nat": "Roman", "saint": true, "img": null, "note": "A decisive pope who opposed the Iconoclast heresy of Emperor Leo III, who ordered the destruction of religious images. Gregory refused, rallied the Western church against the Emperor, and effectively ended Byzantine control over papal elections by relying on Lombard protection. Supported St. Boniface's mission to the Germans." },
+  { "n": 90, "name": "St. Gregory III", "reign": "731–741", "nat": "Syrian", "saint": true, "img": null, "note": "Last non-European pope until John Paul II (1978). Convened a synod that formally condemned Iconoclasm. When Emperor Leo III retaliated by seizing papal properties in Sicily and southern Italy, Gregory turned to the Frankish leader Charles Martel for protection — beginning the fateful alliance between the papacy and the Franks." },
+  { "n": 91, "name": "St. Zachary", "reign": "741–752", "nat": "Greek (Calabria)", "saint": true, "img": null, "note": "Last Greek pope. Skilled diplomat — negotiated multiple truces with the Lombards, sparing Rome from repeated sieges. Approved the deposition of the last Merovingian king and the anointing of Pepin the Short as King of the Franks — a momentous decision that created the Carolingian dynasty and reshaped European history." },
+  { "n": 92, "name": "Stephen II", "reign": "752 (3 days)", "nat": "Roman", "saint": false, "img": null, "note": "Elected pope but died of a stroke three days later before being consecrated bishop. Whether he counts as a true pope has been debated for centuries — he appears in some historical lists and not others. His brief existence created the numbering confusion between Stephen II and Stephen III." },
+  { "n": 93, "name": "Stephen III (II)", "reign": "752–757", "nat": "Roman", "saint": false, "img": null, "note": "The first pope to cross the Alps. Travelled to the Frankish court of Pepin the Short, anointed Pepin and his sons, and secured the 'Donation of Pepin' — a grant of central Italian territories that became the Papal States, which lasted until 1870. This journey fundamentally changed the papacy from a Roman institution into a Western one." },
+  { "n": 94, "name": "St. Paul I", "reign": "757–768", "nat": "Roman", "saint": true, "img": null, "note": "Brother of Stephen III. The first pope to be elected without any imperial involvement. Maintained the Frankish alliance. Faced continued Lombard aggression. Known for personal piety and charity." },
+  { "n": 95, "name": "Stephen IV (III)", "reign": "768–772", "nat": "Sicilian", "saint": false, "img": null, "note": "The Lateran Council of 769, convened under Stephen, ruled that only cardinals could be elected pope — the first formal restriction on papal elections. Excluded the laity from the electoral process." },
+  { "n": 96, "name": "Adrian I", "reign": "772–795", "nat": "Roman", "saint": false, "img": null, "note": "Twenty-three year pontificate — one of the longest in history at that time. Built a close alliance with Charlemagne, who defeated the Lombards and confirmed the Papal States. Together they shaped medieval Christendom. Charlemagne wept openly when he heard of Adrian's death." },
+  { "n": 97, "name": "St. Leo III", "reign": "795–816", "nat": "Roman", "saint": true, "img": null, "note": "Crowned Charlemagne Holy Roman Emperor on Christmas Day, 800 — in the basilica of St. Peter's. This coronation created the political framework of Christian Europe for the next millennium. Leo had been violently attacked and mutilated by enemies in Rome; Charlemagne restored him to the papal throne." },
+  { "n": 98, "name": "Stephen V (IV)", "reign": "816–817", "nat": "Roman", "saint": false, "img": null, "note": "Crowned Emperor Louis the Pious at Rheims — the first papal coronation of a Frankish emperor on Frankish soil. Reigned only approximately one year." },
+  { "n": 99, "name": "St. Paschal I", "reign": "817–824", "nat": "Roman", "saint": true, "img": null, "note": "Built several important churches in Rome and decorated them with mosaics, many of which survive. Sheltered monks fleeing Byzantine Iconoclasm. His reign was troubled by violent factions in Rome." },
+  { "n": 100, "name": "Eugene II", "reign": "824–827", "nat": "Roman", "saint": false, "img": null, "note": "The Constitutio Romana of 824, agreed with Emperor Louis the Pious, placed the papacy under increased Frankish oversight — requiring the pope-elect to take an oath of loyalty before consecration. A step backward for papal independence." }
 ]
