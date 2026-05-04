@@ -9,16 +9,6 @@ export const metadata: Metadata = {
 
 const sacramentIcons = ["I", "II", "III", "IV", "V", "VI", "VII"];
 
-const sacramentImages = [
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Seven_Sacraments_-_Baptism_%28II%29_1646_Nicolas_Poussin.jpg/800px-Seven_Sacraments_-_Baptism_%28II%29_1646_Nicolas_Poussin.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Seven_Sacraments_-_Confirmation_II_%281645%29_Nicolas_Poussin.jpg/800px-Seven_Sacraments_-_Confirmation_II_%281645%29_Nicolas_Poussin.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Nicolas_Poussin_-_The_Sacrament_of_the_Holy_Eucharist_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_the_Holy_Eucharist_%281647%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nicolas_Poussin_-_The_Sacrament_of_Penance_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Penance_%281647%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nicolas_Poussin_-_The_Sacrament_of_Extreme_Unction_%281644%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Extreme_Unction_%281644%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Nicolas_Poussin_-_The_Sacrament_of_Ordination_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Ordination_%281647%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Nicolas_Poussin_-_The_Sacrament_of_Marriage_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Marriage_%281647%29.jpg"
-];
-
 export default function SacramentsPage() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--ivory)" }}>
@@ -78,10 +68,10 @@ export default function SacramentsPage() {
               {/* Painting Banner */}
               <div style={{ width: "100%", height: "260px", position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
                 <img 
-                  src={sacramentImages[i]} 
-                  alt={`${sacrament.name} - Nicolas Poussin`}
+                  src={`/images/sacraments/sacrament-${sacrament.number}.jpg`} 
+                  alt={`Classical Painting for ${sacrament.name}`}
                   className="hover-zoom"
-                  referrerPolicy="no-referrer"
+
                   style={{ 
                     width: "100%", height: "100%", 
                     objectFit: "cover", 

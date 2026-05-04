@@ -10,16 +10,6 @@ interface Props {
 
 const sacramentIcons = ["I", "II", "III", "IV", "V", "VI", "VII"];
 
-const sacramentImages = [
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Seven_Sacraments_-_Baptism_%28II%29_1646_Nicolas_Poussin.jpg/800px-Seven_Sacraments_-_Baptism_%28II%29_1646_Nicolas_Poussin.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Seven_Sacraments_-_Confirmation_II_%281645%29_Nicolas_Poussin.jpg/800px-Seven_Sacraments_-_Confirmation_II_%281645%29_Nicolas_Poussin.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Nicolas_Poussin_-_The_Sacrament_of_the_Holy_Eucharist_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_the_Holy_Eucharist_%281647%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nicolas_Poussin_-_The_Sacrament_of_Penance_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Penance_%281647%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nicolas_Poussin_-_The_Sacrament_of_Extreme_Unction_%281644%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Extreme_Unction_%281644%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Nicolas_Poussin_-_The_Sacrament_of_Ordination_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Ordination_%281647%29.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Nicolas_Poussin_-_The_Sacrament_of_Marriage_%281647%29.jpg/800px-Nicolas_Poussin_-_The_Sacrament_of_Marriage_%281647%29.jpg"
-];
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const sacrament = sacramentsData.find((s) => s.slug === slug);
@@ -41,7 +31,7 @@ export default async function SacramentDetailPage({ params }: Props) {
   if (!sacrament) notFound();
 
   const icon = sacramentIcons[sacramentIndex];
-  const imageUrl = sacramentImages[sacramentIndex];
+  const imageUrl = `/images/sacraments/sacrament-${sacrament.number}.jpg`;
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--ivory)" }}>
@@ -86,8 +76,7 @@ export default async function SacramentDetailPage({ params }: Props) {
       <div style={{ width: "100%", height: "400px", position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
         <img 
           src={imageUrl} 
-          alt={`${sacrament.name} - Nicolas Poussin`}
-          referrerPolicy="no-referrer"
+          alt={`Classical Painting depicting the Sacrament of ${sacrament.name}`}
           style={{ 
             width: "100%", height: "100%", 
             objectFit: "cover", 
