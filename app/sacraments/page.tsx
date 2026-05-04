@@ -93,70 +93,18 @@ export default function SacramentsPage() {
               </div>
 
               {/* Body */}
-              <div style={{ padding: "2rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
-                {/* Left */}
-                <div>
-                  <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontSize: "1rem", marginBottom: "0.75rem" }}>What is it?</h3>
-                  <p style={{ color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "1.5rem", fontSize: "0.925rem" }}>
-                    {sacrament.explanation}
-                  </p>
+              <div style={{ padding: "2rem", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                <p style={{ color: "var(--text-primary)", lineHeight: 1.7, fontSize: "1.05rem" }}>
+                  {sacrament.explanation}
+                </p>
 
-                  <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontSize: "1rem", marginBottom: "0.75rem" }}>Theological Meaning</h3>
-                  <p style={{ color: "var(--text-muted)", lineHeight: 1.8, fontSize: "0.925rem" }}>
-                    {sacrament.theological_meaning}
-                  </p>
-                </div>
-
-                {/* Right */}
-                <div>
-                  {/* Steps */}
-                  <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontSize: "1rem", marginBottom: "0.75rem" }}>How it&apos;s Celebrated</h3>
-                  <ol style={{ paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.5rem" }}>
-                    {sacrament.steps.slice(0, 4).map((step, si) => (
-                      <li key={si} style={{ color: "var(--text-muted)", lineHeight: 1.6, fontSize: "0.875rem" }}>
-                        {step}
-                      </li>
-                    ))}
-                    {sacrament.steps.length > 4 && (
-                      <li style={{ color: "var(--gold-dark)", fontSize: "0.875rem", listStyle: "none", marginLeft: "-1.25rem" }}>
-                        +{sacrament.steps.length - 4} more steps...
-                      </li>
-                    )}
-                  </ol>
-
-                  {/* Scripture */}
-                  <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontSize: "1rem", marginBottom: "0.5rem" }}>Scripture</h3>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-                    {sacrament.bible_references.map((ref, ri) => (
-                      <span key={ri} style={{
-                        background: "var(--cream)",
-                        border: "1px solid rgba(201,168,76,0.3)",
-                        color: "var(--navy)",
-                        fontSize: "0.75rem",
-                        padding: "0.2rem 0.6rem",
-                        borderRadius: "999px",
-                        fontStyle: "italic",
-                      }}>
-                        {ref}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Effects */}
-                  {sacrament.effects.length > 0 && (
-                    <div style={{ marginTop: "1.25rem" }}>
-                      <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontSize: "1rem", marginBottom: "0.5rem" }}>Effects</h3>
-                      <ul style={{ listStyle: "none" }}>
-                        {sacrament.effects.slice(0, 3).map((e, ei) => (
-                          <li key={ei} style={{ display: "flex", gap: "0.5rem", fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "0.3rem" }}>
-                            <span style={{ color: "var(--gold)", flexShrink: 0 }}>✦</span>
-                            {e}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
+                <Link 
+                  href={`/sacraments/${sacrament.slug}`}
+                  className="btn-sacred"
+                  style={{ alignSelf: "flex-start", marginTop: "1rem" }}
+                >
+                  Explore Sacrament Details
+                </Link>
               </div>
             </article>
           ))}
