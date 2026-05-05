@@ -8,7 +8,9 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.pexels.com" },
       { protocol: "https", hostname: "www.pexels.com" },
       { protocol: "https", hostname: "commons.wikimedia.org" },
+      { protocol: "https", hostname: "images.metmuseum.org" },
     ],
+    minimumCacheTTL: 2592000, // Cache optimized images for 30 days on Vercel edge
   },
   experimental: {
     optimizeCss: true,
@@ -20,10 +22,6 @@ const nextConfig: NextConfig = {
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "DENY" },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
         ],
       },
       {
