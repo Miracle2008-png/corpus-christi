@@ -5,44 +5,68 @@ import AppleProvider from "next-auth/providers/apple";
 import { connectDB } from "@/lib/mongodb";
 import User from "@/models/User";
 
-export const { handlers, signIn, signOut, auth } = NextAuth({
-  providers: [
-    Credentials({
-      name: "credentials",
-      credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
-      },
-      async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
-        try {
-          await connectDB();
-          const user = await User.findOne({ email: credentials.email }).select("+password_hash");
-          if (!user) return null;
-          const isValid = await user.comparePassword(credentials.password as string);
-          if (!isValid) return null;
-          await User.findByIdAndUpdate(user._id, { lastLogin: new Date() });
-          return {
-            id: user._id.toString(),
-            email: user.email,
-            name: user.name,
-            role: user.role,
-          };
-        } catch (err) {
-          console.error("Auth error:", err);
-          return null;
-        }
-      },
-    }),
+const providers: any[] = [
+  Credentials({
+    name: "credentials",
+    credentials: {
+      email: { label: "Email", type: "email" },
+      password: { label: "Password", type: "password" },
+    },
+    async authorize(credentials) {
+      if (!credentials?.email || !credentials?.password) return null;
+      try {
+        await connectDB();
+        const user = await User.findOne({ email: credentials.email }).select("+password_hash");
+        if (!user) return null;
+        const isValid = await user.comparePassword(credentials.password as string);
+        if (!isValid) return null;
+        await User.findByIdAndUpdate(user._id, { lastLogin: new Date() });
+        return {
+          id: user._id.toString(),
+          email: user.email,
+          name: user.name,
+          role: user.role,
+        };
+      } catch (err) {
+        console.error("Auth error:", err);
+        return null;
+      }
+    },
+  }),
+];
+
+// Only register Google if credentials are configured
+if (
+  process.env.GOOGLE_CLIENT_ID &&
+  process.env.GOOGLE_CLIENT_ID !== "REPLACE_WITH_GOOGLE_CLIENT_ID" &&
+  process.env.GOOGLE_CLIENT_SECRET &&
+  process.env.GOOGLE_CLIENT_SECRET !== "REPLACE_WITH_GOOGLE_CLIENT_SECRET"
+) {
+  providers.push(
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
-    }),
-    AppleProvider({
-      clientId: process.env.APPLE_ID || "",
-      clientSecret: process.env.APPLE_SECRET || "",
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     })
-  ],
+  );
+}
+
+// Only register Apple if credentials are configured
+if (
+  process.env.APPLE_ID &&
+  process.env.APPLE_ID !== "REPLACE_WITH_APPLE_BUNDLE_ID" &&
+  process.env.APPLE_SECRET &&
+  process.env.APPLE_SECRET !== "REPLACE_WITH_APPLE_SECRET"
+) {
+  providers.push(
+    AppleProvider({
+      clientId: process.env.APPLE_ID,
+      clientSecret: process.env.APPLE_SECRET,
+    })
+  );
+}
+
+export const { handlers, signIn, signOut, auth } = NextAuth({
+  providers,
   callbacks: {
     async signIn({ user, account, profile }) {
       if (account?.provider === "google" || account?.provider === "apple") {

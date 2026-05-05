@@ -84,26 +84,15 @@ export default function PopesPage() {
                   <article key={pope.n} className="pope-card">
 
                     {/* Portrait */}
-                    {pope.img ? (
-                      <div style={{ height: "200px", overflow: "hidden", background: "#eee" }}>
-                        <Image
-                          src={pope.img}
-                          alt={pope.name}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          style={{ objectFit: "cover", objectPosition: "top" }}
-                        />
-                      </div>
-                    ) : (
-                      <div style={{
-                        height: "120px",
-                        background: "linear-gradient(135deg, var(--navy-dark), var(--navy))",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        fontSize: "2.5rem", color: "rgba(201,168,76,0.4)",
-                      }}>
-                        +
-                      </div>
-                    )}
+                    <div style={{ height: "200px", overflow: "hidden", background: "linear-gradient(135deg, var(--navy-dark), #0f1a35)", position: "relative" }}>
+                      <Image
+                        src={pope.img || "/images/pope-placeholder.png"}
+                        alt={pope.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: pope.img ? "cover" : "contain", objectPosition: pope.img ? "top" : "center" }}
+                      />
+                    </div>
 
                     {/* Content */}
                     <div style={{ padding: "1rem 1.125rem 1.25rem", flex: 1, display: "flex", flexDirection: "column" }}>
