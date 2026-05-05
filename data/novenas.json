@@ -1,0 +1,102 @@
+[
+  {
+    "id": "divine-mercy",
+    "slug": "divine-mercy",
+    "title": "Divine Mercy Novena",
+    "subtitle": "Prayed beginning Good Friday",
+    "patron": "Jesus Christ",
+    "intention": "Trust in God's mercy for all souls",
+    "feast": "Second Sunday of Easter",
+    "origin": "Revealed to St. Faustina Kowalska in 1937",
+    "intro": "This novena was given by Jesus to St. Faustina Kowalska (1905–1938), a Polish nun. It begins on Good Friday and ends on Divine Mercy Sunday (the Sunday after Easter). Each day a different group of souls is offered to God for His mercy.",
+    "opening": "You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.\n\nO Blood and Water, which gushed forth from the Heart of Jesus as a fount of Mercy for us — I trust in You!",
+    "daily_prayer": "Eternal Father, I offer You the Body and Blood, Soul and Divinity of Your dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.\n\nFor the sake of His sorrowful Passion, have mercy on us and on the whole world.",
+    "closing": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world. (× 3)",
+    "days": [
+      { "day": 1, "title": "All Mankind, especially sinners", "intention": "Today bring to Me all mankind, especially all sinners, and immerse them in the ocean of My mercy. In this way you will console Me in the bitter grief into which the loss of souls plunges Me." },
+      { "day": 2, "title": "Souls of Priests and Religious", "intention": "Today bring to Me the souls of priests and religious, and immerse them in My unfathomable mercy. It was they who gave Me the strength to endure My bitter Passion. Through them, as through channels, My mercy flows out upon mankind." },
+      { "day": 3, "title": "Devout and Faithful Souls", "intention": "Today bring to Me all devout and faithful souls, and immerse them in the ocean of My mercy. These souls brought Me consolation on the Way of the Cross. They were that drop of consolation in the midst of an ocean of bitterness." },
+      { "day": 4, "title": "Those who do not believe in God", "intention": "Today bring to Me those who do not believe in God and those who do not yet know Me. I was thinking also of them during My bitter Passion, and their future zeal comforted My Heart." },
+      { "day": 5, "title": "Those who have separated themselves from the Church", "intention": "Today bring to Me the souls of those who have separated themselves from My Church, and immerse them in the ocean of My mercy. During My bitter Passion they tore at My Body and Heart, that is, My Church." },
+      { "day": 6, "title": "The Meek and Humble Souls", "intention": "Today bring to Me the meek and humble souls and the souls of little children, and immerse them in My mercy. These souls most closely resemble My Heart. They strengthened Me during My bitter agony." },
+      { "day": 7, "title": "Souls who especially venerate My Mercy", "intention": "Today bring to Me the souls who especially venerate and glorify My mercy, and immerse them in My mercy. These souls sorrowed most over My Passion and entered most deeply into My Spirit." },
+      { "day": 8, "title": "Souls in Purgatory", "intention": "Today bring to Me the souls who are in the prison of Purgatory, and immerse them in the abyss of My mercy. Let the torrents of My Blood cool down their scorching flames. All these souls are greatly loved by Me." },
+      { "day": 9, "title": "Souls who have become lukewarm", "intention": "Today bring to Me the souls who have become lukewarm, and immerse them in the abyss of My mercy. These souls wound My Heart most painfully. My soul suffered the most dreadful loathing in the Garden of Olives because of lukewarm souls." }
+    ]
+  },
+  {
+    "id": "st-jude",
+    "slug": "st-jude",
+    "title": "Novena to St. Jude",
+    "subtitle": "Patron of Hopeless Cases",
+    "patron": "St. Jude Thaddaeus",
+    "intention": "For desperate and impossible causes",
+    "feast": "October 28",
+    "origin": "Ancient devotion, popularised in the 20th century",
+    "intro": "St. Jude Thaddaeus, one of the Twelve Apostles, is invoked as the patron saint of desperate cases and lost causes. He is often called upon when all other hope seems lost. He is believed to intercede powerfully because he shared his name with Judas Iscariot, making people hesitant to invoke him — so he is thought to respond with special urgency to those who do.",
+    "opening": "Most holy Apostle, St. Jude, faithful servant and friend of Jesus, the Church honours and invokes you universally, as the patron of difficult cases and desperate situations.",
+    "daily_prayer": "O most holy Apostle, St. Jude Thaddaeus, I greet you through the Sacred Heart of Jesus. Through His Heart I praise and thank God for all the graces He has bestowed upon you. Humbly I implore you, through God's love for you, to look down upon me from Heaven and help me in my present need and urgent petition: [State your intention here].\n\nMake use, I implore you, of that particular privilege given to you, to bring visible and speedy help where help is almost despaired of. Come to my assistance in this great need that I may receive the consolation and succour of Heaven in all my necessities, tribulations, and sufferings.\n\nI praise God with you and all the saints forever. I promise, blessed St. Jude, to be ever mindful of this great favour, to always honour you as my special and powerful patron, and to gratefully encourage devotion to you. Amen.\n\nSt. Jude, Apostle and Martyr, great in virtue and rich in miracles, near kinsman of Jesus Christ, faithful intercessor of all who invoke your special patronage in time of need, to you I have recourse from the depths of my heart, and I humbly beg you to whom God has given such great power, to come to my assistance.",
+    "closing": "St. Jude, pray for us and all who invoke your aid. Amen.",
+    "days": [
+      { "day": 1, "title": "St. Jude, Apostle of Christ", "intention": "Pray that through his powerful intercession I will receive the graces needed to address this difficult situation in my life." },
+      { "day": 2, "title": "St. Jude, Preacher of the Gospel", "intention": "Pray that I remain steadfast in faith and trust in God, even when I cannot see the way forward." },
+      { "day": 3, "title": "St. Jude, Martyr for the Faith", "intention": "Pray that I have the courage to persevere in my trial without losing hope or despair." },
+      { "day": 4, "title": "St. Jude, Patron of the Hopeless", "intention": "Pray that God's power is made perfect in my weakness, and that what seems impossible to me is possible with Him." },
+      { "day": 5, "title": "St. Jude, Friend of Jesus", "intention": "Pray that your closeness to Christ bring my petition before His Sacred Heart." },
+      { "day": 6, "title": "St. Jude, Intercessor for All", "intention": "Pray that I surrender my worry and anxiety to God, trusting in His perfect plan." },
+      { "day": 7, "title": "St. Jude, Helper in Need", "intention": "Pray that God's grace is sufficient for all my needs, spiritual and material." },
+      { "day": 8, "title": "St. Jude, Faithful Saint", "intention": "Pray that I remain open to God's answer, even if it comes in a way different from what I expect." },
+      { "day": 9, "title": "St. Jude, Great Miracle Worker", "intention": "Pray that this novena concludes with God's glorification through my answered petition." }
+    ]
+  },
+  {
+    "id": "our-lady-perpetual-help",
+    "slug": "our-lady-perpetual-help",
+    "title": "Novena to Our Lady of Perpetual Help",
+    "subtitle": "Mother of Mercy and Help",
+    "patron": "Our Lady of Perpetual Help",
+    "intention": "For constant help and protection from Mary",
+    "feast": "June 27",
+    "origin": "The miraculous icon dates from the 13th century; given to the Redemptorists in 1866",
+    "intro": "The icon of Our Lady of Perpetual Help, housed in Rome at the Basilica of Sant'Alfonso, depicts Our Lady holding the Child Jesus, who clings to her hand as Angels show him instruments of the Passion. Millions pray this novena weekly around the world for all forms of help and protection.",
+    "opening": "O Mother of Perpetual Help, thou art the dispenser of all the gifts which God grants to us miserable sinners, and for this end He has made thee so powerful, so rich, and so bountiful, in order that thou mayst help us in our misery.",
+    "daily_prayer": "O Mother of Perpetual Help, grant that I may ever invoke thy most powerful name, which is the safeguard of the living and the salvation of the dying. O Purest Mary, O Sweetest Mary, let thy name henceforth be ever on my lips.\n\nDelay not, O Blessed Lady, to help me, whenever I call on thee. In my temptations, in my needs, I will never cease to call on thee, ever repeating thy sacred name: Mary, Mary.\n\n[State your intention here]\n\nWhat a consolation it gives me, O Mother of Perpetual Help, to know that thy name, given to thee by God Himself, has this great privilege of inspiring those who are in trouble with the most lively confidence in thy protection.\n\nFoul thanks be to thee, dear Lady, for the goodness thou hast ever shown me. May I be able one day to thank thee in Heaven for all the graces thou hast obtained for me. Amen.",
+    "closing": "O Mother of Perpetual Help, pray for us! Amen.",
+    "days": [
+      { "day": 1, "title": "Mary's Role as Our Mother", "intention": "Meditate on how God gave Mary to us as our spiritual mother. Ask her to take your petition to her Son." },
+      { "day": 2, "title": "Trust in Mary's Intercession", "intention": "Pray for the grace of complete trust in Our Lady, who never fails those who seek her aid." },
+      { "day": 3, "title": "Mary's Power before God", "intention": "Reflect on Mary's unique closeness to Jesus and the power this gives her intercession." },
+      { "day": 4, "title": "Mary, Help of the Sick", "intention": "Bring any physical or spiritual sickness to Our Lady and ask for healing." },
+      { "day": 5, "title": "Mary, Refuge of Sinners", "intention": "Ask Mary to intercede for your own conversion and that of those you love." },
+      { "day": 6, "title": "Mary, Comfort of the Afflicted", "intention": "Lay your anxieties and sorrows at Mary's feet and receive her motherly consolation." },
+      { "day": 7, "title": "Mary, Queen of Peace", "intention": "Pray for peace in your heart, your family, and the world through Mary's intercession." },
+      { "day": 8, "title": "Mary's Protection", "intention": "Ask Our Lady to cover you and those you love with her mantle of protection." },
+      { "day": 9, "title": "Thanksgiving and Surrender", "intention": "Thank Our Lady for receiving your prayer and surrender the outcome entirely to God's will." }
+    ]
+  },
+  {
+    "id": "st-joseph",
+    "slug": "st-joseph",
+    "title": "Novena to St. Joseph",
+    "subtitle": "Patron of Workers, Fathers & the Universal Church",
+    "patron": "St. Joseph",
+    "intention": "For work, family, and protection of the home",
+    "feast": "March 19 (Solemnity) & May 1 (St. Joseph the Worker)",
+    "origin": "Traditional devotion dating to the early Middle Ages",
+    "intro": "St. Joseph, the foster father of Jesus and husband of Mary, is the patron of the Universal Church, workers, fathers, and a holy death. He is said to intercede with particular power for family and work-related needs, and for those seeking God's will in their lives.",
+    "opening": "O glorious St. Joseph, thou who hast power to render possible even things which are considered impossible, come to our aid in our present trouble and distress. Take this important and difficult affair under thy particular protection, that it may end happily.",
+    "daily_prayer": "O Glorious Patriarch, St. Joseph, whose power makes the impossible possible, come to my aid in these times of anguish and difficulty. Take under your protection the serious and troubling matter about which I ask you, and bring it to a happy ending.\n\nO dear St. Joseph, all of my worries and hopes are before you. Let me not be plagued by the fear of failure. Plead my cause before your foster Son, Jesus Christ, and by the love He has for you, He will embrace my cause as His own.\n\n[State your intention here]\n\nHaving begged you with confidence, I can now say: Glory be to the Father, and to the Son, and to the Holy Spirit. Amen.",
+    "closing": "St. Joseph, pray for us. Amen.",
+    "days": [
+      { "day": 1, "title": "St. Joseph, Chosen by God", "intention": "Ask St. Joseph to bring your work and family needs before Christ." },
+      { "day": 2, "title": "St. Joseph, Guardian of the Holy Family", "intention": "Ask him to protect your own family and home." },
+      { "day": 3, "title": "St. Joseph, Model of Obedience", "intention": "Pray for the grace to accept God's plan, even when it is difficult." },
+      { "day": 4, "title": "St. Joseph, Man of Prayer", "intention": "Pray for a deeper interior life and closeness to God in daily work." },
+      { "day": 5, "title": "St. Joseph, Provider for the Holy Family", "intention": "Ask him to intercede in material and financial difficulties." },
+      { "day": 6, "title": "St. Joseph, Worker", "intention": "Pray for dignity in labour and those who are unemployed." },
+      { "day": 7, "title": "St. Joseph, Terror of Demons", "intention": "Ask his protection against spiritual warfare and temptation." },
+      { "day": 8, "title": "St. Joseph, Patron of a Happy Death", "intention": "Pray for those who are dying, and for the grace of a good death for yourself." },
+      { "day": 9, "title": "St. Joseph, Patron of the Church", "intention": "Pray for the Church, its leaders, and all the faithful under Joseph's powerful patronage." }
+    ]
+  }
+]

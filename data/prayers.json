@@ -1,73 +1,198 @@
 [
   {
-    "slug": "our-father",
-    "title": "Our Father (Lord's Prayer)",
-    "category": "general",
-    "latin_text": "Pater noster, qui es in caelis,\nsanctificetur nomen tuum.\nAdveniat regnum tuum.\nFiat voluntas tua,\nsicut in caelo et in terra.\nPanem nostrum quotidianum da nobis hodie,\net dimitte nobis debita nostra\nsicut et nos dimittimus debitoribus nostris.\nEt ne nos inducas in tentationem,\nsed libera nos a malo.\nAmen.",
-    "english_text": "Our Father, who art in heaven,\nhallowed be thy name;\nthy kingdom come,\nthy will be done\non earth as it is in heaven.\nGive us this day our daily bread,\nand forgive us our trespasses,\nas we forgive those who trespass against us;\nand lead us not into temptation,\nbut deliver us from evil.\nAmen.",
-    "explanation": "The Lord's Prayer was given by Jesus to His disciples when they asked Him to teach them how to pray (Luke 11:1-4, Matthew 6:9-13). It is the foundational prayer of Christianity, addressing God as Father, praying for His kingdom, asking for daily bread, forgiveness, and protection from evil.",
-    "occasion": "All occasions; used at every Mass"
+    "category": "Essential Prayers",
+    "slug": "essential",
+    "icon": "✝",
+    "description": "The foundational prayers every Catholic should know by heart.",
+    "prayers": [
+      {
+        "id": "our-father",
+        "title": "The Our Father (Lord's Prayer)",
+        "latin": "Pater Noster",
+        "text": "Our Father, who art in heaven,\nhallowed be thy name;\nthy kingdom come,\nthy will be done\non earth as it is in heaven.\nGive us this day our daily bread,\nand forgive us our trespasses,\nas we forgive those who trespass against us;\nand lead us not into temptation,\nbut deliver us from evil. Amen.",
+        "source": "Matthew 6:9-13",
+        "note": "The prayer Jesus himself taught his disciples. Prayed at every Mass."
+      },
+      {
+        "id": "hail-mary",
+        "title": "Hail Mary (Ave Maria)",
+        "latin": "Ave Maria",
+        "text": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou amongst women,\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death. Amen.",
+        "source": "Luke 1:28, 42",
+        "note": "The most prayed Marian prayer, said 53 times in each Rosary."
+      },
+      {
+        "id": "glory-be",
+        "title": "Glory Be (Doxology)",
+        "latin": "Gloria Patri",
+        "text": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit,\nas it was in the beginning,\nis now, and ever shall be,\nworld without end. Amen.",
+        "source": "Matthew 28:19",
+        "note": "A short prayer of praise to the Holy Trinity. Said after each decade of the Rosary."
+      },
+      {
+        "id": "apostles-creed",
+        "title": "The Apostles' Creed",
+        "latin": "Symbolum Apostolorum",
+        "text": "I believe in God,\nthe Father almighty,\nCreator of heaven and earth,\nand in Jesus Christ, his only Son, our Lord,\nwho was conceived by the Holy Spirit,\nborn of the Virgin Mary,\nsuffered under Pontius Pilate,\nwas crucified, died and was buried;\nhe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting. Amen.",
+        "note": "A summary of the core beliefs of Christianity, dating from the early Church."
+      },
+      {
+        "id": "nicene-creed",
+        "title": "The Nicene Creed",
+        "latin": "Symbolum Nicaenum",
+        "text": "I believe in one God,\nthe Father almighty,\nmaker of heaven and earth,\nof all things visible and invisible.\nI believe in one Lord Jesus Christ,\nthe Only Begotten Son of God,\nborn of the Father before all ages.\nGod from God, Light from Light,\ntrue God from true God,\nbegotten, not made, consubstantial with the Father;\nthrough him all things were made.\nFor us men and for our salvation\nhe came down from heaven,\nand by the Holy Spirit was incarnate of the Virgin Mary,\nand became man.\nFor our sake he was crucified under Pontius Pilate,\nhe suffered death and was buried,\nand rose again on the third day\nin accordance with the Scriptures.\nHe ascended into heaven\nand is seated at the right hand of the Father.\nHe will come again in glory\nto judge the living and the dead\nand his kingdom will have no end.\nI believe in the Holy Spirit, the Lord, the giver of life,\nwho proceeds from the Father and the Son,\nwho with the Father and the Son is adored and glorified,\nwho has spoken through the prophets.\nI believe in one, holy, catholic and apostolic Church.\nI confess one Baptism for the forgiveness of sins\nand I look forward to the resurrection of the dead\nand the life of the world to come. Amen.",
+        "note": "Professed at Sunday Mass. Defined at the Council of Nicaea (AD 325)."
+      },
+      {
+        "id": "act-of-contrition",
+        "title": "Act of Contrition",
+        "text": "O my God, I am heartily sorry for having offended thee,\nand I detest all my sins because I dread the loss of heaven\nand the pains of hell,\nbut most of all because they offend thee, my God,\nwho art all-good and deserving of all my love.\nI firmly resolve, with the help of thy grace,\nto confess my sins, to do penance,\nand to amend my life. Amen.",
+        "note": "Prayed during the Sacrament of Confession (Penance)."
+      },
+      {
+        "id": "act-of-faith",
+        "title": "Act of Faith",
+        "text": "O my God, I firmly believe that thou art one God in three Divine Persons, Father, Son, and Holy Spirit. I believe that thy Divine Son became man and died for our sins, and that he will come to judge the living and the dead. I believe these and all the truths which the holy Catholic Church teaches, because thou hast revealed them, who canst neither deceive nor be deceived. Amen.",
+        "note": "One of the four Acts — Faith, Hope, Charity, and Contrition."
+      },
+      {
+        "id": "act-of-hope",
+        "title": "Act of Hope",
+        "text": "O my God, relying on thy infinite goodness and promises, I hope to obtain pardon of my sins, the help of thy grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer. Amen.",
+        "note": "An expression of trust in God's mercy and promises of salvation."
+      },
+      {
+        "id": "act-of-charity",
+        "title": "Act of Charity (Love)",
+        "text": "O my God, I love thee above all things, with my whole heart and soul, because thou art all-good and worthy of all love. I love my neighbour as myself for the love of thee. I forgive all who have injured me and ask pardon of all whom I have injured. Amen.",
+        "note": "A declaration of love for God and neighbour, the two great commandments."
+      }
+    ]
   },
   {
-    "slug": "hail-mary",
-    "title": "Hail Mary",
-    "category": "rosary",
-    "latin_text": "Ave Maria, gratia plena,\nDominus tecum.\nBenedicta tu in mulieribus,\net benedictus fructus ventris tui, Iesus.\nSancta Maria, Mater Dei,\nora pro nobis peccatoribus,\nnunc et in hora mortis nostrae.\nAmen.",
-    "english_text": "Hail Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou among women,\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\nAmen.",
-    "explanation": "The first part of the Hail Mary is drawn from the angel Gabriel's salutation to Mary (Luke 1:28) and Elizabeth's greeting (Luke 1:42). The second part is a petition added by the Church, asking Mary's intercession as Mother of God.",
-    "occasion": "Rosary; Angelus; any time"
+    "category": "Morning & Evening",
+    "slug": "morning-evening",
+    "icon": "☀",
+    "description": "Begin and end each day in conversation with God.",
+    "prayers": [
+      {
+        "id": "morning-offering",
+        "title": "Morning Offering",
+        "text": "O Jesus, through the Immaculate Heart of Mary, I offer you my prayers, works, joys and sufferings of this day for all the intentions of your Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, in reparation for my sins, for the intentions of all my associates, and in particular for the intentions of the Holy Father. Amen.",
+        "note": "A classic way to consecrate the entire day to God from the first moment."
+      },
+      {
+        "id": "evening-prayer",
+        "title": "Evening Prayer",
+        "text": "O Lord, grant that I may pass this night in peace.\nKeep me from the temptations of the devil.\nFree me from all anxieties and fears.\nGrant that I may rest in thy peace\nand rise refreshed to serve thee.\nBless those I love and all who are in need.\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen.",
+        "note": "A simple evening prayer to close the day with trust in God."
+      },
+      {
+        "id": "angelus",
+        "title": "The Angelus",
+        "text": "The Angel of the Lord declared unto Mary:\nAnd she conceived of the Holy Spirit.\nHail Mary...\n\nBehold the handmaid of the Lord:\nBe it done unto me according to thy Word.\nHail Mary...\n\nAnd the Word was made Flesh:\nAnd dwelt among us.\nHail Mary...\n\nPray for us, O holy Mother of God:\nThat we may be made worthy of the promises of Christ.\n\nLet us pray:\nPour forth, we beseech thee, O Lord, thy grace into our hearts; that we, to whom the Incarnation of Christ, thy Son, was made known by the message of an angel, may by his Passion and Cross be brought to the glory of his Resurrection, through the same Christ our Lord. Amen.",
+        "note": "Traditionally prayed at 6am, noon, and 6pm, accompanied by the ringing of church bells."
+      },
+      {
+        "id": "regina-caeli",
+        "title": "Regina Caeli (Queen of Heaven)",
+        "latin": "Regina Caeli",
+        "text": "Queen of Heaven, rejoice, alleluia.\nFor He whom you were worthy to bear, alleluia.\nHath risen as he said, alleluia.\nPray for us to God, alleluia.\n\nRejoice and be glad, O Virgin Mary, alleluia.\nFor the Lord hath truly risen, alleluia.\n\nLet us pray:\nO God, who gave joy to the world through the resurrection of thy Son, our Lord Jesus Christ, grant, we beseech thee, that through the intercession of the Virgin Mary, his Mother, we may obtain the joys of everlasting life, through the same Christ our Lord. Amen.",
+        "note": "Replaces the Angelus during the Easter Season. A joyful resurrection prayer."
+      },
+      {
+        "id": "grace-before-meals",
+        "title": "Grace Before Meals",
+        "text": "Bless us, O Lord, and these thy gifts,\nwhich we are about to receive from thy bounty,\nthrough Christ our Lord. Amen.",
+        "note": "The traditional Catholic blessing before meals."
+      },
+      {
+        "id": "grace-after-meals",
+        "title": "Grace After Meals",
+        "text": "We give thee thanks for all thy benefits,\nAlmighty God, who livest and reignest forever;\nand may the souls of the faithful departed,\nthrough the mercy of God, rest in peace. Amen.",
+        "note": "A brief thanksgiving after eating."
+      }
+    ]
   },
   {
-    "slug": "glory-be",
-    "title": "Glory Be (Gloria Patri)",
-    "category": "rosary",
-    "latin_text": "Gloria Patri, et Filio,\net Spiritui Sancto.\nSicut erat in principio,\net nunc et semper,\net in saecula saeculorum.\nAmen.",
-    "english_text": "Glory be to the Father,\nand to the Son,\nand to the Holy Spirit.\nAs it was in the beginning,\nis now, and ever shall be,\nworld without end.\nAmen.",
-    "explanation": "The Gloria Patri is a doxology — a short hymn of praise to the Holy Trinity. It is said at the end of each decade of the Rosary and at the end of each psalm in the Liturgy of the Hours.",
-    "occasion": "Rosary; end of each psalm in Liturgy of the Hours"
+    "category": "Divine Mercy",
+    "slug": "divine-mercy",
+    "icon": "❤",
+    "description": "Prayers revealed to St. Faustina Kowalska, promoting trust in God's boundless mercy.",
+    "prayers": [
+      {
+        "id": "divine-mercy-chaplet",
+        "title": "Chaplet of Divine Mercy",
+        "text": "Begin with:\nOur Father... Hail Mary... Apostles' Creed\n\nThen on the large beads:\n\"Eternal Father, I offer you the Body and Blood, Soul and Divinity of Your dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.\"\n\nOn the small beads (10 times):\n\"For the sake of his sorrowful Passion, have mercy on us and on the whole world.\"\n\nAt the end (3 times):\n\"Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.\"\n\nOptional closing:\n\"Eternal God, in whom mercy is endless and the treasury of compassion inexhaustible, look kindly upon us and increase your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to your holy will, which is Love and Mercy itself.\"",
+        "note": "Revealed to St. Faustina. Traditionally prayed at 3:00 PM — the Hour of Mercy."
+      },
+      {
+        "id": "divine-mercy-prayer",
+        "title": "Divine Mercy Prayer",
+        "text": "O Blood and Water, which gushed forth from the Heart of Jesus as a fountain of Mercy for us, I trust in You! (3 times)\n\nO Jesus, I trust in You.",
+        "note": "The simplest Divine Mercy prayer. 'Jesus, I trust in You' is the central act."
+      },
+      {
+        "id": "hour-of-mercy",
+        "title": "Prayer for the Hour of Mercy (3pm)",
+        "text": "You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world.\nO Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.\n\nO Blood and Water, which gushed forth from the Heart of Jesus as a fount of Mercy for us, I trust in You!",
+        "note": "Prayed at 3:00 PM — the hour Jesus died on the Cross. A powerful moment of intercession."
+      }
+    ]
   },
   {
-    "slug": "apostles-creed",
-    "title": "Apostles' Creed",
-    "category": "general",
-    "latin_text": "Credo in Deum Patrem omnipotentem,\nCreatorem caeli et terrae.\nEt in Iesum Christum, Filium eius unicum,\nDominum nostrum;\nqui conceptus est de Spiritu Sancto,\nnatus ex Maria Virgine,\npassus sub Pontio Pilato,\ncrucifixus, mortuus, et sepultus;\ndescendit ad inferna;\ntertia die resurrexit a mortuis;\nascendit ad caelos;\nsedet ad dexteram Dei Patris omnipotentis;\ninde venturus est iudicare vivos et mortuos.\nCredo in Spiritum Sanctum,\nsanctam Ecclesiam catholicam,\nsanctorum communionem,\nremissionem peccatorum,\ncarnis resurrectionem,\nvitam aeternam.\nAmen.",
-    "english_text": "I believe in God, the Father almighty,\nCreator of heaven and earth,\nand in Jesus Christ, his only Son, our Lord,\nwho was conceived by the Holy Spirit,\nborn of the Virgin Mary,\nsuffered under Pontius Pilate,\nwas crucified, died and was buried;\nhe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy Catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting.\nAmen.",
-    "explanation": "The Apostles' Creed is one of the oldest professions of faith, traditionally attributed to the Twelve Apostles. It summarizes the essential truths of the Christian faith. It is prayed at the beginning of the Rosary.",
-    "occasion": "Beginning of the Rosary; Baptism"
+    "category": "Marian Prayers",
+    "slug": "marian",
+    "icon": "✿",
+    "description": "Prayers honouring the Blessed Virgin Mary, Mother of God.",
+    "prayers": [
+      {
+        "id": "memorare",
+        "title": "The Memorare",
+        "text": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession, was left unaided. Inspired with this confidence, I fly unto thee, O Virgin of virgins, my Mother. To thee I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.",
+        "note": "Attributed to St. Bernard of Clairvaux. One of the most beloved Marian prayers."
+      },
+      {
+        "id": "salve-regina",
+        "title": "Salve Regina (Hail, Holy Queen)",
+        "latin": "Salve Regina",
+        "text": "Hail, holy Queen, Mother of mercy,\nour life, our sweetness and our hope.\nTo thee do we cry, poor banished children of Eve.\nTo thee do we send up our sighs,\nmourning and weeping in this valley of tears.\nTurn then, most gracious advocate,\nthine eyes of mercy towards us,\nand after this our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\nO clement, O loving, O sweet Virgin Mary!\n\nPray for us, O holy Mother of God.\nThat we may be made worthy of the promises of Christ.",
+        "note": "An ancient Marian antiphon, traditionally sung after the Rosary and Night Prayer."
+      },
+      {
+        "id": "sub-tuum",
+        "title": "Sub Tuum Praesidium",
+        "latin": "Sub Tuum Praesidium",
+        "text": "We fly to thy protection, O holy Mother of God;\ndespisest not our petitions in our necessities,\nbut deliver us always from all dangers,\nO glorious and blessed Virgin.",
+        "note": "The oldest known prayer to Mary, dating from approximately AD 250."
+      },
+      {
+        "id": "magnificat",
+        "title": "The Magnificat",
+        "text": "My soul glorifies the Lord,\nmy spirit rejoices in God, my Saviour.\nHe looks on his servant in her lowliness;\nhenceforth all ages will call me blessed.\nThe Almighty works marvels for me.\nHoly his name!\nHis mercy is from age to age,\non those who fear him.\nHe puts forth his arm in strength\nand scatters the proud-hearted.\nHe casts the mighty from their thrones\nand raises the lowly.\nHe fills the starving with good things,\nsends the rich away empty.\nHe protects Israel, his servant,\nremembering his mercy,\nthe mercy promised to our fathers,\nto Abraham and his sons for ever.",
+        "source": "Luke 1:46-55",
+        "note": "Mary's canticle of praise after the Annunciation. Prayed daily at Evening Prayer."
+      }
+    ]
   },
   {
-    "slug": "act-of-contrition",
-    "title": "Act of Contrition",
-    "category": "confession",
-    "english_text": "O my God,\nI am heartily sorry for having offended Thee,\nand I detest all my sins\nbecause I dread the loss of heaven and the pains of hell;\nbut most of all because they offend Thee, my God,\nwho art all good and deserving of all my love.\nI firmly resolve, with the help of Thy grace,\nto confess my sins, to do penance,\nand to amend my life.\nAmen.",
-    "explanation": "The Act of Contrition is the prayer of sorrow and resolution prayed during the Sacrament of Penance (Confession). True contrition — genuine sorrow for sin — is essential for the sacrament. Perfect contrition (sorrow out of love for God) is the highest form.",
-    "occasion": "During Confession; examination of conscience; night prayer"
-  },
-  {
-    "slug": "hail-holy-queen",
-    "title": "Hail, Holy Queen (Salve Regina)",
-    "category": "rosary",
-    "latin_text": "Salve, Regina, mater misericordiae,\nvita, dulcedo et spes nostra, salve.\nAd te clamamus, exsules filii Evae.\nAd te suspiramus gementes et flentes\nin hac lacrimarum valle.\nEia ergo, advocata nostra,\nillos tuos misericordes oculos ad nos converte.\nEt Iesum, benedictum fructum ventris tui,\nnobis post hoc exsilium ostende.\nO clemens, o pia, o dulcis Virgo Maria.",
-    "english_text": "Hail, holy Queen, Mother of Mercy!\nOur life, our sweetness, and our hope!\nTo thee do we cry, poor banished children of Eve;\nto thee do we send up our sighs,\nmourning and weeping in this valley of tears.\nTurn, then, most gracious advocate,\nthine eyes of mercy toward us;\nand after this, our exile,\nshow unto us the blessed fruit of thy womb, Jesus.\nO clement, O loving, O sweet Virgin Mary.",
-    "explanation": "The Salve Regina is a Marian antiphon traditionally attributed to Hermann of Reichenau (11th century). It is prayed at the end of the Rosary and at Compline (Night Prayer) in the Liturgy of the Hours.",
-    "occasion": "End of the Rosary; Night Prayer"
-  },
-  {
-    "slug": "memorare",
-    "title": "The Memorare",
-    "category": "general",
-    "latin_text": "Memorare, O piissima Virgo Maria,\nnon esse auditum a saeculo,\nquemquam ad tua currentem praesidia,\ntua implorantem auxilia,\ntua petentem suffragia esse derelictum.\nEgo tali animatus confidentia,\nad te, Virgo Virginum, Mater, curro;\nad te venio; coram te gemens peccator assisto.\nNoli, Mater Verbi, verba mea despicere;\nsed audi propitia et exaudi.\nAmen.",
-    "english_text": "Remember, O most gracious Virgin Mary,\nthat never was it known\nthat anyone who fled to thy protection,\nimplored thy help,\nor sought thy intercession\nwas left unaided.\nInspired with this confidence,\nI fly to thee, O Virgin of virgins, my Mother;\nto thee do I come, before thee I stand,\nsinful and sorrowful.\nO Mother of the Word Incarnate,\ndespise not my petitions,\nbut in thy mercy hear and answer me.\nAmen.",
-    "explanation": "The Memorare is a cherished Catholic prayer attributed to St. Bernard of Clairvaux (though its medieval origins are debated). It appeals to Our Lady's known faithfulness to all who seek her intercession.",
-    "occasion": "Times of urgent need; Marian devotion"
-  },
-  {
-    "slug": "anima-christi",
-    "title": "Anima Christi (Soul of Christ)",
-    "category": "mass",
-    "latin_text": "Anima Christi, sanctifica me.\nCorpus Christi, salva me.\nSanguis Christi, inebria me.\nAqua lateris Christi, lava me.\nPassio Christi, conforta me.\nO bone Iesu, exaudi me.\nIntra tua vulnera absconde me.\nNe permittas me separari a te.\nAb hoste maligno defende me.\nIn hora mortis meae voca me.\nEt iube me venire ad te,\nUt cum Sanctis tuis laudem te\nIn saecula saeculorum.\nAmen.",
-    "english_text": "Soul of Christ, sanctify me.\nBody of Christ, save me.\nBlood of Christ, inebriate me.\nWater from the side of Christ, wash me.\nPassion of Christ, strengthen me.\nO good Jesus, hear me.\nWithin your wounds, hide me.\nDo not allow me to be separated from you.\nFrom the malicious enemy, defend me.\nAt the hour of my death, call me.\nAnd bid me come to you,\nThat with your saints I may praise you\nForever and ever.\nAmen.",
-    "explanation": "The Anima Christi is a medieval prayer of unknown origin, first appearing in the early 14th century. St. Ignatius of Loyola placed it at the beginning of his Spiritual Exercises. It is traditionally prayed after receiving Holy Communion.",
-    "occasion": "After receiving Holy Communion"
+    "category": "Litanies",
+    "slug": "litanies",
+    "icon": "⊕",
+    "description": "Responsive prayers of intercession and praise, rooted in ancient Christian tradition.",
+    "prayers": [
+      {
+        "id": "litany-loreto",
+        "title": "Litany of Loreto (Litany of the Blessed Virgin)",
+        "text": "Lord, have mercy. Christ, have mercy. Lord, have mercy.\nChrist, hear us. Christ, graciously hear us.\n\nGod the Father of Heaven — Have mercy on us.\nGod the Son, Redeemer of the world — Have mercy on us.\nGod the Holy Spirit — Have mercy on us.\nHoly Trinity, one God — Have mercy on us.\n\nHoly Mary — Pray for us.\nHoly Mother of God — Pray for us.\nMother most pure — Pray for us.\nMother most chaste — Pray for us.\nMother inviolate — Pray for us.\nMother most amiable — Pray for us.\nMother of our Creator — Pray for us.\nMother of our Saviour — Pray for us.\nVirgin most prudent — Pray for us.\nVirgin most venerable — Pray for us.\nVirgin most renowned — Pray for us.\nVirgin most powerful — Pray for us.\nMirror of justice — Pray for us.\nSeat of Wisdom — Pray for us.\nCause of our joy — Pray for us.\nSpiritual vessel — Pray for us.\nVessel of honour — Pray for us.\nMysterious rose — Pray for us.\nTower of David — Pray for us.\nTower of ivory — Pray for us.\nHouse of gold — Pray for us.\nArk of the covenant — Pray for us.\nGate of heaven — Pray for us.\nMorning star — Pray for us.\nHealth of the sick — Pray for us.\nRefuge of sinners — Pray for us.\nComforter of the afflicted — Pray for us.\nHelp of Christians — Pray for us.\nQueen of Angels — Pray for us.\nQueen of Patriarchs — Pray for us.\nQueen of Prophets — Pray for us.\nQueen of Apostles — Pray for us.\nQueen of Martyrs — Pray for us.\nQueen of all Saints — Pray for us.\nQueen of the most Holy Rosary — Pray for us.\nQueen of Peace — Pray for us.\n\nLamb of God, who takes away the sins of the world — Spare us, O Lord.\nLamb of God, who takes away the sins of the world — Graciously hear us, O Lord.\nLamb of God, who takes away the sins of the world — Have mercy on us.\n\nPray for us, O holy Mother of God,\nThat we may be made worthy of the promises of Christ.",
+        "note": "Approved by Pope Sixtus V in 1587. One of the oldest and most widely used litanies."
+      },
+      {
+        "id": "litany-sacred-heart",
+        "title": "Litany of the Sacred Heart",
+        "text": "Lord, have mercy. Christ, have mercy. Lord, have mercy.\n\nHeart of Jesus, Son of the Eternal Father — Have mercy on us.\nHeart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother — Have mercy on us.\nHeart of Jesus, substantially united to the Word of God — Have mercy on us.\nHeart of Jesus, of infinite majesty — Have mercy on us.\nHeart of Jesus, holy temple of God — Have mercy on us.\nHeart of Jesus, tabernacle of the Most High — Have mercy on us.\nHeart of Jesus, house of God and gate of heaven — Have mercy on us.\nHeart of Jesus, burning furnace of charity — Have mercy on us.\nHeart of Jesus, vessel of justice and love — Have mercy on us.\nHeart of Jesus, full of goodness and love — Have mercy on us.\nHeart of Jesus, abyss of all virtues — Have mercy on us.\nHeart of Jesus, most worthy of all praise — Have mercy on us.\nHeart of Jesus, King and centre of all hearts — Have mercy on us.\nHeart of Jesus, in whom are all the treasures of wisdom and knowledge — Have mercy on us.\nHeart of Jesus, in whom dwells all the fullness of divinity — Have mercy on us.\nHeart of Jesus, in whom the Father is well pleased — Have mercy on us.\nHeart of Jesus, of whose fullness we have all received — Have mercy on us.\nHeart of Jesus, desire of the everlasting hills — Have mercy on us.\nHeart of Jesus, patient and most merciful — Have mercy on us.\nHeart of Jesus, enriching all who invoke thee — Have mercy on us.\nHeart of Jesus, fountain of life and holiness — Have mercy on us.\nHeart of Jesus, propitiation for our sins — Have mercy on us.\nHeart of Jesus, loaded down with opprobrium — Have mercy on us.\nHeart of Jesus, bruised for our offences — Have mercy on us.\nHeart of Jesus, obedient unto death — Have mercy on us.\nHeart of Jesus, pierced with a lance — Have mercy on us.\nHeart of Jesus, source of all consolation — Have mercy on us.\nHeart of Jesus, our life and resurrection — Have mercy on us.\nHeart of Jesus, our peace and reconciliation — Have mercy on us.\nHeart of Jesus, victim for our sins — Have mercy on us.\nHeart of Jesus, salvation of those who trust in thee — Have mercy on us.\nHeart of Jesus, hope of those who die in thee — Have mercy on us.\nHeart of Jesus, delight of all the saints — Have mercy on us.\n\nLamb of God, who takes away the sins of the world — Spare us, O Lord.\nLamb of God, who takes away the sins of the world — Graciously hear us, O Lord.\nLamb of God, who takes away the sins of the world — Have mercy on us.",
+        "note": "Approved by Pope Leo XIII in 1899 for universal use. June is the Month of the Sacred Heart."
+      }
+    ]
   }
 ]
