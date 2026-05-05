@@ -73,7 +73,7 @@ export default function HomePage() {
           </h1>
 
           <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.3rem)", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
-            A sacred digital home for the Catholic faithful — saints, prayers, sacraments, daily readings, and more. Free, offline-first, for all Catholics worldwide.
+            Your daily companion for Catholic life. Access the daily readings, pray the Rosary, and discover the lives of the Saints—wherever you are.
           </p>
 
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
@@ -112,10 +112,10 @@ export default function HomePage() {
         <div className="container-sacred">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 4vw, 2.75rem)", color: "var(--navy)", marginBottom: "0.75rem" }}>
-              Explore the Faith
+              Grow in Grace
             </h2>
             <p style={{ color: "var(--text-muted)", fontSize: "1rem", maxWidth: "500px", margin: "0 auto" }}>
-              Everything a Catholic needs — prayers, history, and sacraments in one sacred place.
+              A complete library of Catholic tradition, theology, and devotions.
             </p>
           </div>
 
@@ -179,10 +179,10 @@ export default function HomePage() {
       <section style={{ background: "linear-gradient(135deg, var(--crimson) 0%, #6B0F0F 100%)", padding: "5rem 1.5rem", textAlign: "center" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", color: "var(--white)", marginBottom: "1rem" }}>
-            Carry the Faith Wherever You Go
+            Take Your Prayer Life Anywhere
           </h2>
           <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "2rem", lineHeight: 1.7 }}>
-            Install Corpus Christi as a mobile app. Works offline — prayers, saints, and rosary available without internet.
+            Add Corpus Christi to your home screen to pray offline, track your novenas, and read the daily gospel on the go.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/rosary" className="btn-sacred">Pray Now</Link>
