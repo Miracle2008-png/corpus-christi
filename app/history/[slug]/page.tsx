@@ -26,9 +26,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
   const history = getHistoryData();
-  const event = history.find((h) => h.slug === params.slug);
+  const event = history.find((h) => h.slug === resolvedParams.slug);
 
   if (!event) return { title: "Event Not Found" };
 
@@ -38,9 +39,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function HistoryDetailPage({ params }: { params: { slug: string } }) {
+export default async function HistoryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
   const history = getHistoryData();
-  const currentIndex = history.findIndex((h) => h.slug === params.slug);
+  const currentIndex = history.findIndex((h) => h.slug === resolvedParams.slug);
   
   if (currentIndex === -1) {
     notFound();
@@ -94,7 +96,7 @@ export default function HistoryDetailPage({ params }: { params: { slug: string }
       <div className="container-sacred" style={{ maxWidth: "800px", padding: "0 1.5rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem", gap: "1rem", flexWrap: "wrap" }}>
           {prevEvent ? (
-            <Link href={`/history/${prevEvent.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.3)", padding: "1rem", borderRadius: "10px", transition: "background 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.2)")} onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.1)")}>
+            <Link href={`/history/${prevEvent.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.3)", padding: "1rem", borderRadius: "10px", transition: "background 0.2s" }} className="sacred-card-hover">
               <div style={{ color: "var(--gold-dark)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 700, marginBottom: "0.25rem" }}>&larr; Previous Event</div>
               <div style={{ color: "var(--navy)", fontFamily: "var(--font-serif)", fontWeight: 600 }}>{prevEvent.event}</div>
             </Link>
@@ -103,7 +105,7 @@ export default function HistoryDetailPage({ params }: { params: { slug: string }
           )}
 
           {nextEvent ? (
-            <Link href={`/history/${nextEvent.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.3)", padding: "1rem", borderRadius: "10px", textAlign: "right", transition: "background 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.2)")} onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.1)")}>
+            <Link href={`/history/${nextEvent.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(201,168,76,0.1)", border: "1px solid rgba(201,168,76,0.3)", padding: "1rem", borderRadius: "10px", textAlign: "right", transition: "background 0.2s" }} className="sacred-card-hover">
               <div style={{ color: "var(--gold-dark)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 700, marginBottom: "0.25rem" }}>Next Event &rarr;</div>
               <div style={{ color: "var(--navy)", fontFamily: "var(--font-serif)", fontWeight: 600 }}>{nextEvent.event}</div>
             </Link>
