@@ -50,21 +50,6 @@ if (
   );
 }
 
-// Only register Apple if credentials are configured
-if (
-  process.env.APPLE_ID &&
-  process.env.APPLE_ID !== "REPLACE_WITH_APPLE_BUNDLE_ID" &&
-  process.env.APPLE_SECRET &&
-  process.env.APPLE_SECRET !== "REPLACE_WITH_APPLE_SECRET"
-) {
-  providers.push(
-    AppleProvider({
-      clientId: process.env.APPLE_ID,
-      clientSecret: process.env.APPLE_SECRET,
-    })
-  );
-}
-
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers,
   callbacks: {
