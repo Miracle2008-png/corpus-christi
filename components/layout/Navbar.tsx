@@ -37,6 +37,7 @@ const navLinks = [
 export default function Navbar({ session }: { session?: any }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [authDropdownOpen, setAuthDropdownOpen] = useState(false);
 
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
@@ -122,35 +123,70 @@ export default function Navbar({ session }: { session?: any }) {
           {/* Auth buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.75rem" }}>
             {session ? (
-              <>
-                <Link
-                  href="/dashboard"
+              <div style={{ position: "relative" }} onMouseLeave={() => setAuthDropdownOpen(false)}>
+                <button
+                  onClick={() => setAuthDropdownOpen(!authDropdownOpen)}
+                  onMouseEnter={() => setAuthDropdownOpen(true)}
                   style={{
                     color: "var(--navy-dark)", textDecoration: "none",
                     fontSize: "0.8rem", padding: "0.45rem 1rem",
-                    borderRadius: "6px",
+                    borderRadius: "6px", border: "none", cursor: "pointer",
                     background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
                     fontWeight: 700, transition: "all 0.2s",
+                    display: "flex", alignItems: "center", gap: "0.4rem"
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
                 >
                   {session.user?.name ? `Hi, ${session.user.name.split(" ")[0]}` : "My Account"}
-                </Link>
-                <button
-                  onClick={() => signOut({ callbackUrl: "/" })}
-                  style={{
-                    color: "rgba(255,255,255,0.7)", textDecoration: "none",
-                    fontSize: "0.8rem", padding: "0.45rem 1rem",
-                    borderRadius: "6px", border: "1px solid rgba(255,255,255,0.1)",
-                    background: "transparent", cursor: "pointer", transition: "all 0.2s",
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.color = "var(--gold)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; e.currentTarget.style.color = "rgba(255,255,255,0.7)"; }}
-                >
-                  Sign Out
+                  <span style={{ fontSize: "0.6rem" }}>▼</span>
                 </button>
-              </>
+
+                {authDropdownOpen && (
+                  <div style={{
+                    position: "absolute", top: "100%", right: 0, marginTop: "0.5rem",
+                    background: "var(--navy-dark)", border: "1px solid rgba(201,168,76,0.3)",
+                    borderRadius: "8px", padding: "0.5rem 0", minWidth: "180px",
+                    boxShadow: "0 10px 25px rgba(0,0,0,0.5)", zIndex: 100,
+                  }}>
+                    <Link
+                      href="/dashboard"
+                      onClick={() => setAuthDropdownOpen(false)}
+                      style={{
+                        display: "block", padding: "0.6rem 1.25rem", color: "var(--white)",
+                        textDecoration: "none", fontSize: "0.85rem", transition: "all 0.2s"
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = "var(--gold)"; e.currentTarget.style.background = "rgba(255,255,255,0.05)"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.color = "var(--white)"; e.currentTarget.style.background = "transparent"; }}
+                    >
+                      Dashboard
+                    </Link>
+                    <Link
+                      href="/dashboard#donations"
+                      onClick={() => setAuthDropdownOpen(false)}
+                      style={{
+                        display: "block", padding: "0.6rem 1.25rem", color: "var(--white)",
+                        textDecoration: "none", fontSize: "0.85rem", transition: "all 0.2s"
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = "var(--gold)"; e.currentTarget.style.background = "rgba(255,255,255,0.05)"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.color = "var(--white)"; e.currentTarget.style.background = "transparent"; }}
+                    >
+                      My Donations
+                    </Link>
+                    <div style={{ height: "1px", background: "rgba(255,255,255,0.1)", margin: "0.5rem 0" }} />
+                    <button
+                      onClick={() => { setAuthDropdownOpen(false); signOut({ callbackUrl: "/" }); }}
+                      style={{
+                        display: "block", width: "100%", textAlign: "left", padding: "0.6rem 1.25rem",
+                        color: "var(--crimson)", background: "transparent", border: "none", cursor: "pointer",
+                        fontSize: "0.85rem", transition: "all 0.2s"
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,0,0,0.05)"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
             ) : (
               <>
                 <Link
