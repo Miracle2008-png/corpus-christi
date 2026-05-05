@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import popes1 from "@/data/popes-1-50.json";
 import popes2 from "@/data/popes-51-100.json";
 import popes3 from "@/data/popes-101-150.json";
@@ -85,12 +86,12 @@ export default function PopesPage() {
                     {/* Portrait */}
                     {pope.img ? (
                       <div style={{ height: "200px", overflow: "hidden", background: "#eee" }}>
-                        <img
+                        <Image
                           src={pope.img}
                           alt={pope.name}
-                          loading="lazy"
-                          referrerPolicy="no-referrer"
-                          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{ objectFit: "cover", objectPosition: "top" }}
                         />
                       </div>
                     ) : (

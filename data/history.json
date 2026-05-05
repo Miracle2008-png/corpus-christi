@@ -1,0 +1,130 @@
+[
+  {
+    "slug": "pentecost",
+    "year": "c. 33 AD",
+    "event": "Pentecost — Birth of the Church",
+    "desc": "The Holy Spirit descends on the Apostles and Mary in the Upper Room. Peter preaches and 3,000 are baptized. The Church is born.",
+    "icon": "✦",
+    "deep_dive": "Pentecost marks the definitive birth of the Church. Following Christ's Ascension, the Apostles and Mary were gathered in the Upper Room in Jerusalem, praying. Suddenly, a sound like a rushing wind filled the house, and tongues of fire rested upon them. Filled with the Holy Spirit, they began to speak in different languages, allowing the diverse crowds in Jerusalem to hear the Gospel in their native tongues. St. Peter delivered his first powerful sermon, resulting in the baptism of 3,000 people. This day fulfilled Christ's promise to send the Advocate and empowered the Apostles to begin their worldwide mission of evangelization."
+  },
+  {
+    "slug": "martyrdom-of-peter-and-paul",
+    "year": "c. 64-68 AD",
+    "event": "Martyrdom of Peter and Paul in Rome",
+    "desc": "The great Apostles Peter and Paul are martyred in Rome under Emperor Nero. Peter is crucified upside down; Paul is beheaded.",
+    "icon": "✝",
+    "deep_dive": "The martyrdom of Saints Peter and Paul in Rome cemented the city's status as the spiritual center of the Church. Following the Great Fire of Rome in 64 AD, Emperor Nero falsely blamed the Christians, initiating a fierce persecution. St. Peter, the first Pope, was crucified. Deeming himself unworthy to die in the exact same manner as Christ, he requested to be crucified upside down. He was buried on the Vatican Hill. St. Paul, as a Roman citizen, was spared crucifixion and instead was beheaded at Tre Fontane. Their blood watered the seeds of the early Roman Church, and their tombs remain the foundational anchors of Catholicism."
+  },
+  {
+    "slug": "edict-of-milan",
+    "year": "313 AD",
+    "event": "Edict of Milan",
+    "desc": "Emperor Constantine I issues the Edict of Milan, granting religious tolerance throughout the Empire.",
+    "icon": "+",
+    "deep_dive": "After nearly three centuries of periodic and brutal persecutions, the Church finally found peace through the Edict of Milan. Promulgated by Emperor Constantine the Great and his co-emperor Licinius, the edict declared religious toleration throughout the Roman Empire and restored confiscated property to Christians. This turning point allowed Christianity to emerge from the catacombs and integrate into public life. Churches were built openly, bishops gained public influence, and the faith began to shape Roman law and society, marking the transition from a persecuted minority to the dominant religion of the Empire."
+  },
+  {
+    "slug": "council-of-nicaea",
+    "year": "325 AD",
+    "event": "First Council of Nicaea",
+    "desc": "The first ecumenical council defines the divinity of Christ against Arianism. The Nicene Creed is composed.",
+    "icon": "+",
+    "deep_dive": "Convened by Emperor Constantine, the First Council of Nicaea was a defining moment in early Christian theology. The primary crisis was Arianism, a heresy taught by the priest Arius, which claimed that Jesus Christ was a created being and not co-eternal with God the Father. The Council definitively condemned Arianism, declaring that the Son is 'consubstantial' (homoousios) with the Father—true God from true God. The resulting Nicene Creed (later expanded at Constantinople) remains the universal profession of faith for Catholics, Orthodox, and most Protestants to this day."
+  },
+  {
+    "slug": "christianity-state-religion",
+    "year": "380 AD",
+    "event": "Christianity becomes State Religion of Rome",
+    "desc": "Emperor Theodosius declares Nicene Christianity the official religion of the Roman Empire.",
+    "icon": "+",
+    "deep_dive": "With the Edict of Thessalonica in 380 AD, Emperor Theodosius I made Nicene Christianity the official state religion of the Roman Empire. This officially ended state support for traditional Roman paganism and Arianism. While it gave the Church unprecedented resources and influence, it also introduced new challenges regarding the relationship between Church and State. The Emperor's decree meant that being a Roman citizen increasingly meant being a Catholic, profoundly shaping the development of European civilization for the next thousand years."
+  },
+  {
+    "slug": "council-of-ephesus",
+    "year": "431 AD",
+    "event": "Council of Ephesus — Mary declared Theotokos",
+    "desc": "The Council of Ephesus defines Mary as Theotokos ('God-bearer'). This confirms Christ's full divinity.",
+    "icon": "✦",
+    "deep_dive": "The Council of Ephesus was called to resolve the Nestorian controversy. Nestorius, the Patriarch of Constantinople, argued that Mary should only be called Christotokos (Christ-bearer), implying a division between the human and divine persons of Jesus. The Council, led by St. Cyril of Alexandria, vehemently rejected this, affirming that Jesus is one divine Person with two natures. Therefore, it is entirely correct to call Mary Theotokos (God-bearer or Mother of God), not because she originated God, but because the Person she carried in her womb and gave birth to was God the Son."
+  },
+  {
+    "slug": "council-of-chalcedon",
+    "year": "451 AD",
+    "event": "Council of Chalcedon",
+    "desc": "Defines Christ as one Person with two natures — fully human and fully divine.",
+    "icon": "+",
+    "deep_dive": "Building upon Ephesus, the Council of Chalcedon provided the definitive Christological statement of the early Church. It addressed the Monophysite heresy, which claimed that Christ had only one nature, a blend of human and divine. The Council produced the Chalcedonian Definition, clarifying that Jesus Christ is one Person subsisting in two distinct, unconfused, and undivided natures: fully God and fully man. This theological masterpiece, heavily influenced by Pope Leo the Great's 'Tome', remains the bedrock of orthodox Christology."
+  },
+  {
+    "slug": "gregory-the-great",
+    "year": "590 AD",
+    "event": "Pontificate of St. Gregory the Great",
+    "desc": "Pope Gregory the Great sends missionaries to England, reforms the liturgy, and writes pastoral masterpieces.",
+    "icon": "✦",
+    "deep_dive": "Pope St. Gregory I, known as Gregory the Great, guided the Church during a time of immense political instability following the collapse of the Western Roman Empire. A former monk, he brought monastic discipline to the papacy. He is renowned for dispatching St. Augustine of Canterbury to evangelize the Anglo-Saxons in England. He also instituted widespread liturgical reforms (Gregorian chant is named in his honor) and wrote extensively on pastoral care and theology. His reign solidified the spiritual and temporal authority of the Papacy in Western Europe."
+  },
+  {
+    "slug": "the-great-schism",
+    "year": "1054 AD",
+    "event": "The Great Schism",
+    "desc": "The mutual excommunication between Rome and Constantinople divides Christianity into Catholic and Eastern Orthodox.",
+    "icon": "✦",
+    "deep_dive": "The Great Schism of 1054 formalized the growing cultural, political, and theological divide between the Latin-speaking West (centered in Rome) and the Greek-speaking East (centered in Constantinople). Tensions over papal authority, the insertion of the Filioque clause into the Creed, and liturgical differences culminated in mutual excommunications between papal legates and the Patriarch of Constantinople. This tragic fracture divided Christendom into the Roman Catholic Church and the Eastern Orthodox Church. Despite numerous attempts at reconciliation, the schism remains a primary ecumenical challenge today."
+  },
+  {
+    "slug": "the-crusades",
+    "year": "1095 AD",
+    "event": "The Crusades Begin",
+    "desc": "Pope Urban II calls the First Crusade at Clermont.",
+    "icon": "+",
+    "deep_dive": "At the Council of Clermont, Pope Urban II urged Western Christians to aid the Byzantine Empire against Seljuk Turkish expansion and to reclaim the Holy Land, particularly Jerusalem, for safe Christian pilgrimage. This launched the First Crusade, leading to the capture of Jerusalem in 1099. The Crusading era spanned several centuries and was a deeply complex period driven by genuine religious fervor, political ambition, and economic interests. While they successfully reopened pilgrimage routes for a time, they also involved significant violence, the tragic sack of Constantinople in 1204, and lasting tensions with the Islamic world."
+  },
+  {
+    "slug": "fourth-lateran-council",
+    "year": "1215 AD",
+    "event": "Fourth Lateran Council",
+    "desc": "The greatest council of the medieval Church. Defines transubstantiation. Mandates annual Confession and Communion.",
+    "icon": "+",
+    "deep_dive": "Convened by Pope Innocent III, the Fourth Lateran Council was the zenith of the medieval papacy's influence. It issued 70 decrees that shaped Catholic life for centuries. It officially adopted the term 'transubstantiation' to explain the real presence of Christ in the Eucharist. It also instituted the precept that every Catholic must confess their sins and receive Holy Communion at least once a year during the Easter season. Additionally, it addressed the Albigensian heresy and laid out procedures for ecclesiastical discipline and inquisitions."
+  },
+  {
+    "slug": "protestant-reformation",
+    "year": "1517 AD",
+    "event": "The Protestant Reformation",
+    "desc": "Martin Luther posts his 95 Theses, sparking the Reformation.",
+    "icon": "✦",
+    "deep_dive": "In 1517, the Augustinian monk Martin Luther published his 95 Theses, initially protesting the abuse of indulgences. This act quickly escalated into a broader theological revolt against papal authority, the sacrificial nature of the Mass, and the Catholic understanding of justification. The movement, later joined by figures like John Calvin and Huldrych Zwingli, led to the formation of various Protestant denominations. This massive rupture permanently ended the religious unity of Western Europe, sparking centuries of theological debate and devastating religious wars."
+  },
+  {
+    "slug": "council-of-trent",
+    "year": "1545-1563 AD",
+    "event": "Council of Trent",
+    "desc": "The Catholic response to the Reformation. Clarifies doctrine and codifies the Tridentine Mass.",
+    "icon": "✝",
+    "deep_dive": "The Council of Trent was the definitive Catholic response to the Protestant Reformation, inaugurating the Counter-Reformation (or Catholic Reformation). Over 18 years, the Council systematically clarified Catholic doctrine concerning Scripture and Tradition, Original Sin, Justification, and the Seven Sacraments. It condemned Protestant theology, demanded strict reform of clerical morals, mandated the establishment of seminaries for priestly formation, and codified the Roman Rite of the Mass (the Tridentine Mass). Trent revitalized the Church, equipping it with a unified doctrinal and pastoral vision for the modern era."
+  },
+  {
+    "slug": "first-vatican-council",
+    "year": "1870 AD",
+    "event": "First Vatican Council — Papal Infallibility",
+    "desc": "Vatican I defines the dogma of papal infallibility.",
+    "icon": "+",
+    "deep_dive": "Convened by Pope Pius IX, the First Vatican Council was held against the backdrop of the rising secularism and rationalism of the 19th century. Its most significant achievement was the dogmatic constitution Pastor Aeternus, which formally defined the dogma of Papal Infallibility. This dogma states that when the Pope speaks ex cathedra (from the chair of Peter) to define a doctrine concerning faith or morals to be held by the whole Church, he is preserved from error by the Holy Spirit. The Council was abruptly suspended when Italian troops captured Rome, ending the Papal States."
+  },
+  {
+    "slug": "second-vatican-council",
+    "year": "1962-1965 AD",
+    "event": "Second Vatican Council",
+    "desc": "The 21st ecumenical council reformed the liturgy and opened dialogue with the modern world.",
+    "icon": "+",
+    "deep_dive": "Called by Pope St. John XXIII, the Second Vatican Council (Vatican II) was a monumental effort to renew the Church (aggiornamento) and engage with the modern world. Attended by over 2,500 bishops, it produced 16 pivotal documents. Key reforms included the revision of the liturgy to allow the vernacular languages alongside Latin, a renewed theology of the laity and the Church as the 'People of God' (Lumen Gentium), an emphasis on ecumenical dialogue, and a declaration on religious liberty (Dignitatis Humanae). Its implementation continues to shape the contemporary Catholic experience."
+  },
+  {
+    "slug": "great-jubilee-2000",
+    "year": "2000 AD",
+    "event": "Great Jubilee of the Year 2000",
+    "desc": "Pope John Paul II leads the Church into the third millennium.",
+    "icon": "✦",
+    "deep_dive": "The Great Jubilee was a massive celebration marking the 2,000th anniversary of the birth of Jesus Christ. Pope St. John Paul II saw this as a profound moment of grace and a necessary purification of memory for the Church. He led the Church in public acts of repentance for past sins committed by Catholics. Millions of pilgrims traveled to Rome to pass through the Holy Doors. The Pope's apostolic letter, Novo Millennio Ineunte, urged the Church to 'Duc in altum' (Put out into the deep), focusing on holiness, prayer, and the New Evangelization in the third millennium."
+  }
+]

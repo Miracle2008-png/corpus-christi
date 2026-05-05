@@ -25,6 +25,7 @@ const features = [
   { href: "/stations", icon: "+", label: "Stations", desc: "Immersive Way of the Cross" },
   { href: "/rosary", icon: "+", label: "Holy Rosary", desc: "Guided prayer with Latin & English" },
   { href: "/readings", icon: "+", label: "Daily Readings", desc: "Scripture for today" },
+  { href: "/calendar", icon: "+", label: "Calendar", desc: "Liturgical seasons & feasts" },
   { href: "/miracles", icon: "+", label: "Miracles", desc: "Verified signs and wonders" },
   { href: "/mass", icon: "+", label: "Mass & Confession", desc: "Full liturgical breakdown" },
   { href: "/history", icon: "+", label: "Church History", desc: "Rome to today — 2000 years" },

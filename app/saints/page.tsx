@@ -123,11 +123,12 @@ export default async function SaintsPage({ searchParams }: PageProps) {
                   {/* Image */}
                   <div style={{ position: "relative", height: "200px", background: "var(--navy)", overflow: "hidden" }}>
                     {saint.image_url ? (
-                      <img
+                      <Image
                         src={saint.image_url}
                         alt={`Painting of ${saint.name}`}
-                        style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.85 }}
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: "cover", opacity: 0.85 }}
                       />
                     ) : (
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>

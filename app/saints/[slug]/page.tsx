@@ -42,10 +42,12 @@ export default async function SaintDetailPage({ params }: Props) {
             {/* Portrait */}
             <div style={{ width: "200px", height: "260px", borderRadius: "12px", overflow: "hidden", border: "3px solid rgba(201,168,76,0.4)", flexShrink: 0, background: "var(--navy-dark)", position: "relative" }}>
               {saint.image_url ? (
-                <img
+                <Image
                   src={saint.image_url}
                   alt={`Portrait of ${saint.name}`}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  style={{ objectFit: "cover" }}
                 />
               ) : (
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>

@@ -4,8 +4,9 @@ import bcrypt from "bcryptjs";
 export interface IUser extends Document {
   name: string;
   email: string;
-  password_hash: string;
+  password_hash?: string;
   role: "admin" | "user";
+  authProvider?: string;
   bookmarks: {
     saints: mongoose.Types.ObjectId[];
     prayers: mongoose.Types.ObjectId[];
@@ -21,8 +22,9 @@ const UserSchema = new Schema<IUser>(
   {
     name:         { type: String, required: true, trim: true, maxlength: 100 },
     email:        { type: String, required: true, unique: true, lowercase: true, trim: true },
-    password_hash:{ type: String, required: true, select: false },
+    password_hash:{ type: String, required: false, select: false },
     role:         { type: String, enum: ["admin", "user"], default: "user" },
+    authProvider: { type: String, default: "credentials" },
     bookmarks: {
       saints:   [{ type: Schema.Types.ObjectId, ref: "Saint" }],
       prayers:  [{ type: Schema.Types.ObjectId, ref: "Prayer" }],

@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
+import AppleProvider from "next-auth/providers/apple";
 import { connectDB } from "@/lib/mongodb";
 import User from "@/models/User";
 
@@ -32,8 +34,44 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
       },
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+    }),
+    AppleProvider({
+      clientId: process.env.APPLE_ID || "",
+      clientSecret: process.env.APPLE_SECRET || "",
+    })
   ],
   callbacks: {
+    async signIn({ user, account, profile }) {
+      if (account?.provider === "google" || account?.provider === "apple") {
+        try {
+          await connectDB();
+          const userEmail = user.email ?? "";
+          if (!userEmail) return false;
+          let dbUser = await User.findOne({ email: userEmail });
+          if (!dbUser) {
+            // Create a new user for OAuth
+            dbUser = await User.create({
+              name: user.name || "User",
+              email: userEmail,
+              role: "user",
+              authProvider: account.provider,
+            });
+          } else {
+            await User.findByIdAndUpdate(dbUser._id, { lastLogin: new Date() });
+          }
+          user.id = dbUser._id.toString();
+          (user as any).role = dbUser.role;
+          return true;
+        } catch (error) {
+          console.error("OAuth SignIn Error:", error);
+          return false;
+        }
+      }
+      return true;
+    },
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;

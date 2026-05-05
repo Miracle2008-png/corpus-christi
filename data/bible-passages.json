@@ -1,0 +1,162 @@
+[
+  {
+    "theme": "Faith & Trust",
+    "color": "#1a3f5c",
+    "passages": [
+      { "ref": "John 3:16", "text": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." },
+      { "ref": "Proverbs 3:5-6", "text": "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight." },
+      { "ref": "Hebrews 11:1", "text": "Now faith is confidence in what we hope for and assurance about what we do not see." },
+      { "ref": "Romans 8:28", "text": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose." },
+      { "ref": "Isaiah 40:31", "text": "But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint." },
+      { "ref": "Matthew 17:20", "text": "Truly I tell you, if you have faith as small as a mustard seed, you can say to this mountain, 'Move from here to there,' and it will move. Nothing will be impossible for you." },
+      { "ref": "James 1:2-3", "text": "Consider it pure joy, my brothers and sisters, whenever you face trials of many kinds, because you know that the testing of your faith produces perseverance." },
+      { "ref": "2 Corinthians 5:7", "text": "For we live by faith, not by sight." },
+      { "ref": "Romans 10:17", "text": "Consequently, faith comes from hearing the message, and the message is heard through the word about Christ." },
+      { "ref": "Ephesians 2:8-9", "text": "For it is by grace you have been saved, through faith — and this is not from yourselves, it is the gift of God — not by works, so that no one can boast." }
+    ]
+  },
+  {
+    "theme": "Love & Grace",
+    "color": "#7b2d3e",
+    "passages": [
+      { "ref": "1 Corinthians 13:4-7", "text": "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres." },
+      { "ref": "John 15:13", "text": "Greater love has no one than this: to lay down one's life for one's friends." },
+      { "ref": "Romans 5:8", "text": "But God demonstrates his own love for us in this: While we were still sinners, Christ died for us." },
+      { "ref": "1 John 4:8", "text": "Whoever does not love does not know God, because God is love." },
+      { "ref": "John 13:34", "text": "A new command I give you: Love one another. As I have loved you, so you must love one another." },
+      { "ref": "Romans 8:38-39", "text": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord." },
+      { "ref": "Ephesians 3:17-19", "text": "And I pray that you, being rooted and established in love, may have power, together with all the Lord's holy people, to grasp how wide and long and high and deep is the love of Christ." },
+      { "ref": "1 John 3:16", "text": "This is how we know what love is: Jesus Christ laid down his life for us. And we ought to lay down our lives for our brothers and sisters." },
+      { "ref": "Lamentations 3:22-23", "text": "Because of the Lord's great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness." },
+      { "ref": "Zephaniah 3:17", "text": "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing." }
+    ]
+  },
+  {
+    "theme": "Hope & Comfort",
+    "color": "#2d5a3d",
+    "passages": [
+      { "ref": "Jeremiah 29:11", "text": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future." },
+      { "ref": "Psalm 23:1-4", "text": "The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures, he leads me beside quiet waters, he refreshes my soul. He guides me along the right paths for his name's sake. Even though I walk through the darkest valley, I will fear no evil, for you are with me." },
+      { "ref": "Matthew 11:28", "text": "Come to me, all you who are weary and burdened, and I will give you rest." },
+      { "ref": "Romans 15:13", "text": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit." },
+      { "ref": "Isaiah 41:10", "text": "So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand." },
+      { "ref": "Psalm 46:1", "text": "God is our refuge and strength, an ever-present help in trouble." },
+      { "ref": "John 14:27", "text": "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid." },
+      { "ref": "Revelation 21:4", "text": "He will wipe every tear from their eyes. There will be no more death or mourning or crying or pain, for the old order of things has passed away." },
+      { "ref": "2 Corinthians 4:17", "text": "For our light and momentary troubles are achieving for us an eternal glory that far outweighs them all." },
+      { "ref": "Psalm 34:18", "text": "The Lord is close to the brokenhearted and saves those who are crushed in spirit." }
+    ]
+  },
+  {
+    "theme": "Strength & Courage",
+    "color": "#5c3d1a",
+    "passages": [
+      { "ref": "Philippians 4:13", "text": "I can do all this through him who gives me strength." },
+      { "ref": "Joshua 1:9", "text": "Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go." },
+      { "ref": "Isaiah 40:29", "text": "He gives strength to the weary and increases the power of the weak." },
+      { "ref": "2 Timothy 1:7", "text": "For the Spirit God gave us does not make us timid, but gives us power, love and self-discipline." },
+      { "ref": "Ephesians 6:10", "text": "Finally, be strong in the Lord and in his mighty power." },
+      { "ref": "Psalm 27:1", "text": "The Lord is my light and my salvation — whom shall I fear? The Lord is the stronghold of my life — of whom shall I be afraid?" },
+      { "ref": "Romans 8:31", "text": "What, then, shall we say in response to these things? If God is for us, who can be against us?" },
+      { "ref": "Nehemiah 8:10", "text": "Do not grieve, for the joy of the Lord is your strength." },
+      { "ref": "Psalm 28:7", "text": "The Lord is my strength and my shield; my heart trusts in him, and he helps me." },
+      { "ref": "Isaiah 43:2", "text": "When you pass through the waters, I will be with you; and when you pass through the rivers, they will not sweep over you." }
+    ]
+  },
+  {
+    "theme": "Prayer & Worship",
+    "color": "#4a2060",
+    "passages": [
+      { "ref": "Matthew 6:9-13", "text": "Our Father in heaven, hallowed be your name, your kingdom come, your will be done, on earth as it is in heaven. Give us today our daily bread. And forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, but deliver us from the evil one." },
+      { "ref": "Philippians 4:6-7", "text": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus." },
+      { "ref": "1 Thessalonians 5:16-18", "text": "Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus." },
+      { "ref": "Matthew 7:7", "text": "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you." },
+      { "ref": "James 5:16", "text": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective." },
+      { "ref": "Psalm 95:6", "text": "Come, let us bow down in worship, let us kneel before the Lord our Maker." },
+      { "ref": "John 4:24", "text": "God is spirit, and his worshipers must worship in the Spirit and in truth." },
+      { "ref": "Romans 12:12", "text": "Be joyful in hope, patient in affliction, faithful in prayer." },
+      { "ref": "1 John 5:14", "text": "This is the confidence we have in approaching God: that if we ask anything according to his will, he hears us." },
+      { "ref": "Luke 18:1", "text": "Then Jesus told his disciples a parable to show them that they should always pray and not give up." }
+    ]
+  },
+  {
+    "theme": "Salvation & Redemption",
+    "color": "#1a4a3a",
+    "passages": [
+      { "ref": "Romans 6:23", "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord." },
+      { "ref": "Acts 4:12", "text": "Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved." },
+      { "ref": "Isaiah 53:5", "text": "But he was pierced for our transgressions, he was crushed for our iniquities; the punishment that brought us peace was on him, and by his wounds we are healed." },
+      { "ref": "John 1:12", "text": "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God." },
+      { "ref": "Titus 3:5", "text": "He saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewing by the Holy Spirit." },
+      { "ref": "Psalm 103:12", "text": "As far as the east is from the west, so far has he removed our transgressions from us." },
+      { "ref": "1 Peter 2:24", "text": "He himself bore our sins in his body on the cross, so that we might die to sins and live for righteousness; by his wounds you have been healed." },
+      { "ref": "Romans 3:23-24", "text": "For all have sinned and fall short of the glory of God, and all are justified freely by his grace through the redemption that came by Christ Jesus." },
+      { "ref": "John 10:10", "text": "The thief comes only to steal and kill and destroy; I have come that they may have life, and have it to the full." },
+      { "ref": "Luke 19:10", "text": "For the Son of Man came to seek and to save the lost." }
+    ]
+  },
+  {
+    "theme": "Peace & Anxiety",
+    "color": "#2a4a5a",
+    "passages": [
+      { "ref": "John 16:33", "text": "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world." },
+      { "ref": "Isaiah 26:3", "text": "You will keep in perfect peace those whose minds are steadfast, because they trust in you." },
+      { "ref": "Psalm 4:8", "text": "In peace I will lie down and sleep, for you alone, Lord, make me dwell in safety." },
+      { "ref": "Colossians 3:15", "text": "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful." },
+      { "ref": "Romans 8:6", "text": "The mind governed by the flesh is death, but the mind governed by the Spirit is life and peace." },
+      { "ref": "Matthew 6:34", "text": "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own." },
+      { "ref": "1 Peter 5:7", "text": "Cast all your anxiety on him because he cares for you." },
+      { "ref": "Numbers 6:24-26", "text": "The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you; the Lord turn his face toward you and give you peace." },
+      { "ref": "Psalm 29:11", "text": "The Lord gives strength to his people; the Lord blesses his people with peace." },
+      { "ref": "Galatians 5:22-23", "text": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law." }
+    ]
+  },
+  {
+    "theme": "Wisdom & Guidance",
+    "color": "#4a3a1a",
+    "passages": [
+      { "ref": "James 1:5", "text": "If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you." },
+      { "ref": "Psalm 119:105", "text": "Your word is a lamp for my feet, a light on my path." },
+      { "ref": "Proverbs 4:7", "text": "The beginning of wisdom is this: Get wisdom. Though it cost all you have, get understanding." },
+      { "ref": "Colossians 3:16", "text": "Let the message of Christ dwell among you richly as you teach and admonish one another with all wisdom through psalms, hymns, and songs from the Spirit." },
+      { "ref": "Proverbs 1:7", "text": "The fear of the Lord is the beginning of wisdom; fools despise wisdom and instruction." },
+      { "ref": "Isaiah 55:8-9", "text": "For my thoughts are not your thoughts, neither are your ways my ways, declares the Lord. As the heavens are higher than the earth, so are my ways higher than your ways and my thoughts than your thoughts." },
+      { "ref": "Romans 12:2", "text": "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is — his good, pleasing and perfect will." },
+      { "ref": "Psalm 37:4", "text": "Take delight in the Lord, and he will give you the desires of your heart." },
+      { "ref": "2 Timothy 3:16-17", "text": "All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness, so that the servant of God may be thoroughly equipped for every good work." },
+      { "ref": "Proverbs 16:9", "text": "In their hearts humans plan their course, but the Lord establishes their steps." }
+    ]
+  },
+  {
+    "theme": "Purpose & Identity",
+    "color": "#3a1a4a",
+    "passages": [
+      { "ref": "Jeremiah 1:5", "text": "Before I formed you in the womb I knew you, before you were born I set you apart; I appointed you as a prophet to the nations." },
+      { "ref": "Ephesians 2:10", "text": "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do." },
+      { "ref": "Psalm 139:14", "text": "I praise you because I am fearfully and wonderfully made; your works are wonderful, I know that full well." },
+      { "ref": "Romans 8:17", "text": "Now if we are children, then we are heirs — heirs of God and co-heirs with Christ, if indeed we share in his sufferings in order that we may also share in his glory." },
+      { "ref": "Galatians 2:20", "text": "I have been crucified with Christ and I no longer live, but Christ lives in me. The life I now live in the body, I live by faith in the Son of God, who loved me and gave himself for me." },
+      { "ref": "1 Peter 2:9", "text": "But you are a chosen people, a royal priesthood, a holy nation, God's special possession, that you may declare the praises of him who called you out of darkness into his wonderful light." },
+      { "ref": "Psalm 139:16", "text": "Your eyes saw my unformed body; all the days ordained for me were written in your book before one of them came to be." },
+      { "ref": "Colossians 1:16", "text": "For in him all things were created: things in heaven and on earth, visible and invisible, whether thrones or powers or rulers or authorities; all things have been created through him and for him." },
+      { "ref": "2 Corinthians 5:17", "text": "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!" },
+      { "ref": "Philippians 1:6", "text": "Being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus." }
+    ]
+  },
+  {
+    "theme": "Praise & Thanksgiving",
+    "color": "#1a3a1a",
+    "passages": [
+      { "ref": "Psalm 100:4", "text": "Enter his gates with thanksgiving and his courts with praise; give thanks to him and praise his name." },
+      { "ref": "Psalm 150:6", "text": "Let everything that has breath praise the Lord. Praise the Lord." },
+      { "ref": "Philippians 4:4", "text": "Rejoice in the Lord always. I will say it again: Rejoice!" },
+      { "ref": "Psalm 107:1", "text": "Give thanks to the Lord, for he is good; his love endures forever." },
+      { "ref": "Hebrews 13:15", "text": "Through Jesus, therefore, let us continually offer to God a sacrifice of praise — the fruit of lips that openly profess his name." },
+      { "ref": "Psalm 9:1", "text": "I will give thanks to you, Lord, with all my heart; I will tell of all your wonderful deeds." },
+      { "ref": "Isaiah 12:5", "text": "Sing to the Lord, for he has done glorious things; let this be known to all the world." },
+      { "ref": "Colossians 3:17", "text": "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him." },
+      { "ref": "Revelation 4:11", "text": "You are worthy, our Lord and God, to receive glory and honor and power, for you created all things, and by your will they were created and have their being." },
+      { "ref": "Luke 1:46-47", "text": "And Mary said: My soul glorifies the Lord and my spirit rejoices in God my Savior." }
+    ]
+  }
+]

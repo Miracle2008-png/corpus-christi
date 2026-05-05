@@ -19,7 +19,7 @@ export default function AdminPage() {
       <section style={{ background: "var(--navy)", padding: "3rem 1.5rem 2rem" }}>
         <div className="container-sacred">
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <span style={{ fontSize: "2rem" }}>⚙</span>
+            <span style={{ fontSize: "2rem" }}>⚜</span>
             <div>
               <h1 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.75rem", marginBottom: "0.25rem" }}>Admin Dashboard</h1>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>Manage all content on the Corpus Christi platform</p>

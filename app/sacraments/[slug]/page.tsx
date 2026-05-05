@@ -74,11 +74,13 @@ export default async function SacramentDetailPage({ params }: Props) {
 
       {/* Painting Banner */}
       <div style={{ width: "100%", height: "400px", position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
-        <img 
+        <Image 
           src={imageUrl} 
           alt={`Classical Painting depicting the Sacrament of ${sacrament.name}`}
+          fill
+          priority
+          sizes="100vw"
           style={{ 
-            width: "100%", height: "100%", 
             objectFit: "cover", 
             display: "block",
             filter: "brightness(0.85) sepia(0.15) contrast(1.1)",

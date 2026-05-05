@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import sacramentsData from "@/data/sacraments.json";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "The Seven Sacraments",
@@ -67,18 +68,17 @@ export default function SacramentsPage() {
               
               {/* Painting Banner */}
               <div style={{ width: "100%", height: "260px", position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
-                <img 
+                <Image 
                   src={`/images/sacraments/sacrament-${sacrament.number}.jpg`} 
                   alt={`Classical Painting for ${sacrament.name}`}
                   className="hover-zoom"
-
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ 
-                    width: "100%", height: "100%", 
                     objectFit: "cover", 
                     display: "block",
                     filter: "brightness(0.85) sepia(0.15) contrast(1.1)",
                   }}
-                  loading="lazy"
                 />
               </div>
 

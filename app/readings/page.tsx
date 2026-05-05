@@ -48,8 +48,8 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
 
   const readingSections = [
     { label: "First Reading", ref: reading.old_testament?.reference, text: reading.old_testament?.text, icon: "+" },
-    { label: "Responsorial Psalm", ref: reading.psalm?.reference, text: reading.psalm?.text, icon: "🎵", response: reading.psalm?.response },
-    { label: "Second Reading", ref: reading.new_testament?.reference, text: reading.new_testament?.text, icon: "✉" },
+    { label: "Responsorial Psalm", ref: reading.psalm?.reference, text: reading.psalm?.text, icon: "✦", response: reading.psalm?.response },
+    { label: "Second Reading", ref: reading.new_testament?.reference, text: reading.new_testament?.text, icon: "✦" },
     { label: "Gospel", ref: reading.gospel?.reference, text: reading.gospel?.text, icon: "+" },
   ];
 

@@ -85,6 +85,39 @@ export default function DonatePage() {
           </div>
         </section>
 
+        {/* Payment Methods Strip */}
+        <div style={{ background: "#fff", borderBottom: "1px solid rgba(26,39,68,0.08)", padding: "0.9rem 1.5rem" }}>
+          <div className="container-sacred" style={{ maxWidth: "820px", display: "flex", alignItems: "center", justifyContent: "center", gap: "2rem", flexWrap: "wrap" }}>
+            <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+              Accepted Payment Methods:
+            </span>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
+              {/* Card */}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", background: "rgba(26,39,68,0.04)", borderRadius: "8px", padding: "0.35rem 0.85rem", border: "1px solid rgba(26,39,68,0.1)" }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+                </svg>
+                <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--navy)" }}>Debit / Credit Card</span>
+              </div>
+              {/* Bank Transfer */}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", background: "rgba(26,39,68,0.04)", borderRadius: "8px", padding: "0.35rem 0.85rem", border: "1px solid rgba(26,39,68,0.1)" }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                </svg>
+                <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--navy)" }}>Bank Transfer</span>
+              </div>
+              {/* USSD */}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", background: "rgba(26,39,68,0.04)", borderRadius: "8px", padding: "0.35rem 0.85rem", border: "1px solid rgba(26,39,68,0.1)" }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+                <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--navy)" }}>USSD</span>
+              </div>
+            </div>
+            <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>🔒 Secured by Paystack</span>
+          </div>
+        </div>
+
         <div className="container-sacred" style={{ maxWidth: "820px", padding: "3rem 1.5rem" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "2rem" }}>
 

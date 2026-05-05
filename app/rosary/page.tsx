@@ -1,38 +1,11 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const MARY_IMAGE = "/images/mary.jpg";
 
-const mysteries = [
-  { set: "Joyful Mysteries", days: "Monday & Saturday", list: [
-    { n: 1, title: "The Annunciation", ref: "Luke 1:26-38", fruit: "Humility", desc: "The Angel Gabriel appears to Mary and announces she will conceive the Son of God by the Holy Spirit. Mary's response — 'Let it be done to me according to your word' — is the perfect act of faith and the model of all Christian surrender. Heaven holds its breath as a young woman in Nazareth says yes to God, and the Word begins to take flesh." },
-    { n: 2, title: "The Visitation", ref: "Luke 1:39-56", fruit: "Charity", desc: "Mary, newly pregnant, immediately sets out to visit her elderly cousin Elizabeth, who is six months pregnant with John the Baptist. When Mary's greeting reaches Elizabeth's ears, the child leaps in her womb and Elizabeth is filled with the Holy Spirit. The Magnificat pours from Mary's lips — the great hymn of the lowly exalting God." },
-    { n: 3, title: "The Nativity", ref: "Luke 2:1-20", fruit: "Poverty of Spirit", desc: "The eternal Son of God is born in a stable in Bethlehem because there was no room in the inn. Shepherds are the first to hear the angels' song. The One who holds the universe is laid in a feeding trough. God enters creation in absolute poverty and vulnerability — to meet us exactly where we are." },
-    { n: 4, title: "The Presentation", ref: "Luke 2:22-38", fruit: "Obedience", desc: "Mary and Joseph present Jesus at the Temple in Jerusalem, following the Law of Moses. The aged Simeon takes the child in his arms and recognizes the Messiah. He blesses the family and prophesies: 'This child is destined to cause the falling and rising of many in Israel — and a sword will pierce your own soul.' Mary receives the first shadow of the cross." },
-    { n: 5, title: "Finding Jesus in the Temple", ref: "Luke 2:41-52", fruit: "Zeal for God", desc: "At age twelve, Jesus remains behind in Jerusalem after Passover. After three days of searching, Mary and Joseph find Him in the Temple, sitting among the teachers, listening and asking questions. All who heard Him were amazed. To Mary's anguish He says: 'Did you not know that I must be about my Father's business?' Jesus belongs first to the Father." },
-  ]},
-  { set: "Luminous Mysteries", days: "Thursday", list: [
-    { n: 1, title: "The Baptism of Jesus", ref: "Matthew 3:13-17", fruit: "Openness to the Holy Spirit", desc: "Jesus comes to John at the Jordan River and insists on being baptized. As He rises from the water, the heavens open, the Holy Spirit descends as a dove, and the Father's voice thunders: 'This is my beloved Son, in whom I am well pleased.' The Trinity is revealed together for the first time. Jesus sanctifies the waters of Baptism and all who will receive it." },
-    { n: 2, title: "The Wedding at Cana", ref: "John 2:1-11", fruit: "Marian Intercession", desc: "At a wedding feast in Cana, the wine runs out. Mary notices before anyone else and goes to Jesus: 'They have no wine.' Jesus replies that His hour has not yet come. Yet Mary turns to the servants and says: 'Do whatever He tells you.' At Mary's intercession, Jesus performs His first public miracle — turning water into the finest wine. The disciples believe." },
-    { n: 3, title: "Proclamation of the Kingdom", ref: "Mark 1:14-15", fruit: "Repentance and Trust", desc: "Jesus goes through Galilee proclaiming: 'The time is fulfilled, and the Kingdom of God is at hand; repent and believe in the gospel.' He calls fishermen from their nets, heals the sick, casts out demons, and forgives sinners. The Kingdom is not a place — it is the reign of God breaking into history wherever Jesus is present and received." },
-    { n: 4, title: "The Transfiguration", ref: "Matthew 17:1-8", fruit: "Desire for Holiness", desc: "Jesus takes Peter, James, and John to the top of a high mountain. Before their eyes He is transfigured — His face shines like the sun, His garments become dazzling white. Moses and Elijah appear beside Him. The Father speaks from a bright cloud: 'This is my beloved Son, with whom I am well pleased; listen to Him.' The disciples fall on their faces in awe." },
-    { n: 5, title: "Institution of the Eucharist", ref: "Luke 22:14-20", fruit: "Eucharistic Adoration", desc: "At the Last Supper on Holy Thursday, Jesus takes bread, blesses it, breaks it, and says: 'This is my Body which will be given up for you.' He takes the chalice and says: 'This is the chalice of my Blood, the Blood of the new and eternal covenant, which will be poured out for you and for many for the forgiveness of sins. Do this in memory of me.' The source and summit of Christian life is instituted." },
-  ]},
-  { set: "Sorrowful Mysteries", days: "Tuesday & Friday", list: [
-    { n: 1, title: "The Agony in the Garden", ref: "Luke 22:39-46", fruit: "Conformity to God's Will", desc: "Jesus goes to the Garden of Gethsemane on the night of His arrest. He prays with such intensity that His sweat becomes like drops of blood falling to the ground. 'Father, if you are willing, take this cup from me; yet not my will, but yours be done.' An angel comes to strengthen Him. He accepted, in full human terror, the Father's will. This is the foundation of all Christian prayer." },
-    { n: 2, title: "The Scourging at the Pillar", ref: "Matthew 27:26", fruit: "Mortification", desc: "At Pilate's order, Jesus is bound to a stone pillar and flogged by Roman soldiers. Roman scourging was among the most brutal punishments in the ancient world — the flagrum stripped flesh to the bone. Isaiah foresaw this: 'By His wounds we are healed.' Every blow absorbs human sin. The Body that fed thousands in the wilderness is now destroyed for the salvation of the world." },
-    { n: 3, title: "Crowning with Thorns", ref: "Matthew 27:27-31", fruit: "Moral Courage", desc: "The soldiers twist a crown of long thorns into Jesus's scalp and press it down. They place a purple robe on His torn back and a reed in His hand. They kneel in mockery: 'Hail, King of the Jews!' They spit on Him and strike the crown deeper with the reed. Pilate presents Him to the crowd: 'Behold the man.' They cannot see that this battered figure is, in fact, the King of Kings." },
-    { n: 4, title: "The Carrying of the Cross", ref: "John 19:17", fruit: "Patience in Suffering", desc: "Jesus takes up His cross and carries it through the streets of Jerusalem toward Golgotha. He has been awake all night, tortured, and is near death from blood loss. He falls three times. He meets His mother. Simon of Cyrene is conscripted to help. Veronica wipes His face. The women of Jerusalem weep. Every step is a free choice — He could call legions of angels. He does not." },
-    { n: 5, title: "The Crucifixion and Death", ref: "John 19:18-30", fruit: "Salvation", desc: "At nine in the morning, Jesus is nailed to the cross at Golgotha, between two criminals. From the cross He speaks seven words: He forgives His executioners; He promises paradise to the repentant thief; He gives His mother to John and John to His mother; He cries out in the agony of abandonment; He thirsts; He declares all finished; He commends His spirit to the Father. At 3 PM He dies. The earth shakes. The temple veil tears from top to bottom. Tetelestai — it is finished." },
-  ]},
-  { set: "Glorious Mysteries", days: "Wednesday & Sunday", list: [
-    { n: 1, title: "The Resurrection", ref: "John 20:1-18", fruit: "Faith", desc: "On the third day, before dawn, Mary Magdalene goes to the tomb and finds the stone rolled away. She runs for Peter and John. When John enters the tomb and sees the burial cloths lying folded, he sees and believes. Jesus appears to Mary Magdalene in the garden — she mistakes Him for the gardener until He speaks her name. Death is defeated. The resurrection of Jesus is the hinge of all history." },
-    { n: 2, title: "The Ascension", ref: "Acts 1:6-11", fruit: "Hope in Eternal Life", desc: "Forty days after the Resurrection, Jesus leads His disciples to the Mount of Olives. He blesses them, and as He is blessing them, He is taken up into heaven before their eyes. A cloud receives Him. Two men in white robes appear: 'Why do you stand looking into the sky? This Jesus, who has been taken from you into heaven, will come back in the same way.' He goes to prepare a place for us." },
-    { n: 3, title: "Descent of the Holy Spirit", ref: "Acts 2:1-13", fruit: "Love of God and Neighbor", desc: "On the feast of Pentecost, fifty days after Passover, the apostles are gathered in the Upper Room with Mary. A sound like a rushing mighty wind fills the house. Tongues of fire rest on each of them. They are all filled with the Holy Spirit and begin to speak in other languages. Three thousand are baptized that day. The Church is born. The age of the Spirit begins." },
-    { n: 4, title: "The Assumption of Mary", ref: "Revelation 12:1", fruit: "Grace of a Holy Death", desc: "At the completion of her earthly life, the Blessed Virgin Mary is taken up body and soul into heavenly glory. She shares in her Son's victory over death — not by her own power but by His grace. She is the first human being to experience what the resurrection of the body means for all the redeemed. In Mary assumed into heaven, we see the destiny of the Church and of every baptised soul." },
-    { n: 5, title: "Coronation of Mary, Queen of Heaven", ref: "Revelation 12:1", fruit: "Trust in Mary's Intercession", desc: "In heaven, Mary is crowned Queen by her Son — not because she earned a throne, but because she is the Mother of the King and the perfect disciple. She reigns at the right hand of Christ, interceding without ceasing for her children on earth. From the throne of grace, she holds every rosary bead ever prayed, every desperate cry ever whispered to her, and presents them to her Son." },
-  ]},
-];
+import mysteries from "@/data/rosary.json";
+import Link from "next/link";
 
 const prayers = [
   { title: "The Apostles' Creed", when: "Begin the Rosary", latin: "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae...", text: "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, His only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; He descended into hell; on the third day He rose again from the dead; He ascended into heaven, and is seated at the right hand of God the Father almighty; from there He will come to judge the living and the dead. I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen." },
@@ -64,10 +37,13 @@ export default function RosaryPage() {
 
       {/* Hero with Mary image */}
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-        <img
+        <Image
           src={MARY_IMAGE}
           alt="The Immaculate Conception — classical Catholic painting"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.35) saturate(0.8)" }}
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", filter: "brightness(0.35) saturate(0.8)" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(26,39,68,0.3) 0%, var(--navy) 100%)" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "2rem 1.5rem" }}>
@@ -149,9 +125,12 @@ export default function RosaryPage() {
                 <p style={{ color: "var(--gold)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.25rem" }}>Spiritual Fruit</p>
                 <p style={{ color: "#fff", fontWeight: 600 }}>{mystery.fruit}</p>
               </div>
-              <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.78rem", marginTop: "1.25rem" }}>
+              <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.78rem", marginTop: "1.25rem", marginBottom: "1rem" }}>
                 For each mystery: 1 Our Father · 10 Hail Marys · 1 Glory Be · 1 Fatima Prayer
               </p>
+              <Link href={`/rosary/${mystery.slug}`} style={{ display: "inline-block", background: "var(--gold)", color: "var(--navy-dark)", padding: "0.6rem 1.2rem", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "0.85rem", transition: "all 0.2s" }}>
+                Deep Dive & Pray &rarr;
+              </Link>
             </div>
           </div>
         </div>

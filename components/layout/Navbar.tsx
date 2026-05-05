@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/stations", label: "Stations" },
   { href: "/rosary", label: "Rosary" },
   { href: "/readings", label: "Readings" },
+  { href: "/calendar", label: "Calendar" },
   {
     label: "More",
     children: [
@@ -16,6 +17,8 @@ const navLinks = [
       { href: "/priesthood", label: "Priesthood" },
       { href: "/miracles", label: "Miracles" },
       { href: "/mass", label: "Mass & Confession" },
+      { href: "/bible/passages", label: "Bible Passages" },
+      { href: "/bible/stories", label: "Bible Stories" },
     ],
   },
 ];
@@ -105,9 +108,39 @@ export default function Navbar() {
             )
           )}
 
-          <Link href="/donate" className="btn-sacred" style={{ marginLeft: "0.75rem", fontSize: "0.8rem", padding: "0.5rem 1.25rem" }}>
-            ♥ Donate
-          </Link>
+          {/* Auth buttons */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.75rem" }}>
+            <Link
+              href="/auth/login"
+              style={{
+                color: "rgba(255,255,255,0.85)", textDecoration: "none",
+                fontSize: "0.8rem", padding: "0.45rem 1rem",
+                borderRadius: "6px", border: "1px solid rgba(255,255,255,0.2)",
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.color = "var(--gold)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
+            >
+              Sign In
+            </Link>
+            <Link
+              href="/auth/register"
+              style={{
+                color: "var(--navy-dark)", textDecoration: "none",
+                fontSize: "0.8rem", padding: "0.45rem 1rem",
+                borderRadius: "6px",
+                background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
+                fontWeight: 700, transition: "all 0.2s",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
+            >
+              Sign Up
+            </Link>
+            <Link href="/donate" className="btn-sacred" style={{ fontSize: "0.8rem", padding: "0.5rem 1.25rem" }}>
+              ✦ Donate
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Hamburger */}
@@ -173,9 +206,25 @@ export default function Navbar() {
               </Link>
             )
           ))}
-          <Link href="/donate" className="btn-sacred" style={{ display: "block", textAlign: "center", marginTop: "1rem" }}>
-            ♥ Donate
-          </Link>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid rgba(201,168,76,0.2)" }}>
+            <Link
+              href="/auth/login"
+              onClick={() => setMobileOpen(false)}
+              style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "rgba(255,255,255,0.85)", textDecoration: "none", border: "1px solid rgba(201,168,76,0.4)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600 }}
+            >
+              Sign In
+            </Link>
+            <Link
+              href="/auth/register"
+              onClick={() => setMobileOpen(false)}
+              style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "var(--navy-dark)", textDecoration: "none", background: "linear-gradient(135deg,var(--gold-dark),var(--gold))", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 700 }}
+            >
+              Sign Up
+            </Link>
+            <Link href="/donate" className="btn-sacred" style={{ display: "block", textAlign: "center" }}>
+              ✦ Donate
+            </Link>
+          </div>
         </div>
       )}
 

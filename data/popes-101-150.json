@@ -1,52 +1,452 @@
 [
-  { "n": 101, "name": "Valentine", "reign": "Aug–Sep 827", "nat": "Roman", "saint": false, "img": null, "note": "Pontificate of approximately 40 days — died of natural causes. Almost nothing is recorded of his actions during this time." },
-  { "n": 102, "name": "Gregory IV", "reign": "827–844", "nat": "Roman", "saint": false, "img": null, "note": "Attempted to mediate the civil war among Charlemagne's grandsons. Introduced the feast of All Saints (November 1) to the universal Church." },
-  { "n": 103, "name": "Sergius II", "reign": "844–847", "nat": "Roman", "saint": false, "img": null, "note": "The Muslim Saracens sacked the Basilicas of St. Peter and St. Paul outside the Walls during his pontificate (846) — a catastrophic humiliation. Accused of simony in his election." },
-  { "n": 104, "name": "St. Leo IV", "reign": "847–855", "nat": "Roman", "saint": true, "img": null, "note": "Built the Leonine Wall around Vatican Hill to protect it from future Muslim raids — it still stands today. Led a naval coalition that defeated the Saracen fleet at the Battle of Ostia (849), commemorated in Raphael's Vatican fresco. A model of the warrior-pope." },
-  { "n": 105, "name": "Benedict III", "reign": "855–858", "nat": "Roman", "saint": false, "img": null, "note": "His election was briefly contested by an imperial antipope. The legendary story of 'Pope Joan' — a woman who supposedly reigned as pope between Leo IV and Benedict III — is considered entirely fictional by modern historians." },
-  { "n": 106, "name": "St. Nicholas I — The Great", "reign": "858–867", "nat": "Roman", "saint": true, "img": null, "note": "One of only three popes called 'the Great.' Towering figure who asserted the supremacy of papal authority over emperors and patriarchs alike. Forced King Lothair II to take back his lawful wife. Opposed the appointment of Photius as Patriarch of Constantinople — leading to the Photian Schism. His statements on papal authority were the most forceful since Leo the Great." },
-  { "n": 107, "name": "Adrian II", "reign": "867–872", "nat": "Roman", "saint": false, "img": null, "note": "Elected aged 80 — the oldest man to become pope at that time. His family was murdered during his pontificate. Welcomed Sts. Cyril and Methodius, the Apostles to the Slavs, to Rome and approved the use of Slavonic as a liturgical language — a momentous decision for Eastern European Christianity." },
-  { "n": 108, "name": "John VIII", "reign": "872–882", "nat": "Roman", "saint": false, "img": null, "note": "First pope to be assassinated — poisoned and then clubbed to death by members of his own entourage. His pontificate was turbulent: he crowned two emperors, negotiated with the Saracens, and faced constant political violence." },
-  { "n": 109, "name": "Marinus I", "reign": "882–884", "nat": "Italian (Tuscany)", "saint": false, "img": null, "note": "First pope to have previously served as a bishop before election — technically violating canon law that prohibited translation between sees, though this rule was soon abandoned." },
-  { "n": 110, "name": "St. Adrian III", "reign": "884–885", "nat": "Roman", "saint": true, "img": null, "note": "Brief pontificate of approximately 14 months. Died suddenly on his way to a Diet in Worms — his death raised suspicions of poisoning. Canonised in 1891 by Leo XIII." },
-  { "n": 111, "name": "Stephen VI (V)", "reign": "885–891", "nat": "Italian", "saint": false, "img": null, "note": "Navigated the increasing chaos of the fragmented Carolingian Empire. Dealt with invasions of Saracens from the south and Normans from the north." },
-  { "n": 112, "name": "Formosus", "reign": "891–896", "nat": "Roman", "saint": false, "img": null, "note": "Subject of the infamous 'Cadaver Synod' after his death: his successor Stephen VII had his corpse exhumed, dressed in papal vestments, propped on a throne, and put on trial for violating canon law. The decomposing body was 'found guilty,' its fingers cut off, and thrown in the Tiber. Stephen VII was subsequently strangled in prison." },
-  { "n": 113, "name": "Boniface VI", "reign": "Apr 896 (16 days)", "nat": "Roman", "saint": false, "img": null, "note": "Pontificate of only 16 days — one of the shortest in history. Previously twice degraded from holy orders for immorality. Died of gout." },
-  { "n": 114, "name": "Stephen VII (VI)", "reign": "896–897", "nat": "Roman", "saint": false, "img": null, "note": "Conducted the macabre 'Cadaver Synod' against Pope Formosus. His extreme actions provoked a popular uprising; he was stripped of his vestments, imprisoned, and strangled." },
-  { "n": 115, "name": "Romanus", "reign": "Aug–Nov 897", "nat": "Italian", "saint": false, "img": null, "note": "Brief pontificate of approximately 4 months. Reversed the condemnation of Formosus from the Cadaver Synod. Resigned — one of very few popes to do so voluntarily." },
-  { "n": 116, "name": "Theodore II", "reign": "Dec 897 (20 days)", "nat": "Roman (Greek descent)", "saint": false, "img": null, "note": "Pontificate of only 20 days. Rehabilitated Formosus and had his body given a proper burial. Convened a synod that nullified the Cadaver Synod's decrees." },
-  { "n": 117, "name": "John IX", "reign": "898–900", "nat": "Italian (Tivoli)", "saint": false, "img": null, "note": "Convened synods that fully rehabilitated Formosus and condemned the Cadaver Synod. Established canonical procedures for papal elections requiring participation of the Roman clergy, laity, and imperial representatives." },
-  { "n": 118, "name": "Benedict IV", "reign": "900–903", "nat": "Roman", "saint": false, "img": null, "note": "Brief pontificate. Crowned Emperor Louis III. Rome was in political chaos; papal authority was at a low point. The 'Pornocracy' — the domination of the papacy by powerful Roman noble families — was beginning." },
-  { "n": 119, "name": "Leo V", "reign": "Jul–Sep 903", "nat": "Italian", "saint": false, "img": null, "note": "Brief pontificate of approximately 30 days. Deposed and imprisoned by the antipope Christopher. Later murdered in prison — possibly on orders from Sergius III." },
-  { "n": 120, "name": "Sergius III", "reign": "904–911", "nat": "Roman", "saint": false, "img": null, "note": "His election began the 'Pornocracy' — a period of Roman noble domination over the papacy. He reportedly had his two predecessors (Leo V and Christopher) murdered. He fathered an illegitimate son by the 15-year-old Marozia, who would later control the papacy through her family." },
-  { "n": 121, "name": "Anastasius III", "reign": "911–913", "nat": "Roman", "saint": false, "img": null, "note": "Relatively stable pontificate. Reorganised church structures in Germany. The influence of the powerful Theophylact family of Rome was dominant." },
-  { "n": 122, "name": "Lando", "reign": "913–914", "nat": "Italian (Sabina)", "saint": false, "img": null, "note": "Brief pontificate of approximately 6 months. The only pope named Lando in history. Almost nothing is known of his actions." },
-  { "n": 123, "name": "John X", "reign": "914–928", "nat": "Italian (Ravenna)", "saint": false, "img": null, "note": "A capable military leader — personally led papal troops at the Battle of the Garigliano (915), which broke the Muslim stronghold at the Garigliano River and expelled Saracens from central Italy. Later deposed and smothered with a pillow by the faction of Marozia." },
-  { "n": 124, "name": "Leo VI", "reign": "May–Dec 928", "nat": "Roman", "saint": false, "img": null, "note": "Brief pontificate of approximately 7 months. A creature of Marozia's political control. Little is recorded of his pontificate." },
-  { "n": 125, "name": "Stephen VIII (VII)", "reign": "928–931", "nat": "Roman", "saint": false, "img": null, "note": "Another pope under Marozia's domination. Almost nothing is recorded of his actions." },
-  { "n": 126, "name": "John XI", "reign": "931–935", "nat": "Roman", "saint": false, "img": null, "note": "Son of Marozia — either by Sergius III or Alberic I of Spoleto. His mother controlled Rome and the papacy; he was essentially her instrument. When she tried to marry Hugh of Italy, her son Alberic II imprisoned her, and John XI became the puppet of his half-brother Alberic II." },
-  { "n": 127, "name": "Leo VII", "reign": "936–939", "nat": "Roman", "saint": false, "img": null, "note": "Completely under the control of Alberic II, the secular ruler of Rome. Supported the monastic reform movement associated with Cluny. Encouraged the conversion of Jewish communities — though the methods used were inappropriate." },
-  { "n": 128, "name": "Stephen IX (VIII)", "reign": "939–942", "nat": "Roman", "saint": false, "img": null, "note": "Under Alberic II's domination. Tried to encourage reform and missionary work in Hungary. Brief pontificate." },
-  { "n": 129, "name": "Marinus II", "reign": "942–946", "nat": "Roman", "saint": false, "img": null, "note": "Another pope under Alberic II. Supported the Cluniac reform movement. Modest pontificate." },
-  { "n": 130, "name": "Agapetus II", "reign": "946–955", "nat": "Roman", "saint": false, "img": null, "note": "The last pope fully controlled by Alberic II (who died in 954). Worked actively to reform the Church in Germany and France. His successor was chosen by the dying Alberic II, who forced the Roman clergy to elect his own illegitimate son." },
-  { "n": 131, "name": "John XII", "reign": "955–964", "nat": "Roman (Theophylact family)", "saint": false, "img": null, "note": "The son of Alberic II — made pope at age 18. His personal conduct was notoriously scandalous. He crowned Otto I as Holy Roman Emperor (962) in exchange for military protection — the papal-imperial alliance that defined medieval Europe. Later deposed by Otto I at a synod and replaced. He died shortly after, reportedly during a romantic encounter, aged approximately 27." },
-  { "n": 132, "name": "Leo VIII", "reign": "963–965", "nat": "Roman", "saint": false, "img": null, "note": "Installed by Emperor Otto I after John XII's deposition. His status as a legitimate pope versus antipope depends on whether John XII's deposition was valid. Recognised as legitimate by the Church." },
-  { "n": 133, "name": "Benedict V", "reign": "964–966", "nat": "Roman", "saint": false, "img": null, "note": "Elected by the Romans in opposition to Leo VIII. Otto I had him brought before a synod and deposed. Exiled to Hamburg, where he died. His case illustrates the imperial stranglehold on the 10th century papacy." },
-  { "n": 134, "name": "John XIII", "reign": "965–972", "nat": "Roman", "saint": false, "img": null, "note": "An imperial appointment who had to flee Rome after a popular uprising in his first year. Restored by Emperor Otto I. Crowned Otto II as emperor (967). A capable pope who organised the church in Germany, Poland, and Bohemia." },
-  { "n": 135, "name": "Benedict VI", "reign": "973–974", "nat": "Roman", "saint": false, "img": null, "note": "Strangled in Castel Sant'Angelo on orders from the Roman nobleman Boniface Franco, who briefly installed himself as Antipope Boniface VII. Murdered after approximately one year in office." },
-  { "n": 136, "name": "Benedict VII", "reign": "974–983", "nat": "Roman", "saint": false, "img": null, "note": "Supported the Cluniac monastic reform movement enthusiastically. Issued important degrees against simony. A positive period for the papacy relative to the chaos of recent decades." },
-  { "n": 137, "name": "John XIV", "reign": "983–984", "nat": "Italian (Pavia)", "saint": false, "img": null, "note": "Installed by Emperor Otto II just before the emperor's death. The returning Antipope Boniface VII had him imprisoned in Castel Sant'Angelo, where he starved to death or was murdered — a grim end." },
-  { "n": 138, "name": "John XV", "reign": "985–996", "nat": "Roman", "saint": false, "img": null, "note": "Canonized the first saint by a formal papal decree — Ulrich of Augsburg — in 993, inaugurating the formal canonization process. Generally under the thumb of the powerful Crescentii family of Rome." },
-  { "n": 139, "name": "Gregory V", "reign": "996–999", "nat": "German (Saxony)", "saint": false, "img": null, "note": "First German pope — appointed by his cousin Emperor Otto III at age 24. His youth and foreignness provoked a rebellion; he was briefly expelled by the Crescentii family and replaced by an antipope. Otto III restored him. He died aged approximately 27, possibly of malaria." },
-  { "n": 140, "name": "Sylvester II", "reign": "999–1003", "nat": "French (Auvergne)", "saint": false, "img": null, "note": "First French pope. One of the most learned men of the early Middle Ages — a mathematician who introduced Arabic numerals and the abacus to Western Europe, and built one of the first mechanical clocks. His relationship with Emperor Otto III was one of the closest papal-imperial partnerships in history. His advanced learning made contemporaries whisper he had made a pact with the devil." },
-  { "n": 141, "name": "John XVII", "reign": "May–Nov 1003", "nat": "Roman", "saint": false, "img": null, "note": "Pontificate of approximately 6 months. Completely under the control of the Crescentii family. Almost nothing is known of his brief reign." },
-  { "n": 142, "name": "John XVIII", "reign": "1003–1009", "nat": "Roman", "saint": false, "img": null, "note": "Under Crescentii control. Supported the missions of St. Bruno of Querfurt in Prussia and Russia. Died in a monastery, having abdicated before death." },
-  { "n": 143, "name": "Sergius IV", "reign": "1009–1012", "nat": "Roman", "saint": false, "img": null, "note": "The last pope from a powerful Roman family before the German reform papacy. May have issued a crusading call to recapture Jerusalem after the Church of the Holy Sepulchre was destroyed by the Fatimid Caliph. Died the same day as his patron, John Crescentius II." },
-  { "n": 144, "name": "Benedict VIII", "reign": "1012–1024", "nat": "Roman (Tusculum)", "saint": false, "img": null, "note": "A member of the Tusculum family that now dominated the papacy. Led military campaigns personally against Saracens and Normans. Worked with Emperor Henry II on church reform. Crowned Henry II as Holy Roman Emperor (1014)." },
-  { "n": 145, "name": "John XIX", "reign": "1024–1032", "nat": "Roman (Tusculum)", "saint": false, "img": null, "note": "Brother of Benedict VIII — elected pope as a layman and ordained all in one day, a flagrant example of the nepotism plaguing the church. Crowned Conrad II emperor. Attempted to sell honorary patriarchal rights to Constantinople." },
-  { "n": 146, "name": "Benedict IX", "reign": "1032–1044; 1045; 1047–1048", "nat": "Roman (Tusculum)", "saint": false, "img": null, "note": "Made pope as a teenager (possibly as young as 12) through family influence. He is the only man to have been pope three separate times. He sold the papacy for money — literally sold his office to his godfather. St. Peter Damian called him a demon from hell. Yet he died as a monk in a monastery, reportedly repentant. A uniquely scandalous figure in papal history." },
-  { "n": 147, "name": "Sylvester III", "reign": "Jan–Mar 1045", "nat": "Roman", "saint": false, "img": null, "note": "Elected by the Crescentii faction when Benedict IX was driven from Rome. His election is considered by many historians as that of an antipope. He was later deposed and condemned." },
-  { "n": 148, "name": "Gregory VI", "reign": "1045–1046", "nat": "Roman", "saint": false, "img": null, "note": "John Gratian purchased the papacy from Benedict IX — a genuine act of simony, though motivated by the desire to end Benedict's scandalous pontificate. Despite his good intentions, he was deposed at the Synod of Sutri (1046) for simony. He accepted the judgment humbly. His secretary was the future Gregory VII." },
-  { "n": 149, "name": "Clement II", "reign": "1046–1047", "nat": "German (Saxony)", "saint": false, "img": null, "note": "The first of a series of German reform popes appointed by Emperor Henry III, who swept aside the corrupt Roman papacy. Crowned Henry III emperor. Enacted decrees against simony. Died after approximately nine months — possibly poisoned. His body, remarkably, is the only papal body north of the Alps, preserved in Bamberg Cathedral, Germany." },
-  { "n": 150, "name": "Damasus II", "reign": "Jul–Aug 1048", "nat": "Bavarian (Germany)", "saint": false, "img": null, "note": "Brief pontificate of approximately 23 days. The second German reform pope appointed by Henry III. Died of malaria almost immediately after arriving in Rome." }
+  {
+    "n": 101,
+    "name": "Valentine",
+    "reign": "Aug–Sep 827",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Pontificate of approximately 40 days — died of natural causes. Almost nothing is recorded of his actions during this time."
+  },
+  {
+    "n": 102,
+    "name": "Gregory IV",
+    "reign": "827–844",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Attempted to mediate the civil war among Charlemagne's grandsons. Introduced the feast of All Saints (November 1) to the universal Church."
+  },
+  {
+    "n": 103,
+    "name": "Sergius II",
+    "reign": "844–847",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "The Muslim Saracens sacked the Basilicas of St. Peter and St. Paul outside the Walls during his pontificate (846) — a catastrophic humiliation. Accused of simony in his election."
+  },
+  {
+    "n": 104,
+    "name": "St. Leo IV",
+    "reign": "847–855",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Built the Leonine Wall around Vatican Hill to protect it from future Muslim raids — it still stands today. Led a naval coalition that defeated the Saracen fleet at the Battle of Ostia (849), commemorated in Raphael's Vatican fresco. A model of the warrior-pope."
+  },
+  {
+    "n": 105,
+    "name": "Benedict III",
+    "reign": "855–858",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "His election was briefly contested by an imperial antipope. The legendary story of 'Pope Joan' — a woman who supposedly reigned as pope between Leo IV and Benedict III — is considered entirely fictional by modern historians."
+  },
+  {
+    "n": 106,
+    "name": "St. Nicholas I — The Great",
+    "reign": "858–867",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "One of only three popes called 'the Great.' Towering figure who asserted the supremacy of papal authority over emperors and patriarchs alike. Forced King Lothair II to take back his lawful wife. Opposed the appointment of Photius as Patriarch of Constantinople — leading to the Photian Schism. His statements on papal authority were the most forceful since Leo the Great."
+  },
+  {
+    "n": 107,
+    "name": "Adrian II",
+    "reign": "867–872",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Elected aged 80 — the oldest man to become pope at that time. His family was murdered during his pontificate. Welcomed Sts. Cyril and Methodius, the Apostles to the Slavs, to Rome and approved the use of Slavonic as a liturgical language — a momentous decision for Eastern European Christianity."
+  },
+  {
+    "n": 108,
+    "name": "John VIII",
+    "reign": "872–882",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "First pope to be assassinated — poisoned and then clubbed to death by members of his own entourage. His pontificate was turbulent: he crowned two emperors, negotiated with the Saracens, and faced constant political violence."
+  },
+  {
+    "n": 109,
+    "name": "Marinus I",
+    "reign": "882–884",
+    "nat": "Italian (Tuscany)",
+    "saint": false,
+    "img": null,
+    "note": "First pope to have previously served as a bishop before election — technically violating canon law that prohibited translation between sees, though this rule was soon abandoned."
+  },
+  {
+    "n": 110,
+    "name": "St. Adrian III",
+    "reign": "884–885",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Brief pontificate of approximately 14 months. Died suddenly on his way to a Diet in Worms — his death raised suspicions of poisoning. Canonised in 1891 by Leo XIII."
+  },
+  {
+    "n": 111,
+    "name": "Stephen VI (V)",
+    "reign": "885–891",
+    "nat": "Italian",
+    "saint": false,
+    "img": null,
+    "note": "Navigated the increasing chaos of the fragmented Carolingian Empire. Dealt with invasions of Saracens from the south and Normans from the north."
+  },
+  {
+    "n": 112,
+    "name": "Formosus",
+    "reign": "891–896",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Subject of the infamous 'Cadaver Synod' after his death: his successor Stephen VII had his corpse exhumed, dressed in papal vestments, propped on a throne, and put on trial for violating canon law. The decomposing body was 'found guilty,' its fingers cut off, and thrown in the Tiber. Stephen VII was subsequently strangled in prison."
+  },
+  {
+    "n": 113,
+    "name": "Boniface VI",
+    "reign": "Apr 896 (16 days)",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Pontificate of only 16 days — one of the shortest in history. Previously twice degraded from holy orders for immorality. Died of gout."
+  },
+  {
+    "n": 114,
+    "name": "Stephen VII (VI)",
+    "reign": "896–897",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Conducted the macabre 'Cadaver Synod' against Pope Formosus. His extreme actions provoked a popular uprising; he was stripped of his vestments, imprisoned, and strangled."
+  },
+  {
+    "n": 115,
+    "name": "Romanus",
+    "reign": "Aug–Nov 897",
+    "nat": "Italian",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 4 months. Reversed the condemnation of Formosus from the Cadaver Synod. Resigned — one of very few popes to do so voluntarily."
+  },
+  {
+    "n": 116,
+    "name": "Theodore II",
+    "reign": "Dec 897 (20 days)",
+    "nat": "Roman (Greek descent)",
+    "saint": false,
+    "img": null,
+    "note": "Pontificate of only 20 days. Rehabilitated Formosus and had his body given a proper burial. Convened a synod that nullified the Cadaver Synod's decrees."
+  },
+  {
+    "n": 117,
+    "name": "John IX",
+    "reign": "898–900",
+    "nat": "Italian (Tivoli)",
+    "saint": false,
+    "img": null,
+    "note": "Convened synods that fully rehabilitated Formosus and condemned the Cadaver Synod. Established canonical procedures for papal elections requiring participation of the Roman clergy, laity, and imperial representatives."
+  },
+  {
+    "n": 118,
+    "name": "Benedict IV",
+    "reign": "900–903",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate. Crowned Emperor Louis III. Rome was in political chaos; papal authority was at a low point. The 'Pornocracy' — the domination of the papacy by powerful Roman noble families — was beginning."
+  },
+  {
+    "n": 119,
+    "name": "Leo V",
+    "reign": "Jul–Sep 903",
+    "nat": "Italian",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 30 days. Deposed and imprisoned by the antipope Christopher. Later murdered in prison — possibly on orders from Sergius III."
+  },
+  {
+    "n": 120,
+    "name": "Sergius III",
+    "reign": "904–911",
+    "nat": "Roman",
+    "saint": false,
+    "img": "/images/popes/pope-120.jpg",
+    "note": "His election began the 'Pornocracy' — a period of Roman noble domination over the papacy. He reportedly had his two predecessors (Leo V and Christopher) murdered. He fathered an illegitimate son by the 15-year-old Marozia, who would later control the papacy through her family."
+  },
+  {
+    "n": 121,
+    "name": "Anastasius III",
+    "reign": "911–913",
+    "nat": "Roman",
+    "saint": false,
+    "img": "/images/popes/pope-121.JPG",
+    "note": "Relatively stable pontificate. Reorganised church structures in Germany. The influence of the powerful Theophylact family of Rome was dominant."
+  },
+  {
+    "n": 122,
+    "name": "Lando",
+    "reign": "913–914",
+    "nat": "Italian (Sabina)",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 6 months. The only pope named Lando in history. Almost nothing is known of his actions."
+  },
+  {
+    "n": 123,
+    "name": "John X",
+    "reign": "914–928",
+    "nat": "Italian (Ravenna)",
+    "saint": false,
+    "img": null,
+    "note": "A capable military leader — personally led papal troops at the Battle of the Garigliano (915), which broke the Muslim stronghold at the Garigliano River and expelled Saracens from central Italy. Later deposed and smothered with a pillow by the faction of Marozia."
+  },
+  {
+    "n": 124,
+    "name": "Leo VI",
+    "reign": "May–Dec 928",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 7 months. A creature of Marozia's political control. Little is recorded of his pontificate."
+  },
+  {
+    "n": 125,
+    "name": "Stephen VIII (VII)",
+    "reign": "928–931",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Another pope under Marozia's domination. Almost nothing is recorded of his actions."
+  },
+  {
+    "n": 126,
+    "name": "John XI",
+    "reign": "931–935",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Son of Marozia — either by Sergius III or Alberic I of Spoleto. His mother controlled Rome and the papacy; he was essentially her instrument. When she tried to marry Hugh of Italy, her son Alberic II imprisoned her, and John XI became the puppet of his half-brother Alberic II."
+  },
+  {
+    "n": 127,
+    "name": "Leo VII",
+    "reign": "936–939",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Completely under the control of Alberic II, the secular ruler of Rome. Supported the monastic reform movement associated with Cluny. Encouraged the conversion of Jewish communities — though the methods used were inappropriate."
+  },
+  {
+    "n": 128,
+    "name": "Stephen IX (VIII)",
+    "reign": "939–942",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Under Alberic II's domination. Tried to encourage reform and missionary work in Hungary. Brief pontificate."
+  },
+  {
+    "n": 129,
+    "name": "Marinus II",
+    "reign": "942–946",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Another pope under Alberic II. Supported the Cluniac reform movement. Modest pontificate."
+  },
+  {
+    "n": 130,
+    "name": "Agapetus II",
+    "reign": "946–955",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "The last pope fully controlled by Alberic II (who died in 954). Worked actively to reform the Church in Germany and France. His successor was chosen by the dying Alberic II, who forced the Roman clergy to elect his own illegitimate son."
+  },
+  {
+    "n": 131,
+    "name": "John XII",
+    "reign": "955–964",
+    "nat": "Roman (Theophylact family)",
+    "saint": false,
+    "img": "/images/popes/pope-131.jpg",
+    "note": "The son of Alberic II — made pope at age 18. His personal conduct was notoriously scandalous. He crowned Otto I as Holy Roman Emperor (962) in exchange for military protection — the papal-imperial alliance that defined medieval Europe. Later deposed by Otto I at a synod and replaced. He died shortly after, reportedly during a romantic encounter, aged approximately 27."
+  },
+  {
+    "n": 132,
+    "name": "Leo VIII",
+    "reign": "963–965",
+    "nat": "Roman",
+    "saint": false,
+    "img": "/images/popes/pope-132.png",
+    "note": "Installed by Emperor Otto I after John XII's deposition. His status as a legitimate pope versus antipope depends on whether John XII's deposition was valid. Recognised as legitimate by the Church."
+  },
+  {
+    "n": 133,
+    "name": "Benedict V",
+    "reign": "964–966",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Elected by the Romans in opposition to Leo VIII. Otto I had him brought before a synod and deposed. Exiled to Hamburg, where he died. His case illustrates the imperial stranglehold on the 10th century papacy."
+  },
+  {
+    "n": 134,
+    "name": "John XIII",
+    "reign": "965–972",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "An imperial appointment who had to flee Rome after a popular uprising in his first year. Restored by Emperor Otto I. Crowned Otto II as emperor (967). A capable pope who organised the church in Germany, Poland, and Bohemia."
+  },
+  {
+    "n": 135,
+    "name": "Benedict VI",
+    "reign": "973–974",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Strangled in Castel Sant'Angelo on orders from the Roman nobleman Boniface Franco, who briefly installed himself as Antipope Boniface VII. Murdered after approximately one year in office."
+  },
+  {
+    "n": 136,
+    "name": "Benedict VII",
+    "reign": "974–983",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Supported the Cluniac monastic reform movement enthusiastically. Issued important degrees against simony. A positive period for the papacy relative to the chaos of recent decades."
+  },
+  {
+    "n": 137,
+    "name": "John XIV",
+    "reign": "983–984",
+    "nat": "Italian (Pavia)",
+    "saint": false,
+    "img": null,
+    "note": "Installed by Emperor Otto II just before the emperor's death. The returning Antipope Boniface VII had him imprisoned in Castel Sant'Angelo, where he starved to death or was murdered — a grim end."
+  },
+  {
+    "n": 138,
+    "name": "John XV",
+    "reign": "985–996",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Canonized the first saint by a formal papal decree — Ulrich of Augsburg — in 993, inaugurating the formal canonization process. Generally under the thumb of the powerful Crescentii family of Rome."
+  },
+  {
+    "n": 139,
+    "name": "Gregory V",
+    "reign": "996–999",
+    "nat": "German (Saxony)",
+    "saint": false,
+    "img": "/images/popes/pope-139.jpg",
+    "note": "First German pope — appointed by his cousin Emperor Otto III at age 24. His youth and foreignness provoked a rebellion; he was briefly expelled by the Crescentii family and replaced by an antipope. Otto III restored him. He died aged approximately 27, possibly of malaria."
+  },
+  {
+    "n": 140,
+    "name": "Sylvester II",
+    "reign": "999–1003",
+    "nat": "French (Auvergne)",
+    "saint": false,
+    "img": "/images/popes/pope-140.jpg",
+    "note": "First French pope. One of the most learned men of the early Middle Ages — a mathematician who introduced Arabic numerals and the abacus to Western Europe, and built one of the first mechanical clocks. His relationship with Emperor Otto III was one of the closest papal-imperial partnerships in history. His advanced learning made contemporaries whisper he had made a pact with the devil."
+  },
+  {
+    "n": 141,
+    "name": "John XVII",
+    "reign": "May–Nov 1003",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Pontificate of approximately 6 months. Completely under the control of the Crescentii family. Almost nothing is known of his brief reign."
+  },
+  {
+    "n": 142,
+    "name": "John XVIII",
+    "reign": "1003–1009",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Under Crescentii control. Supported the missions of St. Bruno of Querfurt in Prussia and Russia. Died in a monastery, having abdicated before death."
+  },
+  {
+    "n": 143,
+    "name": "Sergius IV",
+    "reign": "1009–1012",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "The last pope from a powerful Roman family before the German reform papacy. May have issued a crusading call to recapture Jerusalem after the Church of the Holy Sepulchre was destroyed by the Fatimid Caliph. Died the same day as his patron, John Crescentius II."
+  },
+  {
+    "n": 144,
+    "name": "Benedict VIII",
+    "reign": "1012–1024",
+    "nat": "Roman (Tusculum)",
+    "saint": false,
+    "img": null,
+    "note": "A member of the Tusculum family that now dominated the papacy. Led military campaigns personally against Saracens and Normans. Worked with Emperor Henry II on church reform. Crowned Henry II as Holy Roman Emperor (1014)."
+  },
+  {
+    "n": 145,
+    "name": "John XIX",
+    "reign": "1024–1032",
+    "nat": "Roman (Tusculum)",
+    "saint": false,
+    "img": null,
+    "note": "Brother of Benedict VIII — elected pope as a layman and ordained all in one day, a flagrant example of the nepotism plaguing the church. Crowned Conrad II emperor. Attempted to sell honorary patriarchal rights to Constantinople."
+  },
+  {
+    "n": 146,
+    "name": "Benedict IX",
+    "reign": "1032–1044; 1045; 1047–1048",
+    "nat": "Roman (Tusculum)",
+    "saint": false,
+    "img": null,
+    "note": "Made pope as a teenager (possibly as young as 12) through family influence. He is the only man to have been pope three separate times. He sold the papacy for money — literally sold his office to his godfather. St. Peter Damian called him a demon from hell. Yet he died as a monk in a monastery, reportedly repentant. A uniquely scandalous figure in papal history."
+  },
+  {
+    "n": 147,
+    "name": "Sylvester III",
+    "reign": "Jan–Mar 1045",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Elected by the Crescentii faction when Benedict IX was driven from Rome. His election is considered by many historians as that of an antipope. He was later deposed and condemned."
+  },
+  {
+    "n": 148,
+    "name": "Gregory VI",
+    "reign": "1045–1046",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "John Gratian purchased the papacy from Benedict IX — a genuine act of simony, though motivated by the desire to end Benedict's scandalous pontificate. Despite his good intentions, he was deposed at the Synod of Sutri (1046) for simony. He accepted the judgment humbly. His secretary was the future Gregory VII."
+  },
+  {
+    "n": 149,
+    "name": "Clement II",
+    "reign": "1046–1047",
+    "nat": "German (Saxony)",
+    "saint": false,
+    "img": null,
+    "note": "The first of a series of German reform popes appointed by Emperor Henry III, who swept aside the corrupt Roman papacy. Crowned Henry III emperor. Enacted decrees against simony. Died after approximately nine months — possibly poisoned. His body, remarkably, is the only papal body north of the Alps, preserved in Bamberg Cathedral, Germany."
+  },
+  {
+    "n": 150,
+    "name": "Damasus II",
+    "reign": "Jul–Aug 1048",
+    "nat": "Bavarian (Germany)",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 23 days. The second German reform pope appointed by Henry III. Died of malaria almost immediately after arriving in Rome."
+  }
 ]

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import stationsData from "@/data/stations.json";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function StationsPage() {
   const [activeStation, setActiveStation] = useState(0);
@@ -139,19 +140,20 @@ export default function StationsPage() {
         >
           {/* Left: Painting */}
           <div style={{ position: "relative", overflow: "hidden" }}>
-            <img
+            <Image
               src={station.image_url}
               alt={`${station.title} — James Tissot`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{
-                width: "100%", height: "100%",
                 objectFit: "cover",
                 display: "block",
                 filter: "brightness(0.75) saturate(0.9)",
                 transition: "transform 0.6s ease",
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.03)"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
-              loading={i === 0 ? "eager" : "lazy"}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1.03)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+              priority={i === 0}
             />
             {/* Gradient overlay */}
             <div style={{
