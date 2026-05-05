@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PWARegister from "@/components/PWARegister";
+import { Providers } from "@/components/Providers";
 import { auth } from "@/lib/auth";
 
 export const metadata: Metadata = {
@@ -55,12 +56,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className="bg-parchment">
-        <PWARegister />
-        <Navbar session={session} />
-        <main id="main-content" role="main">
-          {children}
-        </main>
-        <Footer />
+        <Providers>
+          <PWARegister />
+          <Navbar session={session} />
+          <main id="main-content" role="main">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

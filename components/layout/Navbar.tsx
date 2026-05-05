@@ -21,6 +21,7 @@ const navLinks = [
       { href: "/mass", label: "Mass & Confession" },
       { href: "/bible/passages", label: "Bible Passages" },
       { href: "/bible/stories", label: "Bible Stories" },
+      { href: "/intentions", label: "Prayer Intentions Wall" },
       { href: "/prayers", label: "Prayers Library" },
       { href: "/novenas", label: "Novenas" },
       { href: "/confession", label: "Confession Guide" },
