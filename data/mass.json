@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "introductory-rites",
+    "section": "Introductory Rites",
+    "latin": "Ritus Initiales",
+    "order": 1,
+    "summary": "The Mass begins with the Introductory Rites — prayers and actions that prepare the faithful to hear the Word of God and celebrate the Eucharist worthily.",
+    "steps": [
+      {
+        "name": "Entrance Procession",
+        "latin": "Processio ad Altare",
+        "desc": "The priest and ministers process to the altar. The congregation stands and sings the entrance hymn. The sacred space is prepared.",
+        "detail": "The Entrance Procession marks the beginning of the liturgical celebration. The priest, deacon, and other ministers process from the back of the church to the sanctuary, usually accompanied by an entrance hymn or antiphon. The procession symbolizes the pilgrim Church journeying toward God. The Book of the Gospels may be carried in procession and placed on the altar. Upon reaching the altar, the priest and deacon reverence it with a kiss — a sign of veneration for Christ, whom the altar represents. If incense is used, the priest incenses the altar as a sign of the Church's prayer rising to God.",
+        "prayers": ["In the name of the Father, and of the Son, and of the Holy Spirit. Amen."],
+        "responses": ["The congregation stands and joins in the entrance hymn."]
+      },
+      {
+        "name": "Greeting",
+        "latin": "Salutatio",
+        "desc": "The priest makes the Sign of the Cross with the people and greets them, acknowledging the Lord's presence.",
+        "detail": "After the Sign of the Cross, the priest greets the congregation using one of three prescribed greetings, each drawn from Scripture. The most common is 'The Lord be with you,' to which the people respond 'And with your spirit.' This exchange acknowledges the mutual presence of Christ in the assembly. The greeting establishes the communal nature of worship — we do not pray alone but as the Body of Christ gathered together.",
+        "prayers": ["The Lord be with you.", "The grace of our Lord Jesus Christ, and the love of God, and the communion of the Holy Spirit be with you all.", "Grace to you and peace from God our Father and the Lord Jesus Christ."],
+        "responses": ["And with your spirit."]
+      },
+      {
+        "name": "Penitential Rite",
+        "latin": "Actus Paenitentialis",
+        "desc": "The Confiteor is prayed. We acknowledge our sinfulness and ask for God's mercy before approaching the altar.",
+        "detail": "The Penitential Act is a moment of communal repentance. The priest invites the faithful to acknowledge their sins. The most common form is the Confiteor: 'I confess to almighty God and to you, my brothers and sisters, that I have greatly sinned, in my thoughts and in my words, in what I have done and in what I have failed to do.' The striking of the breast at 'through my fault, through my fault, through my most grievous fault' is an ancient gesture of contrition. This act of humility prepares us to participate worthily in the sacred mysteries. Note: this does not replace the Sacrament of Confession for mortal sins.",
+        "prayers": ["I confess to almighty God and to you, my brothers and sisters, that I have greatly sinned, in my thoughts and in my words, in what I have done and in what I have failed to do, through my fault, through my fault, through my most grievous fault; therefore I ask blessed Mary ever-Virgin, all the Angels and Saints, and you, my brothers and sisters, to pray for me to the Lord our God."],
+        "responses": ["May almighty God have mercy on us, forgive us our sins, and bring us to everlasting life. Amen."]
+      },
+      {
+        "name": "Kyrie Eleison",
+        "latin": "Kyrie Eleison",
+        "desc": "Lord, have mercy. Christ, have mercy. Lord, have mercy.",
+        "detail": "The Kyrie is one of the most ancient prayers of the Mass, preserved in Greek even in the Latin Rite as a testament to its apostolic origins. It is a threefold invocation of Christ's mercy — addressed to the three Persons of the Trinity. Each invocation is repeated, creating a litany of supplication. The Kyrie is not merely a request for forgiveness; it is a joyful acclamation of the merciful Christ who comes to save His people.",
+        "prayers": ["Lord, have mercy. (Kyrie, eleison.)", "Christ, have mercy. (Christe, eleison.)", "Lord, have mercy. (Kyrie, eleison.)"],
+        "responses": ["Lord, have mercy.", "Christ, have mercy.", "Lord, have mercy."]
+      },
+      {
+        "name": "Gloria",
+        "latin": "Gloria in Excelsis Deo",
+        "desc": "Glory to God in the highest — this ancient hymn of praise echoes the angels' song at Bethlehem.",
+        "detail": "The Gloria is a magnificent hymn of praise sung or recited on Sundays outside of Advent and Lent, on solemnities, and on feast days. It begins with the words the angels sang at the birth of Christ (Luke 2:14) and expands into a grand doxology praising each Person of the Trinity. The hymn dates back to at least the 4th century and was originally a morning prayer. Its inclusion in the Mass elevates our worship to join the heavenly chorus of angels and saints.",
+        "prayers": ["Glory to God in the highest, and on earth peace to people of good will. We praise you, we bless you, we adore you, we glorify you, we give you thanks for your great glory, Lord God, heavenly King, O God, almighty Father. Lord Jesus Christ, Only Begotten Son, Lord God, Lamb of God, Son of the Father, you take away the sins of the world, have mercy on us; you take away the sins of the world, receive our prayer; you are seated at the right hand of the Father, have mercy on us. For you alone are the Holy One, you alone are the Lord, you alone are the Most High, Jesus Christ, with the Holy Spirit, in the glory of God the Father. Amen."],
+        "responses": []
+      },
+      {
+        "name": "Opening Prayer (Collect)",
+        "latin": "Collecta",
+        "desc": "The priest invites the people to silent prayer, then 'collects' the prayers of all and presents them to God.",
+        "detail": "The Collect is the prayer that concludes the Introductory Rites. The priest says 'Let us pray,' and a brief silence follows so that each person may formulate their own intentions. The priest then pronounces the Collect — a single, carefully composed prayer that 'collects' the individual prayers of the faithful into one offering to God. Collects follow a specific structure: they address God the Father, recall His saving acts, make a petition, and conclude through Christ. The congregation ratifies the prayer with their 'Amen.'",
+        "prayers": ["Let us pray..."],
+        "responses": ["Amen."]
+      }
+    ]
+  },
+  {
+    "slug": "liturgy-of-the-word",
+    "section": "Liturgy of the Word",
+    "latin": "Liturgia Verbi",
+    "order": 2,
+    "summary": "In the Liturgy of the Word, God speaks to His people through Sacred Scripture. The readings, psalm, Gospel, homily, and prayers form a dialogue between God and His Church.",
+    "steps": [
+      {
+        "name": "First Reading",
+        "latin": "Lectio Prima",
+        "desc": "A reading from the Old Testament (or Acts during Easter).",
+        "detail": "The First Reading is typically taken from the Old Testament and is chosen to relate thematically to the Gospel of the day. During the Easter season, it is taken from the Acts of the Apostles. The reading is proclaimed by a lector from the ambo (lectern). It concludes with 'The Word of the Lord,' to which the people respond 'Thanks be to God.' This reading connects us to the long history of salvation, showing how God prepared His people for the coming of Christ.",
+        "prayers": [],
+        "responses": ["The Word of the Lord.", "Thanks be to God."]
+      },
+      {
+        "name": "Responsorial Psalm",
+        "latin": "Psalmus Responsorius",
+        "desc": "A psalm sung or recited between readings with the congregation responding to the antiphon.",
+        "detail": "The Responsorial Psalm is taken from the Book of Psalms and is selected to reflect the themes of the First Reading. It serves as the congregation's prayerful meditation on God's Word. The cantor or psalmist sings the verses, and the assembly responds with an antiphon (a repeated refrain). The psalms are the prayer book of Jesus Himself — He prayed them throughout His life, even on the Cross. By praying the psalms at Mass, we join our voices with Christ's own prayer.",
+        "prayers": [],
+        "responses": ["The congregation repeats the antiphon after each verse."]
+      },
+      {
+        "name": "Second Reading",
+        "latin": "Lectio Secunda",
+        "desc": "A reading from the New Testament letters (epistles).",
+        "detail": "The Second Reading is taken from the New Testament epistles (letters of Saint Paul, Saint Peter, Saint James, Saint John, or the Letter to the Hebrews) or from the Book of Revelation. Unlike the First Reading, the Second Reading follows a semi-continuous cycle through a particular epistle across several Sundays. These letters were written to early Christian communities and contain practical instruction on how to live the Christian life. They connect the ancient Church to our present-day faith.",
+        "prayers": [],
+        "responses": ["The Word of the Lord.", "Thanks be to God."]
+      },
+      {
+        "name": "Gospel Acclamation",
+        "latin": "Alleluia",
+        "desc": "The congregation stands and sings Alleluia to prepare for the Gospel.",
+        "detail": "The Gospel Acclamation is a joyful shout of 'Alleluia' (meaning 'Praise the Lord' in Hebrew), sung as the assembly stands in reverence for the Gospel. During Lent, a different acclamation replaces the Alleluia (such as 'Praise to you, Lord Jesus Christ, King of endless glory'). A verse from Scripture, usually related to the Gospel, is sung between the Alleluias. This acclamation expresses the joy and eagerness of the faithful to hear Christ speak to them through the Gospel.",
+        "prayers": ["Alleluia, alleluia!"],
+        "responses": ["Alleluia, alleluia!"]
+      },
+      {
+        "name": "Gospel",
+        "latin": "Evangelium",
+        "desc": "The deacon or priest proclaims the Gospel — the words and deeds of Jesus Christ.",
+        "detail": "The Gospel is the high point of the Liturgy of the Word. Only a deacon or priest may proclaim it, signifying its special dignity. The congregation stands as a sign of readiness to hear and follow Christ. The priest or deacon says 'The Lord be with you' and announces the Gospel. The people trace a small cross on their forehead, lips, and heart — praying that the Word may be in their mind, on their lips, and in their heart. If incense is used, the Book of the Gospels is incensed. After the reading: 'The Gospel of the Lord' — 'Praise to you, Lord Jesus Christ.'",
+        "prayers": ["The Lord be with you.", "A reading from the Holy Gospel according to..."],
+        "responses": ["And with your spirit.", "Glory to you, O Lord.", "The Gospel of the Lord.", "Praise to you, Lord Jesus Christ."]
+      },
+      {
+        "name": "Homily",
+        "latin": "Homilia",
+        "desc": "The priest or deacon preaches on the readings, breaking open the Word of God.",
+        "detail": "The Homily is an integral part of the liturgy, not an interruption of it. The priest or deacon breaks open the Scripture readings and applies them to the lives of the faithful. It should illuminate the mysteries of the faith and guide the norms of Christian living. The homily is reserved to the ordained minister (priest or deacon) and should relate to the readings, the liturgical season, or the particular celebration. The faithful sit and listen in attentive silence.",
+        "prayers": [],
+        "responses": []
+      },
+      {
+        "name": "Nicene Creed",
+        "latin": "Symbolum Nicaenum",
+        "desc": "The congregation professes the faith handed down from the Council of Nicaea (325 AD).",
+        "detail": "The Profession of Faith (Creed) is the assembly's response to the Word of God. On Sundays and solemnities, the Nicene Creed is recited. Formulated at the Councils of Nicaea (325 AD) and Constantinople (381 AD), it summarizes the core truths of the Catholic faith. At the words 'and by the Holy Spirit was incarnate of the Virgin Mary, and became man,' all bow — a gesture of reverence for the Incarnation. On certain occasions, the Apostles' Creed may be used instead.",
+        "prayers": ["I believe in one God, the Father almighty, maker of heaven and earth, of all things visible and invisible..."],
+        "responses": []
+      },
+      {
+        "name": "Prayers of the Faithful",
+        "latin": "Oratio Universalis",
+        "desc": "General intercessions are offered for the Church, the world, and those in need.",
+        "detail": "The Universal Prayer (Prayer of the Faithful) is the people's exercise of their baptismal priesthood, interceding for all of humanity. Intentions typically follow a prescribed order: for the needs of the Church, for public authorities and the salvation of the whole world, for those burdened by any kind of difficulty, and for the local community. The deacon, cantor, or lector announces each intention, and the people respond with a common prayer such as 'Lord, hear our prayer.' The priest concludes with a collect prayer.",
+        "prayers": [],
+        "responses": ["Lord, hear our prayer."]
+      }
+    ]
+  },
+  {
+    "slug": "liturgy-of-the-eucharist",
+    "section": "Liturgy of the Eucharist",
+    "latin": "Liturgia Eucharistica",
+    "order": 3,
+    "summary": "The Liturgy of the Eucharist is the heart of the Mass. Here, through the power of the Holy Spirit and the words of Christ, bread and wine truly become His Body and Blood.",
+    "steps": [
+      {
+        "name": "Preparation of the Gifts",
+        "latin": "Praeparatio Donorum",
+        "desc": "Bread and wine are brought to the altar. The priest prepares them with prayers.",
+        "detail": "Members of the congregation bring forward the gifts of bread and wine — the fruits of human labor that will become the Body and Blood of Christ. The priest receives the gifts and places them on the altar. He prays quietly: 'Blessed are you, Lord God of all creation, for through your goodness we have received the bread (wine) we offer you: fruit of the earth (vine) and work of human hands, it will become for us the bread of life (our spiritual drink).' A collection is typically taken at this time as the people's material offering. The priest may add a drop of water to the wine, symbolizing the union of Christ's divinity with our humanity.",
+        "prayers": ["Blessed are you, Lord God of all creation, for through your goodness we have received the bread we offer you: fruit of the earth and work of human hands, it will become for us the bread of life.", "Blessed are you, Lord God of all creation, for through your goodness we have received the wine we offer you: fruit of the vine and work of human hands, it will become our spiritual drink."],
+        "responses": ["Blessed be God for ever."]
+      },
+      {
+        "name": "Prayer over the Offerings",
+        "latin": "Oratio super Oblata",
+        "desc": "The priest asks God to accept the gifts being offered.",
+        "detail": "After the preparation, the priest washes his hands — a symbolic act of inner purification — while praying quietly, 'Wash me, O Lord, from my iniquity and cleanse me from my sin.' He then invites the people: 'Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father.' The people respond with a prayer asking God to accept the sacrifice. The priest then says the Prayer over the Offerings, a variable prayer that asks God to sanctify the gifts.",
+        "prayers": ["Pray, brethren, that my sacrifice and yours may be acceptable to God, the almighty Father."],
+        "responses": ["May the Lord accept the sacrifice at your hands for the praise and glory of his name, for our good and the good of all his holy Church."]
+      },
+      {
+        "name": "Eucharistic Prayer — Preface",
+        "latin": "Praefatio",
+        "desc": "The central prayer of the Mass begins with the Preface dialogue and thanksgiving.",
+        "detail": "The Eucharistic Prayer is the center and summit of the entire Mass. It begins with the Preface Dialogue: 'The Lord be with you / And with your spirit. Lift up your hearts / We lift them up to the Lord. Let us give thanks to the Lord our God / It is right and just.' The Preface is a prayer of thanksgiving that varies according to the liturgical season or feast day, giving thanks for God's saving work. There are over 80 different prefaces in the Roman Missal. The Preface concludes by leading into the Sanctus.",
+        "prayers": ["The Lord be with you.", "Lift up your hearts.", "Let us give thanks to the Lord our God."],
+        "responses": ["And with your spirit.", "We lift them up to the Lord.", "It is right and just."]
+      },
+      {
+        "name": "Sanctus",
+        "latin": "Sanctus",
+        "desc": "Holy, Holy, Holy Lord God of hosts — this angelic hymn joins the worship of heaven.",
+        "detail": "The Sanctus is taken from Isaiah 6:3, where the seraphim cry out in the heavenly temple, and from Matthew 21:9, the cry of the crowds on Palm Sunday. By singing or reciting it, the earthly assembly joins its voice to the unending hymn of the angels and saints in heaven. This is a profound moment of union between the Church on earth and the Church in glory.",
+        "prayers": ["Holy, Holy, Holy Lord God of hosts. Heaven and earth are full of your glory. Hosanna in the highest. Blessed is he who comes in the name of the Lord. Hosanna in the highest."],
+        "responses": []
+      },
+      {
+        "name": "Epiclesis",
+        "latin": "Epiclesis",
+        "desc": "The priest invokes the Holy Spirit over the bread and wine.",
+        "detail": "The Epiclesis (Greek for 'invocation') is the moment when the priest extends his hands over the gifts of bread and wine and calls upon the Holy Spirit to transform them. This is the power of God at work — not the priest's own power. The priest prays: 'Make holy, therefore, these gifts, we pray, by sending down your Spirit upon them like the dewfall, so that they may become for us the Body and Blood of our Lord Jesus Christ.' The bell may be rung to alert the faithful.",
+        "prayers": ["Make holy, therefore, these gifts, we pray, by sending down your Spirit upon them like the dewfall, so that they may become for us the Body and Blood of our Lord Jesus Christ."],
+        "responses": []
+      },
+      {
+        "name": "Consecration",
+        "latin": "Consecratio",
+        "desc": "The bread and wine truly become the Body and Blood of Christ.",
+        "detail": "This is the most sacred moment of the Mass. The priest, acting in the person of Christ (in persona Christi), repeats the words Jesus spoke at the Last Supper. Over the bread: 'Take this, all of you, and eat of it, for this is my Body, which will be given up for you.' Over the chalice: 'Take this, all of you, and drink from it, for this is the chalice of my Blood, the Blood of the new and eternal covenant, which will be poured out for you and for many for the forgiveness of sins. Do this in memory of me.' At this moment, transubstantiation occurs — the substance of bread and wine is wholly converted into the substance of Christ's Body and Blood, while the appearances remain. The priest genuflects in adoration. Bells are rung.",
+        "prayers": ["Take this, all of you, and eat of it, for this is my Body, which will be given up for you.", "Take this, all of you, and drink from it, for this is the chalice of my Blood, the Blood of the new and eternal covenant, which will be poured out for you and for many for the forgiveness of sins. Do this in memory of me."],
+        "responses": []
+      },
+      {
+        "name": "Memorial Acclamation",
+        "latin": "Mysterium Fidei",
+        "desc": "The Mystery of Faith — the people proclaim their faith in Christ's death and resurrection.",
+        "detail": "Immediately after the Consecration, the priest sings or says 'The mystery of faith,' and the people respond with one of three acclamations proclaiming the Paschal Mystery. This acclamation is the assembly's faith-filled response to the miracle they have just witnessed.",
+        "prayers": ["The mystery of faith."],
+        "responses": ["We proclaim your Death, O Lord, and profess your Resurrection until you come again.", "When we eat this Bread and drink this Cup, we proclaim your Death, O Lord, until you come again.", "Save us, Savior of the world, for by your Cross and Resurrection you have set us free."]
+      },
+      {
+        "name": "Lord's Prayer",
+        "latin": "Pater Noster",
+        "desc": "Our Father — the prayer Christ Himself taught us.",
+        "detail": "The Lord's Prayer is the perfect prayer given by Christ Himself (Matthew 6:9-13). It is prayed by the entire assembly with hands extended or joined. After the prayer, the priest adds the embolism: 'Deliver us, Lord, we pray, from every evil, graciously grant peace in our days...' and the people conclude with the doxology: 'For the kingdom, the power and the glory are yours now and for ever.'",
+        "prayers": ["Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil."],
+        "responses": ["For the kingdom, the power and the glory are yours now and for ever."]
+      },
+      {
+        "name": "Sign of Peace",
+        "latin": "Ritus Pacis",
+        "desc": "The priest extends Christ's peace and the people exchange a sign of peace.",
+        "detail": "The Rite of Peace follows the Lord's Prayer. The priest prays for peace and unity and then offers the peace of Christ: 'The peace of the Lord be with you always.' The people respond 'And with your spirit.' The deacon or priest then invites: 'Let us offer each other the sign of peace.' This exchange — usually a handshake, bow, or embrace — is not merely a social greeting but a liturgical act expressing the communion and charity of the Body of Christ before receiving the Eucharist.",
+        "prayers": ["The peace of the Lord be with you always."],
+        "responses": ["And with your spirit."]
+      },
+      {
+        "name": "Lamb of God",
+        "latin": "Agnus Dei",
+        "desc": "Lamb of God, you take away the sins of the world — the host is broken.",
+        "detail": "During the Agnus Dei, the priest breaks the consecrated host — a gesture called the Fractio Panis (Breaking of the Bread), one of the oldest names for the Eucharist. A small piece of the host is placed into the chalice, symbolizing the unity of the Body and Blood of Christ. The assembly sings or recites: 'Lamb of God, you take away the sins of the world, have mercy on us' (twice), then 'Lamb of God, you take away the sins of the world, grant us peace.' This prayer echoes John the Baptist's proclamation of Jesus (John 1:29).",
+        "prayers": ["Lamb of God, you take away the sins of the world, have mercy on us. Lamb of God, you take away the sins of the world, have mercy on us. Lamb of God, you take away the sins of the world, grant us peace."],
+        "responses": []
+      },
+      {
+        "name": "Communion",
+        "latin": "Communio",
+        "desc": "The faithful receive the Body and Blood of Christ.",
+        "detail": "Before distributing Communion, the priest elevates the host and says: 'Behold the Lamb of God, behold him who takes away the sins of the world. Blessed are those called to the supper of the Lamb.' The people respond: 'Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.' The priest receives Communion first, then distributes to the faithful. The minister says 'The Body of Christ' and the communicant responds 'Amen.' This 'Amen' is the most important one a Catholic ever says — it affirms belief in the Real Presence. Catholics must be in a state of grace and have fasted for at least one hour before receiving.",
+        "prayers": ["Behold the Lamb of God, behold him who takes away the sins of the world. Blessed are those called to the supper of the Lamb."],
+        "responses": ["Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.", "Amen."]
+      }
+    ]
+  },
+  {
+    "slug": "concluding-rites",
+    "section": "Concluding Rites",
+    "latin": "Ritus Conclusionis",
+    "order": 4,
+    "summary": "The Concluding Rites bring the Mass to a close with blessing and dismissal, sending the faithful out to live what they have celebrated.",
+    "steps": [
+      {
+        "name": "Final Blessing",
+        "latin": "Benedictio",
+        "desc": "The priest blesses the congregation in the name of the Trinity.",
+        "detail": "After any brief announcements, the priest blesses the congregation. The simple blessing is: 'May almighty God bless you, the Father, and the Son, and the Holy Spirit.' On more solemn occasions, a Solemn Blessing or Prayer over the People may be used, consisting of three invocations with the people responding 'Amen' to each. The blessing sends the faithful forth strengthened by grace to live the Gospel in the world.",
+        "prayers": ["The Lord be with you.", "May almighty God bless you, the Father, and the Son, and the Holy Spirit."],
+        "responses": ["And with your spirit.", "Amen."]
+      },
+      {
+        "name": "Dismissal",
+        "latin": "Dimissio",
+        "desc": "Go forth, the Mass is ended — the people are sent to live the Eucharist.",
+        "detail": "The deacon or priest dismisses the assembly with one of four formulas: 'Go forth, the Mass is ended,' 'Go and announce the Gospel of the Lord,' 'Go in peace, glorifying the Lord by your life,' or 'Go in peace.' The word 'Mass' itself comes from the Latin 'Missa' (dismissal) — the entire celebration takes its name from this final sending. The dismissal is not merely an ending but a commissioning: the faithful are sent forth as missionaries to bring Christ's love and truth to the world. The priest and ministers reverence the altar with a kiss and process out.",
+        "prayers": ["Go forth, the Mass is ended.", "Go and announce the Gospel of the Lord.", "Go in peace, glorifying the Lord by your life.", "Go in peace."],
+        "responses": ["Thanks be to God. (Deo gratias.)"]
+      }
+    ]
+  }
+]

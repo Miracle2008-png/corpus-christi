@@ -126,7 +126,6 @@ export default async function SaintsPage({ searchParams }: PageProps) {
                       <img
                         src={saint.image_url}
                         alt={`Painting of ${saint.name}`}
-                        referrerPolicy="no-referrer"
                         style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.85 }}
                         loading="lazy"
                       />

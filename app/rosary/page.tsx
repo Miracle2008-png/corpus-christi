@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const MARY_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Murillo_-_Inmaculada_Concepci%C3%B3n_de_los_Venerables_o_de_Soult_%28Museo_del_Prado%2C_1678%29.jpg/800px-Murillo_-_Inmaculada_Concepci%C3%B3n_de_los_Venerables_o_de_Soult_%28Museo_del_Prado%2C_1678%29.jpg";
+const MARY_IMAGE = "/images/mary.jpg";
 
 const mysteries = [
   { set: "Joyful Mysteries", days: "Monday & Saturday", list: [
@@ -66,8 +66,7 @@ export default function RosaryPage() {
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         <img
           src={MARY_IMAGE}
-          alt="Virgin of the Rosary by Bartolomé Esteban Murillo, c. 1650"
-          referrerPolicy="no-referrer"
+          alt="The Immaculate Conception — classical Catholic painting"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.35) saturate(0.8)" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(26,39,68,0.3) 0%, var(--navy) 100%)" }} />

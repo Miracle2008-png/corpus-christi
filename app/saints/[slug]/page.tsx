@@ -45,7 +45,6 @@ export default async function SaintDetailPage({ params }: Props) {
                 <img
                   src={saint.image_url}
                   alt={`Portrait of ${saint.name}`}
-                  referrerPolicy="no-referrer"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               ) : (
