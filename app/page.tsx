@@ -46,16 +46,6 @@ export default function HomePage() {
     <>
       {/* ========== HERO ========== */}
       <section className="hero-sacred" style={{ minHeight: "90vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "4rem 1.5rem", position: "relative", overflow: "hidden" }}>
-        {/* Background video — place your mp4 at /public/videos/hero.mp4 */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.12, pointerEvents: "none" }}
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
 
         {/* Background cross pattern */}
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>

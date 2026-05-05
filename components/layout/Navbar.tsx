@@ -144,11 +144,13 @@ export default function Navbar() {
 
                 {authDropdownOpen && (
                   <div style={{
-                    position: "absolute", top: "100%", right: 0, marginTop: "0.5rem",
+                    position: "absolute", top: "100%", right: 0, marginTop: "0",
                     background: "var(--navy-dark)", border: "1px solid rgba(201,168,76,0.3)",
                     borderRadius: "8px", padding: "0.5rem 0", minWidth: "180px",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.5)", zIndex: 100,
                   }}>
+                    {/* Invisible bridge to cover the hover gap */}
+                    <div style={{ position: "absolute", top: "-10px", left: 0, right: 0, height: "10px", background: "transparent" }} />
                     <Link
                       href="/dashboard"
                       onClick={() => setAuthDropdownOpen(false)}
