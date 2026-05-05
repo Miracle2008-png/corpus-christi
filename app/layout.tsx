@@ -41,8 +41,6 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const session = await auth();
-  
   return (
     <html lang="en">
       <head>
@@ -58,7 +56,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="bg-parchment">
         <Providers>
           <PWARegister />
-          <Navbar session={session} />
+          <Navbar />
           <main id="main-content" role="main">
             {children}
           </main>

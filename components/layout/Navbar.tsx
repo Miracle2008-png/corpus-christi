@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 const navLinks = [
   { href: "/saints", label: "Saints" },
@@ -35,7 +35,8 @@ const navLinks = [
   },
 ];
 
-export default function Navbar({ session }: { session?: any }) {
+export default function Navbar() {
+  const { data: session } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [authDropdownOpen, setAuthDropdownOpen] = useState(false);
