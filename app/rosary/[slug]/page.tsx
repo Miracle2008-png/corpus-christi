@@ -44,9 +44,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
   const flat = getFlatMysteries();
-  const item = flat.find((m) => m.mystery.slug === params.slug);
+  const item = flat.find((m) => m.mystery.slug === resolvedParams.slug);
 
   if (!item) return { title: "Mystery Not Found" };
 
@@ -56,9 +57,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function MysteryDetailPage({ params }: { params: { slug: string } }) {
+export default async function MysteryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
   const flat = getFlatMysteries();
-  const currentIndex = flat.findIndex((m) => m.mystery.slug === params.slug);
+  const currentIndex = flat.findIndex((m) => m.mystery.slug === resolvedParams.slug);
   
   if (currentIndex === -1) {
     notFound();
@@ -131,7 +133,7 @@ export default function MysteryDetailPage({ params }: { params: { slug: string }
       <div className="container-sacred" style={{ maxWidth: "800px", padding: "0 1.5rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem", gap: "1rem", flexWrap: "wrap" }}>
           {prevMystery ? (
-            <Link href={`/rosary/${prevMystery.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", padding: "1.25rem", borderRadius: "10px", transition: "background 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")} onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.05)")}>
+            <Link href={`/rosary/${prevMystery.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", padding: "1.25rem", borderRadius: "10px", transition: "background 0.2s" }} className="sacred-card-hover">
               <div style={{ color: "var(--gold-dark)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 700, marginBottom: "0.25rem" }}>&larr; Previous Mystery</div>
               <div style={{ color: "var(--white)", fontFamily: "var(--font-serif)", fontWeight: 600 }}>{prevMystery.title}</div>
             </Link>
@@ -140,7 +142,7 @@ export default function MysteryDetailPage({ params }: { params: { slug: string }
           )}
 
           {nextMystery ? (
-            <Link href={`/rosary/${nextMystery.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.4)", padding: "1.25rem", borderRadius: "10px", textAlign: "right", transition: "background 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.25)")} onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.15)")}>
+            <Link href={`/rosary/${nextMystery.slug}`} style={{ flex: 1, textDecoration: "none", background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.4)", padding: "1.25rem", borderRadius: "10px", textAlign: "right", transition: "background 0.2s" }} className="sacred-card-hover">
               <div style={{ color: "var(--gold)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 700, marginBottom: "0.25rem" }}>Next Mystery &rarr;</div>
               <div style={{ color: "var(--white)", fontFamily: "var(--font-serif)", fontWeight: 600 }}>{nextMystery.title}</div>
             </Link>
