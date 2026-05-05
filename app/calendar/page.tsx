@@ -37,10 +37,17 @@ export default function CalendarPage() {
       const year = currentDate.getFullYear();
       const month = String(currentDate.getMonth() + 1).padStart(2, "0");
       try {
-        const res = await fetch(`http://calapi.inadiutorium.cz/api/v0/en/calendars/default/${year}/${month}`);
+        const res = await fetch(`/api/calendar?year=${year}&month=${month}`);
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
-        setDays(data);
+        
+        // Ensure data is an array before setting
+        if (Array.isArray(data)) {
+          setDays(data);
+        } else {
+          console.error("API did not return an array:", data);
+          setDays([]);
+        }
       } catch (err) {
         console.error("Error fetching calendar:", err);
       } finally {

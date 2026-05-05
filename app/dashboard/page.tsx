@@ -13,18 +13,6 @@ export default async function DashboardPage() {
     redirect("/auth/login");
   }
 
-  // Mock data for the dashboard until backend integration is complete
-  const mockDonations = [
-    { id: "DON-8492", date: "May 1, 2026", amount: "₦5,000", status: "Successful", project: "General Ministry Fund" },
-    { id: "DON-7310", date: "April 15, 2026", amount: "₦2,000", status: "Successful", project: "E-Library Expansion" },
-  ];
-
-  const mockSavedPrayers = [
-    { title: "The Holy Rosary", path: "/rosary" },
-    { title: "Novena to St. Jude", path: "/novenas" },
-    { title: "Prayer of St. Francis", path: "/prayers" },
-  ];
-
   return (
     <div className="bg-parchment" style={{ minHeight: "100vh", padding: "4rem 1.5rem" }}>
       <div className="container-sacred" style={{ maxWidth: "1000px", marginTop: "2rem" }}>
@@ -69,26 +57,14 @@ export default async function DashboardPage() {
               <span style={{ color: "var(--gold)" }}>✦</span> Saved Prayers
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-              {mockSavedPrayers.map((prayer, i) => (
-                <Link key={i} href={prayer.path} style={{ textDecoration: "none" }}>
-                  <div style={{
-                    padding: "1rem", border: "1px solid rgba(201,168,76,0.3)", borderRadius: "8px",
-                    display: "flex", justifyContent: "space-between", alignItems: "center",
-                    background: "rgba(255,255,255,0.5)", transition: "all 0.2s"
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.background = "white"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.3)"; e.currentTarget.style.background = "rgba(255,255,255,0.5)"; }}
-                  >
-                    <span style={{ color: "var(--navy-dark)", fontWeight: 600 }}>{prayer.title}</span>
-                    <span style={{ color: "var(--gold)" }}>→</span>
-                  </div>
+              <div style={{ padding: "2rem", textAlign: "center", border: "1px dashed rgba(201,168,76,0.3)", borderRadius: "8px" }}>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "1rem" }}>
+                  You haven&apos;t saved any prayers yet.
+                </p>
+                <Link href="/prayers" className="btn-outline-sacred" style={{ fontSize: "0.85rem", padding: "0.5rem 1rem" }}>
+                  Browse Prayers Library
                 </Link>
-              ))}
-            </div>
-            <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
-              <Link href="/prayers" style={{ color: "var(--gold-dark)", fontSize: "0.9rem", fontWeight: 600, textDecoration: "none" }}>
-                Browse more prayers
-              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -99,46 +75,15 @@ export default async function DashboardPage() {
             <span style={{ color: "var(--gold)" }}>✦</span> My Donations
           </h2>
           
-          <div className="sacred-card" style={{ overflow: "hidden" }}>
-            <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "600px" }}>
-                <thead>
-                  <tr style={{ background: "rgba(201,168,76,0.1)", borderBottom: "2px solid rgba(201,168,76,0.3)" }}>
-                    <th style={{ padding: "1rem 1.5rem", textAlign: "left", color: "var(--navy-dark)", fontSize: "0.9rem", fontWeight: 700 }}>Reference</th>
-                    <th style={{ padding: "1rem 1.5rem", textAlign: "left", color: "var(--navy-dark)", fontSize: "0.9rem", fontWeight: 700 }}>Date</th>
-                    <th style={{ padding: "1rem 1.5rem", textAlign: "left", color: "var(--navy-dark)", fontSize: "0.9rem", fontWeight: 700 }}>Amount</th>
-                    <th style={{ padding: "1rem 1.5rem", textAlign: "left", color: "var(--navy-dark)", fontSize: "0.9rem", fontWeight: 700 }}>Project</th>
-                    <th style={{ padding: "1rem 1.5rem", textAlign: "left", color: "var(--navy-dark)", fontSize: "0.9rem", fontWeight: 700 }}>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {mockDonations.map((donation, i) => (
-                    <tr key={donation.id} style={{ borderBottom: i === mockDonations.length - 1 ? "none" : "1px solid rgba(0,0,0,0.05)" }}>
-                      <td style={{ padding: "1rem 1.5rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>{donation.id}</td>
-                      <td style={{ padding: "1rem 1.5rem", color: "var(--navy)", fontSize: "0.9rem", fontWeight: 600 }}>{donation.date}</td>
-                      <td style={{ padding: "1rem 1.5rem", color: "var(--navy)", fontSize: "1rem", fontWeight: 700 }}>{donation.amount}</td>
-                      <td style={{ padding: "1rem 1.5rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>{donation.project}</td>
-                      <td style={{ padding: "1rem 1.5rem" }}>
-                        <span style={{ 
-                          background: "rgba(34, 197, 94, 0.1)", color: "#166534", 
-                          padding: "0.25rem 0.75rem", borderRadius: "999px", fontSize: "0.8rem", fontWeight: 600 
-                        }}>
-                          {donation.status}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div style={{ marginTop: "1.5rem", textAlign: "right" }}>
+          <div className="sacred-card" style={{ padding: "3rem 2rem", textAlign: "center" }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "1rem", marginBottom: "1.5rem", maxWidth: "500px", margin: "0 auto 1.5rem" }}>
+              You don&apos;t have any donation history yet. Your support helps us maintain this platform and spread the Catholic faith globally.
+            </p>
             <Link href="/donate" className="btn-sacred" style={{ padding: "0.6rem 1.5rem", fontSize: "0.9rem" }}>
-              Make a New Donation
+              Make a Donation
             </Link>
           </div>
         </div>
-
       </div>
     </div>
   );
