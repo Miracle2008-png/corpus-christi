@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { signOut } from "next-auth/react";
+
 const navLinks = [
   { href: "/saints", label: "Saints" },
   { href: "/popes", label: "Popes" },
@@ -32,7 +34,7 @@ const navLinks = [
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({ session }: { session?: any }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -119,33 +121,67 @@ export default function Navbar() {
 
           {/* Auth buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.75rem" }}>
-            <Link
-              href="/auth/login"
-              style={{
-                color: "rgba(255,255,255,0.85)", textDecoration: "none",
-                fontSize: "0.8rem", padding: "0.45rem 1rem",
-                borderRadius: "6px", border: "1px solid rgba(255,255,255,0.2)",
-                transition: "all 0.2s",
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.color = "var(--gold)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/auth/register"
-              style={{
-                color: "var(--navy-dark)", textDecoration: "none",
-                fontSize: "0.8rem", padding: "0.45rem 1rem",
-                borderRadius: "6px",
-                background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
-                fontWeight: 700, transition: "all 0.2s",
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
-            >
-              Sign Up
-            </Link>
+            {session ? (
+              <>
+                <Link
+                  href="/dashboard"
+                  style={{
+                    color: "var(--navy-dark)", textDecoration: "none",
+                    fontSize: "0.8rem", padding: "0.45rem 1rem",
+                    borderRadius: "6px",
+                    background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
+                    fontWeight: 700, transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
+                >
+                  {session.user?.name ? `Hi, ${session.user.name.split(" ")[0]}` : "My Account"}
+                </Link>
+                <button
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  style={{
+                    color: "rgba(255,255,255,0.7)", textDecoration: "none",
+                    fontSize: "0.8rem", padding: "0.45rem 1rem",
+                    borderRadius: "6px", border: "1px solid rgba(255,255,255,0.1)",
+                    background: "transparent", cursor: "pointer", transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.color = "var(--gold)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; e.currentTarget.style.color = "rgba(255,255,255,0.7)"; }}
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/auth/login"
+                  style={{
+                    color: "rgba(255,255,255,0.85)", textDecoration: "none",
+                    fontSize: "0.8rem", padding: "0.45rem 1rem",
+                    borderRadius: "6px", border: "1px solid rgba(255,255,255,0.2)",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.color = "var(--gold)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/auth/register"
+                  style={{
+                    color: "var(--navy-dark)", textDecoration: "none",
+                    fontSize: "0.8rem", padding: "0.45rem 1rem",
+                    borderRadius: "6px",
+                    background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
+                    fontWeight: 700, transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
+                >
+                  Sign Up
+                </Link>
+              </>
+            )}
             <Link href="/donate" className="btn-sacred" style={{ fontSize: "0.8rem", padding: "0.5rem 1.25rem" }}>
               ✦ Donate
             </Link>

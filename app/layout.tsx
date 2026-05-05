@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PWARegister from "@/components/PWARegister";
+import { auth } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: {
@@ -38,7 +39,9 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const session = await auth();
+  
   return (
     <html lang="en">
       <head>
@@ -53,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-parchment">
         <PWARegister />
-        <Navbar />
+        <Navbar session={session} />
         <main id="main-content" role="main">
           {children}
         </main>
