@@ -22,19 +22,28 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     );
   }
 
-  // Not logged in
+  // Not logged in — show message, don't redirect (prevents loops)
   if (status === "unauthenticated") {
-    if (typeof window !== "undefined") window.location.href = "/auth/login";
-    return null;
+    return (
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--navy-dark)" }}>
+        <div style={{ textAlign: "center" }}>
+          <p style={{ color: "var(--gold)", fontFamily: "var(--font-serif)", fontSize: "1.3rem", marginBottom: "1rem" }}>Please sign in</p>
+          <a href="/auth/login" style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem" }}>Go to Login</a>
+        </div>
+      </div>
+    );
   }
 
-  // Logged in but not an admin email — send to normal dashboard
+  // Logged in but not an admin email — show Access Denied, no redirect
   const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
   if (!isAdmin) {
-    if (typeof window !== "undefined") window.location.href = "/dashboard";
     return (
-      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--ivory)" }}>
-        <p style={{ color: "var(--text-muted)", fontFamily: "var(--font-serif)" }}>Redirecting...</p>
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--navy-dark)" }}>
+        <div style={{ textAlign: "center" }}>
+          <p style={{ color: "var(--crimson)", fontFamily: "var(--font-serif)", fontSize: "1.3rem", marginBottom: "0.5rem" }}>Access Denied</p>
+          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.9rem", marginBottom: "1rem" }}>You do not have admin privileges.</p>
+          <a href="/dashboard" style={{ color: "var(--gold)", fontSize: "0.9rem" }}>Go to Dashboard</a>
+        </div>
       </div>
     );
   }

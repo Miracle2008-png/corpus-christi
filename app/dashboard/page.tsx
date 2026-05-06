@@ -18,11 +18,6 @@ export default async function DashboardPage() {
     redirect("/auth/login");
   }
 
-  // Admins should always be in the Admin Portal, not the user dashboard
-  if (session.user.email && ADMIN_EMAILS.includes(session.user.email)) {
-    redirect("/admin");
-  }
-
   return (
     <div className="bg-parchment" style={{ minHeight: "100vh", padding: "4rem 1.5rem" }}>
       <div className="container-sacred" style={{ maxWidth: "1000px", marginTop: "2rem" }}>
