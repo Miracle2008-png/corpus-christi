@@ -1,13 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 
 const GOOGLE_CONFIGURED = process.env.NEXT_PUBLIC_GOOGLE_CONFIGURED === "true";
-const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
 
 export default function LoginPage() {
   const { status } = useSession();
+
+  // If already logged in, go to the redirect hub which sends to right place
+  useEffect(() => {
+    if (status === "authenticated") {
+      window.location.href = "/auth/redirect";
+    }
+  }, [status]);
 
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
