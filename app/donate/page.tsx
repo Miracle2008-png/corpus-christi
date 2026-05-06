@@ -39,9 +39,28 @@ export default function DonatePage() {
       amount: Math.round((amount as number) * 100), // Paystack takes kobo/cents
       currency: "NGN",
       metadata: { custom_fields: [{ display_name: "Donor Name", variable_name: "donor_name", value: name }, { display_name: "Purpose", variable_name: "purpose", value: purpose.label }] },
-      callback: (response: { reference: string }) => {
-        setLoading(false);
-        if (response.reference) setSuccess(true);
+      callback: async (response: { reference: string }) => {
+        if (response.reference) {
+          try {
+            await fetch("/api/donations", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                donor_name: name,
+                email,
+                amount,
+                purpose: purpose.label,
+                reference: response.reference,
+              }),
+            });
+          } catch (err) {
+            console.error("Failed to save donation to database", err);
+          }
+          setLoading(false);
+          setSuccess(true);
+        } else {
+          setLoading(false);
+        }
       },
       onClose: () => setLoading(false),
     });
