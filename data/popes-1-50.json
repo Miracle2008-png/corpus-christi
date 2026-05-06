@@ -1,52 +1,452 @@
 [
-  { "n": 1, "name": "St. Peter", "reign": "c. 30–68", "nat": "Galilean (Jewish)", "saint": true, "img": null, "note": "The first pope. Fisherman chosen by Christ as the 'Rock' of the Church (Matthew 16:18). Led the early Church in Jerusalem and Rome. Crucified upside down under Emperor Nero on Vatican Hill." },
-  { "n": 2, "name": "St. Linus", "reign": "c. 67–76", "nat": "Italian", "saint": true, "img": null, "note": "Peter's immediate successor. Mentioned by St. Paul (2 Timothy 4:21). Martyred under Emperor Vespasian." },
-  { "n": 3, "name": "St. Anacletus (Cletus)", "reign": "c. 76–88", "nat": "Greek", "saint": true, "img": null, "note": "Third pope. Organised the Roman clergy into presbyteries. Martyred under Emperor Domitian." },
-  { "n": 4, "name": "St. Clement I", "reign": "c. 88–99", "nat": "Roman", "saint": true, "img": null, "note": "Author of the earliest surviving Christian letter outside the New Testament — the 'Letter to the Corinthians.' Established the authority of bishops as successors of the Apostles. Martyred by drowning with an anchor tied to him, which became his symbol." },
-  { "n": 5, "name": "St. Evaristus", "reign": "c. 99–107", "nat": "Greek", "saint": true, "img": null, "note": "Fifth pope. Divided Rome into parishes (tituli). Martyred under Emperor Trajan." },
-  { "n": 6, "name": "St. Alexander I", "reign": "c. 107–115", "nat": "Roman", "saint": true, "img": null, "note": "Introduced the mixing of water with wine at Mass and the use of holy water. Martyred under Hadrian." },
-  { "n": 7, "name": "St. Sixtus I", "reign": "c. 115–125", "nat": "Roman", "saint": true, "img": null, "note": "Seventh pope. Established several liturgical norms still in use, including the Sanctus. Possibly martyred." },
-  { "n": 8, "name": "St. Telesphorus", "reign": "c. 125–136", "nat": "Greek", "saint": true, "img": null, "note": "The only 2nd-century pope whose martyrdom is historically confirmed, attested by St. Irenaeus. Introduced the Gloria in Excelsis and the practice of three Masses on Christmas Day." },
-  { "n": 9, "name": "St. Hyginus", "reign": "c. 136–140", "nat": "Greek", "saint": true, "img": null, "note": "Ninth pope. Organised the hierarchy of the Roman church. Confronted early Gnostic heresies, including Valentinus." },
-  { "n": 10, "name": "St. Pius I", "reign": "c. 140–155", "nat": "Italian", "saint": true, "img": null, "note": "Tenth pope. Brother of Hermas, author of the early Christian text 'The Shepherd.' Condemned the Marcionite heresy. Possibly martyred." },
-  { "n": 11, "name": "St. Anicetus", "reign": "c. 155–166", "nat": "Syrian", "saint": true, "img": null, "note": "Eleventh pope. Hosted St. Polycarp of Smyrna in Rome to discuss the date of Easter — the first recorded controversy over this question. Martyred." },
-  { "n": 12, "name": "St. Soter", "reign": "c. 166–175", "nat": "Italian", "saint": true, "img": null, "note": "Twelfth pope. Known for charity to poor Christians and prisoners. Confirmed Easter Sunday as an annual feast." },
-  { "n": 13, "name": "St. Eleutherius", "reign": "c. 175–189", "nat": "Greek", "saint": true, "img": null, "note": "Thirteenth pope. Received missions from England and Gaul. Combated Montanism. Ruled for fourteen years." },
-  { "n": 14, "name": "St. Victor I", "reign": "189–199", "nat": "African (Berber)", "saint": true, "img": null, "note": "First African pope and first to conduct Church business in Latin rather than Greek. Threatened to excommunicate Eastern churches over the Easter date controversy — the first exercise of papal authority over distant churches." },
-  { "n": 15, "name": "St. Zephyrinus", "reign": "199–217", "nat": "Roman", "saint": true, "img": null, "note": "Fifteenth pope. Navigated the Monarchianist controversies. St. Hippolytus was his fierce critic. Possibly martyred." },
-  { "n": 16, "name": "St. Callixtus I", "reign": "217–222", "nat": "Roman", "saint": true, "img": null, "note": "A former slave who rose to become pope. Established the famous Catacomb of Callixtus on the Appian Way, still one of Rome's most visited sites. Martyred in a popular uprising." },
-  { "n": 17, "name": "St. Urban I", "reign": "222–230", "nat": "Roman", "saint": true, "img": null, "note": "Seventeenth pope. Possibly martyred under Alexander Severus. Many Christians converted during his reign due to relative peace." },
-  { "n": 18, "name": "St. Pontian", "reign": "230–235", "nat": "Roman", "saint": true, "img": null, "note": "First pope to abdicate — forced by Emperor Maximinus Thrax, who exiled him to the Sardinian mines. Died from harsh conditions. His abdication enabled the Church to elect a successor." },
-  { "n": 19, "name": "St. Anterus", "reign": "Nov 235–Jan 236", "nat": "Greek", "saint": true, "img": null, "note": "Nineteenth pope with one of the shortest pontificates — approximately 43 days. Died a natural death. Collected accounts of Christian martyrs." },
-  { "n": 20, "name": "St. Fabian", "reign": "236–250", "nat": "Roman", "saint": true, "img": null, "note": "Legend says a dove landed on his head during the election, revealing him as God's choice — a layman who became pope instantly. Organised the Roman church into seven regions. Martyred under Emperor Decius. St. Cyprian called him 'incomparable.'" },
-  { "n": 21, "name": "St. Cornelius", "reign": "251–253", "nat": "Roman", "saint": true, "img": null, "note": "Elected after a 14-month vacancy. Opposed Novatianism — the rigorist heresy that denied forgiveness to those who lapsed during persecution. Exiled by Emperor Gallus and died from harsh treatment." },
-  { "n": 22, "name": "St. Lucius I", "reign": "253–254", "nat": "Roman", "saint": true, "img": null, "note": "Twenty-second pope. Brief pontificate. Exiled briefly by Emperor Gallus, then allowed to return. Died a natural death though venerated as a martyr." },
-  { "n": 23, "name": "St. Stephen I", "reign": "254–257", "nat": "Roman", "saint": true, "img": null, "note": "Embroiled in fierce controversy with St. Cyprian over whether baptisms by heretics were valid. Stephen insisted they were; Cyprian disagreed. The conflict illustrates early tensions over papal authority. Died peacefully during the Valerian persecution." },
-  { "n": 24, "name": "St. Sixtus II", "reign": "257–258", "nat": "Greek", "saint": true, "img": null, "note": "Martyred with four deacons during the Mass by Emperor Valerian's soldiers on August 6, 258. His deacon, St. Lawrence, was martyred three days later. St. Cyprian was martyred the same year. One of the most dramatic single moments of 3rd-century persecution." },
-  { "n": 25, "name": "St. Dionysius", "reign": "260–268", "nat": "Unknown", "saint": true, "img": null, "note": "Reorganised the Roman church after the devastation of the Valerian persecution. Condemned Sabellian heresy and resolved tensions in the North African church." },
-  { "n": 26, "name": "St. Felix I", "reign": "269–274", "nat": "Roman", "saint": true, "img": null, "note": "Twenty-sixth pope. Condemned the Monarchianist heresy of Paul of Samosata. Established the practice of celebrating Mass over the tombs of martyrs." },
-  { "n": 27, "name": "St. Eutychian", "reign": "275–283", "nat": "Italian", "saint": true, "img": null, "note": "Twenty-seventh pope. Period of relative peace. Reportedly buried 342 martyrs with his own hands, though this may be legend. Natural death." },
-  { "n": 28, "name": "St. Caius", "reign": "283–296", "nat": "Dalmatian", "saint": true, "img": null, "note": "Twenty-eighth pope. Said to be related to Emperor Diocletian. Established the sequence of clerical orders before episcopate." },
-  { "n": 29, "name": "St. Marcellinus", "reign": "296–304", "nat": "Roman", "saint": true, "img": null, "note": "Reigned during the Great Persecution of Diocletian. Accused of handing over scripture and offering incense to pagan gods — a serious charge. He may have later repented and was martyred. His case remains historically complex." },
-  { "n": 30, "name": "St. Marcellus I", "reign": "308–309", "nat": "Roman", "saint": true, "img": null, "note": "Thirtieth pope after a lengthy vacancy. Faced the crisis of how to reconcile Christians who had lapsed under Diocletian. His strict policies caused a popular revolt. Condemned by a synod and died shortly after." },
-  { "n": 31, "name": "St. Eusebius", "reign": "309–310", "nat": "Greek", "saint": true, "img": null, "note": "Thirty-first pope. Exiled to Sicily by Emperor Maxentius after internal conflict over readmission of the lapsed. Died in exile." },
-  { "n": 32, "name": "St. Miltiades", "reign": "311–314", "nat": "African", "saint": true, "img": null, "note": "Pope during the epochal Edict of Milan (313), which granted Christians freedom of worship. Constantine donated the Lateran Palace to the Church. The age of persecution ended under Miltiades." },
-  { "n": 33, "name": "St. Sylvester I", "reign": "314–335", "nat": "Roman", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Sylvester_I.jpg/400px-Sylvester_I.jpg", "note": "Pope during the Council of Nicaea (325), the first ecumenical council, which defined Christ's divinity against Arianism. Longest-reigning early pope — 21 years. Received the Lateran Basilica from Constantine, which became the cathedral of Rome." },
-  { "n": 34, "name": "St. Mark", "reign": "Jan–Oct 336", "nat": "Roman", "saint": true, "img": null, "note": "Thirty-fourth pope. Very brief pontificate of approximately 8 months. Built two basilicas in Rome. Natural death." },
-  { "n": 35, "name": "St. Julius I", "reign": "337–352", "nat": "Roman", "saint": true, "img": null, "note": "Championed St. Athanasius against Arian emperors and bishops. Convened the Council of Sardica (343), which affirmed the right of bishops to appeal to Rome. Established December 25 as the official date of Christmas." },
-  { "n": 36, "name": "Liberius", "reign": "352–366", "nat": "Roman", "saint": false, "img": null, "note": "First pope not canonised as a saint. Under pressure from the Arian Emperor Constantius II, he signed an Arian formula and exiled St. Athanasius — though he later repented. A deeply tragic figure: a man broken by imperial power." },
-  { "n": 37, "name": "St. Damasus I", "reign": "366–384", "nat": "Spanish", "saint": true, "img": null, "note": "Commissioned St. Jerome to produce the Vulgate — the definitive Latin Bible, still the basis of Catholic translations. Elevated the prestige of the Roman see, applying Matthew 16:18 to the papacy. Established Rome's primacy in doctrinal appeals." },
-  { "n": 38, "name": "St. Siricius", "reign": "384–399", "nat": "Roman", "saint": true, "img": null, "note": "Issued the first formal papal decretal — a letter of binding doctrinal instruction to other churches. Established clerical celibacy as a binding norm in the West. Set the template for future papal legislative authority." },
-  { "n": 39, "name": "St. Anastasius I", "reign": "399–401", "nat": "Roman", "saint": true, "img": null, "note": "Thirty-ninth pope. Condemned the writings of Origen as heretical. Brief but consequential pontificate. St. Jerome called him 'a man of great holiness.'" },
-  { "n": 40, "name": "St. Innocent I", "reign": "401–417", "nat": "Italian (Albano)", "saint": true, "img": null, "note": "One of the most important early popes. Explicitly claimed universal jurisdiction over all churches and the right to decide all major doctrinal controversies. Sheltered St. John Chrysostom. His pontificate saw the sack of Rome by Alaric (410) — a civilization-shaking event." },
-  { "n": 41, "name": "St. Zosimus", "reign": "417–418", "nat": "Greek", "saint": true, "img": null, "note": "Forty-first pope. Brief pontificate marked by controversy over Pelagianism (the heresy that humans can achieve salvation without grace). Reversed himself twice on the question, causing confusion." },
-  { "n": 42, "name": "St. Boniface I", "reign": "418–422", "nat": "Roman", "saint": true, "img": null, "note": "Elected amid schism — two rival popes claimed the see simultaneously. Eulalius was supported by the Emperor, but Boniface prevailed. Vigorously defended Rome's primacy over the African and Eastern churches." },
-  { "n": 43, "name": "St. Celestine I", "reign": "422–432", "nat": "Italian", "saint": true, "img": null, "note": "Sent St. Germanus to Britain to combat Pelagianism and — according to tradition — commissioned St. Patrick to evangelize Ireland (432). Presided over the Council of Ephesus (431), which defined Mary as Theotokos (Mother of God). A decisive pontificate." },
-  { "n": 44, "name": "St. Sixtus III", "reign": "432–440", "nat": "Roman", "saint": true, "img": null, "note": "Built or restored the Basilica of Santa Maria Maggiore in Rome — still standing today, decorated with stunning 5th-century mosaics — to celebrate the Council of Ephesus's definition of Mary as Mother of God." },
-  { "n": 45, "name": "St. Leo I — The Great", "reign": "440–461", "nat": "Italian (Tuscany)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Leo_I_and_Attila.jpg/400px-Leo_I_and_Attila.jpg", "note": "One of only two popes in history called 'the Great.' Famously rode out to meet Attila the Hun on the River Po in 452 and persuaded him to turn back from Rome — an act commemorated in Raphael's Vatican fresco. Wrote the 'Tome of Leo,' the definitive statement of Christ's two natures, read aloud at the Council of Chalcedon (451). The most theologically and politically consequential pope of the first millennium." },
-  { "n": 46, "name": "St. Hilarius", "reign": "461–468", "nat": "Sardinian", "saint": true, "img": null, "note": "Forty-sixth pope. Built several chapels in Rome. Defended Chalcedonian orthodoxy against heretical emperors in the East. Left an important collection of papal documents." },
-  { "n": 47, "name": "St. Simplicius", "reign": "468–483", "nat": "Italian", "saint": true, "img": null, "note": "Pope during the fall of the Western Roman Empire (476). As the last Roman emperor was deposed, the papacy became the sole institution of continuity in the West. Simplicius navigated the Acacian schism — the first major split between Rome and Constantinople." },
-  { "n": 48, "name": "St. Felix III", "reign": "483–492", "nat": "Roman", "saint": true, "img": null, "note": "An ancestor of Pope Gregory the Great. Excommunicated Patriarch Acacius of Constantinople — the first formal break between East and West, known as the Acacian Schism. A great-great-grandfather of Gregory I." },
-  { "n": 49, "name": "St. Gelasius I", "reign": "492–496", "nat": "African", "saint": true, "img": null, "note": "Second African pope. Articulated the foundational doctrine of 'two powers' — the spiritual authority of the Church and the temporal authority of kings — laying the groundwork for medieval political theology. Prolific writer; produced 49 papal letters. Defended the full humanity and divinity of Christ against the Monophysites." },
-  { "n": 50, "name": "Anastasius II", "reign": "496–498", "nat": "Roman", "saint": false, "img": null, "note": "Attempted reconciliation with Constantinople after the Acacian Schism. His conciliatory approach was viewed as betrayal by many Roman clergy. Later condemned by Dante in the Inferno (Canto XI) as a heretic — though modern historians dispute this characterisation." }
+  {
+    "n": 1,
+    "name": "St. Peter",
+    "reign": "c. 30–68",
+    "nat": "Galilean (Jewish)",
+    "saint": true,
+    "img": null,
+    "note": "The first pope. Fisherman chosen by Christ as the 'Rock' of the Church (Matthew 16:18). Led the early Church in Jerusalem and Rome. Crucified upside down under Emperor Nero on Vatican Hill."
+  },
+  {
+    "n": 2,
+    "name": "St. Linus",
+    "reign": "c. 67–76",
+    "nat": "Italian",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Menologion_of_Basil_II_-_Patrobulus%2C_Hermas%2C_Linus%2C_Caius%2C_Philologus_of_70_disciples_%28Portrait_of_Linus%29.jpg",
+    "note": "Peter's immediate successor. Mentioned by St. Paul (2 Timothy 4:21). Martyred under Emperor Vespasian."
+  },
+  {
+    "n": 3,
+    "name": "St. Anacletus (Cletus)",
+    "reign": "c. 76–88",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "Third pope. Organised the Roman clergy into presbyteries. Martyred under Emperor Domitian."
+  },
+  {
+    "n": 4,
+    "name": "St. Clement I",
+    "reign": "c. 88–99",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Author of the earliest surviving Christian letter outside the New Testament — the 'Letter to the Corinthians.' Established the authority of bishops as successors of the Apostles. Martyred by drowning with an anchor tied to him, which became his symbol."
+  },
+  {
+    "n": 5,
+    "name": "St. Evaristus",
+    "reign": "c. 99–107",
+    "nat": "Greek",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Pope_Saint_Evaristus_%28by_Sandro_Botticelli%29_%E2%80%93_Sistine_Chapel_%281481%29.jpg",
+    "note": "Fifth pope. Divided Rome into parishes (tituli). Martyred under Emperor Trajan."
+  },
+  {
+    "n": 6,
+    "name": "St. Alexander I",
+    "reign": "c. 107–115",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Sanctus_Alexander_Papa_Sancta_Maria_Antiqua.jpg/500px-Sanctus_Alexander_Papa_Sancta_Maria_Antiqua.jpg",
+    "note": "Introduced the mixing of water with wine at Mass and the use of holy water. Martyred under Hadrian."
+  },
+  {
+    "n": 7,
+    "name": "St. Sixtus I",
+    "reign": "c. 115–125",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Celat%2C_chiesa_di_San_Rocco_-_Affreschi_della_sagrestia_01_-_San_Sisto%28cropped%29.jpg/500px-Celat%2C_chiesa_di_San_Rocco_-_Affreschi_della_sagrestia_01_-_San_Sisto%28cropped%29.jpg",
+    "note": "Seventh pope. Established several liturgical norms still in use, including the Sanctus. Possibly martyred."
+  },
+  {
+    "n": 8,
+    "name": "St. Telesphorus",
+    "reign": "c. 125–136",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "The only 2nd-century pope whose martyrdom is historically confirmed, attested by St. Irenaeus. Introduced the Gloria in Excelsis and the practice of three Masses on Christmas Day."
+  },
+  {
+    "n": 9,
+    "name": "St. Hyginus",
+    "reign": "c. 136–140",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "Ninth pope. Organised the hierarchy of the Roman church. Confronted early Gnostic heresies, including Valentinus."
+  },
+  {
+    "n": 10,
+    "name": "St. Pius I",
+    "reign": "c. 140–155",
+    "nat": "Italian",
+    "saint": true,
+    "img": null,
+    "note": "Tenth pope. Brother of Hermas, author of the early Christian text 'The Shepherd.' Condemned the Marcionite heresy. Possibly martyred."
+  },
+  {
+    "n": 11,
+    "name": "St. Anicetus",
+    "reign": "c. 155–166",
+    "nat": "Syrian",
+    "saint": true,
+    "img": null,
+    "note": "Eleventh pope. Hosted St. Polycarp of Smyrna in Rome to discuss the date of Easter — the first recorded controversy over this question. Martyred."
+  },
+  {
+    "n": 12,
+    "name": "St. Soter",
+    "reign": "c. 166–175",
+    "nat": "Italian",
+    "saint": true,
+    "img": null,
+    "note": "Twelfth pope. Known for charity to poor Christians and prisoners. Confirmed Easter Sunday as an annual feast."
+  },
+  {
+    "n": 13,
+    "name": "St. Eleutherius",
+    "reign": "c. 175–189",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "Thirteenth pope. Received missions from England and Gaul. Combated Montanism. Ruled for fourteen years."
+  },
+  {
+    "n": 14,
+    "name": "St. Victor I",
+    "reign": "189–199",
+    "nat": "African (Berber)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pfarrkirche_Semmering_Glasfenster.jpg/500px-Pfarrkirche_Semmering_Glasfenster.jpg",
+    "note": "First African pope and first to conduct Church business in Latin rather than Greek. Threatened to excommunicate Eastern churches over the Easter date controversy — the first exercise of papal authority over distant churches."
+  },
+  {
+    "n": 15,
+    "name": "St. Zephyrinus",
+    "reign": "199–217",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png/500px-Fresco_of_Pope_Zephyrinus_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.png",
+    "note": "Fifteenth pope. Navigated the Monarchianist controversies. St. Hippolytus was his fierce critic. Possibly martyred."
+  },
+  {
+    "n": 16,
+    "name": "St. Callixtus I",
+    "reign": "217–222",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg/500px-Fresco_of_Pope_Callixtus_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg",
+    "note": "A former slave who rose to become pope. Established the famous Catacomb of Callixtus on the Appian Way, still one of Rome's most visited sites. Martyred in a popular uprising."
+  },
+  {
+    "n": 17,
+    "name": "St. Urban I",
+    "reign": "222–230",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sala_di_costantino%2C_papa_urbano_I_tra_la_giustizia_e_la_carit%C3%A0.jpg/500px-Sala_di_costantino%2C_papa_urbano_I_tra_la_giustizia_e_la_carit%C3%A0.jpg",
+    "note": "Seventeenth pope. Possibly martyred under Alexander Severus. Many Christians converted during his reign due to relative peace."
+  },
+  {
+    "n": 18,
+    "name": "St. Pontian",
+    "reign": "230–235",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Spinello_Aretino_008.jpg/500px-Spinello_Aretino_008.jpg",
+    "note": "First pope to abdicate — forced by Emperor Maximinus Thrax, who exiled him to the Sardinian mines. Died from harsh conditions. His abdication enabled the Church to elect a successor."
+  },
+  {
+    "n": 19,
+    "name": "St. Anterus",
+    "reign": "Nov 235–Jan 236",
+    "nat": "Greek",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pietro_Perugino_%E2%80%93_Anterus.jpg/500px-Pietro_Perugino_%E2%80%93_Anterus.jpg",
+    "note": "Nineteenth pope with one of the shortest pontificates — approximately 43 days. Died a natural death. Collected accounts of Christian martyrs."
+  },
+  {
+    "n": 20,
+    "name": "St. Fabian",
+    "reign": "236–250",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Saint_Fabian1.jpg/500px-Saint_Fabian1.jpg",
+    "note": "Legend says a dove landed on his head during the election, revealing him as God's choice — a layman who became pope instantly. Organised the Roman church into seven regions. Martyred under Emperor Decius. St. Cyprian called him 'incomparable.'"
+  },
+  {
+    "n": 21,
+    "name": "St. Cornelius",
+    "reign": "251–253",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Pope_Cornelius_%E2%80%93_Santa_Maria_in_Trastevere.jpg/500px-Pope_Cornelius_%E2%80%93_Santa_Maria_in_Trastevere.jpg",
+    "note": "Elected after a 14-month vacancy. Opposed Novatianism — the rigorist heresy that denied forgiveness to those who lapsed during persecution. Exiled by Emperor Gallus and died from harsh treatment."
+  },
+  {
+    "n": 22,
+    "name": "St. Lucius I",
+    "reign": "253–254",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Fresco_of_Pope_Lucius_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg/500px-Fresco_of_Pope_Lucius_I_-_Basilica_of_Saint_Paul_Outside_the_Walls_%28Before_1823%29.jpg",
+    "note": "Twenty-second pope. Brief pontificate. Exiled briefly by Emperor Gallus, then allowed to return. Died a natural death though venerated as a martyr."
+  },
+  {
+    "n": 23,
+    "name": "St. Stephen I",
+    "reign": "254–257",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Head_of_Pope_Saint_Stephen_I_-_Speyer_Cathedral_-_Speyer_-_Germany_2017.jpg/500px-Head_of_Pope_Saint_Stephen_I_-_Speyer_Cathedral_-_Speyer_-_Germany_2017.jpg",
+    "note": "Embroiled in fierce controversy with St. Cyprian over whether baptisms by heretics were valid. Stephen insisted they were; Cyprian disagreed. The conflict illustrates early tensions over papal authority. Died peacefully during the Valerian persecution."
+  },
+  {
+    "n": 24,
+    "name": "St. Sixtus II",
+    "reign": "257–258",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "Martyred with four deacons during the Mass by Emperor Valerian's soldiers on August 6, 258. His deacon, St. Lawrence, was martyred three days later. St. Cyprian was martyred the same year. One of the most dramatic single moments of 3rd-century persecution."
+  },
+  {
+    "n": 25,
+    "name": "St. Dionysius",
+    "reign": "260–268",
+    "nat": "Unknown",
+    "saint": true,
+    "img": null,
+    "note": "Reorganised the Roman church after the devastation of the Valerian persecution. Condemned Sabellian heresy and resolved tensions in the North African church."
+  },
+  {
+    "n": 26,
+    "name": "St. Felix I",
+    "reign": "269–274",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Twenty-sixth pope. Condemned the Monarchianist heresy of Paul of Samosata. Established the practice of celebrating Mass over the tombs of martyrs."
+  },
+  {
+    "n": 27,
+    "name": "St. Eutychian",
+    "reign": "275–283",
+    "nat": "Italian",
+    "saint": true,
+    "img": null,
+    "note": "Twenty-seventh pope. Period of relative peace. Reportedly buried 342 martyrs with his own hands, though this may be legend. Natural death."
+  },
+  {
+    "n": 28,
+    "name": "St. Caius",
+    "reign": "283–296",
+    "nat": "Dalmatian",
+    "saint": true,
+    "img": null,
+    "note": "Twenty-eighth pope. Said to be related to Emperor Diocletian. Established the sequence of clerical orders before episcopate."
+  },
+  {
+    "n": 29,
+    "name": "St. Marcellinus",
+    "reign": "296–304",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Reigned during the Great Persecution of Diocletian. Accused of handing over scripture and offering incense to pagan gods — a serious charge. He may have later repented and was martyred. His case remains historically complex."
+  },
+  {
+    "n": 30,
+    "name": "St. Marcellus I",
+    "reign": "308–309",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Thirtieth pope after a lengthy vacancy. Faced the crisis of how to reconcile Christians who had lapsed under Diocletian. His strict policies caused a popular revolt. Condemned by a synod and died shortly after."
+  },
+  {
+    "n": 31,
+    "name": "St. Eusebius",
+    "reign": "309–310",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "Thirty-first pope. Exiled to Sicily by Emperor Maxentius after internal conflict over readmission of the lapsed. Died in exile."
+  },
+  {
+    "n": 32,
+    "name": "St. Miltiades",
+    "reign": "311–314",
+    "nat": "African",
+    "saint": true,
+    "img": null,
+    "note": "Pope during the epochal Edict of Milan (313), which granted Christians freedom of worship. Constantine donated the Lateran Palace to the Church. The age of persecution ended under Miltiades."
+  },
+  {
+    "n": 33,
+    "name": "St. Sylvester I",
+    "reign": "314–335",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Saint_Sylvester_I.jpg",
+    "note": "Pope during the Council of Nicaea (325), the first ecumenical council, which defined Christ's divinity against Arianism. Longest-reigning early pope — 21 years. Received the Lateran Basilica from Constantine, which became the cathedral of Rome."
+  },
+  {
+    "n": 34,
+    "name": "St. Mark",
+    "reign": "Jan–Oct 336",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Thirty-fourth pope. Very brief pontificate of approximately 8 months. Built two basilicas in Rome. Natural death."
+  },
+  {
+    "n": 35,
+    "name": "St. Julius I",
+    "reign": "337–352",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Championed St. Athanasius against Arian emperors and bishops. Convened the Council of Sardica (343), which affirmed the right of bishops to appeal to Rome. Established December 25 as the official date of Christmas."
+  },
+  {
+    "n": 36,
+    "name": "Liberius",
+    "reign": "352–366",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "First pope not canonised as a saint. Under pressure from the Arian Emperor Constantius II, he signed an Arian formula and exiled St. Athanasius — though he later repented. A deeply tragic figure: a man broken by imperial power."
+  },
+  {
+    "n": 37,
+    "name": "St. Damasus I",
+    "reign": "366–384",
+    "nat": "Spanish",
+    "saint": true,
+    "img": null,
+    "note": "Commissioned St. Jerome to produce the Vulgate — the definitive Latin Bible, still the basis of Catholic translations. Elevated the prestige of the Roman see, applying Matthew 16:18 to the papacy. Established Rome's primacy in doctrinal appeals."
+  },
+  {
+    "n": 38,
+    "name": "St. Siricius",
+    "reign": "384–399",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Issued the first formal papal decretal — a letter of binding doctrinal instruction to other churches. Established clerical celibacy as a binding norm in the West. Set the template for future papal legislative authority."
+  },
+  {
+    "n": 39,
+    "name": "St. Anastasius I",
+    "reign": "399–401",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Thirty-ninth pope. Condemned the writings of Origen as heretical. Brief but consequential pontificate. St. Jerome called him 'a man of great holiness.'"
+  },
+  {
+    "n": 40,
+    "name": "St. Innocent I",
+    "reign": "401–417",
+    "nat": "Italian (Albano)",
+    "saint": true,
+    "img": null,
+    "note": "One of the most important early popes. Explicitly claimed universal jurisdiction over all churches and the right to decide all major doctrinal controversies. Sheltered St. John Chrysostom. His pontificate saw the sack of Rome by Alaric (410) — a civilization-shaking event."
+  },
+  {
+    "n": 41,
+    "name": "St. Zosimus",
+    "reign": "417–418",
+    "nat": "Greek",
+    "saint": true,
+    "img": null,
+    "note": "Forty-first pope. Brief pontificate marked by controversy over Pelagianism (the heresy that humans can achieve salvation without grace). Reversed himself twice on the question, causing confusion."
+  },
+  {
+    "n": 42,
+    "name": "St. Boniface I",
+    "reign": "418–422",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Elected amid schism — two rival popes claimed the see simultaneously. Eulalius was supported by the Emperor, but Boniface prevailed. Vigorously defended Rome's primacy over the African and Eastern churches."
+  },
+  {
+    "n": 43,
+    "name": "St. Celestine I",
+    "reign": "422–432",
+    "nat": "Italian",
+    "saint": true,
+    "img": null,
+    "note": "Sent St. Germanus to Britain to combat Pelagianism and — according to tradition — commissioned St. Patrick to evangelize Ireland (432). Presided over the Council of Ephesus (431), which defined Mary as Theotokos (Mother of God). A decisive pontificate."
+  },
+  {
+    "n": 44,
+    "name": "St. Sixtus III",
+    "reign": "432–440",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "Built or restored the Basilica of Santa Maria Maggiore in Rome — still standing today, decorated with stunning 5th-century mosaics — to celebrate the Council of Ephesus's definition of Mary as Mother of God."
+  },
+  {
+    "n": 45,
+    "name": "St. Leo I — The Great",
+    "reign": "440–461",
+    "nat": "Italian (Tuscany)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Francisco_de_Herrera_el_Mozo_-_St_Leo_the_Great_-_WGA11363.jpg",
+    "note": "One of only two popes in history called 'the Great.' Famously rode out to meet Attila the Hun on the River Po in 452 and persuaded him to turn back from Rome — an act commemorated in Raphael's Vatican fresco. Wrote the 'Tome of Leo,' the definitive statement of Christ's two natures, read aloud at the Council of Chalcedon (451). The most theologically and politically consequential pope of the first millennium."
+  },
+  {
+    "n": 46,
+    "name": "St. Hilarius",
+    "reign": "461–468",
+    "nat": "Sardinian",
+    "saint": true,
+    "img": null,
+    "note": "Forty-sixth pope. Built several chapels in Rome. Defended Chalcedonian orthodoxy against heretical emperors in the East. Left an important collection of papal documents."
+  },
+  {
+    "n": 47,
+    "name": "St. Simplicius",
+    "reign": "468–483",
+    "nat": "Italian",
+    "saint": true,
+    "img": null,
+    "note": "Pope during the fall of the Western Roman Empire (476). As the last Roman emperor was deposed, the papacy became the sole institution of continuity in the West. Simplicius navigated the Acacian schism — the first major split between Rome and Constantinople."
+  },
+  {
+    "n": 48,
+    "name": "St. Felix III",
+    "reign": "483–492",
+    "nat": "Roman",
+    "saint": true,
+    "img": null,
+    "note": "An ancestor of Pope Gregory the Great. Excommunicated Patriarch Acacius of Constantinople — the first formal break between East and West, known as the Acacian Schism. A great-great-grandfather of Gregory I."
+  },
+  {
+    "n": 49,
+    "name": "St. Gelasius I",
+    "reign": "492–496",
+    "nat": "African",
+    "saint": true,
+    "img": null,
+    "note": "Second African pope. Articulated the foundational doctrine of 'two powers' — the spiritual authority of the Church and the temporal authority of kings — laying the groundwork for medieval political theology. Prolific writer; produced 49 papal letters. Defended the full humanity and divinity of Christ against the Monophysites."
+  },
+  {
+    "n": 50,
+    "name": "Anastasius II",
+    "reign": "496–498",
+    "nat": "Roman",
+    "saint": false,
+    "img": null,
+    "note": "Attempted reconciliation with Constantinople after the Acacian Schism. His conciliatory approach was viewed as betrayal by many Roman clergy. Later condemned by Dante in the Inferno (Canto XI) as a heretic — though modern historians dispute this characterisation."
+  }
 ]

@@ -25,6 +25,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <nav style={{ flex: 1, padding: "1.5rem 1rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           {[
             { name: "Overview", path: "/admin", icon: "📊" },
+            { name: "Manage Readings", path: "/admin/readings", icon: "📖" },
             { name: "Donations", path: "/admin/transactions", icon: "💳" },
             { name: "Prayer Intentions", path: "/admin/intentions", icon: "🙏" },
             { name: "Users", path: "/admin/users", icon: "👥" },

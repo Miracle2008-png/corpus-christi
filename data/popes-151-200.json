@@ -5,7 +5,7 @@
     "reign": "1049–1054",
     "nat": "Alsatian (France/Germany)",
     "saint": true,
-    "img": "/images/popes/pope-151.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Leon_IX.jpg",
     "note": "The first great reform pope. Travelled across Europe on reform synods, personally deposing simoniacal bishops. His pontificate ended in catastrophe: he led a military expedition against the Normans, was captured, and died in captivity. During his imprisonment, the Great Schism of 1054 occurred between Rome and Constantinople — the most significant ecclesiastical rupture in history, dividing Christianity into Catholic and Orthodox to this day."
   },
   {
@@ -41,7 +41,7 @@
     "reign": "1061–1073",
     "nat": "Lombard (Italy)",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Papaalessandroii-cena.jpg/500px-Papaalessandroii-cena.jpg",
     "note": "His election provoked a schism — Emperor Henry IV supported an antipope for years. Supported William the Conqueror's invasion of England (1066). Condemned anti-Jewish pogroms — a notable act of protection for Jewish communities."
   },
   {
@@ -50,7 +50,7 @@
     "reign": "1073–1085",
     "nat": "Italian (Tuscany)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/4/44/Gregorius_%28Vita_Gregorii_VII%29.jpg",
     "note": "One of the most revolutionary popes in history. Launched the Gregorian Reform: banned lay investiture (emperors appointing bishops), mandated celibacy for clergy, and attacked simony across the Church. His conflict with Emperor Henry IV climaxed at Canossa (1077), where Henry stood barefoot in the snow for three days to obtain absolution — the most dramatic moment of the medieval struggle between Church and State. Gregory died in exile, saying: 'I have loved justice and hated iniquity — therefore I die in exile.'"
   },
   {
@@ -68,7 +68,7 @@
     "reign": "1088–1099",
     "nat": "French (Champagne)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/Urbano_II_in_consacrazione_de_l%27altare_del_monastero_di_Cluny_%28detail%29_%28crop%29.png",
     "note": "Called the First Crusade at the Council of Clermont in 1095 — one of the most consequential speeches in history. His call mobilised hundreds of thousands of Europeans toward Jerusalem. He died two weeks after Jerusalem fell to the Crusaders in 1099, not knowing of the city's capture. Beatified by Leo XIII in 1881."
   },
   {
@@ -86,7 +86,7 @@
     "reign": "1118–1119",
     "nat": "Italian (Gaeta)",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Gelasius-II.jpg/500px-Gelasius-II.jpg",
     "note": "Seized and beaten by the Frangipani family immediately after his election. Fled Rome and died in exile at Cluny, France. His pontificate was a casualty of the Investiture Controversy's violence."
   },
   {
@@ -95,7 +95,7 @@
     "reign": "1119–1124",
     "nat": "Burgundian (France)",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/d/df/Calixtus_II.jpg",
     "note": "Ended the Investiture Controversy with the Concordat of Worms (1122) — a compromise allowing the church to elect bishops freely while emperors retained political investiture. One of the most consequential diplomatic achievements of the medieval papacy."
   },
   {
@@ -113,7 +113,7 @@
     "reign": "1130–1143",
     "nat": "Roman",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Pope_Innocent_II_%E2%80%93_Santa_Maria_in_Trastevere.jpg/500px-Pope_Innocent_II_%E2%80%93_Santa_Maria_in_Trastevere.jpg",
     "note": "His election produced a schism — Antipope Anacletus II controlled Rome for most of the 1130s, forcing Innocent to govern from France and Germany. St. Bernard of Clairvaux rallied Europe to his cause. The Second Lateran Council (1139) under Innocent was a major reform council."
   },
   {
@@ -221,7 +221,7 @@
     "reign": "1198–1216",
     "nat": "Italian (Anagni)",
     "saint": false,
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Lotario_dei_Conti_di_Segni_%28Innocent_III%29.jpg/400px-Lotario_dei_Conti_di_Segni_%28Innocent_III%29.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Innocentius_III.jpg",
     "note": "The most powerful pope in history. Elected at age 37, he brought the medieval papacy to its absolute zenith. Proclaimed himself 'Vicar of Christ' (rather than merely Vicar of Peter). Directed four Crusades. Presided over the Fourth Lateran Council (1215) — the most important council of the Middle Ages, which defined transubstantiation, mandated annual Confession, and set rules for Jewish dress and moneylending. Approved the Franciscan and Dominican orders. Deposed and crowned kings across Europe. Launched the Albigensian Crusade against Catharism in France. A man of towering intellect and absolute conviction."
   },
   {
@@ -374,7 +374,7 @@
     "reign": "1294–1303",
     "nat": "Italian (Anagni)",
     "saint": false,
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boniface_VIII_portrait.jpg/400px-Boniface_VIII_portrait.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Boniface_VIII.jpg",
     "note": "Issued Unam Sanctam (1302) — the most extreme statement of papal supremacy ever made: 'It is altogether necessary to salvation for every human creature to be subject to the Roman Pontiff.' His conflict with King Philip IV of France ended catastrophically: Philip's agents seized Boniface at Anagni and reportedly slapped him in the face. Boniface died of shock one month later. Dante placed him in Hell."
   },
   {

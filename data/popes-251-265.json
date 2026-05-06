@@ -1,18 +1,146 @@
 [
-  { "n": 251, "name": "Leo XII", "reign": "1823–1829", "nat": "Italian (Marche)", "saint": false, "img": null, "note": "A severe traditionalist who reversed many of Pius VII's moderate concessions. Condemned religious indifferentism, tightened restrictions on Jews in the Papal States (re-establishing the Roman Ghetto), and fought Freemasonry and secret societies. Deeply unpopular in Rome for his austerity." },
-  { "n": 252, "name": "Pius VIII", "reign": "1829–1830", "nat": "Italian (Marche)", "saint": false, "img": null, "note": "Brief pontificate of approximately 20 months. Condemned mixed marriages without Catholic pledges and secret societies. The beginning of the revolutionary upheavals that would consume Europe occurred just as he died." },
-  { "n": 253, "name": "Gregory XVI", "reign": "1831–1846", "nat": "Italian (Veneto)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gregory_XVI.jpg/400px-Gregory_XVI.jpg", "note": "A deeply conservative monk who had never left a monastery before becoming a cardinal. Condemned Félicité de Lamennais's liberal Catholicism. Opposed Italian nationalism. Issued In Supremo Apostolatus (1837) — condemning the slave trade, though the condemnation was ambiguously applied. Introduced gas lighting to the Papal States but refused railroads — he called them 'roads to hell' (chemins de fer / chemins d'enfer). The Papal States were administered notoriously badly." },
-  { "n": 254, "name": "Bl. Pius IX", "reign": "1846–1878", "nat": "Italian (Marche)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Pope_Pius_IX.jpg/400px-Pope_Pius_IX.jpg", "note": "The longest-serving pope in history (31 years 7 months) and one of its most controversial. Defined the dogma of the Immaculate Conception (1854) and Papal Infallibility at Vatican I (1870). Published the Syllabus of Errors condemning modern liberalism. Lost the Papal States to the Italian state (1870) and became 'the prisoner of the Vatican.' He began as a liberal reformer and ended as a bitter reactionary. Beatified by John Paul II in 2000." },
-  { "n": 255, "name": "Leo XIII", "reign": "1878–1903", "nat": "Italian (Lazio)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Leo_XIII_1898.jpg/400px-Leo_XIII_1898.jpg", "note": "A towering intellectual figure who engaged modernity with unprecedented sophistication. Rerum Novarum (1891) — the first great social encyclical — addressed the industrial revolution's injustices, defending workers' rights and laying the foundation of Catholic Social Teaching. Opened the Vatican Archives to scholars. Encouraged biblical studies. Promoted Thomistic philosophy as the foundation of Catholic intellectual life. Established Catholic universities worldwide. Died aged 93 — the oldest pope in history until that point." },
-  { "n": 256, "name": "St. Pius X", "reign": "1903–1914", "nat": "Italian (Veneto)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Pius_X._Papst.jpg/400px-Pius_X._Papst.jpg", "note": "A poor peasant's son who became pope. Lowered the First Communion age to 7, reformed the breviary and liturgical calendar, encouraged daily Communion (then rare), composed the definitive Code of Canon Law (completed posthumously 1917). Vigorously condemned Modernism with Pascendi Dominici Gregis (1907). Died at the outbreak of World War I, reportedly of grief. Said: 'I was born poor, I lived poor, and I will die poor.' Canonised 1954." },
-  { "n": 257, "name": "Benedict XV", "reign": "1914–1922", "nat": "Italian (Genoa)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BenedictXV.jpg/400px-BenedictXV.jpg", "note": "Pope of World War I — which he called 'the suicide of civilised Europe.' His seven-point peace proposal of 1917 was rejected by all belligerents. Organised extraordinary charitable relief efforts for war prisoners and refugees. Canonised Joan of Arc (1920). Issued Maximum Illud (1919), reforming Catholic missionary practice and insisting on indigenous clergy. Deeply underappreciated historically." },
-  { "n": 258, "name": "Pius XI", "reign": "1922–1939", "nat": "Italian (Lombardy)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Pope_Pius_XI.jpg/400px-Pope_Pius_XI.jpg", "note": "Signed the Lateran Treaty (1929) with Mussolini, creating Vatican City as a sovereign state — resolving the 59-year 'Roman Question' since the loss of the Papal States. Condemned Nazism in Mit Brennender Sorge (1937) — smuggled into Germany and read from every pulpit on Palm Sunday. Condemned Soviet Communism in Divini Redemptoris (1937). Called Christ 'the King' and instituted the Feast of Christ the King (1925). Coined the principle of subsidiarity in Quadragesimo Anno (1931)." },
-  { "n": 259, "name": "Bl. Pius XII", "reign": "1939–1958", "nat": "Roman", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pius_XII_1951.jpg/400px-Pius_XII_1951.jpg", "note": "One of the most controversial popes of the 20th century. His conduct during the Holocaust — whether he did enough to oppose Nazi genocide — remains vigorously debated by historians. The Church claims he worked through diplomatic channels and sheltered thousands of Jews in Vatican properties. Critics argue his public silence emboldened perpetrators. He defined the dogma of the Assumption of Mary (1950). Reformed Holy Week liturgies. Opened the Church to modern biblical scholarship (Divino Afflante Spiritu, 1943). Beatified by Benedict XVI in 2009." },
-  { "n": 260, "name": "St. John XXIII", "reign": "1958–1963", "nat": "Italian (Bergamo)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pope_John_XXIII-_1959.jpg/400px-Pope_John_XXIII-_1959.jpg", "note": "Angelo Roncalli — elected at 76 as a transitional pope, he surprised the world by convening the Second Vatican Council (1962–1965), the most important council in centuries. His encyclical Pacem in Terris (1963) — addressed to 'all people of good will' — was a landmark of Catholic social thought. His warmth, humility, and pastoral joy made him one of the most beloved figures of the 20th century. He died of stomach cancer before the Council concluded. Canonised by Francis in 2014." },
-  { "n": 261, "name": "St. Paul VI", "reign": "1963–1978", "nat": "Italian (Brescia)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Pope_Paul_VI_1973.jpg/400px-Pope_Paul_VI_1973.jpg", "note": "Guided the Second Vatican Council to completion and implemented its reforms, including the New Mass in the vernacular. First pope to visit all six inhabited continents. His encyclical Humanae Vitae (1968) — reaffirming the Church's prohibition of artificial contraception — proved the most controversial papal document of the century. Also issued Evangelii Nuntiandi (1975) — considered by many the greatest evangelisation document of the modern era. Lived to see his close friend Aldo Moro murdered by the Red Brigades. Canonised 2018." },
-  { "n": 262, "name": "St. John Paul I", "reign": "Aug 26–Sep 28, 1978", "nat": "Italian (Veneto)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Giovanni_Paolo_I.jpg/400px-Giovanni_Paolo_I.jpg", "note": "Albino Luciani — 'the smiling pope.' Elected in August, dead 33 days later — found alone in his bedroom by his secretary. No autopsy was performed, sparking decades of conspiracy theories. He was the first pope to use the double name, combining his two predecessors, John and Paul. His warmth, simplicity, and evident holiness made his death a global tragedy. Beatified by Francis in 2022." },
-  { "n": 263, "name": "St. John Paul II", "reign": "1978–2005", "nat": "Polish (Wadowice)", "saint": true, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/JohnPaulII_portrait.jpg/400px-JohnPaulII_portrait.jpg", "note": "Karol Józef Wojtyla — one of the most consequential humans of the 20th century. The first non-Italian pope since 1523. His 1979 visit to Poland catalysed the Solidarity movement that began the peaceful collapse of Soviet Communism. Survived an assassination attempt in St. Peter's Square (1981) and personally forgave his would-be assassin. Visited 129 countries — more than any other person in history. Issued the Catechism of the Catholic Church (1992). Died after years of visible Parkinson's suffering — his death watched live by an estimated two billion people. Canonised 2014." },
-  { "n": 264, "name": "Benedict XVI", "reign": "2005–2013", "nat": "German (Bavaria)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Benedikt_XVI_ua.jpg/400px-Benedikt_XVI_ua.jpg", "note": "Joseph Aloisius Ratzinger — a brilliant theologian who had been John Paul II's closest doctrinal collaborator for 23 years. His pontificate was overshadowed by the clergy abuse scandal, which he confronted more directly than any previous pope. Lifted the excommunication of SSPX bishops. Issued the apostolic constitution Anglicanorum Coetibus creating personal ordinariates for Anglican converts. On February 11, 2013, he announced his resignation — the first pope to resign since Gregory XII in 1415, citing his failing strength. His decision to resign fundamentally changed the modern papacy. He died on December 31, 2022, aged 95." },
-  { "n": 266, "name": "Pope Francis", "reign": "2013–2025", "nat": "Argentine (Buenos Aires)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pope-Francis-Manipal.jpg/400px-Pope-Francis-Manipal.jpg", "note": "Jorge Mario Bergoglio — the first Jesuit pope, the first from the Americas, the first from the Southern Hemisphere, and the first to take the name Francis, in honour of St. Francis of Assisi. He lived in Casa Santa Marta rather than the Apostolic Palace. Issued Laudato Si (2015) on ecology and Amoris Laetitia (2016) on family life. Called for a 'poor Church for the poor.' His pontificate was marked by synodality, mercy, and the ongoing response to the clergy abuse crisis. He died on April 21, 2025, at the age of 88." },
-  { "n": 267, "name": "Pope Leo XIV", "reign": "2025–present", "nat": "American (Chicago, Illinois)", "saint": false, "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pope_Leo_XIV_%28Robert_Prevost%29.jpg/400px-Pope_Leo_XIV_%28Robert_Prevost%29.jpg", "note": "Robert Francis Prevost — the first American pope in the history of the Church. Born in Chicago, Illinois, he is a member of the Order of Saint Augustine (OSA) and served as a missionary in Peru for over two decades before becoming Bishop of Chiclayo. Pope Francis appointed him Prefect of the Dicastery for Bishops in 2023 — one of the most influential positions in the Vatican. He was elected on May 8, 2025, taking the name Leo XIV in honour of Pope Leo XIII, whose great social encyclical Rerum Novarum (1891) laid the foundation of Catholic Social Teaching. He is the 267th Bishop of Rome." }
+  {
+    "n": 251,
+    "name": "Leo XII",
+    "reign": "1823–1829",
+    "nat": "Italian (Marche)",
+    "saint": false,
+    "img": null,
+    "note": "A severe traditionalist who reversed many of Pius VII's moderate concessions. Condemned religious indifferentism, tightened restrictions on Jews in the Papal States (re-establishing the Roman Ghetto), and fought Freemasonry and secret societies. Deeply unpopular in Rome for his austerity."
+  },
+  {
+    "n": 252,
+    "name": "Pius VIII",
+    "reign": "1829–1830",
+    "nat": "Italian (Marche)",
+    "saint": false,
+    "img": null,
+    "note": "Brief pontificate of approximately 20 months. Condemned mixed marriages without Catholic pledges and secret societies. The beginning of the revolutionary upheavals that would consume Europe occurred just as he died."
+  },
+  {
+    "n": 253,
+    "name": "Gregory XVI",
+    "reign": "1831–1846",
+    "nat": "Italian (Veneto)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Gregory_XVI.jpg/400px-Gregory_XVI.jpg",
+    "note": "A deeply conservative monk who had never left a monastery before becoming a cardinal. Condemned Félicité de Lamennais's liberal Catholicism. Opposed Italian nationalism. Issued In Supremo Apostolatus (1837) — condemning the slave trade, though the condemnation was ambiguously applied. Introduced gas lighting to the Papal States but refused railroads — he called them 'roads to hell' (chemins de fer / chemins d'enfer). The Papal States were administered notoriously badly."
+  },
+  {
+    "n": 254,
+    "name": "Bl. Pius IX",
+    "reign": "1846–1878",
+    "nat": "Italian (Marche)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Pope_Pius_IX.jpg/400px-Pope_Pius_IX.jpg",
+    "note": "The longest-serving pope in history (31 years 7 months) and one of its most controversial. Defined the dogma of the Immaculate Conception (1854) and Papal Infallibility at Vatican I (1870). Published the Syllabus of Errors condemning modern liberalism. Lost the Papal States to the Italian state (1870) and became 'the prisoner of the Vatican.' He began as a liberal reformer and ended as a bitter reactionary. Beatified by John Paul II in 2000."
+  },
+  {
+    "n": 255,
+    "name": "Leo XIII",
+    "reign": "1878–1903",
+    "nat": "Italian (Lazio)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Leo_XIII_1898.jpg/400px-Leo_XIII_1898.jpg",
+    "note": "A towering intellectual figure who engaged modernity with unprecedented sophistication. Rerum Novarum (1891) — the first great social encyclical — addressed the industrial revolution's injustices, defending workers' rights and laying the foundation of Catholic Social Teaching. Opened the Vatican Archives to scholars. Encouraged biblical studies. Promoted Thomistic philosophy as the foundation of Catholic intellectual life. Established Catholic universities worldwide. Died aged 93 — the oldest pope in history until that point."
+  },
+  {
+    "n": 256,
+    "name": "St. Pius X",
+    "reign": "1903–1914",
+    "nat": "Italian (Veneto)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Pius_X._Papst.jpg/400px-Pius_X._Papst.jpg",
+    "note": "A poor peasant's son who became pope. Lowered the First Communion age to 7, reformed the breviary and liturgical calendar, encouraged daily Communion (then rare), composed the definitive Code of Canon Law (completed posthumously 1917). Vigorously condemned Modernism with Pascendi Dominici Gregis (1907). Died at the outbreak of World War I, reportedly of grief. Said: 'I was born poor, I lived poor, and I will die poor.' Canonised 1954."
+  },
+  {
+    "n": 257,
+    "name": "Benedict XV",
+    "reign": "1914–1922",
+    "nat": "Italian (Genoa)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/BenedictXV.jpg/400px-BenedictXV.jpg",
+    "note": "Pope of World War I — which he called 'the suicide of civilised Europe.' His seven-point peace proposal of 1917 was rejected by all belligerents. Organised extraordinary charitable relief efforts for war prisoners and refugees. Canonised Joan of Arc (1920). Issued Maximum Illud (1919), reforming Catholic missionary practice and insisting on indigenous clergy. Deeply underappreciated historically."
+  },
+  {
+    "n": 258,
+    "name": "Pius XI",
+    "reign": "1922–1939",
+    "nat": "Italian (Lombardy)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Pope_Pius_XI.jpg/400px-Pope_Pius_XI.jpg",
+    "note": "Signed the Lateran Treaty (1929) with Mussolini, creating Vatican City as a sovereign state — resolving the 59-year 'Roman Question' since the loss of the Papal States. Condemned Nazism in Mit Brennender Sorge (1937) — smuggled into Germany and read from every pulpit on Palm Sunday. Condemned Soviet Communism in Divini Redemptoris (1937). Called Christ 'the King' and instituted the Feast of Christ the King (1925). Coined the principle of subsidiarity in Quadragesimo Anno (1931)."
+  },
+  {
+    "n": 259,
+    "name": "Bl. Pius XII",
+    "reign": "1939–1958",
+    "nat": "Roman",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pius_XII_1951.jpg/400px-Pius_XII_1951.jpg",
+    "note": "One of the most controversial popes of the 20th century. His conduct during the Holocaust — whether he did enough to oppose Nazi genocide — remains vigorously debated by historians. The Church claims he worked through diplomatic channels and sheltered thousands of Jews in Vatican properties. Critics argue his public silence emboldened perpetrators. He defined the dogma of the Assumption of Mary (1950). Reformed Holy Week liturgies. Opened the Church to modern biblical scholarship (Divino Afflante Spiritu, 1943). Beatified by Benedict XVI in 2009."
+  },
+  {
+    "n": 260,
+    "name": "St. John XXIII",
+    "reign": "1958–1963",
+    "nat": "Italian (Bergamo)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pope_John_XXIII-_1959.jpg/400px-Pope_John_XXIII-_1959.jpg",
+    "note": "Angelo Roncalli — elected at 76 as a transitional pope, he surprised the world by convening the Second Vatican Council (1962–1965), the most important council in centuries. His encyclical Pacem in Terris (1963) — addressed to 'all people of good will' — was a landmark of Catholic social thought. His warmth, humility, and pastoral joy made him one of the most beloved figures of the 20th century. He died of stomach cancer before the Council concluded. Canonised by Francis in 2014."
+  },
+  {
+    "n": 261,
+    "name": "St. Paul VI",
+    "reign": "1963–1978",
+    "nat": "Italian (Brescia)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Pope_Paul_VI_1973.jpg/400px-Pope_Paul_VI_1973.jpg",
+    "note": "Guided the Second Vatican Council to completion and implemented its reforms, including the New Mass in the vernacular. First pope to visit all six inhabited continents. His encyclical Humanae Vitae (1968) — reaffirming the Church's prohibition of artificial contraception — proved the most controversial papal document of the century. Also issued Evangelii Nuntiandi (1975) — considered by many the greatest evangelisation document of the modern era. Lived to see his close friend Aldo Moro murdered by the Red Brigades. Canonised 2018."
+  },
+  {
+    "n": 262,
+    "name": "St. John Paul I",
+    "reign": "Aug 26–Sep 28, 1978",
+    "nat": "Italian (Veneto)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Giovanni_Paolo_I.jpg/400px-Giovanni_Paolo_I.jpg",
+    "note": "Albino Luciani — 'the smiling pope.' Elected in August, dead 33 days later — found alone in his bedroom by his secretary. No autopsy was performed, sparking decades of conspiracy theories. He was the first pope to use the double name, combining his two predecessors, John and Paul. His warmth, simplicity, and evident holiness made his death a global tragedy. Beatified by Francis in 2022."
+  },
+  {
+    "n": 263,
+    "name": "St. John Paul II",
+    "reign": "1978–2005",
+    "nat": "Polish (Wadowice)",
+    "saint": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/JohnPaulII_portrait.jpg/400px-JohnPaulII_portrait.jpg",
+    "note": "Karol Józef Wojtyla — one of the most consequential humans of the 20th century. The first non-Italian pope since 1523. His 1979 visit to Poland catalysed the Solidarity movement that began the peaceful collapse of Soviet Communism. Survived an assassination attempt in St. Peter's Square (1981) and personally forgave his would-be assassin. Visited 129 countries — more than any other person in history. Issued the Catechism of the Catholic Church (1992). Died after years of visible Parkinson's suffering — his death watched live by an estimated two billion people. Canonised 2014."
+  },
+  {
+    "n": 264,
+    "name": "Benedict XVI",
+    "reign": "2005–2013",
+    "nat": "German (Bavaria)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Benedikt_XVI_ua.jpg/400px-Benedikt_XVI_ua.jpg",
+    "note": "Joseph Aloisius Ratzinger — a brilliant theologian who had been John Paul II's closest doctrinal collaborator for 23 years. His pontificate was overshadowed by the clergy abuse scandal, which he confronted more directly than any previous pope. Lifted the excommunication of SSPX bishops. Issued the apostolic constitution Anglicanorum Coetibus creating personal ordinariates for Anglican converts. On February 11, 2013, he announced his resignation — the first pope to resign since Gregory XII in 1415, citing his failing strength. His decision to resign fundamentally changed the modern papacy. He died on December 31, 2022, aged 95."
+  },
+  {
+    "n": 266,
+    "name": "Pope Francis",
+    "reign": "2013–2025",
+    "nat": "Argentine (Buenos Aires)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Pope-Francis-Manipal.jpg/400px-Pope-Francis-Manipal.jpg",
+    "note": "Jorge Mario Bergoglio — the first Jesuit pope, the first from the Americas, the first from the Southern Hemisphere, and the first to take the name Francis, in honour of St. Francis of Assisi. He lived in Casa Santa Marta rather than the Apostolic Palace. Issued Laudato Si (2015) on ecology and Amoris Laetitia (2016) on family life. Called for a 'poor Church for the poor.' His pontificate was marked by synodality, mercy, and the ongoing response to the clergy abuse crisis. He died on April 21, 2025, at the age of 88."
+  },
+  {
+    "n": 267,
+    "name": "Pope Leo XIV",
+    "reign": "2025–present",
+    "nat": "American (Chicago, Illinois)",
+    "saint": false,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Pope_Leo_XIV_%28Robert_Prevost%29.jpg/400px-Pope_Leo_XIV_%28Robert_Prevost%29.jpg",
+    "note": "Robert Francis Prevost — the first American pope in the history of the Church. Born in Chicago, Illinois, he is a member of the Order of Saint Augustine (OSA) and served as a missionary in Peru for over two decades before becoming Bishop of Chiclayo. Pope Francis appointed him Prefect of the Dicastery for Bishops in 2023 — one of the most influential positions in the Vatican. He was elected on May 8, 2025, taking the name Leo XIV in honour of Pope Leo XIII, whose great social encyclical Rerum Novarum (1891) laid the foundation of Catholic Social Teaching. He is the 267th Bishop of Rome."
+  }
 ]

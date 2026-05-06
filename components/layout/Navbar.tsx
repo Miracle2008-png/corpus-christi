@@ -152,6 +152,22 @@ export default function Navbar() {
                   }}>
                     {/* Invisible bridge to cover the hover gap */}
                     <div style={{ position: "absolute", top: "-10px", left: 0, right: 0, height: "10px", background: "transparent" }} />
+                    
+                    {(session?.user as any)?.role === "admin" && (
+                      <Link
+                        href="/admin"
+                        onClick={() => setAuthDropdownOpen(false)}
+                        style={{
+                          display: "block", padding: "0.6rem 1.25rem", color: "var(--gold)",
+                          textDecoration: "none", fontSize: "0.85rem", fontWeight: 700, transition: "all 0.2s"
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = "var(--white)"; e.currentTarget.style.background = "rgba(201,168,76,0.2)"; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = "var(--gold)"; e.currentTarget.style.background = "transparent"; }}
+                      >
+                        ✦ Admin Portal
+                      </Link>
+                    )}
+
                     <Link
                       href="/dashboard"
                       onClick={() => setAuthDropdownOpen(false)}
