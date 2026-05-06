@@ -6,11 +6,21 @@ export const metadata = {
   title: "My Dashboard",
 };
 
+const ADMIN_EMAILS = [
+  "miraclechimdindu2008@gmail.com",
+  "miraclechimdindu2025@gmail.com",
+];
+
 export default async function DashboardPage() {
   const session = await auth();
 
   if (!session?.user) {
     redirect("/auth/login");
+  }
+
+  // Admins should always be in the Admin Portal, not the user dashboard
+  if (session.user.email && ADMIN_EMAILS.includes(session.user.email)) {
+    redirect("/admin");
   }
 
   return (
