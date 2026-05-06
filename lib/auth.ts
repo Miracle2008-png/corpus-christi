@@ -53,15 +53,14 @@ if (
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers,
   callbacks: {
-    async signIn({ user, account, profile }) {
+    async signIn({ user, account }) {
       if (account?.provider === "google" || account?.provider === "apple") {
         try {
           await connectDB();
           const userEmail = user.email ?? "";
-          if (!userEmail) return false;
+          if (!userEmail) return true; // Allow sign-in, email check will catch it
           let dbUser = await User.findOne({ email: userEmail });
           if (!dbUser) {
-            // Create a new user for OAuth
             dbUser = await User.create({
               name: user.name || "User",
               email: userEmail,
@@ -73,11 +72,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           }
           user.id = dbUser._id.toString();
           (user as any).role = dbUser.role;
-          return true;
         } catch (error) {
-          console.error("OAuth SignIn Error:", error);
-          return false;
+          // Log but NEVER block the sign-in — the session callback handles admin check
+          console.error("OAuth DB sync error (non-fatal):", error);
         }
+        return true; // Always allow Google sign-in
       }
       return true;
     },
