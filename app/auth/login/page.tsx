@@ -1,18 +1,26 @@
 "use client";
 import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import Link from "next/link";
 
 const GOOGLE_CONFIGURED = process.env.NEXT_PUBLIC_GOOGLE_CONFIGURED === "true";
 
 export default function LoginPage() {
   const router = useRouter();
+  const { status } = useSession();
+  
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/dashboard");
+    }
+  }, [status, router]);
+
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [oauthNote, setOauthNote] = useState("");
-
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
