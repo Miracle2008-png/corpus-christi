@@ -4,19 +4,18 @@ import Matter from "matter-js";
 
 export default function AntigravityHero({ children }: { children: React.ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [triggered, setTriggered] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Trigger almost instantly
-    const timer = setTimeout(() => {
-      setTriggered(true);
-    }, 100);
-    return () => clearTimeout(timer);
+    // Mount instantly without delay
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    if (!triggered || !containerRef.current) return;
+    if (!mounted || !containerRef.current) return;
 
+    // === 1. MATTER.JS PHYSICS ===
     const Engine = Matter.Engine,
       Runner = Matter.Runner,
       MouseConstraint = Matter.MouseConstraint,
@@ -68,9 +67,9 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
       const { el, width, height, x, y } = data;
 
       const body = Bodies.rectangle(x, y, width, height, {
-        restitution: 0.6, // Bounciness
+        restitution: 0.8, // More bounciness for snappy feel
         friction: 0.1,
-        frictionAir: 0.02,
+        frictionAir: 0.01, // Less air friction so they fall faster
         density: 0.005,
       });
 
@@ -83,6 +82,10 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
       el.style.width = `${width}px`;
       el.style.height = `${height}px`;
       el.style.transformOrigin = "center center";
+
+      // Add a tiny random spin and velocity so they don't fall rigidly
+      Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.1);
+      Matter.Body.setVelocity(body, { x: (Math.random() - 0.5) * 5, y: -2 });
 
       // Initial transform
       el.style.transform = `translate(${x - width / 2}px, ${y - height / 2}px) rotate(0rad)`;
@@ -113,24 +116,79 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     const runner = Runner.create();
     Runner.run(runner, engine);
 
-    // Sync DOM elements with physics bodies
+    // === 2. MOUSE PARTICLE TRAIL ===
+    const canvas = canvasRef.current;
+    let ctx: CanvasRenderingContext2D | null = null;
+    let particles: { x: number, y: number, r: number, color: string, vx: number, vy: number, life: number }[] = [];
+    const colors = ['#C9A84C', '#F0D060', '#A07830', '#FFFFFF', '#8B1A1A'];
+    
+    if (canvas) {
+      canvas.width = document.documentElement.scrollWidth;
+      canvas.height = document.documentElement.scrollHeight;
+      ctx = canvas.getContext('2d');
+    }
+
+    const onMouseMove = (e: MouseEvent) => {
+      // Add multiple particles per mouse move for a dense trail
+      for (let i = 0; i < 3; i++) {
+        particles.push({
+          x: e.pageX + (Math.random() - 0.5) * 10,
+          y: e.pageY + (Math.random() - 0.5) * 10,
+          r: Math.random() * 4 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2 + 1, // Fall down slightly
+          life: 1.0
+        });
+      }
+    };
+    window.addEventListener('mousemove', onMouseMove);
+
+    // Sync DOM elements with physics bodies & draw particles
     const updateLoop = () => {
       bodyMap.forEach(({ body, el, width, height }) => {
         el.style.transform = `translate(${body.position.x - width / 2}px, ${body.position.y - height / 2}px) rotate(${body.angle}rad)`;
       });
+
+      // Render Particles
+      if (ctx && canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.life -= 0.02; // Fade out
+
+          if (p.life <= 0) {
+            particles.splice(i, 1);
+          } else {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.life;
+            ctx.fill();
+            ctx.globalAlpha = 1.0;
+          }
+        }
+      }
+
       requestAnimationFrame(updateLoop);
     };
     requestAnimationFrame(updateLoop);
 
     return () => {
+      window.removeEventListener('mousemove', onMouseMove);
       Runner.stop(runner);
       Engine.clear(engine);
     };
-  }, [triggered]);
+  }, [mounted]);
 
   return (
-    <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
-      {children}
+    <div style={{ width: "100%", height: "100%", position: "relative", opacity: mounted ? 1 : 0, transition: "opacity 0.1s" }}>
+      <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 9999 }} />
+      <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
+        {children}
+      </div>
     </div>
   );
 }
