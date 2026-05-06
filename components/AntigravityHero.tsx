@@ -34,11 +34,10 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     if (elements.length === 0) return;
 
     const width = document.documentElement.scrollWidth;
-    const height = window.innerHeight; // The floor is the bottom of the screen
-    const scrollY = window.scrollY;
+    const height = document.documentElement.scrollHeight; // Floor is at the absolute bottom of the entire page
+    const scrollY = 0;
 
-    // Lock scrolling when triggered so they don't scroll away from the fun
-    document.body.style.overflow = "hidden";
+    // Allow scrolling so the user can follow the elements down!
 
     // Create boundaries to keep things on screen
     const wallThickness = 100;
@@ -124,7 +123,6 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     requestAnimationFrame(updateLoop);
 
     return () => {
-      document.body.style.overflow = "";
       Runner.stop(runner);
       Engine.clear(engine);
     };
