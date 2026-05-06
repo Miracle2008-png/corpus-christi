@@ -1,6 +1,19 @@
 import { NextResponse } from "next/server";
 import connectToDatabase from "@/lib/mongodb";
 import Donation from "@/models/Donation";
+import { auth } from "@/lib/auth";
+
+// GET — admin can fetch all donations
+export async function GET() {
+  const session = await auth();
+  const role = (session?.user as any)?.role;
+  if (role !== "admin") {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  await connectToDatabase();
+  const donations = await Donation.find().sort({ createdAt: -1 });
+  return NextResponse.json({ donations });
+}
 
 export async function POST(req: Request) {
   try {
