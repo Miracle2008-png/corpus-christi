@@ -1,112 +1,96 @@
-"use client";
-import { useSession } from "next-auth/react";
+import { auth } from "@/lib/auth";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+import { ReactNode } from "react";
 
-const ADMIN_EMAILS = [
-  "miraclechimdindu2008@gmail.com",
-  "miraclechimdindu2025@gmail.com",
+const navItems = [
+  { name: "Overview", path: "/admin", icon: "▦" },
+  { name: "Readings", path: "/admin/readings", icon: "✦" },
+  { name: "Saints", path: "/admin/saints", icon: "✦" },
+  { name: "Popes", path: "/admin/popes", icon: "✦" },
+  { name: "Prayers", path: "/admin/prayers", icon: "✦" },
+  { name: "Users", path: "/admin/users", icon: "✦" },
+  { name: "Intentions", path: "/admin/intentions", icon: "✦" },
+  { name: "Donations", path: "/admin/donations", icon: "✦" },
+  { name: "Analytics", path: "/admin/analytics", icon: "✦" },
 ];
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  const { data: session, status } = useSession();
-  const pathname = usePathname();
-
-  // Loading state
-  if (status === "loading") {
-    return (
-      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--ivory)" }}>
-        <p style={{ color: "var(--text-muted)", fontFamily: "var(--font-serif)", fontSize: "1.1rem" }}>Verifying access...</p>
-      </div>
-    );
-  }
-
-  // Not logged in — show message, don't redirect (prevents loops)
-  if (status === "unauthenticated") {
-    return (
-      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--navy-dark)" }}>
-        <div style={{ textAlign: "center" }}>
-          <p style={{ color: "var(--gold)", fontFamily: "var(--font-serif)", fontSize: "1.3rem", marginBottom: "1rem" }}>Please sign in</p>
-          <a href="/auth/login" style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem" }}>Go to Login</a>
-        </div>
-      </div>
-    );
-  }
-
-  // Logged in but not an admin email — show Access Denied, no redirect
-  const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
-  if (!isAdmin) {
-    return (
-      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--navy-dark)" }}>
-        <div style={{ textAlign: "center" }}>
-          <p style={{ color: "var(--crimson)", fontFamily: "var(--font-serif)", fontSize: "1.3rem", marginBottom: "0.5rem" }}>Access Denied</p>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.9rem", marginBottom: "1rem" }}>You do not have admin privileges.</p>
-          <a href="/dashboard" style={{ color: "var(--gold)", fontSize: "0.9rem" }}>Go to Dashboard</a>
-        </div>
-      </div>
-    );
-  }
-
-  const navItems = [
-    { name: "Overview", path: "/admin", icon: "📊" },
-    { name: "Manage Readings", path: "/admin/readings", icon: "📖" },
-    { name: "Donations", path: "/admin/transactions", icon: "💳" },
-    { name: "Prayer Intentions", path: "/admin/intentions", icon: "🙏" },
-    { name: "Users", path: "/admin/users", icon: "👥" },
-  ];
+export default async function AdminLayout({ children }: { children: ReactNode }) {
+  const session = await auth();
+  const name = session?.user?.name?.split(" ")[0] ?? "Admin";
+  const email = session?.user?.email ?? "";
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh", background: "var(--ivory)" }}>
+    <div style={{ display: "flex", minHeight: "100vh", fontFamily: "Inter, sans-serif" }}>
       {/* Sidebar */}
-      <aside style={{ width: "260px", background: "var(--navy-dark)", borderRight: "1px solid rgba(201,168,76,0.2)", display: "flex", flexDirection: "column", flexShrink: 0 }}>
-        <div style={{ padding: "2rem 1.5rem", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-          <p style={{ color: "var(--gold)", fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 800, marginBottom: "0.2rem" }}>Restricted</p>
-          <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--white)", fontSize: "1.2rem", margin: 0 }}>Admin Portal</h2>
+      <aside style={{
+        width: "240px", flexShrink: 0,
+        background: "#0f1729",
+        borderRight: "1px solid rgba(201,168,76,0.15)",
+        display: "flex", flexDirection: "column",
+        position: "fixed", top: 0, left: 0, height: "100vh", overflowY: "auto", zIndex: 50,
+      }}>
+        {/* Logo */}
+        <div style={{ padding: "1.5rem 1.25rem", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+          <p style={{ color: "#c9a84c", fontSize: "0.6rem", textTransform: "uppercase", letterSpacing: "0.2em", fontWeight: 800, margin: "0 0 0.2rem" }}>Corpus Christi</p>
+          <p style={{ color: "#fff", fontFamily: "Georgia, serif", fontSize: "1rem", fontWeight: 600, margin: 0 }}>Admin Portal</p>
         </div>
 
-        <nav style={{ flex: 1, padding: "1.5rem 1rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          {navItems.map((item) => {
-            const isActive = pathname === item.path;
-            return (
-              <Link
-                key={item.path}
-                href={item.path}
-                style={{
-                  display: "flex", alignItems: "center", gap: "0.75rem",
-                  padding: "0.75rem 1rem", borderRadius: "8px", textDecoration: "none",
-                  color: isActive ? "var(--gold)" : "rgba(255,255,255,0.7)",
-                  background: isActive ? "rgba(201,168,76,0.12)" : "transparent",
-                  fontSize: "0.9rem", fontWeight: 600, transition: "all 0.2s",
-                  borderLeft: isActive ? "3px solid var(--gold)" : "3px solid transparent",
-                }}
-              >
-                <span>{item.icon}</span> {item.name}
-              </Link>
-            );
-          })}
+        {/* Nav */}
+        <nav style={{ flex: 1, padding: "1rem 0.75rem", display: "flex", flexDirection: "column", gap: "2px" }}>
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              style={{
+                display: "flex", alignItems: "center", gap: "0.6rem",
+                padding: "0.65rem 0.85rem", borderRadius: "6px",
+                textDecoration: "none", color: "rgba(255,255,255,0.65)",
+                fontSize: "0.85rem", fontWeight: 500, transition: "all 0.15s",
+              }}
+              onMouseOver={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(201,168,76,0.1)";
+                (e.currentTarget as HTMLElement).style.color = "#c9a84c";
+              }}
+              onMouseOut={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "transparent";
+                (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.65)";
+              }}
+            >
+              <span style={{ fontSize: "0.7rem", color: "#c9a84c" }}>{item.icon}</span>
+              {item.name}
+            </Link>
+          ))}
         </nav>
 
-        <div style={{ padding: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.7rem", marginBottom: "0.25rem" }}>Logged in as:</p>
-          <p style={{ color: "var(--gold)", fontSize: "0.8rem", fontWeight: 600, margin: "0 0 0.75rem" }}>{session?.user?.email}</p>
-          <Link href="/" style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem", textDecoration: "none" }}>← Back to Main Site</Link>
+        {/* Footer */}
+        <div style={{ padding: "1rem 1.25rem", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+          <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.65rem", margin: "0 0 0.15rem" }}>Signed in as</p>
+          <p style={{ color: "#c9a84c", fontSize: "0.72rem", fontWeight: 600, margin: "0 0 0.75rem", wordBreak: "break-all" }}>{email}</p>
+          <Link href="/" style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.72rem", textDecoration: "none", display: "block", marginBottom: "0.4rem" }}>← Back to Site</Link>
+          <Link href="/api/auth/signout" style={{ color: "#e74c3c", fontSize: "0.72rem", textDecoration: "none" }}>Sign Out</Link>
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
-        <header style={{ background: "#fff", height: "64px", borderBottom: "1px solid rgba(26,39,68,0.08)", display: "flex", alignItems: "center", padding: "0 2rem", justifyContent: "space-between" }}>
-          <p style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontWeight: 600, margin: 0 }}>
-            {navItems.find(n => n.path === pathname)?.name || "Admin Portal"}
+      {/* Main */}
+      <div style={{ marginLeft: "240px", flex: 1, display: "flex", flexDirection: "column", minHeight: "100vh", background: "#f5f5f0" }}>
+        {/* Top bar */}
+        <header style={{
+          height: "56px", background: "#fff",
+          borderBottom: "1px solid rgba(0,0,0,0.07)",
+          display: "flex", alignItems: "center",
+          padding: "0 2rem", justifyContent: "space-between",
+          position: "sticky", top: 0, zIndex: 40,
+        }}>
+          <p style={{ fontFamily: "Georgia, serif", color: "#1a2744", fontWeight: 600, margin: 0, fontSize: "0.95rem" }}>
+            Corpus Christi Admin
           </p>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.8rem", margin: 0 }}>Welcome, {session?.user?.name?.split(" ")[0]}</p>
+          <p style={{ color: "#666", fontSize: "0.8rem", margin: 0 }}>Welcome, {name}</p>
         </header>
 
-        <div style={{ flex: 1, overflowY: "auto", padding: "2.5rem" }}>
+        <main style={{ flex: 1, padding: "2rem" }}>
           {children}
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }

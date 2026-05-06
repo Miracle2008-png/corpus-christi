@@ -1,13 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
-import { signIn, useSession } from "next-auth/react";
+import { useState } from "react";
+import { signIn } from "next-auth/react";
 import Link from "next/link";
 
-const GOOGLE_CONFIGURED = process.env.NEXT_PUBLIC_GOOGLE_CONFIGURED === "true";
-
 export default function LoginPage() {
-  const { status } = useSession();
-
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -26,8 +22,8 @@ export default function LoginPage() {
     if (result?.error) {
       setError("Invalid email or password. Please try again.");
     } else {
-      // Go through redirect page which uses useSession to determine destination
-      window.location.href = "/auth/redirect";
+      // Go home — from there they click Admin Portal in the navbar
+      window.location.href = "/";
     }
   }
 
@@ -109,7 +105,7 @@ export default function LoginPage() {
             <button
               onClick={async () => {
                 try {
-                  await signIn("google", { callbackUrl: "/auth/redirect" });
+                  await signIn("google", { callbackUrl: "/" });
                 } catch {
                   setOauthNote("Google sign-in is not configured yet. Please use email & password, or contact the admin to enable Google OAuth.");
                 }
