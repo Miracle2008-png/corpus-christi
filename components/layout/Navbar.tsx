@@ -31,6 +31,7 @@ const navLinks = [
       { href: "/saint-of-the-day", label: "Saint of the Day" },
       { href: "/virtues", label: "Virtues & Beatitudes" },
       { href: "/encyclicals", label: "Papal Encyclicals" },
+      { href: "/ai", label: "🤖 AI Assistant" },
     ],
   },
 ];
