@@ -11,10 +11,12 @@ export default function LoginPage() {
   const router = useRouter();
   const { data: session, status } = useSession();
   
+  const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
+  
   useEffect(() => {
     if (status === "authenticated") {
-      const role = (session?.user as any)?.role;
-      router.push(role === "admin" ? "/admin" : "/dashboard");
+      const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
+      router.push(isAdmin ? "/admin" : "/dashboard");
     }
   }, [status, session, router]);
 

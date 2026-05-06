@@ -7,13 +7,15 @@ import Link from "next/link";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const { status } = useSession();
+  const { data: session, status } = useSession();
+  const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
   
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/dashboard");
+      const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
+      router.push(isAdmin ? "/admin" : "/dashboard");
     }
-  }, [status, router]);
+  }, [status, session, router]);
 
   const [form, setForm] = useState({ name: "", email: "", password: "", confirm: "" });
   const [error, setError] = useState("");
