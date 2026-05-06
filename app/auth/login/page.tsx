@@ -9,13 +9,14 @@ const GOOGLE_CONFIGURED = process.env.NEXT_PUBLIC_GOOGLE_CONFIGURED === "true";
 
 export default function LoginPage() {
   const router = useRouter();
-  const { status } = useSession();
+  const { data: session, status } = useSession();
   
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/dashboard");
+      const role = (session?.user as any)?.role;
+      router.push(role === "admin" ? "/admin" : "/dashboard");
     }
-  }, [status, router]);
+  }, [status, session, router]);
 
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
@@ -35,7 +36,11 @@ export default function LoginPage() {
     if (result?.error) {
       setError("Invalid email or password. Please try again.");
     } else {
-      router.push("/");
+      // Fetch the fresh session to read the role, then redirect appropriately
+      const { getSession } = await import("next-auth/react");
+      const freshSession = await getSession();
+      const role = (freshSession?.user as any)?.role;
+      router.push(role === "admin" ? "/admin" : "/dashboard");
       router.refresh();
     }
   }
@@ -118,7 +123,7 @@ export default function LoginPage() {
             <button
               onClick={async () => {
                 try {
-                  await signIn("google", { callbackUrl: "/" });
+                  await signIn("google", { callbackUrl: "/dashboard" });
                 } catch {
                   setOauthNote("Google sign-in is not configured yet. Please use email & password, or contact the admin to enable Google OAuth.");
                 }
