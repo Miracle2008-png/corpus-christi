@@ -27,10 +27,8 @@ export default function LoginPage() {
     if (result?.error) {
       setError("Invalid email or password. Please try again.");
     } else {
-      const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
-      const isAdminEmail = ADMIN_EMAILS.includes(form.email.trim().toLowerCase());
-      // Hard redirect — ensures session cookie is fully set before next page loads
-      window.location.href = isAdminEmail ? "/admin" : "/dashboard";
+      // Go through redirect page which uses useSession to determine destination
+      window.location.href = "/auth/redirect";
     }
   }
 
@@ -112,7 +110,7 @@ export default function LoginPage() {
             <button
               onClick={async () => {
                 try {
-                  await signIn("google", { callbackUrl: "/admin" });
+                  await signIn("google", { callbackUrl: "/auth/redirect" });
                 } catch {
                   setOauthNote("Google sign-in is not configured yet. Please use email & password, or contact the admin to enable Google OAuth.");
                 }
