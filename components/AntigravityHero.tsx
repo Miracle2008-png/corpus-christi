@@ -121,17 +121,16 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     const colors = ['#C9A84C', '#F0D060', '#A07830', '#FFFFFF', '#8B1A1A'];
     
     if (canvas) {
-      canvas.width = document.documentElement.scrollWidth;
-      canvas.height = document.documentElement.scrollHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       ctx = canvas.getContext('2d');
     }
 
-    const onMouseMove = (e: MouseEvent) => {
-      // Add multiple particles per mouse move for a dense trail
+    const addParticle = (x: number, y: number) => {
       for (let i = 0; i < 3; i++) {
         particles.push({
-          x: e.pageX + (Math.random() - 0.5) * 10,
-          y: e.pageY + (Math.random() - 0.5) * 10,
+          x: x + (Math.random() - 0.5) * 10,
+          y: y + (Math.random() - 0.5) * 10,
           r: Math.random() * 4 + 2,
           color: colors[Math.floor(Math.random() * colors.length)],
           vx: (Math.random() - 0.5) * 2,
@@ -140,7 +139,16 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
         });
       }
     };
+
+    const onMouseMove = (e: MouseEvent) => addParticle(e.clientX, e.clientY);
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        addParticle(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+    
     window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
 
     // Sync DOM elements with physics bodies & draw particles
     const updateLoop = () => {
@@ -176,6 +184,7 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('touchmove', onTouchMove);
       Runner.stop(runner);
       Engine.clear(engine);
     };
@@ -185,7 +194,7 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     <>
       <style dangerouslySetInnerHTML={{ __html: `.ag-element { visibility: hidden; }` }} />
       <div style={{ width: "100%", height: "100%", position: "relative" }}>
-        <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 9999 }} />
+        <canvas ref={canvasRef} style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", pointerEvents: "none", zIndex: 9999 }} />
         <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
           {children}
         </div>
