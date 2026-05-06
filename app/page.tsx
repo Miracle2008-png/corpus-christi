@@ -45,9 +45,9 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ========== HERO ========== */}
-      <section className="hero-sacred" style={{ minHeight: "90vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "4rem 1.5rem", position: "relative", overflow: "hidden" }}>
-        <AntigravityHero>
+      <AntigravityHero>
+        {/* ========== HERO ========== */}
+        <section className="hero-sacred" style={{ minHeight: "90vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "4rem 1.5rem", position: "relative", overflow: "hidden" }}>
           {/* Background cross pattern */}
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>
             <span style={{ fontSize: "clamp(200px, 40vw, 600px)", color: "rgba(201,168,76,0.04)", userSelect: "none", fontWeight: 900, lineHeight: 1, fontFamily: "serif" }}>+</span>
@@ -76,41 +76,43 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </AntigravityHero>
-      </section>
+        </section>
 
-      {/* ========== TODAY'S DATE BANNER ========== */}
-      <div style={{ background: "var(--gold)", padding: "0.75rem 1.5rem", textAlign: "center" }}>
-        <p style={{ color: "var(--navy-dark)", fontSize: "0.875rem", fontWeight: 600, letterSpacing: "0.05em" }}>
+        {/* ========== TODAY'S DATE BANNER ========== */}
+        <div className="ag-element" style={{ background: "var(--gold)", padding: "0.75rem 1.5rem", textAlign: "center" }}>
+          <p style={{ color: "var(--navy-dark)", fontSize: "0.875rem", fontWeight: 600, letterSpacing: "0.05em", display: "inline-block" }}>
+            ✝ {today} · Ordinary Time
+          </p>
+        </div>
           ✝ {today} · Ordinary Time
         </p>
       </div>
 
       {/* ========== SAINT QUOTE OF THE DAY ========== */}
       <section style={{ background: "var(--navy)", padding: "5rem 1.5rem", textAlign: "center" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <p style={{ fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1.5rem", fontWeight: 700 }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <p className="ag-element" style={{ display: "inline-block", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1.5rem", fontWeight: 700 }}>
             ✝ Saint Quote of the Day ✝
           </p>
-          <blockquote style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem, 3vw, 2rem)", color: "var(--white)", fontStyle: "italic", lineHeight: 1.5, marginBottom: "1.5rem" }}>
+          <blockquote className="ag-element" style={{ display: "inline-block", fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem, 3vw, 2rem)", color: "var(--white)", fontStyle: "italic", lineHeight: 1.5, marginBottom: "1.5rem" }}>
             &ldquo;{todaysQuote.quote}&rdquo;
           </blockquote>
-          <cite style={{ color: "var(--gold)", fontSize: "0.95rem", fontWeight: 600, letterSpacing: "0.03em" }}>
+          <cite className="ag-element" style={{ display: "inline-block", color: "var(--gold)", fontSize: "0.95rem", fontWeight: 600, letterSpacing: "0.03em" }}>
             — {todaysQuote.saint}
           </cite>
         </div>
       </section>
 
-      <hr className="gold-divider" style={{ margin: 0 }} />
+      <hr className="gold-divider ag-element" style={{ margin: 0 }} />
 
       {/* ========== QUICK ACCESS GRID ========== */}
       <section className="section-sacred bg-parchment">
         <div className="container-sacred">
-          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 4vw, 2.75rem)", color: "var(--navy)", marginBottom: "0.75rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "3rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <h2 className="ag-element" style={{ display: "inline-block", fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 4vw, 2.75rem)", color: "var(--navy)", marginBottom: "0.75rem" }}>
               Grow in Grace
             </h2>
-            <p style={{ color: "var(--text-muted)", fontSize: "1rem", maxWidth: "500px", margin: "0 auto" }}>
+            <p className="ag-element" style={{ display: "inline-block", color: "var(--text-muted)", fontSize: "1rem", maxWidth: "500px", margin: "0 auto" }}>
               A complete library of Catholic tradition, theology, and devotions.
             </p>
           </div>
@@ -127,7 +129,7 @@ export default function HomePage() {
                 style={{ textDecoration: "none" }}
                 className={`animate-fade-in animate-delay-${Math.min(i + 1, 4)}`}
               >
-                <div className="sacred-card" style={{ padding: "1.75rem 1.25rem", textAlign: "center", height: "100%" }}>
+                <div className="sacred-card ag-element" style={{ padding: "1.75rem 1.25rem", textAlign: "center", height: "100%", display: "inline-block", width: "100%" }}>
                   <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>{f.icon}</div>
                   <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", color: "var(--navy)", marginBottom: "0.4rem", fontWeight: 700 }}>
                     {f.label}
@@ -173,21 +175,26 @@ export default function HomePage() {
 
       {/* ========== CTA BANNER ========== */}
       <section style={{ background: "linear-gradient(135deg, var(--crimson) 0%, #6B0F0F 100%)", padding: "5rem 1.5rem", textAlign: "center" }}>
-        <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", color: "var(--white)", marginBottom: "1rem" }}>
+        <div style={{ maxWidth: "600px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h2 className="ag-element" style={{ display: "inline-block", fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", color: "var(--white)", marginBottom: "1rem" }}>
             Take Your Prayer Life Anywhere
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "2rem", lineHeight: 1.7 }}>
+          <p className="ag-element" style={{ display: "inline-block", color: "rgba(255,255,255,0.8)", marginBottom: "2rem", lineHeight: 1.7 }}>
             Add Corpus Christi to your home screen to pray offline, track your novenas, and read the daily gospel on the go.
           </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/rosary" className="btn-sacred">Pray Now</Link>
-            <Link href="/saints" className="btn-outline-sacred" style={{ borderColor: "rgba(255,255,255,0.5)", color: "var(--white)" }}>
-              Explore Saints
-            </Link>
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
+            <div className="ag-element" style={{ display: "inline-block" }}>
+              <Link href="/rosary" className="btn-sacred">Pray Now</Link>
+            </div>
+            <div className="ag-element" style={{ display: "inline-block" }}>
+              <Link href="/saints" className="btn-outline-sacred" style={{ borderColor: "rgba(255,255,255,0.5)", color: "var(--white)" }}>
+                Explore Saints
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+      </AntigravityHero>
     </>
   );
 }

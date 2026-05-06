@@ -7,10 +7,10 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
   const [triggered, setTriggered] = useState(false);
 
   useEffect(() => {
-    // Automatically trigger the easter egg after 1.5 seconds for maximum surprise
+    // Trigger almost instantly
     const timer = setTimeout(() => {
       setTriggered(true);
-    }, 1500);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,15 +33,19 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     const elements = Array.from(container.querySelectorAll(".ag-element")) as HTMLElement[];
     if (elements.length === 0) return;
 
-    const width = container.clientWidth;
-    const height = container.clientHeight;
+    const width = document.documentElement.scrollWidth;
+    const height = window.innerHeight; // The floor is the bottom of the screen
+    const scrollY = window.scrollY;
+
+    // Lock scrolling when triggered so they don't scroll away from the fun
+    document.body.style.overflow = "hidden";
 
     // Create boundaries to keep things on screen
     const wallThickness = 100;
-    const ground = Bodies.rectangle(width / 2, height + wallThickness/2 - 10, width * 2, wallThickness, { isStatic: true });
-    const leftWall = Bodies.rectangle(-wallThickness/2, height / 2, wallThickness, height * 2, { isStatic: true });
-    const rightWall = Bodies.rectangle(width + wallThickness/2, height / 2, wallThickness, height * 2, { isStatic: true });
-    const ceiling = Bodies.rectangle(width / 2, -1000, width * 2, wallThickness, { isStatic: true });
+    const ground = Bodies.rectangle(width / 2, scrollY + height + wallThickness/2 - 10, width * 2, wallThickness, { isStatic: true });
+    const leftWall = Bodies.rectangle(-wallThickness/2, scrollY + height / 2, wallThickness, height * 2, { isStatic: true });
+    const rightWall = Bodies.rectangle(width + wallThickness/2, scrollY + height / 2, wallThickness, height * 2, { isStatic: true });
+    const ceiling = Bodies.rectangle(width / 2, scrollY - 1000, width * 2, wallThickness, { isStatic: true });
 
     World.add(world, [ground, leftWall, rightWall, ceiling]);
 
@@ -120,13 +124,14 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
     requestAnimationFrame(updateLoop);
 
     return () => {
+      document.body.style.overflow = "";
       Runner.stop(runner);
       Engine.clear(engine);
     };
   }, [triggered]);
 
   return (
-    <div ref={containerRef} style={{ width: "100%", height: "100%", minHeight: "80vh", position: "relative" }}>
+    <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
       {children}
     </div>
   );
