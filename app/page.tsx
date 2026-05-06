@@ -78,15 +78,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ========== TODAY'S DATE BANNER ========== */}
         <div className="ag-element" style={{ background: "var(--gold)", padding: "0.75rem 1.5rem", textAlign: "center" }}>
           <p style={{ color: "var(--navy-dark)", fontSize: "0.875rem", fontWeight: 600, letterSpacing: "0.05em", display: "inline-block" }}>
             ✝ {today} · Ordinary Time
           </p>
         </div>
-          ✝ {today} · Ordinary Time
-        </p>
-      </div>
 
       {/* ========== SAINT QUOTE OF THE DAY ========== */}
       <section style={{ background: "var(--navy)", padding: "5rem 1.5rem", textAlign: "center" }}>
