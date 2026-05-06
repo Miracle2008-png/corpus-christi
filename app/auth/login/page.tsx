@@ -16,7 +16,7 @@ export default function LoginPage() {
   useEffect(() => {
     if (status === "authenticated") {
       const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
-      router.push(isAdmin ? "/admin" : "/dashboard");
+      window.location.href = isAdmin ? "/admin" : "/dashboard";
     }
   }, [status, session, router]);
 
@@ -38,11 +38,10 @@ export default function LoginPage() {
     if (result?.error) {
       setError("Invalid email or password. Please try again.");
     } else {
-      // Redirect based on email — role token can be stale on first login
       const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
       const isAdminEmail = ADMIN_EMAILS.includes(form.email.trim().toLowerCase());
-      router.push(isAdminEmail ? "/admin" : "/dashboard");
-      router.refresh();
+      // Hard redirect — ensures session cookie is fully set before next page loads
+      window.location.href = isAdminEmail ? "/admin" : "/dashboard";
     }
   }
 
