@@ -23,7 +23,7 @@ export default function LoginPage() {
       setError("Invalid email or password. Please try again.");
     } else {
       // Go home — from there they click Admin Portal in the navbar
-      window.location.href = "/";
+      window.location.href = "/admin";
     }
   }
 
@@ -105,7 +105,7 @@ export default function LoginPage() {
             <button
               onClick={async () => {
                 try {
-                  await signIn("google", { callbackUrl: "/" });
+                  await signIn("google", { callbackUrl: "/admin" });
                 } catch {
                   setOauthNote("Google sign-in is not configured yet. Please use email & password, or contact the admin to enable Google OAuth.");
                 }
