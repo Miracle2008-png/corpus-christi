@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("AI route error:", error);
     return NextResponse.json(
-      { error: "Failed to get a response. Please try again." },
+      { error: "Error from AI: " + (error instanceof Error ? error.message : "Unknown error") },
       { status: 500 }
     );
   }
