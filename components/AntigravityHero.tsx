@@ -1,19 +1,16 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 import Matter from "matter-js";
+
+// Use useLayoutEffect to run before browser paints on client
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 export default function AntigravityHero({ children }: { children: React.ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    // Mount instantly without delay
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted || !containerRef.current) return;
+  useIsomorphicLayoutEffect(() => {
+    if (!containerRef.current) return;
 
     // === 1. MATTER.JS PHYSICS ===
     const Engine = Matter.Engine,
@@ -82,6 +79,7 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
       el.style.width = `${width}px`;
       el.style.height = `${height}px`;
       el.style.transformOrigin = "center center";
+      el.style.visibility = "visible"; // Make it visible now that physics has it
 
       // Add a tiny random spin and velocity so they don't fall rigidly
       Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.1);
@@ -181,14 +179,17 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
       Runner.stop(runner);
       Engine.clear(engine);
     };
-  }, [mounted]);
+  }, []);
 
   return (
-    <div style={{ width: "100%", height: "100%", position: "relative", opacity: mounted ? 1 : 0, transition: "opacity 0.1s" }}>
-      <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 9999 }} />
-      <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
-        {children}
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `.ag-element { visibility: hidden; }` }} />
+      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+        <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 9999 }} />
+        <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
