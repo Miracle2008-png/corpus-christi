@@ -90,7 +90,11 @@ export default async function SacramentDetailPage({ params }: Props) {
 
       {/* Content */}
       <div className="container-sacred" style={{ maxWidth: "1000px", padding: "4rem 1.5rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr minmax(300px, 1fr)", gap: "4rem" }}>
+        <div className="sacrament-grid">
+          <style>{`
+            .sacrament-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
+            @media(min-width: 768px) { .sacrament-grid { grid-template-columns: 1fr minmax(300px, 1fr); } }
+          `}</style>
           
           {/* Main Info */}
           <div>

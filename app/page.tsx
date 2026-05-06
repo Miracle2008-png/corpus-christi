@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AntigravityHero from "@/components/AntigravityHero";
 
 export const metadata: Metadata = {
   title: "Corpus Christi — Catholic Ministry Platform",
@@ -46,31 +47,36 @@ export default function HomePage() {
     <>
       {/* ========== HERO ========== */}
       <section className="hero-sacred" style={{ minHeight: "90vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "4rem 1.5rem", position: "relative", overflow: "hidden" }}>
-
-        {/* Background cross pattern */}
-        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>
-          <span style={{ fontSize: "clamp(200px, 40vw, 600px)", color: "rgba(201,168,76,0.04)", userSelect: "none", fontWeight: 900, lineHeight: 1, fontFamily: "serif" }}>+</span>
-        </div>
-
-        <div style={{ position: "relative", zIndex: 1, maxWidth: "800px", margin: "0 auto" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.3)", borderRadius: "999px", padding: "0.4rem 1.2rem", marginBottom: "2rem" }}>
-            <span style={{ color: "var(--gold)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>Sacred Digital Ministry</span>
+        <AntigravityHero>
+          {/* Background cross pattern */}
+          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>
+            <span style={{ fontSize: "clamp(200px, 40vw, 600px)", color: "rgba(201,168,76,0.04)", userSelect: "none", fontWeight: 900, lineHeight: 1, fontFamily: "serif" }}>+</span>
           </div>
 
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 7vw, 5rem)", fontWeight: 900, color: "var(--white)", lineHeight: 1.1, marginBottom: "1.5rem" }}>
-            Corpus{" "}
-            <span style={{ color: "var(--gold)", textShadow: "0 0 40px rgba(201,168,76,0.5)" }}>Christi</span>
-          </h1>
+          <div style={{ position: "relative", zIndex: 1, maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div className="ag-element" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.3)", borderRadius: "999px", padding: "0.4rem 1.2rem", marginBottom: "2rem" }}>
+              <span style={{ color: "var(--gold)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>Sacred Digital Ministry</span>
+            </div>
 
-          <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.3rem)", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
-            Your daily companion for Catholic life. Access the daily readings, pray the Rosary, and discover the lives of the Saints—wherever you are.
-          </p>
+            <h1 className="ag-element" style={{ display: "inline-block", fontFamily: "var(--font-serif)", fontSize: "clamp(2.5rem, 7vw, 5rem)", fontWeight: 900, color: "var(--white)", lineHeight: 1.1, marginBottom: "1.5rem", textAlign: "center" }}>
+              Corpus{" "}
+              <span style={{ color: "var(--gold)", textShadow: "0 0 40px rgba(201,168,76,0.5)" }}>Christi</span>
+            </h1>
 
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/readings" className="btn-sacred">Today&apos;s Readings</Link>
-            <Link href="/rosary" className="btn-outline-sacred">Pray the Rosary</Link>
+            <p className="ag-element" style={{ display: "inline-block", fontSize: "clamp(1rem, 2.5vw, 1.3rem)", color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "600px", textAlign: "center" }}>
+              Your daily companion for Catholic life. Access the daily readings, pray the Rosary, and discover the lives of the Saints—wherever you are.
+            </p>
+
+            <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
+              <div className="ag-element" style={{ display: "inline-block" }}>
+                <Link href="/readings" className="btn-sacred">Today&apos;s Readings</Link>
+              </div>
+              <div className="ag-element" style={{ display: "inline-block" }}>
+                <Link href="/rosary" className="btn-outline-sacred">Pray the Rosary</Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </AntigravityHero>
       </section>
 
       {/* ========== TODAY'S DATE BANNER ========== */}

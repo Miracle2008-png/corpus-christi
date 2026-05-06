@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 
-interface Reading { _id: string; date: string; season: string; gospel?: { reference: string }; }
+interface Reading { _id: string; date: string; liturgical_season?: string; old_testament?: { reference: string; text: string }; psalm?: { reference: string; text: string; response?: string }; new_testament?: { reference: string; text: string }; gospel?: { reference: string; text: string }; gospel_reflection?: string; }
 
-const emptyForm = { date: "", season: "Ordinary Time", firstReading: { title: "", reference: "", text: "" }, psalm: { reference: "", text: "" }, secondReading: { title: "", reference: "", text: "" }, gospel: { title: "", reference: "", text: "" } };
+const emptyForm = { date: "", liturgical_season: "Ordinary Time", old_testament: { reference: "", text: "" }, psalm: { reference: "", text: "", response: "" }, new_testament: { reference: "", text: "" }, gospel: { reference: "", text: "" }, gospel_reflection: "" };
 
 export default function AdminReadings() {
   const [items, setItems] = useState<Reading[]>([]);
@@ -40,7 +40,7 @@ export default function AdminReadings() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexWrap: "wrap", gap: "1rem" }}>
         <div><h1 style={{ fontFamily: "Georgia, serif", color: "#1a2744", fontSize: "1.5rem", margin: "0 0 0.2rem" }}>Liturgical Readings</h1><p style={{ color: "#888", fontSize: "0.8rem", margin: 0 }}>{total} total readings</p></div>
         <div style={{ display: "flex", gap: "0.5rem" }}>
-          <input value={search} onChange={e => setSearch(e.target.value)} onKeyDown={e => e.key === "Enter" && load(1)} placeholder="Search by date or season..." style={{ ...inputStyle, width: "200px" }} />
+          <input value={search} onChange={e => setSearch(e.target.value)} onKeyDown={e => e.key === "Enter" && load(1)} placeholder="Search by date (YYYY-MM-DD)..." style={{ ...inputStyle, width: "220px" }} />
           <button onClick={() => load(1)} style={{ padding: "0.5rem 1rem", background: "#1a2744", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "0.85rem" }}>Search</button>
           <button onClick={() => { setForm(emptyForm); setEditing(null); setShowForm(true); }} style={{ padding: "0.5rem 1rem", background: "#c9a84c", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "0.85rem", fontWeight: 600 }}>+ Add Reading</button>
         </div>
@@ -51,27 +51,50 @@ export default function AdminReadings() {
           <div style={{ background: "#fff", borderRadius: "12px", padding: "2rem", width: "100%", maxWidth: "700px", maxHeight: "90vh", overflowY: "auto" }}>
             <h2 style={{ fontFamily: "Georgia, serif", color: "#1a2744", margin: "0 0 1.5rem" }}>{editing ? "Edit" : "Add"} Reading</h2>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
-              <div><label style={labelStyle}>Date (YYYY-MM-DD)</label><input style={inputStyle} value={(form.date as string) || ""} onChange={e => setForm(f => ({ ...f, date: e.target.value }))} /></div>
-              <div><label style={labelStyle}>Season</label>
-                <select style={inputStyle} value={(form.season as string) || ""} onChange={e => setForm(f => ({ ...f, season: e.target.value }))}>
+              <div><label style={labelStyle}>Date (YYYY-MM-DD)</label><input style={inputStyle} value={(form.date as string) || ""} onChange={e => setForm(f => ({ ...f, date: e.target.value }))} placeholder="2026-05-06" /></div>
+              <div><label style={labelStyle}>Liturgical Season</label>
+                <select style={inputStyle} value={(form.liturgical_season as string) || "Ordinary Time"} onChange={e => setForm(f => ({ ...f, liturgical_season: e.target.value }))}>
                   {["Ordinary Time", "Advent", "Christmas", "Lent", "Easter", "Pentecost"].map(s => <option key={s}>{s}</option>)}
                 </select>
               </div>
             </div>
-            {[["firstReading", "First Reading"], ["psalm", "Psalm"], ["secondReading", "Second Reading"], ["gospel", "Gospel"]].map(([key, label]) => (
-              <div key={key} style={{ marginBottom: "1rem", padding: "1rem", background: "#f8f8f6", borderRadius: "8px" }}>
-                <p style={{ fontWeight: 700, color: "#1a2744", margin: "0 0 0.75rem", fontSize: "0.85rem" }}>{label}</p>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "0.5rem" }}>
-                  {key !== "psalm" && <div><label style={labelStyle}>Title</label><input style={inputStyle} value={((form[key] as Record<string, string>)?.title) || ""} onChange={e => setForm(f => ({ ...f, [key]: { ...(f[key] as Record<string, string>), title: e.target.value } }))} /></div>}
-                  <div><label style={labelStyle}>Reference</label><input style={inputStyle} value={((form[key] as Record<string, string>)?.reference) || ""} onChange={e => setForm(f => ({ ...f, [key]: { ...(f[key] as Record<string, string>), reference: e.target.value } }))} /></div>
-                </div>
-                <label style={labelStyle}>Text</label>
-                <textarea style={{ ...inputStyle, height: "80px", resize: "vertical" }} value={((form[key] as Record<string, string>)?.text) || ""} onChange={e => setForm(f => ({ ...f, [key]: { ...(f[key] as Record<string, string>), text: e.target.value } }))} />
+            
+            {/* Old Testament */}
+            <div style={{ marginBottom: "1rem", padding: "1rem", background: "#f8f8f6", borderRadius: "8px" }}>
+              <p style={{ fontWeight: 700, color: "#1a2744", margin: "0 0 0.75rem", fontSize: "0.85rem" }}>Old Testament (First Reading)</p>
+              <div style={{ marginBottom: "0.5rem" }}><label style={labelStyle}>Reference</label><input style={inputStyle} value={((form.old_testament as Record<string, string>)?.reference) || ""} onChange={e => setForm(f => ({ ...f, old_testament: { ...(f.old_testament as Record<string, string>), reference: e.target.value } }))} placeholder="e.g. Genesis 1:1-2"/></div>
+              <label style={labelStyle}>Text</label><textarea style={{ ...inputStyle, height: "80px", resize: "vertical" }} value={((form.old_testament as Record<string, string>)?.text) || ""} onChange={e => setForm(f => ({ ...f, old_testament: { ...(f.old_testament as Record<string, string>), text: e.target.value } }))} />
+            </div>
+
+            {/* Psalm */}
+            <div style={{ marginBottom: "1rem", padding: "1rem", background: "#f8f8f6", borderRadius: "8px" }}>
+              <p style={{ fontWeight: 700, color: "#1a2744", margin: "0 0 0.75rem", fontSize: "0.85rem" }}>Responsorial Psalm</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "0.5rem" }}>
+                <div><label style={labelStyle}>Reference</label><input style={inputStyle} value={((form.psalm as Record<string, string>)?.reference) || ""} onChange={e => setForm(f => ({ ...f, psalm: { ...(f.psalm as Record<string, string>), reference: e.target.value } }))} placeholder="e.g. Psalm 23:1-3"/></div>
+                <div><label style={labelStyle}>Response</label><input style={inputStyle} value={((form.psalm as Record<string, string>)?.response) || ""} onChange={e => setForm(f => ({ ...f, psalm: { ...(f.psalm as Record<string, string>), response: e.target.value } }))} placeholder="e.g. The Lord is my shepherd."/></div>
               </div>
-            ))}
+              <label style={labelStyle}>Text</label><textarea style={{ ...inputStyle, height: "80px", resize: "vertical" }} value={((form.psalm as Record<string, string>)?.text) || ""} onChange={e => setForm(f => ({ ...f, psalm: { ...(f.psalm as Record<string, string>), text: e.target.value } }))} />
+            </div>
+
+            {/* New Testament */}
+            <div style={{ marginBottom: "1rem", padding: "1rem", background: "#f8f8f6", borderRadius: "8px" }}>
+              <p style={{ fontWeight: 700, color: "#1a2744", margin: "0 0 0.75rem", fontSize: "0.85rem" }}>New Testament (Second Reading)</p>
+              <div style={{ marginBottom: "0.5rem" }}><label style={labelStyle}>Reference</label><input style={inputStyle} value={((form.new_testament as Record<string, string>)?.reference) || ""} onChange={e => setForm(f => ({ ...f, new_testament: { ...(f.new_testament as Record<string, string>), reference: e.target.value } }))} placeholder="e.g. Romans 8:28"/></div>
+              <label style={labelStyle}>Text</label><textarea style={{ ...inputStyle, height: "80px", resize: "vertical" }} value={((form.new_testament as Record<string, string>)?.text) || ""} onChange={e => setForm(f => ({ ...f, new_testament: { ...(f.new_testament as Record<string, string>), text: e.target.value } }))} />
+            </div>
+
+            {/* Gospel */}
+            <div style={{ marginBottom: "1rem", padding: "1rem", background: "#f8f8f6", borderRadius: "8px" }}>
+              <p style={{ fontWeight: 700, color: "#1a2744", margin: "0 0 0.75rem", fontSize: "0.85rem" }}>Gospel</p>
+              <div style={{ marginBottom: "0.5rem" }}><label style={labelStyle}>Reference</label><input style={inputStyle} value={((form.gospel as Record<string, string>)?.reference) || ""} onChange={e => setForm(f => ({ ...f, gospel: { ...(f.gospel as Record<string, string>), reference: e.target.value } }))} placeholder="e.g. John 3:16"/></div>
+              <label style={labelStyle}>Text</label><textarea style={{ ...inputStyle, height: "80px", resize: "vertical" }} value={((form.gospel as Record<string, string>)?.text) || ""} onChange={e => setForm(f => ({ ...f, gospel: { ...(f.gospel as Record<string, string>), text: e.target.value } }))} />
+            </div>
+
+            <div style={{ marginBottom: "1rem" }}><label style={labelStyle}>Gospel Reflection</label><textarea style={{ ...inputStyle, height: "100px", resize: "vertical" }} value={(form.gospel_reflection as string) || ""} onChange={e => setForm(f => ({ ...f, gospel_reflection: e.target.value }))} /></div>
+
             <div style={{ display: "flex", gap: "0.75rem", justifyContent: "flex-end", marginTop: "1rem" }}>
               <button onClick={() => { setShowForm(false); setEditing(null); }} style={{ padding: "0.6rem 1.25rem", border: "1px solid #ddd", borderRadius: "6px", background: "#fff", cursor: "pointer" }}>Cancel</button>
-              <button onClick={save} disabled={saving} style={{ padding: "0.6rem 1.25rem", background: "#1a2744", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontWeight: 600 }}>{saving ? "Saving..." : "Save Reading"}</button>
+              <button onClick={save} disabled={saving || !form.date} style={{ padding: "0.6rem 1.25rem", background: "#1a2744", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontWeight: 600, opacity: (!form.date)?0.5:1 }}>{saving ? "Saving..." : "Save Reading"}</button>
             </div>
           </div>
         </div>
@@ -89,7 +112,7 @@ export default function AdminReadings() {
                 : items.map((item, i) => (
                   <tr key={item._id} style={{ borderBottom: "1px solid #f0f0f0", background: i % 2 === 0 ? "#fff" : "#fafafa" }}>
                     <td style={{ padding: "0.75rem 1rem", fontWeight: 600, color: "#1a2744" }}>{item.date}</td>
-                    <td style={{ padding: "0.75rem 1rem" }}><span style={{ padding: "0.2rem 0.6rem", borderRadius: "20px", fontSize: "0.7rem", background: "#e8f5e9", color: "#2e7d32" }}>{item.season}</span></td>
+                    <td style={{ padding: "0.75rem 1rem" }}><span style={{ padding: "0.2rem 0.6rem", borderRadius: "20px", fontSize: "0.7rem", background: "#e8f5e9", color: "#2e7d32" }}>{item.liturgical_season || "—"}</span></td>
                     <td style={{ padding: "0.75rem 1rem", color: "#555" }}>{item.gospel?.reference || "—"}</td>
                     <td style={{ padding: "0.75rem 1rem" }}>
                       <div style={{ display: "flex", gap: "0.4rem" }}>

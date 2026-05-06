@@ -504,6 +504,21 @@ h1, h2, h3, .heading-serif {
 }
 
 /* ============================================
+   SACRAMENTS
+   ============================================ */
+.sacrament-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .sacrament-grid {
+    grid-template-columns: 1fr minmax(300px, 1fr);
+  }
+}
+
+/* ============================================
    RESPONSIVE UTILITIES
    ============================================ */
 .container-sacred {

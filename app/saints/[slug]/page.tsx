@@ -1,8 +1,39 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import saintsData from "@/data/saints.json";
+import { connectDB } from "@/lib/mongodb";
+import Saint from "@/models/Saint";
+
+async function getSaint(slug: string) {
+  let saint = saintsData.find((s) => s.slug === slug);
+  if (!saint) {
+    try {
+      await connectDB();
+      const s = await Saint.findOne({ slug }).lean();
+      if (s) {
+        saint = {
+          name: s.name ?? "",
+          slug: s.slug ?? "",
+          birth_date: s.birth_date ?? "",
+          death_date: s.death_date ?? "",
+          feast_day: s.feast_day ?? "",
+          canonization_date: s.canonization_date ?? "",
+          canonized_by_pope: s.canonized_by_pope ?? "",
+          category: s.category ?? "other",
+          known_for: s.known_for ?? "",
+          patron_of: s.patron_of ?? [],
+          biography_long: s.biography_long ?? "",
+          miracles: s.miracles ?? [],
+          quotes: s.quotes ?? [],
+          image_url: s.image_url ?? "",
+        } as any;
+      }
+    } catch {}
+  }
+  return saint;
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -10,7 +41,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const saint = saintsData.find((s) => s.slug === slug);
+  const saint = await getSaint(slug);
   if (!saint) return { title: "Saint Not Found" };
   return {
     title: saint.name,
@@ -24,7 +55,7 @@ export function generateStaticParams() {
 
 export default async function SaintDetailPage({ params }: Props) {
   const { slug } = await params;
-  const saint = saintsData.find((s) => s.slug === slug);
+  const saint = await getSaint(slug);
   if (!saint) notFound();
 
   return (
@@ -41,19 +72,14 @@ export default async function SaintDetailPage({ params }: Props) {
           <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "start", paddingBottom: "3rem" }}>
             {/* Portrait */}
             <div style={{ width: "200px", height: "260px", borderRadius: "12px", overflow: "hidden", border: "3px solid rgba(201,168,76,0.4)", flexShrink: 0, background: "var(--navy-dark)", position: "relative" }}>
-              {saint.image_url ? (
-                <Image
-                  src={saint.image_url}
-                  alt={`Portrait of ${saint.name}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{ objectFit: "cover" }}
-                />
-              ) : (
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>
-                  <span style={{ fontSize: "6rem", opacity: 0.3 }}>✝</span>
-                </div>
-              )}
+              <SafeImage
+                src={saint.image_url}
+                alt={`Portrait of ${saint.name}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                style={{ objectFit: "cover" }}
+                fallbackIcon="✝"
+              />
             </div>
 
             {/* Info */}
@@ -98,7 +124,11 @@ export default async function SaintDetailPage({ params }: Props) {
 
       {/* Content */}
       <div className="container-sacred" style={{ maxWidth: "900px", padding: "3rem 1.5rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "2.5rem" }}>
+        <div className="saint-grid">
+          <style>{`
+            .saint-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+            @media(min-width: 768px) { .saint-grid { grid-template-columns: 1fr 300px; } }
+          `}</style>
           {/* Main */}
           <div>
             {/* Biography */}

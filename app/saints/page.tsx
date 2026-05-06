@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import saintsData from "@/data/saints.json";
+import { connectDB } from "@/lib/mongodb";
+import Saint from "@/models/Saint";
 
 export const metadata: Metadata = {
   title: "Saints",
@@ -21,8 +23,35 @@ export default async function SaintsPage({ searchParams }: PageProps) {
   const page = parseInt(params.page || "1");
   const perPage = 12;
 
-  // Filter from static JSON (works offline)
-  let saints = saintsData;
+  // Fetch admin-added saints from MongoDB and merge with static JSON
+  let dbSaints: typeof saintsData = [];
+  try {
+    await connectDB();
+    const raw = await Saint.find({}).lean();
+    // Normalize DB saints to match JSON shape
+    dbSaints = raw.map((s) => ({
+      name: s.name ?? "",
+      known_for: s.known_for ?? "",
+      biography_long: s.biography_long ?? "",
+      birth_date: s.birth_date ?? "",
+      death_date: s.death_date ?? "",
+      feast_day: s.feast_day ?? "",
+      canonization_date: s.canonization_date ?? "",
+      canonized_by_pope: s.canonized_by_pope ?? "",
+      miracles: s.miracles ?? [],
+      patron_of: s.patron_of ?? [],
+      quotes: s.quotes ?? [],
+      category: (s.category as string) ?? "other",
+      image_url: s.image_url ?? "",
+      slug: s.slug ?? "",
+    }));
+  } catch { /* use static only */ }
+
+  // Merge: DB saints come first (admin-added), then static — deduplicate by slug
+  const staticSlugs = new Set(dbSaints.map(s => s.slug));
+  const allSaints = [...dbSaints, ...saintsData.filter(s => !staticSlugs.has(s.slug))];
+
+  let saints = allSaints;
   if (search) {
     saints = saints.filter(
       (s) =>
@@ -122,19 +151,14 @@ export default async function SaintsPage({ searchParams }: PageProps) {
                 <article className="sacred-card" style={{ overflow: "hidden", height: "100%", display: "flex", flexDirection: "column" }}>
                   {/* Image */}
                   <div style={{ position: "relative", height: "200px", background: "var(--navy)", overflow: "hidden" }}>
-                    {saint.image_url ? (
-                      <Image
-                        src={saint.image_url}
-                        alt={`Painting of ${saint.name}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: "cover", opacity: 0.85 }}
-                      />
-                    ) : (
-                      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>
-                        <span style={{ fontSize: "5rem", opacity: 0.3 }}>✝</span>
-                      </div>
-                    )}
+                    <SafeImage
+                      src={saint.image_url}
+                      alt={`Painting of ${saint.name}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: "cover", opacity: 0.85 }}
+                      fallbackIcon="✝"
+                    />
                     {/* Category badge overlay */}
                     <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem" }}>
                       <span className={`badge-category badge-${saint.category}`}>

@@ -1,14 +1,39 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import prayersData from "../../data/prayers.json";
+
+type PrayerItem = { id?: string; title: string; latin?: string; text: string; source?: string; note?: string; };
+type Category = { category: string; slug?: string; icon: string; description?: string; prayers: PrayerItem[]; };
 
 export default function PrayersPage() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [activePrayer, setActivePrayer] = useState(0);
   const [showLatin, setShowLatin] = useState(false);
+  const [allCategories, setAllCategories] = useState<Category[]>(prayersData as Category[]);
 
-  const category = prayersData[activeCategory];
-  const prayer = category.prayers[activePrayer];
+  // Fetch admin-added prayers and merge into categories
+  useEffect(() => {
+    fetch("/api/prayers-db")
+      .then(r => r.json())
+      .then(({ prayers }) => {
+        if (!prayers?.length) return;
+        const merged: Category[] = JSON.parse(JSON.stringify(prayersData));
+        prayers.forEach((p: PrayerItem & { category?: string }) => {
+          const catName = p.category || "Other";
+          const existing = merged.find(c => c.category === catName);
+          if (existing) {
+            if (!existing.prayers.find(x => x.title === p.title)) existing.prayers.push(p);
+          } else {
+            merged.push({ category: catName, icon: "✦", prayers: [p] });
+          }
+        });
+        setAllCategories(merged);
+      })
+      .catch(() => {});
+  }, []);
+
+  const category = allCategories[activeCategory];
+  const prayer = category?.prayers[activePrayer];
 
   const handleCategoryChange = (i: number) => {
     setActiveCategory(i);
@@ -40,11 +65,11 @@ export default function PrayersPage() {
       </section>
 
       <div className="container-sacred" style={{ maxWidth: "1200px", padding: "2.5rem 1.5rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "280px 1fr", gap: "2rem" }}>
+        <div className="prayers-grid">
 
           {/* LEFT — Category + Prayer list */}
           <div>
-            {prayersData.map((cat, ci) => (
+            {allCategories.map((cat, ci) => (
               <div key={ci} style={{ marginBottom: "1.5rem" }}>
                 <button
                   onClick={() => handleCategoryChange(ci)}
@@ -162,9 +187,14 @@ export default function PrayersPage() {
       </div>
 
       <style>{`
+        .prayers-grid {
+          display: grid;
+          grid-template-columns: 280px 1fr;
+          gap: 2rem;
+        }
         @media (max-width: 768px) {
-          div[style*="gridTemplateColumns: \"280px 1fr\""] {
-            grid-template-columns: 1fr !important;
+          .prayers-grid {
+            grid-template-columns: 1fr;
           }
         }
       `}</style>

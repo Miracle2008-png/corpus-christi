@@ -1,18 +1,30 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import popes1 from "@/data/popes-1-50.json";
 import popes2 from "@/data/popes-51-100.json";
 import popes3 from "@/data/popes-101-150.json";
 import popes4 from "@/data/popes-151-200.json";
 import popes5 from "@/data/popes-201-250.json";
 import popes6 from "@/data/popes-251-265.json";
+import { connectDB } from "@/lib/mongodb";
+import mongoose from "mongoose";
+
+const staticPopes = [...popes1, ...popes2, ...popes3, ...popes4, ...popes5, ...popes6];
+
+// Fetch any additional popes added via admin
+async function getAdminPopes() {
+  try {
+    await connectDB();
+    const PopeSchema = new mongoose.Schema({ n: Number, name: String, reign: String, nat: String, saint: Boolean, img: String, note: String });
+    const Pope = mongoose.models.Pope || mongoose.model("Pope", PopeSchema);
+    return await Pope.find({}).sort({ n: 1 }).lean();
+  } catch { return []; }
+}
 
 export const metadata: Metadata = {
   title: "All Popes of the Catholic Church | Corpus Christi",
   description: "The complete list of all 265 Bishops of Rome — from St. Peter to Pope Francis — with portraits, reigns, nationalities, and historical notes.",
 };
-
-const allPopes = [...popes1, ...popes2, ...popes3, ...popes4, ...popes5, ...popes6];
 
 const eras = [
   { label: "Apostolic & Patristic Era", range: [1, 50], years: "c. 30 – 498 AD", desc: "The foundational centuries — from Peter's martyrdom through the collapse of the Western Roman Empire." },
@@ -23,7 +35,12 @@ const eras = [
   { label: "Modern Era", range: [241, 267], years: "1691 – Present", desc: "Enlightenment, Revolution, Vatican Councils I and II, and the global Church of the 20th–21st centuries — through Pope Leo XIV, the first American pope." },
 ];
 
-export default function PopesPage() {
+export default async function PopesPage() {
+  const adminPopes = await getAdminPopes();
+  // Merge: static popes first, then admin-added ones (deduplicated by name)
+  const staticNames = new Set(staticPopes.map((p) => p.name));
+  const newPopes = adminPopes.filter((p: {name?:string}) => p.name && !staticNames.has(p.name));
+  const allPopes = [...staticPopes, ...newPopes];
   return (
     <div style={{ minHeight: "100vh", background: "var(--ivory)" }}>
       {/* Header */}
@@ -84,9 +101,9 @@ export default function PopesPage() {
                   <article key={pope.n} className="pope-card">
 
                     {/* Portrait */}
-                    <div style={{ height: "200px", overflow: "hidden", background: "linear-gradient(135deg, var(--navy-dark), #0f1a35)", position: "relative" }}>
-                      <Image
-                        src={pope.img || "/images/pope-placeholder.png"}
+                    <div style={{ height: "200px", overflow: "hidden", background: "linear-gradient(135deg, var(--navy-dark), #0f1a35)", position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <SafeImage
+                        src={pope.img || ""}
                         alt={pope.name}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

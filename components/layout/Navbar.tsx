@@ -312,21 +312,34 @@ export default function Navbar() {
             )
           ))}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid rgba(201,168,76,0.2)" }}>
-            <Link
-              href="/auth/login"
-              onClick={() => setMobileOpen(false)}
-              style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "rgba(255,255,255,0.85)", textDecoration: "none", border: "1px solid rgba(201,168,76,0.4)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600 }}
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/auth/register"
-              onClick={() => setMobileOpen(false)}
-              style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "var(--navy-dark)", textDecoration: "none", background: "linear-gradient(135deg,var(--gold-dark),var(--gold))", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 700 }}
-            >
-              Sign Up
-            </Link>
-            <Link href="/donate" className="btn-sacred" style={{ display: "block", textAlign: "center" }}>
+            {session ? (
+              <>
+                <div style={{ padding: "0.5rem 0", color: "var(--gold)", fontWeight: 700, fontSize: "0.95rem", textAlign: "center" }}>
+                  {session.user?.name ? `Hi, ${session.user.name.split(" ")[0]}` : "My Account"}
+                </div>
+                {isAdmin && (
+                  <Link href="/admin" onClick={() => setMobileOpen(false)} style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "var(--gold)", textDecoration: "none", border: "1px solid rgba(201,168,76,0.4)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 700 }}>
+                    ✦ Admin Portal
+                  </Link>
+                )}
+                <Link href="/dashboard" onClick={() => setMobileOpen(false)} style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "var(--white)", textDecoration: "none", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600 }}>
+                  Dashboard
+                </Link>
+                <button onClick={() => { setMobileOpen(false); signOut({ callbackUrl: "/" }); }} style={{ display: "block", width: "100%", textAlign: "center", padding: "0.75rem", color: "var(--crimson)", background: "transparent", border: "1px solid rgba(255,0,0,0.3)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600, cursor: "pointer" }}>
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/auth/login" onClick={() => setMobileOpen(false)} style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "rgba(255,255,255,0.85)", textDecoration: "none", border: "1px solid rgba(201,168,76,0.4)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600 }}>
+                  Sign In
+                </Link>
+                <Link href="/auth/register" onClick={() => setMobileOpen(false)} style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "var(--navy-dark)", textDecoration: "none", background: "linear-gradient(135deg,var(--gold-dark),var(--gold))", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 700 }}>
+                  Sign Up
+                </Link>
+              </>
+            )}
+            <Link href="/donate" onClick={() => setMobileOpen(false)} className="btn-sacred" style={{ display: "block", textAlign: "center", marginTop: "0.5rem" }}>
               ✦ Donate
             </Link>
           </div>
