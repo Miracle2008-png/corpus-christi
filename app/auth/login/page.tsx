@@ -1,24 +1,13 @@
 "use client";
 import { useState } from "react";
 import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import Link from "next/link";
 
 const GOOGLE_CONFIGURED = process.env.NEXT_PUBLIC_GOOGLE_CONFIGURED === "true";
+const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
 
 export default function LoginPage() {
-  const router = useRouter();
-  const { data: session, status } = useSession();
-  
-  const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
-  
-  useEffect(() => {
-    if (status === "authenticated") {
-      const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
-      window.location.href = isAdmin ? "/admin" : "/dashboard";
-    }
-  }, [status, session, router]);
+  const { status } = useSession();
 
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
