@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.pexels.com" },
       { protocol: "https", hostname: "commons.wikimedia.org" },
       { protocol: "https", hostname: "images.metmuseum.org" },
+      { protocol: "https", hostname: "*.wikimedia.org" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
     ],
     minimumCacheTTL: 2592000, // Cache optimized images for 30 days on Vercel edge
   },
