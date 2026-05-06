@@ -200,7 +200,7 @@ export default function Navbar() {
                     color: "rgba(255,255,255,0.85)", textDecoration: "none",
                     fontSize: "0.8rem", padding: "0.45rem 1rem",
                     borderRadius: "6px", border: "1px solid rgba(255,255,255,0.2)",
-                    transition: "all 0.2s",
+                    transition: "all 0.2s", whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--gold)"; e.currentTarget.style.color = "var(--gold)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
@@ -212,7 +212,7 @@ export default function Navbar() {
                   style={{
                     color: "var(--navy-dark)", textDecoration: "none",
                     fontSize: "0.8rem", padding: "0.45rem 1rem",
-                    borderRadius: "6px",
+                    borderRadius: "6px", whiteSpace: "nowrap",
                     background: "linear-gradient(135deg, var(--gold-dark), var(--gold))",
                     fontWeight: 700, transition: "all 0.2s",
                   }}
@@ -223,7 +223,7 @@ export default function Navbar() {
                 </Link>
               </>
             )}
-            <Link href="/donate" className="btn-sacred" style={{ fontSize: "0.8rem", padding: "0.5rem 1.25rem" }}>
+            <Link href="/donate" className="btn-sacred" style={{ fontSize: "0.8rem", padding: "0.5rem 1.25rem", whiteSpace: "nowrap" }}>
               ✦ Donate
             </Link>
           </div>
