@@ -193,9 +193,9 @@ export default function AntigravityHero({ children }: { children: React.ReactNod
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `.ag-element { visibility: hidden; }` }} />
-      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      <div style={{ width: "100%", position: "relative" }}>
         <canvas ref={canvasRef} style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", pointerEvents: "none", zIndex: 9999 }} />
-        <div ref={containerRef} style={{ width: "100%", height: "100%", position: "relative" }}>
+        <div ref={containerRef} style={{ width: "100%", position: "relative" }}>
           {children}
         </div>
       </div>
