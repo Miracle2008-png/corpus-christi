@@ -36,11 +36,10 @@ export default function LoginPage() {
     if (result?.error) {
       setError("Invalid email or password. Please try again.");
     } else {
-      // Fetch the fresh session to read the role, then redirect appropriately
-      const { getSession } = await import("next-auth/react");
-      const freshSession = await getSession();
-      const role = (freshSession?.user as any)?.role;
-      router.push(role === "admin" ? "/admin" : "/dashboard");
+      // Redirect based on email — role token can be stale on first login
+      const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
+      const isAdminEmail = ADMIN_EMAILS.includes(form.email.trim().toLowerCase());
+      router.push(isAdminEmail ? "/admin" : "/dashboard");
       router.refresh();
     }
   }

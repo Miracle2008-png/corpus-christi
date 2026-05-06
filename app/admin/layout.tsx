@@ -8,9 +8,14 @@ export const metadata = { title: "Admin Portal | Corpus Christi" };
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
 
-  // Strict check: Only "admin" role allowed
-  if (!(session?.user as any)?.role || (session?.user as any)?.role !== "admin") {
-    redirect("/"); // Kick non-admins out immediately
+  // Check by email — most reliable, role token can be stale
+  const ADMIN_EMAILS = [
+    "miraclechimdindu2008@gmail.com",
+    "miraclechimdindu2025@gmail.com",
+  ];
+
+  if (!session?.user?.email || !ADMIN_EMAILS.includes(session.user.email)) {
+    redirect("/auth/login");
   }
 
   return (

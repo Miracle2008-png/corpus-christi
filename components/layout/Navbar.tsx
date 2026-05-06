@@ -42,6 +42,9 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [authDropdownOpen, setAuthDropdownOpen] = useState(false);
 
+  const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
+  const isAdmin = !!(session?.user?.email && ADMIN_EMAILS.includes(session.user.email));
+
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="container-sacred" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 1.5rem", height: "64px" }}>
@@ -153,7 +156,7 @@ export default function Navbar() {
                     {/* Invisible bridge to cover the hover gap */}
                     <div style={{ position: "absolute", top: "-10px", left: 0, right: 0, height: "10px", background: "transparent" }} />
                     
-                    {(session?.user as any)?.role === "admin" && (
+                    {isAdmin && (
                       <Link
                         href="/admin"
                         onClick={() => setAuthDropdownOpen(false)}
