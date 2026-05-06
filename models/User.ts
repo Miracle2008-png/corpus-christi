@@ -43,7 +43,6 @@ UserSchema.methods.comparePassword = async function (password: string): Promise<
   return bcrypt.compare(password, this.password_hash);
 };
 
-UserSchema.index({ email: 1 });
 UserSchema.index({ role: 1 });
 
 const User: Model<IUser> =
