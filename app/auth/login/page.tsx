@@ -112,7 +112,7 @@ export default function LoginPage() {
             <button
               onClick={async () => {
                 try {
-                  await signIn("google", { callbackUrl: "/dashboard" });
+                  await signIn("google", { callbackUrl: "/admin" });
                 } catch {
                   setOauthNote("Google sign-in is not configured yet. Please use email & password, or contact the admin to enable Google OAuth.");
                 }

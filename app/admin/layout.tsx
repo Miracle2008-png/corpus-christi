@@ -28,11 +28,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     return null;
   }
 
-  // Logged in but not an admin email
+  // Logged in but not an admin email — send to normal dashboard
   const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
   if (!isAdmin) {
     if (typeof window !== "undefined") window.location.href = "/dashboard";
-    return null;
+    return (
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--ivory)" }}>
+        <p style={{ color: "var(--text-muted)", fontFamily: "var(--font-serif)" }}>Redirecting...</p>
+      </div>
+    );
   }
 
   const navItems = [

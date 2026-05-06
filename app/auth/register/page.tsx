@@ -92,7 +92,7 @@ export default function RegisterPage() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <button
-              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+              onClick={() => signIn("google", { callbackUrl: "/admin" })}
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", width: "100%", padding: "0.875rem", background: "#fff", color: "#333", border: "none", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600, cursor: "pointer", transition: "all 0.2s" }}
               onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
