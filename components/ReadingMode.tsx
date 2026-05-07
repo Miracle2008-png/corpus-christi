@@ -43,13 +43,18 @@ export default function ReadingMode({ date, sections, reflection }: ReadingModeP
   }
 
   return (
-    <div style={{
+    <div className="reading-mode-overlay" style={{
       position: "fixed", inset: 0, zIndex: 99999,
-      background: "#f4eedb", // Sepia/parchment background
+      background: "#f4eedb",
+      backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E\")",
       overflowY: "auto",
       padding: "clamp(2rem, 5vw, 6rem) clamp(1.5rem, 5vw, 20%)",
-      color: "#2c2820"
+      color: "#2c2820",
+      animation: "fadeIn 0.4s ease-out forwards"
     }}>
+      <style>{`
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      `}</style>
       {/* Top Bar */}
       <div style={{ position: "fixed", top: 0, left: 0, right: 0, padding: "1rem 2rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "linear-gradient(to bottom, #f4eedb 50%, transparent)", zIndex: 10 }}>
         <div style={{ fontFamily: "var(--font-serif)", fontSize: "0.9rem", opacity: 0.7, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>
@@ -85,9 +90,11 @@ export default function ReadingMode({ date, sections, reflection }: ReadingModeP
             )}
             <div style={{ 
               fontFamily: "var(--font-serif)", 
-              fontSize: "clamp(1.2rem, 4vw, 1.4rem)", 
-              lineHeight: 1.8,
-              color: "#2c2820"
+              fontSize: "clamp(1.2rem, 4vw, 1.45rem)", 
+              lineHeight: 1.85,
+              color: "#2c2820",
+              textIndent: "1.5rem",
+              textAlign: "justify"
             }}>
               {sec.text?.split('\n').map((paragraph, idx) => (
                 <p key={idx} style={{ marginBottom: "1.5rem" }}>{paragraph}</p>
