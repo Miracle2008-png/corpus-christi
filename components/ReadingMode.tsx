@@ -34,8 +34,14 @@ export default function ReadingMode({ date, sections, reflection }: ReadingModeP
           borderRadius: "999px", fontWeight: 700, cursor: "pointer",
           fontSize: "0.85rem", transition: "all 0.2s"
         }}
-        onMouseEnter={e => e.currentTarget.style.background = "var(--gold)", e => e.currentTarget.style.color = "var(--navy-dark)"}
-        onMouseLeave={e => e.currentTarget.style.background = "var(--navy-dark)", e => e.currentTarget.style.color = "var(--gold)"}
+        onMouseEnter={(e: React.MouseEvent<HTMLButtonElement>) => {
+          e.currentTarget.style.background = "var(--gold)";
+          e.currentTarget.style.color = "var(--navy-dark)";
+        }}
+        onMouseLeave={(e: React.MouseEvent<HTMLButtonElement>) => {
+          e.currentTarget.style.background = "var(--navy-dark)";
+          e.currentTarget.style.color = "var(--gold)";
+        }}
       >
         <span style={{ fontSize: "1.1rem" }}>📖</span> Enter Reading Mode
       </button>
