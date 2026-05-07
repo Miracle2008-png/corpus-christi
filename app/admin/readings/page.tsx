@@ -17,6 +17,20 @@ export default function AdminReadings() {
     const d = await r.json(); setItems(d.items ?? []); setTotal(d.total ?? 0); setPages(d.pages ?? 1); setPage(p); setLoading(false);
   }, [search]);
 
+  const handleSeed = async () => {
+    if (!confirm("This will automatically fetch and save the next 7 days of readings from the Bible API. Continue?")) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/admin/seed-readings", { method: "POST" });
+      const data = await res.json();
+      alert(data.message || data.error);
+      load(1);
+    } catch {
+      alert("Failed to seed readings.");
+      setLoading(false);
+    }
+  };
+
   useEffect(() => { load(1); }, []);
 
   const save = async () => {
@@ -42,6 +56,7 @@ export default function AdminReadings() {
         <div style={{ display: "flex", gap: "0.5rem" }}>
           <input value={search} onChange={e => setSearch(e.target.value)} onKeyDown={e => e.key === "Enter" && load(1)} placeholder="Search by date (YYYY-MM-DD)..." style={{ ...inputStyle, width: "220px" }} />
           <button onClick={() => load(1)} style={{ padding: "0.5rem 1rem", background: "#1a2744", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "0.85rem" }}>Search</button>
+          <button onClick={handleSeed} style={{ padding: "0.5rem 1rem", background: "#3498db", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "0.85rem", fontWeight: 600 }}>Auto-Seed (API)</button>
           <button onClick={() => { setForm(emptyForm); setEditing(null); setShowForm(true); }} style={{ padding: "0.5rem 1rem", background: "#c9a84c", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "0.85rem", fontWeight: 600 }}>+ Add Reading</button>
         </div>
       </div>

@@ -63,8 +63,11 @@ export default function AdminOverview() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: "0.75rem" }}>
           {[
             { label: "Add Reading", href: "/admin/readings", color: "#9b59b6" },
+            { label: "Add Library Book", href: "/admin/library", color: "#8e44ad" },
             { label: "Add Saint", href: "/admin/saints", color: "#c9a84c" },
             { label: "Add Prayer", href: "/admin/prayers", color: "#3498db" },
+            { label: "Manage Parishes", href: "/admin/mass-finder", color: "#16a085" },
+            { label: "Manage Holy Sites", href: "/admin/holy-sites", color: "#f39c12" },
             { label: "Manage Users", href: "/admin/users", color: "#2ecc71" },
             { label: "View Donations", href: "/admin/donations", color: "#e67e22" },
             { label: "Review Intentions", href: "/admin/intentions", color: "#e74c3c" },

@@ -189,9 +189,9 @@ export default function IntentionsPage() {
                   
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(201,168,76,0.2)", paddingTop: "1rem", marginTop: "0.5rem" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                      <span style={{ color: "var(--gold)", fontSize: "1.2rem" }}>🙏</span>
+                      <span style={{ color: "var(--gold)", fontSize: "1.2rem" }}>🕯️</span>
                       <span style={{ fontSize: "0.9rem", color: "var(--text-muted)", fontWeight: 600 }}>
-                        {intention.prayer_count} {intention.prayer_count === 1 ? "person" : "people"} prayed
+                        {intention.prayer_count} {intention.prayer_count === 1 ? "candle lit" : "candles lit"}
                       </span>
                     </div>
                     
@@ -199,12 +199,13 @@ export default function IntentionsPage() {
                       onClick={() => handlePray(intention._id)}
                       disabled={hasPrayed || !session}
                       style={{
-                        padding: "0.5rem 1.25rem", borderRadius: "999px", fontSize: "0.85rem", fontWeight: 700,
+                        padding: "0.5rem 1rem", borderRadius: "999px", fontSize: "0.85rem", fontWeight: 700,
                         border: hasPrayed ? "1px solid transparent" : "1px solid var(--gold)",
-                        background: hasPrayed ? "rgba(34, 197, 94, 0.1)" : "transparent",
-                        color: hasPrayed ? "#166534" : "var(--gold-dark)",
+                        background: hasPrayed ? "rgba(255, 153, 0, 0.1)" : "transparent",
+                        color: hasPrayed ? "#d35400" : "var(--gold-dark)",
                         cursor: hasPrayed || !session ? "default" : "pointer",
-                        transition: "all 0.2s"
+                        transition: "all 0.3s ease",
+                        display: "flex", alignItems: "center", gap: "0.4rem"
                       }}
                       onMouseEnter={(e) => {
                         if (!hasPrayed && session) {
@@ -219,7 +220,15 @@ export default function IntentionsPage() {
                         }
                       }}
                     >
-                      {hasPrayed ? "✓ You prayed for this" : "I prayed for this"}
+                      {hasPrayed ? (
+                        <>
+                          <span style={{ fontSize: "1.1rem" }}>🔥</span> Amen (Lit)
+                        </>
+                      ) : (
+                        <>
+                          <span style={{ fontSize: "1rem" }}>🕯️</span> Light Candle
+                        </>
+                      )}
                     </button>
                   </div>
                 </div>

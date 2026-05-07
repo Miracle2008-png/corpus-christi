@@ -30,7 +30,15 @@ export const metadata: Metadata = {
     title: "Corpus Christi — Catholic Ministry Platform",
     description: "A sacred digital platform for the Catholic faithful.",
     siteName: "Corpus Christi",
+    images: [{ url: "/images/og-image.jpg" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corpus Christi — Catholic Ministry Platform",
+    description: "A sacred digital platform for the Catholic faithful.",
+    images: ["/images/og-image.jpg"],
+  },
+  metadataBase: new URL("https://corpus-christi.vercel.app"),
 };
 
 export const viewport: Viewport = {

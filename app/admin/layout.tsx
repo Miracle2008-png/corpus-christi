@@ -13,6 +13,9 @@ const navItems = [
   { name: "Users", path: "/admin/users" },
   { name: "Intentions", path: "/admin/intentions" },
   { name: "Donations", path: "/admin/donations" },
+  { name: "Library", path: "/admin/library" },
+  { name: "Mass Finder", path: "/admin/mass-finder" },
+  { name: "Holy Sites", path: "/admin/holy-sites" },
   { name: "Analytics", path: "/admin/analytics" },
 ];
 

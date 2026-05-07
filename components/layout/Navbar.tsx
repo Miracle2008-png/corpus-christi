@@ -31,6 +31,10 @@ const navLinks = [
       { href: "/saint-of-the-day", label: "Saint of the Day" },
       { href: "/virtues", label: "Virtues & Beatitudes" },
       { href: "/encyclicals", label: "Papal Encyclicals" },
+      { href: "/library", label: "📚 Catholic Library" },
+      { href: "/liturgy", label: "🕯 Liturgy of the Hours" },
+      { href: "/pilgrimage", label: "✈ Virtual Pilgrimage" },
+      { href: "/mass-finder", label: "📍 Find Mass Near Me" },
       { href: "/ai", label: "AI Assistant" },
     ],
   },
@@ -274,11 +278,13 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div style={{
           background: "var(--navy-dark)", borderTop: "1px solid rgba(201,168,76,0.2)",
           padding: "1rem",
+          maxHeight: "calc(100vh - 64px)",
+          overflowY: "auto",
+          WebkitOverflowScrolling: "touch",
         }}>
           {navLinks.map((link) => (
             link.children ? (

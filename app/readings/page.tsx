@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AudioReader from "@/components/AudioReader";
+import ReadingMode from "@/components/ReadingMode";
 
 export const metadata: Metadata = {
   title: "Daily Readings",
@@ -61,7 +63,11 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
         <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "var(--white)", marginBottom: "0.5rem" }}>
           Daily Readings
         </h1>
-        <p style={{ color: "var(--gold)", fontSize: "1.1rem", marginBottom: "2rem" }}>{displayDate}</p>
+        <p style={{ color: "var(--gold)", fontSize: "1.1rem", marginBottom: "1.5rem" }}>{displayDate}</p>
+
+        <div style={{ marginBottom: "2.5rem" }}>
+          <ReadingMode date={displayDate} sections={readingSections} reflection={reading.gospel_reflection} />
+        </div>
 
         {/* Week navigation */}
         <div style={{ display: "flex", gap: "0.4rem", justifyContent: "center", flexWrap: "wrap" }}>
@@ -100,12 +106,15 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
             marginBottom: "1.5rem",
             borderLeft: "4px solid var(--gold)",
           }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.75rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.75rem", flexWrap: "wrap" }}>
               <span style={{ fontSize: "1.1rem" }}>{section.icon}</span>
               <h2 style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--gold-dark)", fontWeight: 700 }}>
                 {section.label}
               </h2>
-              <span style={{ marginLeft: "auto", color: "var(--text-muted)", fontSize: "0.82rem", fontStyle: "italic" }}>{section.ref}</span>
+              <span style={{ color: "var(--text-muted)", fontSize: "0.82rem", fontStyle: "italic" }}>{section.ref}</span>
+              <span style={{ marginLeft: "auto" }}>
+                <AudioReader text={section.text || ""} label="Listen" />
+              </span>
             </div>
             {section.response && (
               <p style={{ color: "var(--gold-dark)", fontSize: "0.82rem", fontWeight: 600, marginBottom: "0.5rem" }}>
@@ -126,9 +135,12 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
             padding: "2rem",
             marginTop: "0.5rem",
           }}>
-            <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.2rem", marginBottom: "1rem" }}>
-              ✝ Gospel Reflection
-            </h2>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem", flexWrap: "wrap" }}>
+              <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.2rem", margin: 0 }}>
+                ✝ Gospel Reflection
+              </h2>
+              <AudioReader text={reading.gospel_reflection} label="Listen" />
+            </div>
             <p style={{ color: "rgba(255,255,255,0.85)", lineHeight: 1.9, fontStyle: "italic", fontFamily: "var(--font-serif)" }}>
               &ldquo;{reading.gospel_reflection}&rdquo;
             </p>

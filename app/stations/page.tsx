@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import stationsData from "@/data/stations.json";
 import Link from "next/link";
 import Image from "next/image";
+import StationsReadingMode from "@/components/StationsReadingMode";
 
 export default function StationsPage() {
   const [activeStation, setActiveStation] = useState(0);
@@ -70,14 +71,16 @@ export default function StationsPage() {
             Station {activeStation + 1} of {stationsData.length}
           </p>
         </div>
-        <div style={{ width: "80px", height: "4px", background: "rgba(255,255,255,0.1)", borderRadius: "2px" }}>
-          <div style={{
-            height: "100%", borderRadius: "2px",
-            background: "var(--gold)",
-            width: `${((activeStation + 1) / stationsData.length) * 100}%`,
-            transition: "width 0.4s ease",
-          }} />
-        </div>
+        <StationsReadingMode stations={stationsData as any[]} />
+      </div>
+
+      {/* Progress bar */}
+      <div style={{ position: "fixed", top: "60px", left: 0, right: 0, zIndex: 99, height: "3px", background: "rgba(255,255,255,0.05)" }}>
+        <div style={{
+          height: "100%", background: "var(--gold)",
+          width: `${((activeStation + 1) / stationsData.length) * 100}%`,
+          transition: "width 0.4s ease",
+        }} />
       </div>
 
       {/* Opening title section */}
@@ -189,10 +192,16 @@ export default function StationsPage() {
             <h2 style={{
               fontFamily: "var(--font-serif)",
               fontSize: "clamp(1.4rem,3vw,2.25rem)",
-              color: "#fff", marginBottom: "1.5rem", lineHeight: 1.2,
+              color: "#fff", marginBottom: "2rem", lineHeight: 1.2,
             }}>
               {station.title}
             </h2>
+
+            {/* Traditional Opening Response */}
+            <div style={{ marginBottom: "2rem", borderLeft: "2px solid rgba(201,168,76,0.5)", paddingLeft: "1rem" }}>
+              <p style={{ color: "var(--gold)", fontSize: "0.85rem", fontWeight: 700, marginBottom: "0.4rem" }}>V. We adore Thee, O Christ, and we praise Thee.</p>
+              <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.85rem", fontWeight: 600 }}>R. Because by Thy holy cross, Thou hast redeemed the world.</p>
+            </div>
 
             {/* Scripture */}
             <div style={{
@@ -216,15 +225,19 @@ export default function StationsPage() {
             {/* Prayer */}
             <div style={{
               borderLeft: "3px solid var(--gold)",
-              paddingLeft: "1.25rem",
               background: "rgba(0,0,0,0.3)",
-              padding: "1rem 1.25rem",
+              padding: "1.5rem",
               borderRadius: "0 8px 8px 0",
+              marginBottom: "1.5rem"
             }}>
-              <p style={{ color: "var(--gold)", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.4rem" }}>Prayer</p>
-              <p style={{ color: "rgba(255,255,255,0.78)", fontStyle: "italic", fontFamily: "var(--font-serif)", lineHeight: 1.8, fontSize: "0.92rem" }}>
+              <p style={{ color: "var(--gold)", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.5rem" }}>Prayer</p>
+              <p style={{ color: "rgba(255,255,255,0.78)", fontStyle: "italic", fontFamily: "var(--font-serif)", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: "1.5rem" }}>
                 {station.prayer}
               </p>
+              <div style={{ borderTop: "1px solid rgba(201,168,76,0.2)", paddingTop: "1rem" }}>
+                <p style={{ color: "var(--white)", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.4rem" }}>Our Father... Hail Mary... Glory Be...</p>
+                <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.8rem", fontStyle: "italic" }}>Have mercy on us, O Lord. Have mercy on us.</p>
+              </div>
             </div>
 
             {/* Next station hint */}
