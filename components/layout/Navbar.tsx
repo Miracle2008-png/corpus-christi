@@ -288,20 +288,28 @@ export default function Navbar() {
         }}>
           {navLinks.map((link) => (
             link.children ? (
-              link.children.map((child) => (
-                <Link
-                  key={child.href}
-                  href={child.href}
-                  onClick={() => setMobileOpen(false)}
-                  style={{
-                    display: "block", padding: "0.75rem 1rem",
-                    color: "rgba(255,255,255,0.8)", textDecoration: "none",
-                    fontSize: "0.95rem", borderBottom: "1px solid rgba(255,255,255,0.05)",
-                  }}
-                >
-                  {child.label}
-                </Link>
-              ))
+              <details key={link.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                <summary style={{ padding: "0.75rem 1rem", color: "rgba(255,255,255,0.8)", fontSize: "0.95rem", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none" }}>
+                  <span style={{ fontWeight: 600 }}>{link.label}</span>
+                  <span style={{ fontSize: "0.7rem", opacity: 0.7 }}>▼</span>
+                </summary>
+                <div style={{ background: "rgba(0,0,0,0.15)", padding: "0.5rem 0" }}>
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => setMobileOpen(false)}
+                      style={{
+                        display: "block", padding: "0.6rem 2rem",
+                        color: "rgba(255,255,255,0.75)", textDecoration: "none",
+                        fontSize: "0.9rem", transition: "color 0.2s"
+                      }}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </details>
             ) : (
               <Link
                 key={link.href}
