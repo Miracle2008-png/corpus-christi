@@ -286,6 +286,19 @@ export default function Navbar() {
           overflowY: "auto",
           WebkitOverflowScrolling: "touch",
         }}>
+          <Link
+            href="/readings"
+            onClick={() => setMobileOpen(false)}
+            style={{
+              display: "block", padding: "0.85rem 1rem",
+              background: "rgba(201,168,76,0.15)", color: "var(--gold)",
+              textDecoration: "none", fontSize: "1rem", fontWeight: 700,
+              borderRadius: "8px", marginBottom: "1rem", textAlign: "center",
+              border: "1px solid rgba(201,168,76,0.3)"
+            }}
+          >
+            Enter Read Mode
+          </Link>
           {navLinks.map((link) => (
             link.children ? (
               <details key={link.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
