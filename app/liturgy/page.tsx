@@ -123,7 +123,7 @@ export default function LiturgyPage() {
         </PrayerBlock>
 
         {/* ── SCRIPTURE READING ── */}
-        <PrayerBlock title={`Scripture Reading — ${hour.reading.ref}`} icon="✝" color={hour.color}>
+        <PrayerBlock title={`Scripture Reading — ${hour.reading.ref}`} icon="" color={hour.color}>
           {hour.reading.text.split("\n\n").map((para, i) => (
             <p key={i} style={{ ...textStyle, marginBottom: "0.75rem" }}>{para}</p>
           ))}
@@ -149,7 +149,7 @@ export default function LiturgyPage() {
         )}
 
         {/* ── CONCLUDING COLLECT ── */}
-        <PrayerBlock title="Concluding Prayer" icon="✝" color={hour.color}>
+        <PrayerBlock title="Concluding Prayer" icon="" color={hour.color}>
           <p style={{ ...textStyle, fontStyle: "italic" }}>{hour.collect}</p>
         </PrayerBlock>
 

@@ -31,10 +31,10 @@ const navLinks = [
       { href: "/saint-of-the-day", label: "Saint of the Day" },
       { href: "/virtues", label: "Virtues & Beatitudes" },
       { href: "/encyclicals", label: "Papal Encyclicals" },
-      { href: "/library", label: "📚 Catholic Library" },
-      { href: "/liturgy", label: "🕯 Liturgy of the Hours" },
+      { href: "/library", label: "� Catholic Library" },
+      { href: "/liturgy", label: "Liturgy of the Hours" },
       { href: "/pilgrimage", label: "✈ Virtual Pilgrimage" },
-      { href: "/mass-finder", label: "📍 Find Mass Near Me" },
+      { href: "/mass-finder", label: "� Find Mass Near Me" },
       { href: "/ai", label: "AI Assistant" },
     ],
   },
@@ -54,7 +54,7 @@ export default function Navbar() {
       <div className="container-sacred" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 1.5rem", height: "64px" }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <span style={{ fontSize: "1.75rem", lineHeight: 1 }}>✝</span>
+          <span style={{ fontSize: "1.75rem", lineHeight: 1 }}></span>
           <div>
             <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 700, color: "var(--gold)", lineHeight: 1.1, letterSpacing: "0.02em" }}>
               Corpus Christi

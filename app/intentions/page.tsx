@@ -189,7 +189,7 @@ export default function IntentionsPage() {
                   
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(201,168,76,0.2)", paddingTop: "1rem", marginTop: "0.5rem" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                      <span style={{ color: "var(--gold)", fontSize: "1.2rem" }}>🕯️</span>
+                      <span style={{ color: "var(--gold)", fontSize: "1.2rem" }}></span>
                       <span style={{ fontSize: "0.9rem", color: "var(--text-muted)", fontWeight: 600 }}>
                         {intention.prayer_count} {intention.prayer_count === 1 ? "candle lit" : "candles lit"}
                       </span>
@@ -222,11 +222,11 @@ export default function IntentionsPage() {
                     >
                       {hasPrayed ? (
                         <>
-                          <span style={{ fontSize: "1.1rem" }}>🔥</span> Amen (Lit)
+                          <span style={{ fontSize: "1.1rem" }}>�</span> Amen (Lit)
                         </>
                       ) : (
                         <>
-                          <span style={{ fontSize: "1rem" }}>🕯️</span> Light Candle
+                          <span style={{ fontSize: "1rem" }}></span> Light Candle
                         </>
                       )}
                     </button>

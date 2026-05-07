@@ -25,7 +25,7 @@ export default function MassPage() {
     <div style={{ minHeight: "100vh", background: "var(--ivory)" }}>
       {/* Header */}
       <section style={{ background: "var(--navy)", padding: "4rem 1.5rem 3rem", textAlign: "center" }}>
-        <p style={{ color: "var(--gold)", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "1rem" }}>✝ The Holy Sacrifice</p>
+        <p style={{ color: "var(--gold)", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "1rem" }}>The Holy Sacrifice</p>
         <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "var(--white)", marginBottom: "1rem" }}>
           The Holy Mass & Confession
         </h1>

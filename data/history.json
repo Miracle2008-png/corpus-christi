@@ -12,7 +12,7 @@
     "year": "c. 64-68 AD",
     "event": "Martyrdom of Peter and Paul in Rome",
     "desc": "The great Apostles Peter and Paul are martyred in Rome under Emperor Nero. Peter is crucified upside down; Paul is beheaded.",
-    "icon": "✝",
+    "icon": "",
     "deep_dive": "The martyrdom of Saints Peter and Paul in Rome cemented the city's status as the spiritual center of the Church. Following the Great Fire of Rome in 64 AD, Emperor Nero falsely blamed the Christians, initiating a fierce persecution. St. Peter, the first Pope, was crucified. Deeming himself unworthy to die in the exact same manner as Christ, he requested to be crucified upside down. He was buried on the Vatican Hill. St. Paul, as a Roman citizen, was spared crucifixion and instead was beheaded at Tre Fontane. Their blood watered the seeds of the early Roman Church, and their tombs remain the foundational anchors of Catholicism."
   },
   {
@@ -100,7 +100,7 @@
     "year": "1545-1563 AD",
     "event": "Council of Trent",
     "desc": "The Catholic response to the Reformation. Clarifies doctrine and codifies the Tridentine Mass.",
-    "icon": "✝",
+    "icon": "",
     "deep_dive": "The Council of Trent was the definitive Catholic response to the Protestant Reformation, inaugurating the Counter-Reformation (or Catholic Reformation). Over 18 years, the Council systematically clarified Catholic doctrine concerning Scripture and Tradition, Original Sin, Justification, and the Seven Sacraments. It condemned Protestant theology, demanded strict reform of clerical morals, mandated the establishment of seminaries for priestly formation, and codified the Roman Rite of the Mass (the Tridentine Mass). Trent revitalized the Church, equipping it with a unified doctrinal and pastoral vision for the modern era."
   },
   {

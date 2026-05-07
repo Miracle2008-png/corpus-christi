@@ -37,7 +37,7 @@ export default function GlobalSearch() {
   return (
     <div ref={ref} style={{ position: "relative", zIndex: 50 }}>
       <div style={{ display: "flex", alignItems: "center", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "20px", padding: "0.4rem 1rem", width: "220px", transition: "all 0.2s" }}>
-        <span style={{ fontSize: "0.8rem", marginRight: "0.5rem", opacity: 0.5 }}>🔍</span>
+        <span style={{ fontSize: "0.8rem", marginRight: "0.5rem", opacity: 0.5 }}>�</span>
         <input 
           type="text" 
           placeholder="Search..." 

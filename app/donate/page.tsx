@@ -133,7 +133,7 @@ export default function DonatePage() {
                 <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--navy)" }}>USSD</span>
               </div>
             </div>
-            <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>🔒 Secured by Paystack</span>
+            <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>� Secured by Paystack</span>
           </div>
         </div>
 

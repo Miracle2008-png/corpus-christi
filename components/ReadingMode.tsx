@@ -43,7 +43,7 @@ export default function ReadingMode({ date, sections, reflection }: ReadingModeP
           e.currentTarget.style.color = "var(--gold)";
         }}
       >
-        <span style={{ fontSize: "1.1rem" }}>📖</span> Enter Reading Mode
+        <span style={{ fontSize: "1.1rem" }}></span> Enter Reading Mode
       </button>
     );
   }

@@ -71,16 +71,16 @@ export default function RosaryPage() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "1rem" }}>
             {[
-              { n: 1, icon: "✝", title: "Make the Sign of the Cross", desc: "Begin with the Sign of the Cross." },
-              { n: 2, icon: "📖", title: "Apostles' Creed", desc: "Hold the crucifix and recite the Apostles' Creed." },
-              { n: 3, icon: "🙏", title: "Our Father", desc: "Pray one Our Father on the first large bead." },
-              { n: 4, icon: "📿", title: "3 Hail Marys", desc: "Pray 3 Hail Marys on the next 3 small beads for Faith, Hope & Charity." },
-              { n: 5, icon: "✨", title: "Glory Be", desc: "Pray the Glory Be and the Fatima Prayer." },
+              { n: 1, icon: "", title: "Make the Sign of the Cross", desc: "Begin with the Sign of the Cross." },
+              { n: 2, icon: "", title: "Apostles' Creed", desc: "Hold the crucifix and recite the Apostles' Creed." },
+              { n: 3, icon: "", title: "Our Father", desc: "Pray one Our Father on the first large bead." },
+              { n: 4, icon: "", title: "3 Hail Marys", desc: "Pray 3 Hail Marys on the next 3 small beads for Faith, Hope & Charity." },
+              { n: 5, icon: "", title: "Glory Be", desc: "Pray the Glory Be and the Fatima Prayer." },
               { n: 6, icon: "🌟", title: "Announce Mystery 1", desc: "Name the first mystery, then pray Our Father on the large bead." },
-              { n: 7, icon: "📿", title: "10 Hail Marys", desc: "Pray 10 Hail Marys on the small beads, meditating on the mystery." },
-              { n: 8, icon: "✨", title: "Glory Be + Fatima", desc: "End the decade with Glory Be and the Fatima Prayer." },
-              { n: 9, icon: "🔄", title: "Repeat ×5", desc: "Repeat steps 6–8 for all 5 mysteries of the chosen set." },
-              { n: 10, icon: "👑", title: "Closing Prayers", desc: "Finish with Hail Holy Queen, the Benediction, and optionally the Litany of Mary." },
+              { n: 7, icon: "", title: "10 Hail Marys", desc: "Pray 10 Hail Marys on the small beads, meditating on the mystery." },
+              { n: 8, icon: "", title: "Glory Be + Fatima", desc: "End the decade with Glory Be and the Fatima Prayer." },
+              { n: 9, icon: "�", title: "Repeat ×5", desc: "Repeat steps 6–8 for all 5 mysteries of the chosen set." },
+              { n: 10, icon: "�", title: "Closing Prayers", desc: "Finish with Hail Holy Queen, the Benediction, and optionally the Litany of Mary." },
             ].map(s => (
               <div key={s.n} style={{ display: "flex", gap: "1rem", alignItems: "flex-start", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "12px", padding: "1rem" }}>
                 <div style={{ width: "34px", height: "34px", borderRadius: "50%", background: "linear-gradient(135deg,var(--gold-dark),var(--gold))", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--navy-dark)", fontWeight: 800, fontSize: "0.85rem", flexShrink: 0 }}>{s.n}</div>

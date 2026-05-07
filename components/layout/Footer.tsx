@@ -47,7 +47,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
-              <span style={{ fontSize: "2rem", color: "var(--gold)" }}>✝</span>
+              <span style={{ fontSize: "2rem", color: "var(--gold)" }}></span>
               <div>
                 <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--gold)", fontWeight: 700 }}>
                   Corpus Christi

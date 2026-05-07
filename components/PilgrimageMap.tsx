@@ -98,7 +98,7 @@ export default function PilgrimageMap({ sites, selected, onSelect, visited }: Pr
               <div style={{ minWidth: "180px", fontFamily: "system-ui, sans-serif" }}>
                 <p style={{ fontSize: "0.7rem", color: "#888", margin: "0 0 0.25rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>{site.type}</p>
                 <strong style={{ fontSize: "0.95rem", color: "#111" }}>{site.emoji} {site.name}</strong>
-                <p style={{ fontSize: "0.8rem", color: "#666", margin: "0.2rem 0 0.5rem" }}>📍 {site.location}</p>
+                <p style={{ fontSize: "0.8rem", color: "#666", margin: "0.2rem 0 0.5rem" }}>� {site.location}</p>
                 <button
                   onClick={() => onSelect(site.id)}
                   style={{ background: site.color, color: "#fff", border: "none", padding: "0.35rem 0.85rem", borderRadius: "6px", fontSize: "0.78rem", fontWeight: 600, cursor: "pointer", width: "100%" }}

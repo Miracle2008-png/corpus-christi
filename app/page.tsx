@@ -78,7 +78,7 @@ export default function HomePage() {
       {/* ========== TODAY'S DATE BANNER ========== */}
       <div style={{ background: "var(--gold)", padding: "0.75rem 1.5rem", textAlign: "center" }}>
         <p style={{ color: "var(--navy-dark)", fontSize: "0.875rem", fontWeight: 600, letterSpacing: "0.05em" }}>
-          ✝ {today} · Ordinary Time
+          {today} · Ordinary Time
         </p>
       </div>
 
@@ -86,7 +86,7 @@ export default function HomePage() {
       <section style={{ background: "var(--navy)", padding: "5rem 1.5rem", textAlign: "center" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <p style={{ fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1.5rem", fontWeight: 700 }}>
-            ✝ Saint Quote of the Day ✝
+            Saint Quote of the Day 
           </p>
           <blockquote style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.3rem, 3vw, 2rem)", color: "var(--white)", fontStyle: "italic", lineHeight: 1.5, marginBottom: "1.5rem" }}>
             &ldquo;{todaysQuote.quote}&rdquo;

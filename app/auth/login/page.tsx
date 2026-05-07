@@ -32,7 +32,7 @@ export default function LoginPage() {
       <div style={{ width: "100%", maxWidth: "420px" }}>
         {/* Logo */}
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-          <span style={{ fontSize: "3rem", color: "var(--gold)" }}>✝</span>
+          <span style={{ fontSize: "3rem", color: "var(--gold)" }}></span>
           <h1 style={{ fontFamily: "var(--font-serif)", color: "var(--white)", fontSize: "1.75rem", marginTop: "0.5rem" }}>Corpus Christi</h1>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>Sign in to your account</p>
         </div>
@@ -85,7 +85,7 @@ export default function LoginPage() {
               className="btn-sacred"
               style={{ width: "100%", justifyContent: "center", opacity: loading ? 0.7 : 1 }}
             >
-              {loading ? "Signing in..." : "✝ Sign In"}
+              {loading ? "Signing in..." : "Sign In"}
             </button>
           </form>
 

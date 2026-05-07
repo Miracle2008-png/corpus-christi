@@ -137,7 +137,7 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem", flexWrap: "wrap" }}>
               <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.2rem", margin: 0 }}>
-                ✝ Gospel Reflection
+                Gospel Reflection
               </h2>
               <AudioReader text={reading.gospel_reflection} label="Listen" />
             </div>
@@ -150,7 +150,7 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
         {/* Actions */}
         <div style={{ display: "flex", gap: "1rem", marginTop: "2rem", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/rosary" className="btn-sacred">Pray the Rosary</Link>
-          <Link href="/stations" className="btn-outline-sacred">✝ Stations of the Cross</Link>
+          <Link href="/stations" className="btn-outline-sacred">Stations of the Cross</Link>
         </div>
       </div>
     </div>

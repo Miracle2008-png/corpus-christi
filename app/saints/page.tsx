@@ -72,7 +72,7 @@ export default async function SaintsPage({ searchParams }: PageProps) {
     <div className="bg-parchment" style={{ minHeight: "100vh" }}>
       {/* Header */}
       <section style={{ background: "var(--navy)", padding: "4rem 1.5rem 3rem", textAlign: "center" }}>
-        <p style={{ fontSize: "0.7rem", letterSpacing: "0.2em", color: "var(--gold)", textTransform: "uppercase", fontWeight: 700, marginBottom: "1rem" }}>✝ Communion of Saints ✝</p>
+        <p style={{ fontSize: "0.7rem", letterSpacing: "0.2em", color: "var(--gold)", textTransform: "uppercase", fontWeight: 700, marginBottom: "1rem" }}>Communion of Saints </p>
         <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "var(--white)", marginBottom: "1rem" }}>
           The Saints of the Church
         </h1>
@@ -139,7 +139,7 @@ export default async function SaintsPage({ searchParams }: PageProps) {
 
         {paginated.length === 0 ? (
           <div style={{ textAlign: "center", padding: "4rem 0" }}>
-            <p style={{ fontSize: "3rem", marginBottom: "1rem" }}>✝</p>
+            <p style={{ fontSize: "3rem", marginBottom: "1rem" }}></p>
             <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", marginBottom: "0.5rem" }}>No saints found</h2>
             <p style={{ color: "var(--text-muted)" }}>Try a different search or category.</p>
             <Link href="/saints" className="btn-sacred" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Clear filters</Link>
@@ -157,7 +157,7 @@ export default async function SaintsPage({ searchParams }: PageProps) {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       style={{ objectFit: "cover", opacity: 0.85 }}
-                      fallbackIcon="✝"
+                      fallbackIcon=""
                     />
                     {/* Category badge overlay */}
                     <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem" }}>

@@ -2,7 +2,7 @@
   {
     "category": "Essential Prayers",
     "slug": "essential",
-    "icon": "✝",
+    "icon": "",
     "description": "The foundational prayers every Catholic should know by heart.",
     "prayers": [
       {
@@ -72,7 +72,7 @@
   {
     "category": "Morning & Evening",
     "slug": "morning-evening",
-    "icon": "☀",
+    "icon": "",
     "description": "Begin and end each day in conversation with God.",
     "prayers": [
       {
@@ -198,7 +198,7 @@
   {
     "category": "Catholic Treasury",
     "slug": "treasury",
-    "icon": "🕊",
+    "icon": "",
     "description": "The spiritual riches of the Church: lists, works, virtues, and powerful intercessory prayers.",
     "prayers": [
       {

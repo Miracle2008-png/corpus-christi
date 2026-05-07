@@ -10,7 +10,7 @@ const library = [
   {
     category: "Church Fathers",
     color: "#1a3f5c",
-    icon: "✝",
+    icon: "",
     books: [
       {
         title: "Confessions",
@@ -250,7 +250,7 @@ export default function LibraryPage() {
                         onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
                         onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
                       >
-                        📖 Read Online
+                        Read Online
                       </a>
                       <a href={book.url} target="_blank" rel="noopener noreferrer"
                         style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", border: `1px solid ${cat.color}`, color: cat.color, padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none", transition: "all 0.2s", background: "transparent" }}

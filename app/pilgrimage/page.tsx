@@ -117,7 +117,7 @@ export default function PilgrimagePage() {
                 <div>
                   <div style={{ display: "flex", gap: "0.5rem", marginBottom: "0.5rem", flexWrap: "wrap" }}>
                     <span style={{ background: site.color, color: "#fff", fontSize: "0.65rem", fontWeight: 700, padding: "0.15rem 0.65rem", borderRadius: "999px", letterSpacing: "0.07em" }}>{site.type}</span>
-                    <span style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.55)", fontSize: "0.65rem", padding: "0.15rem 0.65rem", borderRadius: "999px" }}>👥 {site.pilgrims}</span>
+                    <span style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.55)", fontSize: "0.65rem", padding: "0.15rem 0.65rem", borderRadius: "999px" }}>� {site.pilgrims}</span>
                     {prayerDone.has(site.id) && (
                       <span style={{ background: "rgba(100,200,100,0.15)", color: "#6dc56d", fontSize: "0.65rem", fontWeight: 700, padding: "0.15rem 0.65rem", borderRadius: "999px" }}>✓ Visited</span>
                     )}
@@ -125,7 +125,7 @@ export default function PilgrimagePage() {
                   <h2 style={{ fontFamily: "var(--font-serif)", color: "#fff", fontSize: "clamp(1.3rem,3vw,1.8rem)", margin: "0 0 0.25rem" }}>
                     {site.emoji} {site.name}
                   </h2>
-                  <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", margin: 0 }}>📍 {site.location}</p>
+                  <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", margin: 0 }}>� {site.location}</p>
                 </div>
                 <button onClick={() => setSelected(null)} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.5)", padding: "0.4rem 0.85rem", borderRadius: "8px", cursor: "pointer", fontSize: "0.8rem" }}>
                   ✕ Close
@@ -147,7 +147,7 @@ export default function PilgrimagePage() {
 
               {/* Prayer */}
               <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "10px", padding: "1.25rem", marginBottom: "1.5rem" }}>
-                <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.75rem" }}>✝ Pilgrim Prayer</p>
+                <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Pilgrim Prayer</p>
                 <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.85, fontStyle: "italic", fontFamily: "var(--font-serif)", fontSize: "0.95rem", margin: 0 }}>
                   {site.prayer}
                 </p>
@@ -171,7 +171,7 @@ export default function PilgrimagePage() {
                     gap: "0.5rem",
                   }}
                 >
-                  ✝ Mark as Visited & Prayed
+                  Mark as Visited & Prayed
                 </button>
               ) : (
                 <p style={{ color: "#6dc56d", fontSize: "0.88rem", fontWeight: 600 }}>
@@ -210,7 +210,7 @@ export default function PilgrimagePage() {
                 )}
               </div>
               <h3 style={{ fontFamily: "var(--font-serif)", color: "#fff", fontSize: "0.97rem", margin: "0 0 0.25rem", lineHeight: 1.3 }}>{s.name}</h3>
-              <p style={{ color: "rgba(255,255,255,0.38)", fontSize: "0.75rem", margin: "0 0 0.35rem" }}>📍 {s.location}</p>
+              <p style={{ color: "rgba(255,255,255,0.38)", fontSize: "0.75rem", margin: "0 0 0.35rem" }}>� {s.location}</p>
               <span style={{ background: s.color + "33", color: s.color, fontSize: "0.63rem", fontWeight: 700, padding: "0.12rem 0.55rem", borderRadius: "999px", letterSpacing: "0.05em" }}>{s.type}</span>
             </button>
           ))}

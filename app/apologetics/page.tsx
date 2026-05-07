@@ -5,7 +5,7 @@ const categories = [
   {
     title: "About the Catholic Church",
     color: "#1a3f5c",
-    icon: "⛪",
+    icon: "",
     questions: [
       {
         q: "Did Jesus really found the Catholic Church?",
@@ -49,7 +49,7 @@ const categories = [
   {
     title: "The Sacraments",
     color: "#3f1a1a",
-    icon: "✝",
+    icon: "",
     questions: [
       {
         q: "Is the Eucharist really the Body and Blood of Christ?",

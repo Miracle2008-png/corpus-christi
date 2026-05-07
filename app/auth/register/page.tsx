@@ -43,7 +43,7 @@ export default function RegisterPage() {
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--navy)", padding: "2rem" }}>
       <div style={{ width: "100%", maxWidth: "420px" }}>
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-          <span style={{ fontSize: "3rem", color: "var(--gold)" }}>✝</span>
+          <span style={{ fontSize: "3rem", color: "var(--gold)" }}></span>
           <h1 style={{ fontFamily: "var(--font-serif)", color: "var(--white)", fontSize: "1.75rem", marginTop: "0.5rem" }}>Join Corpus Christi</h1>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>Create your free account</p>
         </div>
@@ -80,7 +80,7 @@ export default function RegisterPage() {
             ))}
 
             <button id="register-submit" type="submit" disabled={loading} className="btn-sacred" style={{ width: "100%", justifyContent: "center", opacity: loading ? 0.7 : 1, marginTop: "0.5rem" }}>
-              {loading ? "Creating account..." : "✝ Create Account"}
+              {loading ? "Creating account..." : "Create Account"}
             </button>
           </form>
 

@@ -93,7 +93,7 @@ export default function AIAssistantPage() {
         textAlign: "center",
         borderBottom: "1px solid rgba(201,168,76,0.2)",
       }}>
-        <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>✝</div>
+        <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}></div>
         <h1 style={{
           fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
           color: "var(--gold)", marginBottom: "0.5rem", letterSpacing: "0.02em",
@@ -171,8 +171,7 @@ export default function AIAssistantPage() {
                   display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: "0.9rem", color: "var(--gold)",
                 }}>
-                  ✝
-                </div>
+                                  </div>
               )}
               <div
                 style={{
@@ -214,7 +213,7 @@ export default function AIAssistantPage() {
                 border: "2px solid rgba(201,168,76,0.5)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: "0.9rem", color: "var(--gold)",
-              }}>✝</div>
+              }}></div>
               <div style={{
                 background: "white", border: "1px solid rgba(201,168,76,0.2)",
                 borderRadius: "18px 18px 18px 4px", padding: "1rem 1.5rem",
@@ -238,7 +237,7 @@ export default function AIAssistantPage() {
               background: "rgba(220,38,38,0.08)", border: "1px solid rgba(220,38,38,0.25)",
               borderRadius: "10px", padding: "1rem 1.25rem", color: "#991b1b", fontSize: "0.9rem",
             }}>
-              ⚠️ {error}
+              {error}
             </div>
           )}
           <div ref={messagesEndRef} />

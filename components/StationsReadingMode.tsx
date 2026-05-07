@@ -34,7 +34,7 @@ export default function StationsReadingMode({ stations }: { stations: Station[] 
         onMouseEnter={e => e.currentTarget.style.background = "rgba(201,168,76,0.1)"}
         onMouseLeave={e => e.currentTarget.style.background = "transparent"}
       >
-        <span style={{ fontSize: "1rem" }}>📖</span> Reading Mode
+        <span style={{ fontSize: "1rem" }}></span> Reading Mode
       </button>
     );
   }

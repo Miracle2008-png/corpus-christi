@@ -83,7 +83,7 @@ export default function MassFinderPage() {
               </>
             ) : (
               <>
-                📍 Find Mass Near Me
+                � Find Mass Near Me
               </>
             )}
           </button>
@@ -97,7 +97,7 @@ export default function MassFinderPage() {
 
         {error && (
           <div style={{ marginTop: "1rem", color: "#ff8080", fontSize: "0.88rem", maxWidth: "480px", margin: "1rem auto 0" }}>
-            ⚠ {error}
+            {error}
           </div>
         )}
 
@@ -133,7 +133,7 @@ export default function MassFinderPage() {
               marginBottom: "1.25rem",
               boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
             }}>
-              <span style={{ fontSize: "3rem" }}>⛪</span>
+              <span style={{ fontSize: "3rem" }}></span>
               <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", textAlign: "center", maxWidth: "300px" }}>
                 Click &ldquo;Find Mass Near Me&rdquo; above to see Catholic churches on the map.
               </p>
@@ -142,7 +142,7 @@ export default function MassFinderPage() {
                 disabled={loading}
                 style={{ background: "var(--navy)", color: "#fff", border: "none", padding: "0.65rem 1.5rem", borderRadius: "10px", fontSize: "0.9rem", fontWeight: 600, cursor: "pointer" }}
               >
-                📍 Use My Location
+                � Use My Location
               </button>
             </div>
           )}
@@ -161,7 +161,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "opacity 0.2s",
               }}
             >
-              🗺 Open in Google Maps
+              � Open in Google Maps
             </a>
               <a
               href="https://www.masstimes.org"
@@ -175,7 +175,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "opacity 0.2s",
               }}
             >
-              🕐 MassTimes.org
+              � MassTimes.org
             </a>
             <a
               href="https://www.catholicdirectory.org"
@@ -190,7 +190,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "all 0.2s",
               }}
             >
-              📖 Catholic Directory
+              Catholic Directory
             </a>
           </div>
         </div>
@@ -203,12 +203,12 @@ export default function MassFinderPage() {
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem" }}>
           {[
-            { icon: "🕯", title: "Vigil Mass", time: "Saturday evening", desc: "A Saturday evening Mass fulfills the Sunday obligation. Times vary but are typically 5:00–7:00 PM." },
-            { icon: "☀️", title: "Sunday Masses", time: "Sunday morning", desc: "Most parishes offer multiple Sunday Masses — typically 7:00, 9:00, 11:00 AM and sometimes an afternoon Mass." },
-            { icon: "✝", title: "Daily Mass", time: "Weekdays", desc: "Most parishes offer a weekday Mass, usually 7:00–8:00 AM or 12:00 PM. A beautiful habit to build." },
-            { icon: "🙏", title: "Confession", time: "Before Sunday Mass", desc: "Confession is typically offered 30–60 minutes before a Sunday Mass. Many parishes also offer it Saturday afternoon." },
+            { icon: "", title: "Vigil Mass", time: "Saturday evening", desc: "A Saturday evening Mass fulfills the Sunday obligation. Times vary but are typically 5:00–7:00 PM." },
+            { icon: "", title: "Sunday Masses", time: "Sunday morning", desc: "Most parishes offer multiple Sunday Masses — typically 7:00, 9:00, 11:00 AM and sometimes an afternoon Mass." },
+            { icon: "", title: "Daily Mass", time: "Weekdays", desc: "Most parishes offer a weekday Mass, usually 7:00–8:00 AM or 12:00 PM. A beautiful habit to build." },
+            { icon: "", title: "Confession", time: "Before Sunday Mass", desc: "Confession is typically offered 30–60 minutes before a Sunday Mass. Many parishes also offer it Saturday afternoon." },
             { icon: "⭐", title: "Holy Days of Obligation", time: "Varies", desc: "Catholics are required to attend Mass on Christmas, Immaculate Conception, Assumption, and other holy days of obligation." },
-            { icon: "🕍", title: "Traditional Latin Mass", time: "Varies by parish", desc: "The Traditional Latin Mass (Extraordinary Form) is offered in many dioceses. Check your diocese's TLM schedule." },
+            { icon: "�", title: "Traditional Latin Mass", time: "Varies by parish", desc: "The Traditional Latin Mass (Extraordinary Form) is offered in many dioceses. Check your diocese's TLM schedule." },
           ].map(item => (
             <div key={item.title} style={{
               background: "#fff",

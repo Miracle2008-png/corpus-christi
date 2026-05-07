@@ -153,7 +153,7 @@ export default async function MysteryDetailPage({ params }: { params: Promise<{ 
         {/* HOW TO PRAY THIS DECADE */}
         <div style={{ marginBottom: "2.5rem" }}>
           <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", color: "var(--gold)", marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <span>📿</span> How to Pray This Decade
+            <span></span> How to Pray This Decade
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {DECADE_PRAYERS.map((p) => (
@@ -196,7 +196,7 @@ export default async function MysteryDetailPage({ params }: { params: Promise<{ 
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", marginTop: "0.5rem" }}>Conclude your Rosary with the closing prayers below.</p>
             </div>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: "var(--gold)", marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <span>🕊️</span> Closing Prayers
+              <span></span> Closing Prayers
             </h2>
             {CLOSING_PRAYERS.map((p, i) => (
               <div key={i} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderLeft: "4px solid var(--gold)", borderRadius: "0 12px 12px 0", padding: "1.75rem", marginBottom: "1.25rem" }}>

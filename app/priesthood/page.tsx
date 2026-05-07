@@ -21,7 +21,7 @@ const orders = [
     title: "Priest",
     latin: "Presbyter / Sacerdos",
     level: 2,
-    icon: "✝",
+    icon: "",
     color: "#1A2744",
     description: "Priests receive the second degree of Holy Orders. They participate in the one priesthood of Christ through the bishop. Priests celebrate Mass, forgive sins in Confession, anoint the sick, and preach. A priest acts in persona Christi — in the person of Christ.",
     duties: ["Celebrate Holy Mass", "Administer Sacraments", "Hear Confessions", "Preach and teach", "Pastoral care of souls", "Visit the sick and dying"],

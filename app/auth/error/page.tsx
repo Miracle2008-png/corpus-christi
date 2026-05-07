@@ -24,7 +24,7 @@ function ErrorContent() {
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--navy)", padding: "2rem" }}>
       <div style={{ width: "100%", maxWidth: "420px", textAlign: "center" }}>
         <div style={{ marginBottom: "2rem" }}>
-          <span style={{ fontSize: "3.5rem" }}>⚠</span>
+          <span style={{ fontSize: "3.5rem" }}></span>
         </div>
 
         <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,168,76,0.2)", borderRadius: "20px", padding: "2.5rem" }}>
