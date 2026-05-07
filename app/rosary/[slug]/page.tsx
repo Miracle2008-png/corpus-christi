@@ -142,7 +142,7 @@ export default async function MysteryDetailPage({ params }: { params: Promise<{ 
             {mystery.desc}
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.2)", borderRadius: "10px", padding: "1rem 1.25rem" }}>
-            <span style={{ fontSize: "1.5rem" }}>🌿</span>
+            <span style={{ fontSize: "1.5rem" }}></span>
             <div>
               <p style={{ color: "var(--gold)", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.15rem" }}>Spiritual Fruit of This Mystery</p>
               <p style={{ color: "#fff", fontSize: "1.1rem", fontWeight: 700, fontFamily: "var(--font-serif)" }}>{mystery.fruit}</p>
@@ -192,7 +192,7 @@ export default async function MysteryDetailPage({ params }: { params: Promise<{ 
         {isLastInSet && (
           <div style={{ marginTop: "1rem" }}>
             <div style={{ textAlign: "center", marginBottom: "2rem", padding: "1.5rem", background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.2)", borderRadius: "12px" }}>
-              <p style={{ color: "var(--gold)", fontWeight: 700, fontSize: "1rem" }}>🎉 You have completed all 5 mysteries of the {setName}!</p>
+              <p style={{ color: "var(--gold)", fontWeight: 700, fontSize: "1rem" }}>You have completed all 5 mysteries of the {setName}!</p>
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem", marginTop: "0.5rem" }}>Conclude your Rosary with the closing prayers below.</p>
             </div>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: "var(--gold)", marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>

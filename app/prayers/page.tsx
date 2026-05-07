@@ -142,7 +142,7 @@ export default function PrayersPage() {
               {/* Note */}
               {(prayer as any).note && (
                 <div style={{ background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.2)", borderRadius: "10px", padding: "0.9rem 1.1rem", marginBottom: "2rem", display: "flex", gap: "0.75rem" }}>
-                  <span style={{ color: "var(--gold)", fontSize: "1rem", flexShrink: 0, marginTop: "0.1rem" }}>ℹ</span>
+                  <span style={{ color: "var(--gold)", fontSize: "1rem", flexShrink: 0, marginTop: "0.1rem" }}></span>
                   <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{(prayer as any).note}</p>
                 </div>
               )}

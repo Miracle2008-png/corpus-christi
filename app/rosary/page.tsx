@@ -76,7 +76,7 @@ export default function RosaryPage() {
               { n: 3, icon: "", title: "Our Father", desc: "Pray one Our Father on the first large bead." },
               { n: 4, icon: "", title: "3 Hail Marys", desc: "Pray 3 Hail Marys on the next 3 small beads for Faith, Hope & Charity." },
               { n: 5, icon: "", title: "Glory Be", desc: "Pray the Glory Be and the Fatima Prayer." },
-              { n: 6, icon: "🌟", title: "Announce Mystery 1", desc: "Name the first mystery, then pray Our Father on the large bead." },
+              { n: 6, icon: "", title: "Announce Mystery 1", desc: "Name the first mystery, then pray Our Father on the large bead." },
               { n: 7, icon: "", title: "10 Hail Marys", desc: "Pray 10 Hail Marys on the small beads, meditating on the mystery." },
               { n: 8, icon: "", title: "Glory Be + Fatima", desc: "End the decade with Glory Be and the Fatima Prayer." },
               { n: 9, icon: "�", title: "Repeat ×5", desc: "Repeat steps 6–8 for all 5 mysteries of the chosen set." },

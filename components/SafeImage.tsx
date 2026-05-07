@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon = "✝" }: any) {
+export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon = "" }: any) {
   const [error, setError] = useState(false);
 
   if (error || !src) {

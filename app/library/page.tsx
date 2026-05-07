@@ -257,7 +257,7 @@ export default function LibraryPage() {
                         onMouseEnter={e => { e.currentTarget.style.background = cat.color; e.currentTarget.style.color = "#fff"; }}
                         onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = cat.color; }}
                       >
-                        ⬇ Download
+                        Download
                       </a>
                     </div>
                   </div>

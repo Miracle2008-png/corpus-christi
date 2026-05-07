@@ -168,7 +168,7 @@ export default async function SaintsPage({ searchParams }: PageProps) {
                     {/* Feast day */}
                     {saint.feast_day && (
                       <div style={{ position: "absolute", bottom: "0.75rem", right: "0.75rem", background: "rgba(26,39,68,0.85)", borderRadius: "6px", padding: "0.2rem 0.6rem" }}>
-                        <span style={{ color: "var(--gold)", fontSize: "0.7rem", fontWeight: 600 }}>⚜ {saint.feast_day}</span>
+                        <span style={{ color: "var(--gold)", fontSize: "0.7rem", fontWeight: 600 }}>{saint.feast_day}</span>
                       </div>
                     )}
                   </div>

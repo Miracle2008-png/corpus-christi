@@ -40,7 +40,7 @@ const steps = [
   {
     step: 6,
     title: "Act of Contrition",
-    icon: "❤",
+    icon: "",
     content: "The priest will ask you to pray an Act of Contrition. Pray it sincerely, expressing your sorrow for sin and firm resolve to avoid sin and its occasions in the future.",
     detail: "Act of Contrition: 'O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of heaven, and the pains of hell; but most of all because they offend Thee, my God, Who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen.'",
   },
@@ -54,7 +54,7 @@ const steps = [
   {
     step: 8,
     title: "Thanksgiving",
-    icon: "🌟",
+    icon: "",
     content: "After Confession, spend time in prayer thanking God for His mercy. This is a powerful moment — you are in the state of grace. Offer a prayer of gratitude.",
     detail: "A good thanksgiving prayer: 'Lord Jesus, thank you for the gift of your mercy. I am grateful for the forgiveness I have received. Help me to sin no more and to avoid the near occasions of sin. Mary, help me to persevere. Amen.'",
   },

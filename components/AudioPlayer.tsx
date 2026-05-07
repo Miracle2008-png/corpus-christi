@@ -99,7 +99,7 @@ export default function AudioPlayer({ tracks, title = "Audio Guide" }: AudioPlay
       {/* Header */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-          <span style={{ color: "var(--gold)", fontSize: "1.1rem" }}>🎵</span>
+          <span style={{ color: "var(--gold)", fontSize: "1.1rem" }}></span>
           <div>
             <div style={{ fontSize: "0.7rem", color: "rgba(201,168,76,0.7)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
               {title}
@@ -145,7 +145,7 @@ export default function AudioPlayer({ tracks, title = "Audio Guide" }: AudioPlay
               color: currentTrack === 0 ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.7)",
               fontSize: "1.1rem", padding: "0.25rem",
             }}
-          >⏮</button>
+          ></button>
           <button
             onClick={togglePlay}
             style={{
@@ -158,7 +158,7 @@ export default function AudioPlayer({ tracks, title = "Audio Guide" }: AudioPlay
             onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
-            {isPlaying ? "⏸" : "▶"}
+            {isPlaying ? "" : ""}
           </button>
           <button
             onClick={() => skipTrack(1)}
@@ -168,7 +168,7 @@ export default function AudioPlayer({ tracks, title = "Audio Guide" }: AudioPlay
               color: currentTrack === tracks.length - 1 ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.7)",
               fontSize: "1.1rem", padding: "0.25rem",
             }}
-          >⏭</button>
+          ></button>
         </div>
         <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)" }}>
           {currentTrack + 1} / {tracks.length}
@@ -193,7 +193,7 @@ export default function AudioPlayer({ tracks, title = "Audio Guide" }: AudioPlay
               onMouseLeave={(e) => { if (idx !== currentTrack) e.currentTarget.style.background = "transparent"; }}
             >
               <span style={{ fontSize: "0.8rem", color: "rgba(201,168,76,0.7)", minWidth: "1.5rem" }}>
-                {idx === currentTrack && isPlaying ? "▶" : idx + 1}
+                {idx === currentTrack && isPlaying ? "" : idx + 1}
               </span>
               <span style={{ fontSize: "0.9rem", color: idx === currentTrack ? "var(--gold)" : "rgba(255,255,255,0.8)" }}>
                 {track.label}

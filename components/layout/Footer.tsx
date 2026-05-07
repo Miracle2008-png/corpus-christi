@@ -101,7 +101,7 @@ export default function Footer() {
         {/* Bottom */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.5rem 0", flexWrap: "wrap", gap: "1rem" }}>
           <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.4)" }}>
-            © {year} Corpus Christi Ministry Platform. Built for God&apos;s glory. All content for educational use.
+            {year} Corpus Christi Ministry Platform. Built for God&apos;s glory. All content for educational use.
           </p>
           <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.3)" }}>
             Images from Wikimedia Commons · Unsplash · Pexels (CC licensed)

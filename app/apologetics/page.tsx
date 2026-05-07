@@ -66,7 +66,7 @@ const categories = [
   {
     title: "Faith & Reason",
     color: "#1a3f1a",
-    icon: "⚖",
+    icon: "",
     questions: [
       {
         q: "Can a Catholic believe in science?",
