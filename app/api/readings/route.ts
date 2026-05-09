@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     await connectDB();
     const reading = await Reading.findOne({ date }).lean();
     
-    if (reading && reading.gospel?.reference && !reading.gospel?.text) {
+    if (reading && reading.gospel?.reference && (!reading.gospel?.text || reading.gospel.text.trim() === "")) {
       // Document exists but texts are empty (seeded citations)
       try {
         const fetchBible = async (ref: string) => {
