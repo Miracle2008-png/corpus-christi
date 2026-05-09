@@ -5,7 +5,7 @@
     "reign": "498–514",
     "nat": "Sardinian",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Pope_Symmachus_%E2%80%93_apse_mosaic_of_Sant%27Agnese_fuori_le_mura.png",
     "note": "His election was immediately contested by Antipope Laurentius — the Laurentian Schism lasted until 506. He built or restored many Roman churches and was the first pope to wear the pallium. Defended by Theodoric the Great."
   },
   {
@@ -14,7 +14,7 @@
     "reign": "514–523",
     "nat": "Italian",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tafel_paepste.jpg/500px-Tafel_paepste.jpg",
     "note": "Ended the Acacian Schism (519) — a 35-year split between Rome and Constantinople. The 'Formula of Hormisdas,' signed by the Eastern Patriarch and over 2,500 bishops, remains one of the most significant affirmations of Roman primacy in history. Father of Pope Silverius."
   },
   {
@@ -23,7 +23,7 @@
     "reign": "523–526",
     "nat": "Italian (Tuscany)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Busto_relic%C3%A1rio_do_Papa_S%C3%A3o_Jo%C3%A3o_I.jpg/500px-Busto_relic%C3%A1rio_do_Papa_S%C3%A3o_Jo%C3%A3o_I.jpg",
     "note": "First pope to travel to Constantinople. Sent by Theodoric the Gothic king to negotiate with Emperor Justin. Crowned Justin in the Hagia Sophia. On his return, Theodoric imprisoned him; he died in prison — the first pope to die in captivity."
   },
   {
@@ -32,7 +32,7 @@
     "reign": "526–530",
     "nat": "Italian (Samnium)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mosaic_of_Felix_IV_%28III%29_in_Santi_Cosma_e_Damiano%2C_Rome%2C_Italy_%28527%E2%80%93530%29.jpg",
     "note": "Appointed directly by Theodoric the Great, breaking from election norms. Built the Church of SS. Cosmas and Damian in Rome — one of the finest early Christian mosaics survives there. Designated his successor before death, which caused a disputed election."
   },
   {
@@ -68,7 +68,7 @@
     "reign": "536–537",
     "nat": "Italian (Campania)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Orazio_samacchini%2C_san_giovannino_in_gloria_tra_i_ss._caterina_d%27a._e_silverio_papa%2C_1570-75_ca._01%28cropped%29.jpg",
     "note": "Son of Pope Hormisdas. The Empress Theodora had him deposed and exiled to the island of Ponza, where he died from mistreatment — possibly murdered. He is venerated as a martyr. His successor Vigilius had conspired with Theodora for the papal throne."
   },
   {
@@ -113,7 +113,7 @@
     "reign": "579–590",
     "nat": "Roman (Gothic descent)",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/San_Lorenzo_fuori_le_Mura_-_54018508984.jpg/500px-San_Lorenzo_fuori_le_Mura_-_54018508984.jpg",
     "note": "First pope consecrated without imperial confirmation — a step toward papal independence. Sent the young deacon Gregory (the future Gregory the Great) to Constantinople as his representative. Died of plague during a catastrophic flooding of the Tiber."
   },
   {
@@ -149,7 +149,7 @@
     "reign": "608–615",
     "nat": "Italian (Valeria)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Papa_Bonifacio_IV.png",
     "note": "Converted the Pantheon — the great pagan temple in Rome — into a Christian church dedicated to Mary and All Martyrs. It remains in use to this day as the Church of Santa Maria ad Martyres, the best-preserved ancient building in the world."
   },
   {
@@ -176,7 +176,7 @@
     "reign": "625–638",
     "nat": "Italian (Campania)",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pope_Honorius_I_%E2%80%93_Apse_mosaic_of_Sant%27Agnese_fuori_le_mura_%E2%80%93_Rome_%282016%29.jpg",
     "note": "A deeply controversial figure. His letters to the Patriarch of Constantinople appeared to endorse the Monothelite heresy (that Christ had only one will). After his death, the Third Council of Constantinople (681) formally condemned him as a heretic — the only pope condemned by an ecumenical council. The episode became a major argument in debates about papal infallibility at Vatican I."
   },
   {
@@ -194,7 +194,7 @@
     "reign": "640–642",
     "nat": "Dalmatian",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Papa_Giovanni_IV.png",
     "note": "A Dalmatian, he immediately defended his homeland by ransoming Christian captives from the Avars. Condemned Monothelitism. Defended Honorius I by claiming his predecessor's letters had been misinterpreted."
   },
   {
@@ -203,7 +203,7 @@
     "reign": "642–649",
     "nat": "Greek (Jerusalem)",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/0/02/20_-_s_M_Liberatrice_mosaici_e_stemmi_-_part_re_P1040942%28cropped%29.jpg",
     "note": "A Greek from Jerusalem, continuing the Eastern influence on the papacy. Excommunicated the Monothelite Patriarch of Constantinople. Strong defender of Chalcedonian orthodoxy."
   },
   {
@@ -212,7 +212,7 @@
     "reign": "649–655",
     "nat": "Italian (Umbria)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/14_Chiesa_di_Santa_Maria_della_Consolazione_%28Todi%29%2C_el_papa_Mart%C3%AD_I%2C_de_Carlo_Laurenti.jpg/500px-14_Chiesa_di_Santa_Maria_della_Consolazione_%28Todi%29%2C_el_papa_Mart%C3%AD_I%2C_de_Carlo_Laurenti.jpg",
     "note": "Convened the Lateran Council (649), which condemned Monothelitism in defiance of Emperor Constans II. The Emperor had him arrested, brought in chains to Constantinople, publicly humiliated, exiled to Crimea, and left to starve. He died in 655 from mistreatment — the last pope venerated as a martyr."
   },
   {
@@ -221,7 +221,7 @@
     "reign": "654–657",
     "nat": "Roman",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/%C3%89glise_du_Val-Dieu_080.jpg/500px-%C3%89glise_du_Val-Dieu_080.jpg",
     "note": "Elected while Martin I was still alive in exile. A gentle, universally loved figure. Refused to accept a Monothelite compromise from Constantinople. Died peacefully."
   },
   {
@@ -239,7 +239,7 @@
     "reign": "672–676",
     "nat": "Roman",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/29/77-Adeodatus_II.jpg",
     "note": "A Benedictine monk — the first pope definitely known to come from monastic life, a pattern that would dominate the medieval papacy. Charitable and learned. Natural death."
   },
   {
@@ -257,7 +257,7 @@
     "reign": "678–681",
     "nat": "Greek (Sicily)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Pope_Agatho_%28Menologion_of_Basil_II%29_-_cropped.jpg/500px-Pope_Agatho_%28Menologion_of_Basil_II%29_-_cropped.jpg",
     "note": "Prepared the Third Council of Constantinople (681), which definitively condemned Monothelitism and the memory of Honorius I. His synodal letter was read at the Council as doctrinally authoritative — a strong assertion of papal teaching authority. Reportedly 100 years old at his election."
   },
   {
@@ -284,7 +284,7 @@
     "reign": "685–686",
     "nat": "Syrian",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rivista_italiana_di_numismatica_1891_p_189.jpg/500px-Rivista_italiana_di_numismatica_1891_p_189.jpg",
     "note": "First Syrian pope. Elected by popular acclamation. Brief pontificate of approximately 11 months. The Syrian and Greek influence on the 7th century papacy was profound."
   },
   {
@@ -302,7 +302,7 @@
     "reign": "687–701",
     "nat": "Syrian (Antioch)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Workshop_of_Rogier_van_der_Weyden_%28Netherlandish_-_The_Dream_of_Pope_Sergius_-_Google_Art_Project.jpg/500px-Workshop_of_Rogier_van_der_Weyden_%28Netherlandish_-_The_Dream_of_Pope_Sergius_-_Google_Art_Project.jpg",
     "note": "Refused to sign the Quinisext Council's canons (which contradicted Roman practice) despite Emperor Justinian II sending soldiers to arrest him. The Roman populace defended him and the soldiers fled. He added the Agnus Dei to the Mass and introduced four Marian feasts into the Roman calendar. Baptised the pagan King of the Saxons, Cædwalla."
   },
   {
@@ -320,7 +320,7 @@
     "reign": "705–707",
     "nat": "Greek",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Byzantinischer_Mosaizist_um_705_002.jpg/500px-Byzantinischer_Mosaizist_um_705_002.jpg",
     "note": "Son of a Byzantine official. An accomplished builder; commissioned important mosaics in Rome (some surviving in Santa Maria Antiqua). When Emperor Justinian II sent him the Quinisext Council canons for a second review, he returned them unsigned without comment — a diplomatic non-answer."
   },
   {
@@ -347,7 +347,7 @@
     "reign": "715–731",
     "nat": "Roman",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/SsigregoryIIpope.jpg/500px-SsigregoryIIpope.jpg",
     "note": "A decisive pope who opposed the Iconoclast heresy of Emperor Leo III, who ordered the destruction of religious images. Gregory refused, rallied the Western church against the Emperor, and effectively ended Byzantine control over papal elections by relying on Lombard protection. Supported St. Boniface's mission to the Germans."
   },
   {
@@ -356,7 +356,7 @@
     "reign": "731–741",
     "nat": "Syrian",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/f/f5/178-7866_IMG_-_Gregorius_III_AV.png",
     "note": "Last non-European pope until John Paul II (1978). Convened a synod that formally condemned Iconoclasm. When Emperor Leo III retaliated by seizing papal properties in Sicily and southern Italy, Gregory turned to the Frankish leader Charles Martel for protection — beginning the fateful alliance between the papacy and the Franks."
   },
   {
@@ -365,7 +365,7 @@
     "reign": "741–752",
     "nat": "Greek (Calabria)",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Et%C3%A0_di_papa_Zaccaria%2C_cappella_del_primicerius_Teodoro%2C_Madonna_in_trono_con_Theodoto_e_la_moglie%2C_741-752_%2809%29.jpg/500px-Et%C3%A0_di_papa_Zaccaria%2C_cappella_del_primicerius_Teodoro%2C_Madonna_in_trono_con_Theodoto_e_la_moglie%2C_741-752_%2809%29.jpg",
     "note": "Last Greek pope. Skilled diplomat — negotiated multiple truces with the Lombards, sparing Rome from repeated sieges. Approved the deposition of the last Merovingian king and the anointing of Pepin the Short as King of the Franks — a momentous decision that created the Carolingian dynasty and reshaped European history."
   },
   {
@@ -374,7 +374,7 @@
     "reign": "752 (3 days)",
     "nat": "Roman",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Pape_Etienne_II_%28cropped%29.jpg",
     "note": "Elected pope but died of a stroke three days later before being consecrated bishop. Whether he counts as a true pope has been debated for centuries — he appears in some historical lists and not others. His brief existence created the numbering confusion between Stephen II and Stephen III."
   },
   {
@@ -392,7 +392,7 @@
     "reign": "757–768",
     "nat": "Roman",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/SCeau_Paul_I_pape_17109_%28cropped%29.jpg/500px-SCeau_Paul_I_pape_17109_%28cropped%29.jpg",
     "note": "Brother of Stephen III. The first pope to be elected without any imperial involvement. Maintained the Frankish alliance. Faced continued Lombard aggression. Known for personal piety and charity."
   },
   {
@@ -410,7 +410,7 @@
     "reign": "772–795",
     "nat": "Roman",
     "saint": false,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Zecca_di_roma%2C_denaro_di_adriano_I%2C_772-795%2C_in_argento_%28bibl._apostolica_vaticana%29.jpg/500px-Zecca_di_roma%2C_denaro_di_adriano_I%2C_772-795%2C_in_argento_%28bibl._apostolica_vaticana%29.jpg",
     "note": "Twenty-three year pontificate — one of the longest in history at that time. Built a close alliance with Charlemagne, who defeated the Lombards and confirmed the Papal States. Together they shaped medieval Christendom. Charlemagne wept openly when he heard of Adrian's death."
   },
   {
@@ -419,7 +419,7 @@
     "reign": "795–816",
     "nat": "Roman",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/7/75/Pope_Leo_III_portrait_%E2%80%93_Triclinium_Leoninum.jpg",
     "note": "Crowned Charlemagne Holy Roman Emperor on Christmas Day, 800 — in the basilica of St. Peter's. This coronation created the political framework of Christian Europe for the next millennium. Leo had been violently attacked and mutilated by enemies in Rome; Charlemagne restored him to the papal throne."
   },
   {
@@ -437,7 +437,7 @@
     "reign": "817–824",
     "nat": "Roman",
     "saint": true,
-    "img": null,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/0/00/Pope_Paschalis_I._in_apsis_mosaic_of_Santa_Prassede_in_Rome.gif",
     "note": "Built several important churches in Rome and decorated them with mosaics, many of which survive. Sheltered monks fleeing Byzantine Iconoclasm. His reign was troubled by violent factions in Rome."
   },
   {
