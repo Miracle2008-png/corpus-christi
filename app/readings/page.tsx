@@ -97,7 +97,7 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
 
       {/* Readings */}
       <div className="container-sacred" style={{ maxWidth: "760px", padding: "3rem 1.5rem" }}>
-        {readingSections.map((section, i) => (
+        {readingSections.filter(s => s.ref).map((section, i) => (
           <div key={i} style={{
             background: "var(--white)",
             border: "1px solid rgba(201,168,76,0.2)",

@@ -41,16 +41,20 @@ for (let month = 0; month < 12; month++) {
     let gsBook = booksGospel[gsIndex];
     if (gsChapter > maxGospel[gsBook]) { gsIndex = (gsIndex + 1) % booksGospel.length; gsBook = booksGospel[gsIndex]; gsChapter = 1; }
 
+    const isSunday = new Date(dateStr).getDay() === 0;
+
     data.push({
       date: dateStr,
       liturgical_season: season,
       old_testament: { reference: `${otBook} ${otChapter}:1-5` },
       psalm: { reference: `Psalm ${Math.floor(Math.random() * 150) + 1}:1-3`, response: "The Lord is my shepherd, there is nothing I shall want." },
-      new_testament: { reference: `${ntBook} ${ntChapter}:1-4` },
+      ...(isSunday && { new_testament: { reference: `${ntBook} ${ntChapter}:1-4` } }),
       gospel: { reference: `${gsBook} ${gsChapter}:1-8` }
     });
 
-    otChapter++; ntChapter++; gsChapter++;
+    otChapter++; 
+    if (isSunday) ntChapter++; 
+    gsChapter++;
   }
 }
 
