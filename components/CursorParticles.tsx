@@ -22,15 +22,20 @@ export default function CursorParticles() {
     
     window.addEventListener('resize', resizeCanvas);
 
+    let lastSpawn = 0;
     const addParticle = (x: number, y: number) => {
-      for (let i = 0; i < 3; i++) {
+      const now = performance.now();
+      if (now - lastSpawn < 30) return; // Limit to roughly 30 spawns per second max
+      lastSpawn = now;
+
+      for (let i = 0; i < 2; i++) { // Reduced from 3 to 2 for better performance
         particles.push({
           x: x + (Math.random() - 0.5) * 10,
           y: y + (Math.random() - 0.5) * 10,
-          r: Math.random() * 4 + 2,
+          r: Math.random() * 3 + 1, // Slightly smaller
           color: colors[Math.floor(Math.random() * colors.length)],
           vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2 + 1, // Fall down slightly
+          vy: (Math.random() - 0.5) * 2 + 1, 
           life: 1.0
         });
       }
@@ -43,7 +48,7 @@ export default function CursorParticles() {
       }
     };
     
-    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
     window.addEventListener('touchmove', onTouchMove, { passive: true });
 
     let animationId: number;

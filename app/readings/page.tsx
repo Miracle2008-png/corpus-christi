@@ -3,6 +3,9 @@ import Link from "next/link";
 import AudioReader from "@/components/AudioReader";
 import ReadingMode from "@/components/ReadingMode";
 
+import fs from "fs";
+import path from "path";
+
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
@@ -12,12 +15,13 @@ export const metadata: Metadata = {
 
 async function getReading(date: string) {
   try {
-    const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/readings?date=${date}`, {
-      cache: "no-store",
-    });
-    if (res.ok) return res.json();
-  } catch {}
+    const filePath = path.join(process.cwd(), "data", "lectionary-2026-full.json");
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const reading = data.find((d: any) => d.date === date);
+    if (reading) return reading;
+  } catch (err) {
+    console.error("Error reading lectionary data:", err);
+  }
   // Fallback
   return {
     date,
@@ -51,10 +55,10 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
   });
 
   const readingSections = [
-    { label: "First Reading", ref: reading.old_testament?.reference, text: reading.old_testament?.text, icon: "+" },
+    { label: "First Reading", ref: reading.old_testament?.reference, text: reading.old_testament?.text, icon: "✦" },
     { label: "Responsorial Psalm", ref: reading.psalm?.reference, text: reading.psalm?.text, icon: "✦", response: reading.psalm?.response },
     { label: "Second Reading", ref: reading.new_testament?.reference, text: reading.new_testament?.text, icon: "✦" },
-    { label: "Gospel", ref: reading.gospel?.reference, text: reading.gospel?.text, icon: "+" },
+    { label: "Gospel", ref: reading.gospel?.reference, text: reading.gospel?.text, icon: "✦" },
   ];
 
   return (
@@ -123,9 +127,9 @@ export default async function ReadingsPage({ searchParams }: PageProps) {
                 Response: &ldquo;{section.response}&rdquo;
               </p>
             )}
-            <p style={{ fontFamily: "var(--font-serif)", lineHeight: 1.9, color: "var(--text-primary)", fontSize: "1rem" }}>
+            <div style={{ fontFamily: "var(--font-serif)", lineHeight: 1.9, color: "var(--text-primary)", fontSize: "1rem", whiteSpace: "pre-wrap" }}>
               {section.text}
-            </p>
+            </div>
           </div>
         ))}
 
