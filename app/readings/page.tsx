@@ -12,7 +12,7 @@ async function getReading(date: string) {
   try {
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
     const res = await fetch(`${baseUrl}/api/readings?date=${date}`, {
-      next: { revalidate: 86400 }, // cache 24h
+      next: { revalidate: 60 }, // cache 1 minute to prevent stale blank readings
     });
     if (res.ok) return res.json();
   } catch {}
