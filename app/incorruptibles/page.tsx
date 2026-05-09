@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SafeImage from "@/components/SafeImage";
 
 export const metadata: Metadata = {
   title: "Incorruptible Saints — Bodies That Defy Decay",
@@ -153,10 +154,11 @@ export default function IncorruptiblesPage() {
               {/* Image */}
               <div style={{
                 height: "220px",
-                background: `url(${saint.image}) center/cover no-repeat`,
+                background: "var(--navy)",
                 position: "relative",
               }}>
-                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(transparent, rgba(0,0,0,0.7))", padding: "1rem 1.25rem 0.75rem" }}>
+                <SafeImage src={saint.image} alt={saint.name} fill={true} style={{ objectPosition: "top" }} />
+                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "linear-gradient(transparent, rgba(0,0,0,0.7))", padding: "1rem 1.25rem 0.75rem", zIndex: 2 }}>
                   <span style={{ background: "rgba(201,168,76,0.9)", color: "var(--navy-dark)", fontSize: "0.65rem", fontWeight: 700, padding: "0.15rem 0.6rem", borderRadius: "999px" }}>
                     Feast: {saint.feast}
                   </span>

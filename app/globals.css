@@ -251,6 +251,15 @@ h1, h2, h3, .heading-serif {
   color: var(--navy-dark);
 }
 
+.hover-opacity:hover {
+  opacity: 0.85;
+}
+
+.library-download-btn:hover {
+  background: var(--cat-color) !important;
+  color: #fff !important;
+}
+
 /* Large CTA Buttons */
 .btn-sacred-lg {
   padding: 0.9rem 2.25rem !important;

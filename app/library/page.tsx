@@ -245,17 +245,13 @@ export default function LibraryPage() {
                       &ldquo;{book.quote}&rdquo;
                     </blockquote>
                     <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                      <a href={book.readUrl} target="_blank" rel="noopener noreferrer"
+                      <a href={book.readUrl} target="_blank" rel="noopener noreferrer" className="hover-opacity"
                         style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: cat.color, color: "#fff", padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none", transition: "opacity 0.2s" }}
-                        onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
-                        onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
                       >
                         Read Online
                       </a>
-                      <a href={book.url} target="_blank" rel="noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", border: `1px solid ${cat.color}`, color: cat.color, padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none", transition: "all 0.2s", background: "transparent" }}
-                        onMouseEnter={e => { e.currentTarget.style.background = cat.color; e.currentTarget.style.color = "#fff"; }}
-                        onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = cat.color; }}
+                      <a href={book.url} target="_blank" rel="noopener noreferrer" className="library-download-btn"
+                        style={{ "--cat-color": cat.color, display: "inline-flex", alignItems: "center", gap: "0.4rem", border: `1px solid ${cat.color}`, color: cat.color, padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none", transition: "all 0.2s", background: "transparent" } as React.CSSProperties}
                       >
                         Download
                       </a>
