@@ -1,41 +1,61 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { signOut, useSession } from "next-auth/react";
 
-const navLinks = [
-  { href: "/saints", label: "Saints" },
-  { href: "/popes", label: "Popes" },
-  { href: "/sacraments", label: "Sacraments" },
-  { href: "/stations", label: "Stations" },
-  { href: "/rosary", label: "Rosary" },
-  { href: "/readings", label: "Readings" },
-  { href: "/calendar", label: "Calendar" },
+const navGroups = [
   {
-    label: "More",
+    label: "Pray",
+    icon: "✦",
     children: [
-      { href: "/history", label: "Church History" },
-      { href: "/priesthood", label: "Priesthood" },
-      { href: "/miracles", label: "Miracles" },
-      { href: "/mass", label: "Mass & Confession" },
-      { href: "/bible/passages", label: "Bible Passages" },
-      { href: "/bible/stories", label: "Bible Stories" },
-      { href: "/intentions", label: "Prayer Intentions Wall" },
-      { href: "/prayers", label: "Prayers Library" },
-      { href: "/novenas", label: "Novenas" },
-      { href: "/confession", label: "Confession Guide" },
-      { href: "/marian", label: "Marian Devotions" },
-      { href: "/catechism", label: "Catechism" },
-      { href: "/apologetics", label: "Apologetics" },
-      { href: "/saint-of-the-day", label: "Saint of the Day" },
-      { href: "/virtues", label: "Virtues & Beatitudes" },
-      { href: "/encyclicals", label: "Papal Encyclicals" },
-      { href: "/library", label: "� Catholic Library" },
-      { href: "/liturgy", label: "Liturgy of the Hours" },
-      { href: "/pilgrimage", label: "✈ Virtual Pilgrimage" },
-      { href: "/mass-finder", label: "� Find Mass Near Me" },
-      { href: "/ai", label: "AI Assistant" },
+      { href: "/readings", label: "Daily Readings", desc: "Today's Scripture" },
+      { href: "/rosary", label: "Holy Rosary", desc: "Guided mysteries" },
+      { href: "/stations", label: "Stations of the Cross", desc: "Way of the Cross" },
+      { href: "/novenas", label: "Novenas", desc: "9-day devotions" },
+      { href: "/prayers", label: "Prayers Library", desc: "Classic Catholic prayers" },
+      { href: "/liturgy", label: "Liturgy of the Hours", desc: "Divine Office" },
+      { href: "/intentions", label: "Prayer Intentions", desc: "Submit & pray together" },
+    ],
+  },
+  {
+    label: "Learn",
+    icon: "✦",
+    children: [
+      { href: "/saints", label: "Saints", desc: "Lives & miracles" },
+      { href: "/popes", label: "Popes", desc: "St. Peter to today" },
+      { href: "/sacraments", label: "Sacraments", desc: "The 7 sacraments" },
+      { href: "/history", label: "Church History", desc: "2,000 years" },
+      { href: "/priesthood", label: "Holy Orders", desc: "The sacred hierarchy" },
+      { href: "/catechism", label: "Catechism", desc: "What the Church teaches" },
+      { href: "/apologetics", label: "Apologetics", desc: "Defend the faith" },
+      { href: "/encyclicals", label: "Papal Encyclicals", desc: "Voice of Peter" },
+    ],
+  },
+  {
+    label: "Explore",
+    icon: "✦",
+    children: [
+      { href: "/bible/passages", label: "Bible Passages", desc: "Key Scripture" },
+      { href: "/bible/stories", label: "Bible Stories", desc: "Narrative retellings" },
+      { href: "/miracles", label: "Miracles", desc: "Signs & wonders" },
+      { href: "/incorruptibles", label: "Incorruptible Saints", desc: "Bodies that defy decay" },
+      { href: "/marian", label: "Marian Devotions", desc: "Our Lady" },
+      { href: "/library", label: "Catholic Library", desc: "Free classic texts" },
+      { href: "/pilgrimage", label: "Virtual Pilgrimage", desc: "Holy sites worldwide" },
+    ],
+  },
+  {
+    label: "Community",
+    icon: "✦",
+    children: [
+      { href: "/mass", label: "Mass & Confession", desc: "Liturgical guide" },
+      { href: "/confession", label: "Confession Guide", desc: "Examine your conscience" },
+      { href: "/mass-finder", label: "Find Mass Near Me", desc: "Locate a parish" },
+      { href: "/calendar", label: "Liturgical Calendar", desc: "Seasons & feasts" },
+      { href: "/saint-of-the-day", label: "Saint of the Day", desc: "Today's patron" },
+      { href: "/virtues", label: "Virtues & Beatitudes", desc: "Path to holiness" },
+      { href: "/ai", label: "AI Assistant", desc: "Ask about the faith" },
     ],
   },
 ];
@@ -43,17 +63,39 @@ const navLinks = [
 export default function Navbar() {
   const { data: session } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [authDropdownOpen, setAuthDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
   const isAdmin = !!(session?.user?.email && ADMIN_EMAILS.includes(session.user.email));
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.nav-dropdown-container')) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, []);
+
+  const handleDropdownEnter = (label: string) => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setOpenDropdown(label);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 200);
+  };
 
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="container-sacred" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 1.5rem", height: "64px" }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.75rem", flexShrink: 0 }}>
           <span style={{ fontSize: "1.75rem", lineHeight: 1 }}></span>
           <div>
             <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 700, color: "var(--gold)", lineHeight: 1.1, letterSpacing: "0.02em" }}>
@@ -66,72 +108,104 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
-          {navLinks.map((link) =>
-            link.children ? (
-              <div key={link.label} style={{ position: "relative" }}>
-                <button
-                  id="more-menu-btn"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                  style={{
-                    background: "none", border: "none", cursor: "pointer",
-                    color: "rgba(255,255,255,0.8)", fontSize: "0.875rem",
-                    padding: "0.5rem 0.75rem", borderRadius: "6px",
-                    display: "flex", alignItems: "center", gap: "0.3rem",
-                    transition: "color 0.2s",
-                  }}
-                >
-                  {link.label}
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                    <path d="M6 8L1 3h10z"/>
-                  </svg>
-                </button>
-                {dropdownOpen && (
-                  <div style={{
-                    position: "absolute", top: "100%", right: 0,
-                    background: "var(--navy-dark)", border: "1px solid rgba(201,168,76,0.3)",
-                    borderRadius: "10px", padding: "0.5rem", minWidth: "180px",
-                    boxShadow: "0 8px 32px rgba(0,0,0,0.4)", zIndex: 200,
-                  }}>
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setDropdownOpen(false)}
-                        style={{
-                          display: "block", padding: "0.6rem 1rem",
-                          color: "rgba(255,255,255,0.85)", textDecoration: "none",
-                          fontSize: "0.875rem", borderRadius: "6px",
-                          transition: "background 0.15s",
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(201,168,76,0.15)")}
-                        onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href!}
+        <div className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "0.15rem" }}>
+          {/* Quick links */}
+          <Link
+            href="/readings"
+            className="nav-quick-link"
+            style={{
+              color: "rgba(255,255,255,0.85)", textDecoration: "none",
+              fontSize: "0.82rem", padding: "0.45rem 0.7rem",
+              borderRadius: "6px", transition: "color 0.2s, background 0.2s",
+              fontWeight: 600,
+            }}
+          >
+            Readings
+          </Link>
+          <Link
+            href="/rosary"
+            className="nav-quick-link"
+            style={{
+              color: "rgba(255,255,255,0.85)", textDecoration: "none",
+              fontSize: "0.82rem", padding: "0.45rem 0.7rem",
+              borderRadius: "6px", transition: "color 0.2s, background 0.2s",
+              fontWeight: 600,
+            }}
+          >
+            Rosary
+          </Link>
+
+          {/* Category dropdowns */}
+          {navGroups.map((group) => (
+            <div
+              key={group.label}
+              className="nav-dropdown-container"
+              style={{ position: "relative" }}
+              onMouseEnter={() => handleDropdownEnter(group.label)}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <button
+                onClick={() => setOpenDropdown(openDropdown === group.label ? null : group.label)}
                 style={{
-                  color: "rgba(255,255,255,0.8)", textDecoration: "none",
-                  fontSize: "0.875rem", padding: "0.5rem 0.75rem",
-                  borderRadius: "6px", transition: "color 0.2s, background 0.2s",
+                  background: openDropdown === group.label ? "rgba(201,168,76,0.12)" : "none",
+                  border: "none", cursor: "pointer",
+                  color: openDropdown === group.label ? "var(--gold)" : "rgba(255,255,255,0.75)",
+                  fontSize: "0.82rem",
+                  padding: "0.45rem 0.65rem", borderRadius: "6px",
+                  display: "flex", alignItems: "center", gap: "0.3rem",
+                  transition: "all 0.2s", fontWeight: 500,
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--gold)"; e.currentTarget.style.background = "rgba(201,168,76,0.1)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.8)"; e.currentTarget.style.background = "transparent"; }}
               >
-                {link.label}
-              </Link>
-            )
-          )}
+                {group.label}
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="currentColor" style={{ opacity: 0.6, transition: "transform 0.2s", transform: openDropdown === group.label ? "rotate(180deg)" : "none" }}>
+                  <path d="M6 8L1 3h10z"/>
+                </svg>
+              </button>
+
+              {openDropdown === group.label && (
+                <div style={{
+                  position: "absolute", top: "100%", left: "50%", transform: "translateX(-50%)",
+                  background: "var(--navy-dark)", border: "1px solid rgba(201,168,76,0.25)",
+                  borderRadius: "12px", padding: "0.5rem", minWidth: "260px",
+                  boxShadow: "0 12px 40px rgba(0,0,0,0.5)", zIndex: 200,
+                  marginTop: "0.25rem",
+                }}>
+                  {/* Invisible bridge */}
+                  <div style={{ position: "absolute", top: "-10px", left: 0, right: 0, height: "10px" }} />
+                  
+                  <div style={{ padding: "0.5rem 0.75rem 0.4rem", borderBottom: "1px solid rgba(201,168,76,0.15)", marginBottom: "0.25rem" }}>
+                    <span style={{ fontSize: "0.65rem", fontWeight: 700, color: "var(--gold)", letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                      {group.icon} {group.label}
+                    </span>
+                  </div>
+
+                  {group.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => setOpenDropdown(null)}
+                      className="nav-dropdown-item"
+                      style={{
+                        display: "block", padding: "0.55rem 0.75rem",
+                        textDecoration: "none", borderRadius: "8px",
+                        transition: "background 0.15s",
+                      }}
+                    >
+                      <div style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.85rem", fontWeight: 500 }}>
+                        {child.label}
+                      </div>
+                      <div style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.72rem", marginTop: "0.1rem" }}>
+                        {child.desc}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
 
           {/* Auth buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.75rem" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.5rem" }}>
             {session ? (
               <div style={{ position: "relative" }} onMouseLeave={() => setAuthDropdownOpen(false)}>
                 <button
@@ -157,7 +231,7 @@ export default function Navbar() {
                     borderRadius: "8px", padding: "0.5rem 0", minWidth: "180px",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.5)", zIndex: 100,
                   }}>
-                    {/* Invisible bridge to cover the hover gap */}
+                    {/* Invisible bridge */}
                     <div style={{ position: "absolute", top: "-10px", left: 0, right: 0, height: "10px", background: "transparent" }} />
                     
                     {isAdmin && (
@@ -286,6 +360,7 @@ export default function Navbar() {
           overflowY: "auto",
           WebkitOverflowScrolling: "touch",
         }}>
+          {/* Prominent CTA */}
           <Link
             href="/readings"
             onClick={() => setMobileOpen(false)}
@@ -297,47 +372,41 @@ export default function Navbar() {
               border: "1px solid rgba(201,168,76,0.3)"
             }}
           >
-            Enter Read Mode
+            ✦ Today&apos;s Readings
           </Link>
-          {navLinks.map((link) => (
-            link.children ? (
-              <details key={link.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-                <summary style={{ padding: "0.75rem 1rem", color: "rgba(255,255,255,0.8)", fontSize: "0.95rem", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none" }}>
-                  <span style={{ fontWeight: 600 }}>{link.label}</span>
-                  <span style={{ fontSize: "0.7rem", opacity: 0.7 }}>▼</span>
-                </summary>
-                <div style={{ background: "rgba(0,0,0,0.15)", padding: "0.5rem 0" }}>
-                  {link.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={() => setMobileOpen(false)}
-                      style={{
-                        display: "block", padding: "0.6rem 2rem",
-                        color: "rgba(255,255,255,0.75)", textDecoration: "none",
-                        fontSize: "0.9rem", transition: "color 0.2s"
-                      }}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href!}
-                onClick={() => setMobileOpen(false)}
-                style={{
-                  display: "block", padding: "0.75rem 1rem",
-                  color: "rgba(255,255,255,0.8)", textDecoration: "none",
-                  fontSize: "0.95rem", borderBottom: "1px solid rgba(255,255,255,0.05)",
-                }}
-              >
-                {link.label}
-              </Link>
-            )
+
+          {/* Grouped sections */}
+          {navGroups.map((group) => (
+            <details key={group.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", marginBottom: "0.25rem" }}>
+              <summary style={{ padding: "0.75rem 1rem", color: "rgba(255,255,255,0.85)", fontSize: "0.95rem", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none" }}>
+                <span style={{ fontWeight: 600, display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span style={{ fontSize: "0.9rem" }}>{group.icon}</span>
+                  {group.label}
+                </span>
+                <span style={{ fontSize: "0.65rem", opacity: 0.5, color: "var(--gold)" }}>{group.children.length} items ▼</span>
+              </summary>
+              <div style={{ background: "rgba(0,0,0,0.15)", padding: "0.5rem 0", borderRadius: "0 0 8px 8px" }}>
+                {group.children.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={() => setMobileOpen(false)}
+                    style={{
+                      display: "flex", justifyContent: "space-between", alignItems: "center",
+                      padding: "0.6rem 1.5rem",
+                      color: "rgba(255,255,255,0.75)", textDecoration: "none",
+                      fontSize: "0.9rem", transition: "color 0.2s"
+                    }}
+                  >
+                    <span>{child.label}</span>
+                    <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.35)" }}>{child.desc}</span>
+                  </Link>
+                ))}
+              </div>
+            </details>
           ))}
+
+          {/* Auth section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid rgba(201,168,76,0.2)" }}>
             {session ? (
               <>
@@ -377,6 +446,13 @@ export default function Navbar() {
         @media (max-width: 900px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-trigger { display: flex !important; }
+        }
+        .nav-quick-link:hover {
+          color: var(--gold) !important;
+          background: rgba(201,168,76,0.1);
+        }
+        .nav-dropdown-item:hover {
+          background: rgba(201,168,76,0.12);
         }
       `}</style>
     </nav>

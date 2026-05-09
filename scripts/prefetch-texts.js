@@ -1,30 +1,46 @@
 /**
- * Pre-fetch all Bible texts from bible-api.com and bake them into lectionary-2026.json
- * Run locally: node scripts/prefetch-texts.js
+ * Re-fetch missing Bible texts with retry logic.
+ * Run: node scripts/prefetch-texts.js
  */
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const data = require('../data/lectionary-2026.json');
+const data = require('../data/lectionary-2026-full.json');
 
-function fetchText(reference) {
+function fetchText(reference, attempt = 1) {
   return new Promise((resolve) => {
     if (!reference) return resolve('');
     const encoded = encodeURIComponent(reference);
     const url = `https://bible-api.com/${encoded}?translation=web`;
-    https.get(url, (res) => {
+    const req = https.get(url, (res) => {
       let body = '';
       res.on('data', chunk => body += chunk);
       res.on('end', () => {
         try {
           const json = JSON.parse(body);
-          resolve((json.text || '').trim().replace(/\n{3,}/g, '\n\n'));
+          const text = (json.text || '').trim().replace(/\n{3,}/g, '\n\n');
+          resolve(text);
         } catch {
           resolve('');
         }
       });
-    }).on('error', () => resolve(''));
+    });
+    req.on('error', () => {
+      if (attempt < 4) {
+        setTimeout(() => fetchText(reference, attempt + 1).then(resolve), 1000 * attempt);
+      } else {
+        resolve('');
+      }
+    });
+    req.setTimeout(10000, () => {
+      req.destroy();
+      if (attempt < 4) {
+        setTimeout(() => fetchText(reference, attempt + 1).then(resolve), 1000 * attempt);
+      } else {
+        resolve('');
+      }
+    });
   });
 }
 
@@ -32,57 +48,57 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
+function isPlaceholder(text) {
+  return !text || text.startsWith('A reading from') || text === 'Praise the Lord, all nations.';
+}
+
 async function main() {
-  const output = [];
-  const total = data.length;
+  const output = [...data];
+  let fixed = 0;
+  let stillBad = 0;
 
-  for (let i = 0; i < total; i++) {
-    const day = data[i];
-    process.stdout.write(`\r[${i + 1}/${total}] Fetching ${day.date}...`);
+  for (let i = 0; i < output.length; i++) {
+    const day = output[i];
+    const needsOT = isPlaceholder(day.old_testament?.text);
+    const needsPS = isPlaceholder(day.psalm?.text);
+    const needsNT = day.new_testament && isPlaceholder(day.new_testament?.text);
+    const needsGS = isPlaceholder(day.gospel?.text);
 
-    const [otText, psText, ntText, gsText] = await Promise.all([
-      fetchText(day.old_testament?.reference),
-      fetchText(day.psalm?.reference),
-      fetchText(day.new_testament?.reference), // will be '' on weekdays since reference is undefined
-      fetchText(day.gospel?.reference),
-    ]);
+    if (!needsOT && !needsPS && !needsNT && !needsGS) continue;
 
-    const entry = {
-      date: day.date,
-      liturgical_season: day.liturgical_season,
-      old_testament: {
-        reference: day.old_testament.reference,
-        text: otText || `A reading from the Old Testament (${day.old_testament.reference}).`,
-      },
-      psalm: {
-        reference: day.psalm.reference,
-        response: day.psalm.response,
-        text: psText || `Praise the Lord, all nations.`,
-      },
-      gospel: {
-        reference: day.gospel.reference,
-        text: gsText || `A reading from the Holy Gospel.`,
-      },
-      gospel_reflection: "Take a moment to reflect on how today's Gospel applies to your life and journey of faith.",
-    };
+    process.stdout.write(`\r[${i + 1}/${output.length}] Fixing ${day.date} (fixed:${fixed}, still bad:${stillBad})...`);
 
-    // Only add second reading for Sundays (when new_testament exists in source)
-    if (day.new_testament?.reference) {
-      entry.new_testament = {
-        reference: day.new_testament.reference,
-        text: ntText || `A reading from the New Testament (${day.new_testament.reference}).`,
-      };
+    // Fetch sequentially to avoid rate limit
+    const otText = needsOT ? await fetchText(day.old_testament?.reference) : day.old_testament?.text;
+    await sleep(300);
+    const psText = needsPS ? await fetchText(day.psalm?.reference) : day.psalm?.text;
+    await sleep(300);
+    const gsText = needsGS ? await fetchText(day.gospel?.reference) : day.gospel?.text;
+    await sleep(300);
+    let ntText = day.new_testament?.text;
+    if (needsNT) {
+      ntText = await fetchText(day.new_testament?.reference);
+      await sleep(300);
     }
 
-    output.push(entry);
+    if (!isPlaceholder(gsText)) fixed++;
+    else stillBad++;
 
-    // Polite rate limit: 200ms between requests to avoid being blocked
-    await sleep(200);
+    output[i] = {
+      ...day,
+      old_testament: { ...day.old_testament, text: isPlaceholder(otText) ? day.old_testament.text : otText },
+      psalm: { ...day.psalm, text: isPlaceholder(psText) ? day.psalm.text : psText },
+      gospel: { ...day.gospel, text: isPlaceholder(gsText) ? day.gospel.text : gsText },
+      ...(day.new_testament && {
+        new_testament: { ...day.new_testament, text: (!isPlaceholder(ntText) ? ntText : day.new_testament.text) }
+      }),
+    };
   }
 
   const outPath = path.join(__dirname, '../data/lectionary-2026-full.json');
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
-  console.log(`\n\nDone! Saved ${output.length} days with full texts to data/lectionary-2026-full.json`);
+  console.log(`\n\nDone! Newly fixed: ${fixed}, Still missing: ${stillBad}`);
+  console.log('Saved to data/lectionary-2026-full.json');
 }
 
 main().catch(console.error);

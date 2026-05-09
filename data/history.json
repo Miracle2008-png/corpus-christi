@@ -64,6 +64,14 @@
     "deep_dive": "Pope St. Gregory I, known as Gregory the Great, guided the Church during a time of immense political instability following the collapse of the Western Roman Empire. A former monk, he brought monastic discipline to the papacy. He is renowned for dispatching St. Augustine of Canterbury to evangelize the Anglo-Saxons in England. He also instituted widespread liturgical reforms (Gregorian chant is named in his honor) and wrote extensively on pastoral care and theology. His reign solidified the spiritual and temporal authority of the Papacy in Western Europe."
   },
   {
+    "slug": "dark-age-of-the-papacy",
+    "year": "897–964 AD",
+    "event": "The Dark Age of the Papacy — Saeculum Obscurum",
+    "desc": "The darkest period in papal history. Corrupt noble families controlled the papacy, popes were murdered and deposed, and a dead pope was put on trial. Yet the Church survived — a testimony to Christ's promise.",
+    "icon": "✦",
+    "deep_dive": "The period from roughly 897 to 964 AD is known as the Saeculum Obscurum (the Dark Century) or the 'Pornocracy' — the most scandalous and chaotic era in the history of the papacy. It began with the infamous Cadaver Synod of 897, when the corpse of Pope Formosus was exhumed, dressed in papal vestments, placed on a throne, and subjected to a mock trial by his successor, Pope Stephen VI. The dead pope was found 'guilty,' his ordinations were declared invalid, and his body was thrown into the Tiber. Stephen himself was later strangled in prison.\n\nDuring this era, the papacy fell under the control of powerful Roman aristocratic families — most notoriously Theodora and her daughter Marozia, who installed and deposed popes at will. Many popes of this period died violently: murdered, strangled, starved, or deposed. Pope John XII, elected at just 18, was accused of turning the Lateran Palace into a brothel.\n\nYet despite all of this — the corruption, the violence, the scandal — the Church endured. No heretical doctrine was ever formally defined. The faith of ordinary believers continued. Monasteries kept learning alive. The institution survived its worst leaders, a fact Catholics point to as powerful evidence of divine protection. As Christ promised Peter: 'The gates of hell shall not prevail against it' (Matthew 16:18)."
+  },
+  {
     "slug": "the-great-schism",
     "year": "1054 AD",
     "event": "The Great Schism",
@@ -88,12 +96,28 @@
     "deep_dive": "Convened by Pope Innocent III, the Fourth Lateran Council was the zenith of the medieval papacy's influence. It issued 70 decrees that shaped Catholic life for centuries. It officially adopted the term 'transubstantiation' to explain the real presence of Christ in the Eucharist. It also instituted the precept that every Catholic must confess their sins and receive Holy Communion at least once a year during the Easter season. Additionally, it addressed the Albigensian heresy and laid out procedures for ecclesiastical discipline and inquisitions."
   },
   {
+    "slug": "western-schism",
+    "year": "1378–1417 AD",
+    "event": "The Western Schism — Two and Three Popes at Once",
+    "desc": "For nearly 40 years, rival claimants to the papacy reigned simultaneously in Rome and Avignon. At one point, three men all claimed to be Pope. Resolved at the Council of Constance.",
+    "icon": "✦",
+    "deep_dive": "The Western Schism (also called the Papal Schism) was one of the most destabilizing crises in Church history. It began in 1378 when the cardinals, dissatisfied with the recently elected Pope Urban VI in Rome, declared his election invalid and elected a rival pope, Clement VII, who established his court in Avignon, France. For decades, Western Christendom was divided: nations, dioceses, and religious orders had to choose which pope to obey. France, Scotland, and Spain supported Avignon; England, the Holy Roman Empire, and most of Italy supported Rome.\n\nThe crisis deepened catastrophically in 1409 when the Council of Pisa attempted to resolve the schism by deposing both claimants and electing a third — Alexander V. But neither existing pope accepted his deposition, resulting in THREE simultaneous papal claimants.\n\nThe schism was finally resolved at the Council of Constance (1414–1418), which deposed or accepted the resignation of all three claimants and elected Pope Martin V in 1417, reuniting the Western Church under a single pope. The entire episode, like the Saeculum Obscurum before it, is seen by Catholics as further proof that Christ's Church cannot be destroyed even by catastrophic human failure."
+  },
+  {
     "slug": "protestant-reformation",
     "year": "1517 AD",
     "event": "The Protestant Reformation",
     "desc": "Martin Luther posts his 95 Theses, sparking the Reformation.",
     "icon": "✦",
     "deep_dive": "In 1517, the Augustinian monk Martin Luther published his 95 Theses, initially protesting the abuse of indulgences. This act quickly escalated into a broader theological revolt against papal authority, the sacrificial nature of the Mass, and the Catholic understanding of justification. The movement, later joined by figures like John Calvin and Huldrych Zwingli, led to the formation of various Protestant denominations. This massive rupture permanently ended the religious unity of Western Europe, sparking centuries of theological debate and devastating religious wars."
+  },
+  {
+    "slug": "anglican-schism",
+    "year": "1534 AD",
+    "event": "The English Reformation — Henry VIII and the Anglican Schism",
+    "desc": "King Henry VIII separates England from Rome after the Pope refuses to annul his marriage. The Act of Supremacy declares the King head of the Church of England.",
+    "icon": "✦",
+    "deep_dive": "The English Reformation was triggered not by theology but by politics and personal desire. King Henry VIII of England sought an annulment of his marriage to Catherine of Aragon, who had failed to produce a male heir. He appealed to Pope Clement VII, but the Pope — partly under pressure from Catherine's nephew, the Holy Roman Emperor Charles V — refused the annulment.\n\nFurious, Henry took matters into his own hands. In 1534, Parliament passed the Act of Supremacy, declaring the King (not the Pope) to be the 'Supreme Head on earth of the Church of England.' Those who refused to swear the oath — including the Lord Chancellor St. Thomas More and Bishop St. John Fisher — were executed. More's last words before his beheading were: 'I die the King's good servant, but God's first.'\n\nHenry dissolved the monasteries, seized Church property, and married a total of six wives. However, he never considered himself a Protestant — he continued to affirm Catholic doctrines like transubstantiation and even had Protestants burned for heresy. The full theological shift toward Protestantism came under his successors, particularly Edward VI and Elizabeth I. The Church of England (Anglicanism) became a distinct tradition, neither fully Catholic nor fully Protestant.\n\nThe English Reformation produced some of the Church's greatest martyrs and remains one of the most dramatic examples of political power attempting to override spiritual authority."
   },
   {
     "slug": "council-of-trent",

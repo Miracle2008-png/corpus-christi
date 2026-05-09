@@ -251,6 +251,25 @@ h1, h2, h3, .heading-serif {
   color: var(--navy-dark);
 }
 
+/* Large CTA Buttons */
+.btn-sacred-lg {
+  padding: 0.9rem 2.25rem !important;
+  font-size: 1rem !important;
+  border-radius: 10px;
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+
+.btn-outline-lg {
+  padding: 0.85rem 2rem !important;
+  font-size: 1rem !important;
+  border-radius: 10px;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 2px 12px var(--gold-glow); }
+  50% { box-shadow: 0 4px 28px rgba(201, 168, 76, 0.45); }
+}
+
 /* Cross Ornament */
 .cross-ornament::before {
   content: '✝';
