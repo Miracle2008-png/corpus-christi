@@ -12,11 +12,16 @@ export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon =
     );
   }
 
+  let finalSrc = src;
+  if (finalSrc && finalSrc.includes("wikimedia.org") && finalSrc.includes("/thumb/")) {
+    finalSrc = finalSrc.replace(/\/thumb(\/[^\/]+\/[^\/]+\/[^\/]+)\/[^\/]+(\?.*)?$/, "$1$2");
+  }
+
   const mergedStyle = fill ? { position: "absolute", width: "100%", height: "100%", objectFit: "cover", ...style } : style;
 
   return (
     <img 
-      src={src} 
+      src={finalSrc} 
       alt={alt} 
       style={mergedStyle as any} 
       referrerPolicy="no-referrer"
