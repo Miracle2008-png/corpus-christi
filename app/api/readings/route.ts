@@ -9,82 +9,30 @@ export async function GET(req: NextRequest) {
   try {
     await connectDB();
     const reading = await Reading.findOne({ date }).lean();
-    
-    if (reading && reading.gospel?.reference && (!reading.gospel?.text || reading.gospel.text.trim() === "")) {
-      // Document exists but texts are empty (seeded citations)
-      try {
-        const fetchBible = async (ref: string) => {
-          if (!ref) return "";
-          const r = await fetch(`https://bible-api.com/${encodeURIComponent(ref)}`);
-          if (!r.ok) return "Text currently unavailable.";
-          const d = await r.json();
-          return d.text?.trim() || "";
-        };
 
-        const [ot, ps, nt, gs] = await Promise.all([
-          fetchBible(reading.old_testament?.reference || ""),
-          fetchBible(reading.psalm?.reference || ""),
-          fetchBible(reading.new_testament?.reference || ""),
-          fetchBible(reading.gospel?.reference || ""),
-        ]);
-
-        return NextResponse.json({
-          ...reading,
-          old_testament: { ...reading.old_testament, text: ot },
-          psalm: { ...reading.psalm, text: ps },
-          new_testament: { ...reading.new_testament, text: nt },
-          gospel: { ...reading.gospel, text: gs },
-        });
-      } catch (e) {
-        // Fall through to returning the original reading if fetch fails completely
-      }
+    if (reading) {
+      return NextResponse.json(reading);
     }
 
-    if (!reading) {
-      // Dynamic fallback via Bible API
-      try {
-        const fetchBible = async (ref: string) => {
-          const r = await fetch(`https://bible-api.com/${encodeURIComponent(ref)}`);
-          if (!r.ok) throw new Error("Failed");
-          const d = await r.json();
-          return d.text?.trim() || "";
-        };
-
-        const otRef = "Genesis 1:1-5";
-        const psRef = "Psalm 23:1-3";
-        const ntRef = "Romans 8:28";
-        const gsRef = "John 3:16-17";
-
-        const [ot, ps, nt, gs] = await Promise.all([
-          fetchBible(otRef).catch(() => "In the beginning God created the heavens and the earth..."),
-          fetchBible(psRef).catch(() => "The Lord is my shepherd..."),
-          fetchBible(ntRef).catch(() => "And we know that in all things God works for the good..."),
-          fetchBible(gsRef).catch(() => "For God so loved the world..."),
-        ]);
-
-        return NextResponse.json({
-          date,
-          old_testament: { reference: otRef, text: ot },
-          psalm: { reference: psRef, text: ps, response: "The Lord is my shepherd." },
-          new_testament: { reference: ntRef, text: nt },
-          gospel: { reference: gsRef, text: gs },
-          gospel_reflection: "God's love for humanity is the foundation of our faith. Today, reflect on the gift of eternal life offered freely through Christ.",
-          placeholder: true,
-        });
-      } catch (fallbackErr) {
-        // Ultimate hardcoded fallback
-        return NextResponse.json({
-          date,
-          old_testament: { reference: "Genesis 1:1", text: "In the beginning God created the heavens and the earth." },
-          psalm: { reference: "Psalm 23:1", text: "The Lord is my shepherd; I shall not want.", response: "The Lord is my shepherd." },
-          new_testament: { reference: "John 1:1", text: "In the beginning was the Word, and the Word was with God, and the Word was God." },
-          gospel: { reference: "John 3:16", text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." },
-          gospel_reflection: "God's love for humanity is the foundation of our faith. Today, reflect on the gift of eternal life offered freely through Christ.",
-          placeholder: true,
-        });
-      }
-    }
-    return NextResponse.json(reading);
+    // Hardcoded fallback if DB has no entry for this date
+    return NextResponse.json({
+      date,
+      liturgical_season: "Ordinary Time",
+      old_testament: {
+        reference: "Genesis 1:1-5",
+        text: "In the beginning God created the heavens and the earth. Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters. And God said, \"Let there be light,\" and there was light. God saw that the light was good, and he separated the light from the darkness. God called the light \"day,\" and the darkness he called \"night.\" And there was evening, and there was morning—the first day.",
+      },
+      psalm: {
+        reference: "Psalm 23:1-3",
+        response: "The Lord is my shepherd.",
+        text: "The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures, he leads me beside quiet waters, he refreshes my soul. He guides me along the right paths for his name's sake.",
+      },
+      gospel: {
+        reference: "John 3:16-17",
+        text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. For God did not send his Son into the world to condemn the world, but to save the world through him.",
+      },
+      gospel_reflection: "God's love is the foundation of our faith. Today, let the gift of eternal life offered through Christ be the anchor of your heart.",
+    });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
