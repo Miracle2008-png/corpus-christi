@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon = "" }: any) {
+export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon = "", unoptimized = false }: any) {
   const [error, setError] = useState(false);
 
   if (error || !src) {
@@ -13,5 +13,5 @@ export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon =
     );
   }
 
-  return <Image src={src} alt={alt} fill={fill} sizes={sizes} style={style} onError={() => setError(true)} />;
+  return <Image src={src} alt={alt} fill={fill} sizes={sizes} style={style} unoptimized={unoptimized} onError={() => setError(true)} />;
 }

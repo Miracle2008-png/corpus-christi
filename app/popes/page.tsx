@@ -107,6 +107,7 @@ export default async function PopesPage() {
                         alt={pope.name}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        unoptimized={true}
                         style={{ objectFit: pope.img ? "cover" : "contain", objectPosition: pope.img ? "top" : "center" }}
                       />
                     </div>
