@@ -3,6 +3,8 @@ import Link from "next/link";
 import AudioReader from "@/components/AudioReader";
 import ReadingMode from "@/components/ReadingMode";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Daily Readings",
   description: "Today's Catholic daily Mass readings — Old Testament, Psalm, New Testament, and Gospel — with reflection.",
@@ -12,7 +14,7 @@ async function getReading(date: string) {
   try {
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
     const res = await fetch(`${baseUrl}/api/readings?date=${date}`, {
-      next: { revalidate: 60 }, // cache 1 minute to prevent stale blank readings
+      cache: "no-store",
     });
     if (res.ok) return res.json();
   } catch {}
