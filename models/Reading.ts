@@ -12,7 +12,7 @@ export interface IReading extends Document {
     text: string;
     response?: string;
   };
-  new_testament: {
+  new_testament?: {
     reference: string;
     text: string;
   };
@@ -37,8 +37,8 @@ const ReadingSchema = new Schema<IReading>(
       response: { type: String },
     },
     new_testament: {
-      reference: { type: String, required: true },
-      text: { type: String, required: true },
+      reference: { type: String },
+      text: { type: String },
     },
     gospel: {
       reference: { type: String, required: true },
