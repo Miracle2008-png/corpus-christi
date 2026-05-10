@@ -81,14 +81,14 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Pages — stale-while-revalidate
+  // Pages — Network First to ensure auth state is fresh
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const fetchPromise = fetch(event.request).then((response) => {
-        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, response.clone()));
+    fetch(event.request)
+      .then((response) => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         return response;
-      }).catch(() => cached || new Response("Offline - Please reconnect", { status: 503 }));
-      return cached || fetchPromise;
-    })
+      })
+      .catch(() => caches.match(event.request))
   );
 });

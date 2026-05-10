@@ -2,12 +2,15 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [oauthNote, setOauthNote] = useState("");
+
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -22,8 +25,8 @@ export default function LoginPage() {
     if (result?.error) {
       setError("Invalid email or password. Please try again.");
     } else {
-      // Go home — from there they click Admin Portal in the navbar
-      window.location.href = "/admin";
+      router.push("/admin");
+      router.refresh();
     }
   }
 
