@@ -19,9 +19,11 @@ export async function GET(request: NextRequest) {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer": "https://en.wikipedia.org/",
       },
+      next: { revalidate: 31536000 } // Cache for 1 year in Vercel's Data Cache
     });
 
     if (!response.ok) {
+      console.error(`Failed to fetch ${url}: ${response.status}`);
       return new NextResponse(`Failed to fetch image: ${response.status}`, { status: response.status });
     }
 
@@ -31,7 +33,7 @@ export async function GET(request: NextRequest) {
     return new NextResponse(arrayBuffer, {
       headers: {
         "Content-Type": contentType,
-        "Cache-Control": "public, max-age=31536000, immutable",
+        "Cache-Control": "public, s-maxage=31536000, stale-while-revalidate=31536000, immutable",
       },
     });
   } catch (error) {
