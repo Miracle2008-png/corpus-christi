@@ -14,7 +14,7 @@ const incorruptibles = [
     location: "Chapel of the Convent of St. Gildard, Nevers, France",
     feast: "April 16",
     description: "The visionary of Lourdes who saw the Blessed Virgin Mary 18 times in 1858. When her body was exhumed in 1909, 30 years after death, it was found perfectly intact and flexible. Exhumed again in 1919 and 1925, it remained remarkably preserved. Her body can be seen today in a glass reliquary at Nevers, where she appears to be peacefully sleeping.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bernadette_Soubirous_%28body%29.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Saint_Bernadette%27s_incorrupt_body.jpg/500px-Saint_Bernadette%27s_incorrupt_body.jpg",
     detail: "Three official exhumations confirmed the incorruption. The attending physicians noted the absence of any embalming and the supernatural preservation of the flesh.",
   },
   {
@@ -23,7 +23,7 @@ const incorruptibles = [
     location: "Church of Corpus Domini, Bologna, Italy",
     feast: "March 9",
     description: "A Poor Clare nun, mystic, and artist. After her death, a sweet fragrance emanated from her grave. When exhumed 18 days later, her body was found completely incorrupt. She has been seated upright in a chapel in Bologna for over 500 years — visible to visitors to this day.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Caterina_de%27_Vigri_-_Incorrupt_Body.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Saint_Catherine_of_Bologna_with_Three_Donors_by_the_Master_of_the_Baroncelli_Portraits.jpg/500px-Saint_Catherine_of_Bologna_with_Three_Donors_by_the_Master_of_the_Baroncelli_Portraits.jpg",
     detail: "Her body has remained seated in the same position for more than five centuries without any artificial preservation.",
   },
   {
@@ -32,7 +32,7 @@ const incorruptibles = [
     location: "Basilica of Saint Clare, Assisi, Italy",
     feast: "August 11",
     description: "Foundress of the Order of Poor Ladies (Poor Clares) and one of the first followers of St. Francis of Assisi. Her remains were rediscovered in 1850 under the high altar of the Basilica built in her honour. Though reduced to skeleton after 600 years, her body was still notably preserved in structure.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/df/Santa_Chiara_d%27Assisi_%28reliquia%29.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Simone_Martini_047.jpg/500px-Simone_Martini_047.jpg",
     detail: "A devoted follower of radical poverty, Clare's incorruption points to the holiness of her total self-giving to God.",
   },
   {
@@ -41,7 +41,7 @@ const incorruptibles = [
     location: "Basilica of Ars, Ars-sur-Formans, France",
     feast: "August 4",
     description: "The patron saint of parish priests, famous for spending 16–18 hours daily in the confessional. He was said to have the gift of reading souls. When exhumed in 1904, 45 years after death, his body was found remarkably intact. His heart was removed as a relic and is venerated separately. His body lies in a gold-and-glass reliquary above the main altar at Ars.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Jean-Marie_Vianney_-_Reliquaire.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/S%C3%A3o_Jo%C3%A3o_Maria_Vianney.png/500px-S%C3%A3o_Jo%C3%A3o_Maria_Vianney.png",
     detail: "Pope Pius X declared him patron of parish priests in 1929. His incorrupt body draws hundreds of thousands of pilgrims annually.",
   },
   {
@@ -50,7 +50,7 @@ const incorruptibles = [
     location: "Chapel of the Lazarists, Paris, France",
     feast: "September 27",
     description: "The great apostle of charity who founded the Congregation of the Mission (Lazarists) and the Daughters of Charity. His skeletal remains were found notably preserved and are now encased in a wax figure reliquary above the altar of the Lazarist chapel in Paris. His works for the poor transformed the Church's approach to social ministry.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Vincent_de_Paul_reliquary.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Simon_Fran%C3%A7ois_de_Tours_-_Portrait_Vincent_de_Paul_%284x5_cropped%29.jpeg/500px-Simon_Fran%C3%A7ois_de_Tours_-_Portrait_Vincent_de_Paul_%284x5_cropped%29.jpeg",
     detail: "His charitable legacy includes founding hospitals, orphanages, and the systematization of parish missions throughout France.",
   },
   {
@@ -59,7 +59,7 @@ const incorruptibles = [
     location: "Basilica of St. Rita, Cascia, Italy",
     feast: "May 22",
     description: "The patron saint of impossible causes. After enduring an abusive marriage and the murder of her husband, she became an Augustinian nun. She bore a wound on her forehead said to be from a thorn of Christ's crown. After her death, a sweet fragrance surrounded her body, which has remained incorrupt for over 500 years in Cascia.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/SantaRitaDaCasciaIncorruptBody.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Santa_Rita_da_Cascia.jpg/500px-Santa_Rita_da_Cascia.jpg",
     detail: "The wound on her forehead, which appeared during a mystical experience, remained visible even after death — a permanent stigmata.",
   },
   {
@@ -68,7 +68,7 @@ const incorruptibles = [
     location: "Basilica of San Frediano, Lucca, Italy",
     feast: "April 27",
     description: "A humble domestic servant who served one family in Lucca for 48 years. Known for extraordinary charity — she gave her own food and her master's provisions to the poor. Her body was found incorrupt when exhumed 300 years after her death and can still be viewed in Lucca.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Saint_Zita_-_Incorrupt_Body.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Santa_Zita_lucca.jpg/500px-Santa_Zita_lucca.jpg",
     detail: "St. Zita is the patron saint of domestic workers and maids. Her incorruption, in a simple servant, demonstrates that holiness knows no social station.",
   },
   {
@@ -77,7 +77,7 @@ const incorruptibles = [
     location: "Basilica of San Crisogono, Rome, Italy",
     feast: "June 9",
     description: "A married laywoman and mother of seven children who experienced extraordinary mystical gifts, including a 'miraculous sun' vision in which she could see events happening around the world. Despite her humble life as a housewife, she was consulted by popes and cardinals. Her body remains incorrupt in Rome.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/93/AnnaMariaTaigi.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Anna_Maria_Gesualda_Antonia_Taigi_in_2012.jpg/500px-Anna_Maria_Gesualda_Antonia_Taigi_in_2012.jpg",
     detail: "Her incorruption is remarkable because she was neither a religious sister nor a cleric — she was a working-class wife and mother, proving that the highest holiness is accessible to everyone.",
   },
 ];

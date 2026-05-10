@@ -14,19 +14,7 @@ export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon =
 
   let finalSrc = src;
   if (finalSrc && finalSrc.includes("wikimedia.org")) {
-    try {
-      const parts = finalSrc.split("/");
-      let filename = "";
-      if (finalSrc.includes("/thumb/")) {
-        filename = parts[parts.length - 2];
-      } else {
-        filename = parts[parts.length - 1];
-      }
-      filename = filename.split("?")[0].split("#")[0];
-      finalSrc = `https://commons.wikimedia.org/wiki/Special:FilePath/${filename}`;
-    } catch (e) {
-      // Fallback to original if parsing fails
-    }
+    finalSrc = `/api/image?url=${encodeURIComponent(finalSrc)}`;
   }
 
   const mergedStyle = fill ? { position: "absolute", width: "100%", height: "100%", objectFit: "cover", ...style } : style;
