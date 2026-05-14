@@ -68,7 +68,7 @@ const incorruptibles = [
     location: "Basilica of San Frediano, Lucca, Italy",
     feast: "April 27",
     description: "A humble domestic servant who served one family in Lucca for 48 years. Known for extraordinary charity — she gave her own food and her master's provisions to the poor. Her body was found incorrupt when exhumed 300 years after her death and can still be viewed in Lucca.",
-    image: "/assets/images/incorruptibles/zita.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Santa_Zita.jpg",
     detail: "St. Zita is the patron saint of domestic workers and maids. Her incorruption, in a simple servant, demonstrates that holiness knows no social station.",
   },
   {
@@ -77,7 +77,7 @@ const incorruptibles = [
     location: "Basilica of San Crisogono, Rome, Italy",
     feast: "June 9",
     description: "A married laywoman and mother of seven children who experienced extraordinary mystical gifts, including a 'miraculous sun' vision in which she could see events happening around the world. Despite her humble life as a housewife, she was consulted by popes and cardinals. Her body remains incorrupt in Rome.",
-    image: "/assets/images/incorruptibles/taigi.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Anna_Maria_Gesualda_Antonia_Taigi_in_2012.jpg",
     detail: "Her incorruption is remarkable because she was neither a religious sister nor a cleric — she was a working-class wife and mother, proving that the highest holiness is accessible to everyone.",
   },
 ];

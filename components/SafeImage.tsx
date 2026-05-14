@@ -1,18 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon = "" }: any) {
-  const [isError, setIsError] = useState(false);
-  const [currentSrc, setCurrentSrc] = useState<string | null>(null);
-
-  // Initialize currentSrc with the proxied URL if it's wikimedia
-  if (!currentSrc && src) {
+  // Derive the initial src correctly using useMemo — no setState during render
+  const initialSrc = useMemo(() => {
+    if (!src) return null;
     if (src.includes("wikimedia.org") && !src.startsWith("/assets/")) {
-      setCurrentSrc(`/api/image?url=${encodeURIComponent(src)}`);
-    } else {
-      setCurrentSrc(src);
+      return `/api/image?url=${encodeURIComponent(src)}`;
     }
-  }
+    return src;
+  }, [src]);
+
+  const [isError, setIsError] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState<string | null>(initialSrc);
 
   if (isError || !src) {
     return (
@@ -24,24 +24,26 @@ export default function SafeImage({ src, alt, fill, sizes, style, fallbackIcon =
 
   const handleImageError = () => {
     if (currentSrc?.startsWith("/api/image")) {
-      // Proxy failed (e.g. 429), try original direct link
-      console.warn(`Proxy failed for ${src}, falling back to direct link`);
+      // Proxy failed — fall back to direct link (browser will try without proxy)
+      console.warn(`Proxy failed for ${src}, trying direct`);
       setCurrentSrc(src);
     } else {
-      // Both failed
+      // Both failed — show placeholder
       setIsError(true);
     }
   };
 
-  const mergedStyle = fill ? { position: "absolute", width: "100%", height: "100%", objectFit: "cover", ...style } : style;
+  const mergedStyle = fill
+    ? { position: "absolute", width: "100%", height: "100%", objectFit: "cover", ...style }
+    : style;
 
   return (
-    <img 
-      src={currentSrc || ""} 
-      alt={alt} 
-      style={mergedStyle as any} 
+    <img
+      src={currentSrc || ""}
+      alt={alt}
+      style={mergedStyle as any}
       referrerPolicy="no-referrer"
-      onError={handleImageError} 
+      onError={handleImageError}
       loading="lazy"
     />
   );
