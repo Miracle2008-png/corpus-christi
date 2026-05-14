@@ -65,6 +65,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [authDropdownOpen, setAuthDropdownOpen] = useState(false);
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
@@ -81,6 +82,18 @@ export default function Navbar() {
     document.addEventListener('click', handler);
     return () => document.removeEventListener('click', handler);
   }, []);
+
+  // Close mobile menu on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (mobileOpen) {
+        setMobileOpen(false);
+        setOpenMobileGroup(null);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [mobileOpen]);
 
   const handleDropdownEnter = (label: string) => {
     if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
@@ -375,36 +388,53 @@ export default function Navbar() {
             ✦ Today&apos;s Readings
           </Link>
 
-          {/* Grouped sections */}
-          {navGroups.map((group) => (
-            <details key={group.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", marginBottom: "0.25rem" }}>
-              <summary style={{ padding: "0.75rem 1rem", color: "rgba(255,255,255,0.85)", fontSize: "0.95rem", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none" }}>
-                <span style={{ fontWeight: 600, display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ fontSize: "0.9rem" }}>{group.icon}</span>
-                  {group.label}
-                </span>
-                <span style={{ fontSize: "0.65rem", opacity: 0.5, color: "var(--gold)" }}>{group.children.length} items ▼</span>
-              </summary>
-              <div style={{ background: "rgba(0,0,0,0.15)", padding: "0.5rem 0", borderRadius: "0 0 8px 8px" }}>
-                {group.children.map((child) => (
-                  <Link
-                    key={child.href}
-                    href={child.href}
-                    onClick={() => setMobileOpen(false)}
-                    style={{
-                      display: "flex", justifyContent: "space-between", alignItems: "center",
-                      padding: "0.6rem 1.5rem",
-                      color: "rgba(255,255,255,0.75)", textDecoration: "none",
-                      fontSize: "0.9rem", transition: "color 0.2s"
-                    }}
-                  >
-                    <span>{child.label}</span>
-                    <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.35)" }}>{child.desc}</span>
-                  </Link>
-                ))}
+          {/* Grouped sections — only one open at a time */}
+          {navGroups.map((group) => {
+            const isGroupOpen = openMobileGroup === group.label;
+            return (
+              <div key={group.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", marginBottom: "0.25rem" }}>
+                <button
+                  onClick={() => setOpenMobileGroup(isGroupOpen ? null : group.label)}
+                  style={{
+                    width: "100%", background: "none", border: "none", cursor: "pointer",
+                    padding: "0.75rem 1rem", color: "rgba(255,255,255,0.85)", fontSize: "0.95rem",
+                    display: "flex", justifyContent: "space-between", alignItems: "center",
+                  }}
+                >
+                  <span style={{ fontWeight: 600, display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <span style={{ fontSize: "0.9rem" }}>{group.icon}</span>
+                    {group.label}
+                  </span>
+                  <span style={{
+                    fontSize: "0.65rem", opacity: 0.5, color: "var(--gold)",
+                    transition: "transform 0.2s",
+                    display: "inline-block",
+                    transform: isGroupOpen ? "rotate(180deg)" : "none"
+                  }}>▼</span>
+                </button>
+                {isGroupOpen && (
+                  <div style={{ background: "rgba(0,0,0,0.15)", padding: "0.5rem 0", borderRadius: "0 0 8px 8px" }}>
+                    {group.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => { setMobileOpen(false); setOpenMobileGroup(null); }}
+                        style={{
+                          display: "flex", justifyContent: "space-between", alignItems: "center",
+                          padding: "0.6rem 1.5rem",
+                          color: "rgba(255,255,255,0.75)", textDecoration: "none",
+                          fontSize: "0.9rem", transition: "color 0.2s"
+                        }}
+                      >
+                        <span>{child.label}</span>
+                        <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.35)" }}>{child.desc}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            </details>
-          ))}
+            );
+          })}
 
           {/* Auth section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid rgba(201,168,76,0.2)" }}>
