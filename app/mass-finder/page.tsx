@@ -21,19 +21,33 @@ export default function MassFinderPage() {
         setLoading(false);
       },
       () => {
-        setError("Could not access your location. Please enable location permissions or enter an address below.");
+        setError("Could not access your location. Please enable location permissions or use the links below.");
         setLoading(false);
       }
     );
   };
 
-  const mapsUrl = coords
-    ? `https://www.google.com/maps/embed/v1/search?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=Catholic+church+near+${coords.lat},${coords.lng}&zoom=13`
+  // OpenStreetMap embed — free, no API key required
+  const osmUrl = coords
+    ? `https://www.openstreetmap.org/export/embed.html?bbox=${coords.lng - 0.08},${coords.lat - 0.06},${coords.lng + 0.08},${coords.lat + 0.06}&layer=mapnik&marker=${coords.lat},${coords.lng}`
     : null;
 
-  const directionsUrl = coords
-    ? `https://www.google.com/maps/search/Catholic+church+near+me/@${coords.lat},${coords.lng},13z`
+  const googleMapsUrl = coords
+    ? `https://www.google.com/maps/search/Catholic+church/@${coords.lat},${coords.lng},14z`
     : "https://www.google.com/maps/search/Catholic+church+near+me";
+
+  const massTimesUrl = coords
+    ? `https://www.masstimes.org/mass-times?lat=${coords.lat}&lng=${coords.lng}`
+    : "https://www.masstimes.org";
+
+  const infoCards = [
+    { icon: "🌙", title: "Vigil Mass", time: "Saturday evening", desc: "A Saturday evening Mass fulfills the Sunday obligation. Times vary but are typically 5:00–7:00 PM." },
+    { icon: "☀️", title: "Sunday Masses", time: "Sunday morning", desc: "Most parishes offer multiple Sunday Masses — typically 7:00, 9:00, 11:00 AM and sometimes an afternoon Mass." },
+    { icon: "📖", title: "Daily Mass", time: "Weekdays", desc: "Most parishes offer a weekday Mass, usually 7:00–8:00 AM or 12:00 PM. A beautiful habit to build." },
+    { icon: "✝️", title: "Confession", time: "Before Sunday Mass", desc: "Confession is typically offered 30–60 minutes before a Sunday Mass. Many parishes also offer it Saturday afternoon." },
+    { icon: "⛪", title: "Holy Days of Obligation", time: "Varies", desc: "Catholics are required to attend Mass on Christmas, Immaculate Conception, Assumption, and other holy days." },
+    { icon: "📿", title: "Traditional Latin Mass", time: "Varies by parish", desc: "The Traditional Latin Mass (Extraordinary Form) is offered in many dioceses. Check your diocese's TLM schedule." },
+  ];
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--ivory)" }}>
@@ -82,9 +96,7 @@ export default function MassFinderPage() {
                 Locating…
               </>
             ) : (
-              <>
-                � Find Mass Near Me
-              </>
+              <>📍 Find Mass Near Me</>
             )}
           </button>
         )}
@@ -107,24 +119,26 @@ export default function MassFinderPage() {
       {/* ── MAP ── */}
       <div style={{ padding: "2rem 1.5rem" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          {locationGranted && coords ? (
+          {locationGranted && osmUrl ? (
             <div style={{ borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(26,39,68,0.1)", boxShadow: "0 4px 24px rgba(0,0,0,0.1)", marginBottom: "1.25rem" }}>
               <iframe
                 width="100%"
                 height="500"
                 style={{ border: 0, display: "block" }}
                 loading="lazy"
-                allowFullScreen
-                src={mapsUrl || ""}
-                title="Catholic churches near you"
+                src={osmUrl}
+                title="Your location on the map"
               />
+              <div style={{ background: "rgba(26,39,68,0.04)", padding: "0.75rem 1.25rem", borderTop: "1px solid rgba(26,39,68,0.06)", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+                Map data © <a href="https://openstreetmap.org" target="_blank" rel="noopener noreferrer" style={{ color: "var(--navy)" }}>OpenStreetMap</a> contributors. Use the links below to search for Catholic churches.
+              </div>
             </div>
           ) : (
             <div style={{
               background: "#fff",
               borderRadius: "16px",
               border: "1px solid rgba(26,39,68,0.08)",
-              height: "400px",
+              height: "340px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -133,24 +147,24 @@ export default function MassFinderPage() {
               marginBottom: "1.25rem",
               boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
             }}>
-              <span style={{ fontSize: "3rem" }}></span>
-              <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", textAlign: "center", maxWidth: "300px" }}>
-                Click &ldquo;Find Mass Near Me&rdquo; above to see Catholic churches on the map.
+              <span style={{ fontSize: "3rem" }}>⛪</span>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", textAlign: "center", maxWidth: "320px", lineHeight: 1.6 }}>
+                Click &ldquo;Find Mass Near Me&rdquo; above to locate nearby Catholic churches, or use one of the links below.
               </p>
               <button
                 onClick={findNearMe}
                 disabled={loading}
                 style={{ background: "var(--navy)", color: "#fff", border: "none", padding: "0.65rem 1.5rem", borderRadius: "10px", fontSize: "0.9rem", fontWeight: 600, cursor: "pointer" }}
               >
-                � Use My Location
+                📍 Use My Location
               </button>
             </div>
           )}
 
-          {/* ── OPEN IN GOOGLE MAPS ── */}
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", justifyContent: locationGranted ? "flex-start" : "center" }}>
+          {/* ── EXTERNAL LINKS ── */}
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", justifyContent: locationGranted ? "flex-start" : "center", marginBottom: "0.5rem" }}>
             <a
-              href={directionsUrl}
+              href={googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -161,10 +175,10 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "opacity 0.2s",
               }}
             >
-              � Open in Google Maps
+              🗺️ Search on Google Maps
             </a>
-              <a
-              href="https://www.masstimes.org"
+            <a
+              href={massTimesUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -175,7 +189,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "opacity 0.2s",
               }}
             >
-              � MassTimes.org
+              ⏰ MassTimes.org
             </a>
             <a
               href="https://www.catholicdirectory.org"
@@ -190,7 +204,22 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "all 0.2s",
               }}
             >
-              Catholic Directory
+              📋 Catholic Directory
+            </a>
+            <a
+              href="https://www.latinmassdir.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: "0.5rem",
+                border: "1px solid rgba(201,168,76,0.4)", color: "var(--gold-dark)",
+                background: "rgba(201,168,76,0.06)",
+                padding: "0.65rem 1.4rem", borderRadius: "10px",
+                fontSize: "0.88rem", fontWeight: 600,
+                textDecoration: "none", transition: "all 0.2s",
+              }}
+            >
+              ✝ Latin Mass Directory
             </a>
           </div>
         </div>
@@ -202,14 +231,7 @@ export default function MassFinderPage() {
           Mass Times Guide
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1rem" }}>
-          {[
-            { icon: "", title: "Vigil Mass", time: "Saturday evening", desc: "A Saturday evening Mass fulfills the Sunday obligation. Times vary but are typically 5:00–7:00 PM." },
-            { icon: "", title: "Sunday Masses", time: "Sunday morning", desc: "Most parishes offer multiple Sunday Masses — typically 7:00, 9:00, 11:00 AM and sometimes an afternoon Mass." },
-            { icon: "", title: "Daily Mass", time: "Weekdays", desc: "Most parishes offer a weekday Mass, usually 7:00–8:00 AM or 12:00 PM. A beautiful habit to build." },
-            { icon: "", title: "Confession", time: "Before Sunday Mass", desc: "Confession is typically offered 30–60 minutes before a Sunday Mass. Many parishes also offer it Saturday afternoon." },
-            { icon: "", title: "Holy Days of Obligation", time: "Varies", desc: "Catholics are required to attend Mass on Christmas, Immaculate Conception, Assumption, and other holy days of obligation." },
-            { icon: "�", title: "Traditional Latin Mass", time: "Varies by parish", desc: "The Traditional Latin Mass (Extraordinary Form) is offered in many dioceses. Check your diocese's TLM schedule." },
-          ].map(item => (
+          {infoCards.map(item => (
             <div key={item.title} style={{
               background: "#fff",
               border: "1px solid rgba(26,39,68,0.07)",
