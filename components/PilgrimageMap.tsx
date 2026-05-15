@@ -63,7 +63,7 @@ export default function PilgrimageMap({ sites, selected, onSelect, visited }: Pr
           cursor: pointer;
           transition: all 0.2s;
         ">
-          <span style="transform: rotate(45deg); font-size: 14px; line-height: 1;">${site.emoji}</span>
+          <span style="transform: rotate(45deg); font-size: 12px; line-height: 1; color: ${border}; font-weight: 900;">✦</span>
         </div>
       `,
       iconSize: [36, 36],

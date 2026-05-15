@@ -27,7 +27,7 @@ const categories = [
   {
     title: "Mary & the Saints",
     color: "#5c1a3f",
-    icon: "✿",
+    icon: "",
     questions: [
       {
         q: "Why do Catholics pray to Mary and the saints?",

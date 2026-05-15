@@ -174,7 +174,7 @@ export default function IncorruptiblesPage() {
                   {saint.dates}
                 </p>
                 <p style={{ color: "var(--gold-dark)", fontSize: "0.72rem", fontWeight: 600, marginBottom: "0.75rem", display: "flex", alignItems: "center", gap: "0.3rem" }}>
-                  📍 {saint.location}
+                  {saint.location}
                 </p>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.7, flex: 1, marginBottom: "1rem" }}>
                   {saint.description}

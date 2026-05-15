@@ -24,19 +24,19 @@ const saintQuotes = [
 ];
 
 const features = [
-  { href: "/saints", icon: "✦", label: "Saints", desc: "Biographies, miracles & patronages" },
-  { href: "/popes", icon: "⛪", label: "Popes", desc: "St. Peter to Pope Leo XIV" },
-  { href: "/sacraments", icon: "💧", label: "Sacraments", desc: "The 7 holy sacraments explained" },
-  { href: "/stations", icon: "✝", label: "Stations", desc: "Immersive Way of the Cross" },
-  { href: "/rosary", icon: "📿", label: "Holy Rosary", desc: "Guided prayer with mysteries" },
-  { href: "/readings", icon: "📖", label: "Daily Readings", desc: "Scripture for today" },
-  { href: "/calendar", icon: "📅", label: "Calendar", desc: "Liturgical seasons & feasts" },
-  { href: "/miracles", icon: "✨", label: "Miracles", desc: "Verified signs and wonders" },
-  { href: "/mass", icon: "🕊", label: "Mass & Confession", desc: "Full liturgical breakdown" },
-  { href: "/history", icon: "🏛", label: "Church History", desc: "Rome to today — 2000 years" },
-  { href: "/priesthood", icon: "🙏", label: "Holy Orders", desc: "The three sacred degrees" },
-  { href: "/incorruptibles", icon: "🌹", label: "Incorruptibles", desc: "Bodies that defy decay" },
-  { href: "/intentions", icon: "💫", label: "Prayer Wall", desc: "Submit & pray for others" },
+  { href: "/saints", label: "Saints", desc: "Biographies, miracles & patronages" },
+  { href: "/popes", label: "Popes", desc: "St. Peter to Pope Leo XIV" },
+  { href: "/sacraments", label: "Sacraments", desc: "The 7 holy sacraments explained" },
+  { href: "/stations", label: "Stations", desc: "Immersive Way of the Cross" },
+  { href: "/rosary", label: "Holy Rosary", desc: "Guided prayer with mysteries" },
+  { href: "/readings", label: "Daily Readings", desc: "Scripture for today" },
+  { href: "/calendar", label: "Calendar", desc: "Liturgical seasons & feasts" },
+  { href: "/miracles", label: "Miracles", desc: "Verified signs and wonders" },
+  { href: "/mass", label: "Mass & Confession", desc: "Full liturgical breakdown" },
+  { href: "/history", label: "Church History", desc: "Rome to today — 2000 years" },
+  { href: "/priesthood", label: "Holy Orders", desc: "The three sacred degrees" },
+  { href: "/incorruptibles", label: "Incorruptibles", desc: "Bodies that defy decay" },
+  { href: "/intentions", label: "Prayer Wall", desc: "Submit & pray for others" },
 ];
 
 // Pick today's quote by day of year
@@ -202,7 +202,7 @@ export default function HomePage() {
                 className={`animate-fade-in animate-delay-${Math.min(i + 1, 4)}`}
               >
                 <div className="sacred-card" style={{ padding: "1.75rem 1.25rem", textAlign: "center", height: "100%" }}>
-                  <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>{f.icon}</div>
+                  <div style={{ fontSize: "1.1rem", marginBottom: "0.75rem", color: "var(--gold)", letterSpacing: "0.1em" }}>✦</div>
                   <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", color: "var(--navy)", marginBottom: "0.4rem", fontWeight: 700 }}>
                     {f.label}
                   </h3>

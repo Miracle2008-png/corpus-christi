@@ -104,7 +104,7 @@ export default function LiturgyPage() {
         </PrayerBlock>
 
         {/* ── HYMN ── */}
-        <PrayerBlock title={`Hymn — ${hour.hymn.title}`} icon="♪" color={hour.color}>
+        <PrayerBlock title={`Hymn — ${hour.hymn.title}`} icon="✦" color={hour.color}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
             {hour.hymn.lines.map((line, i) => (
               <p key={i} style={{ ...textStyle, fontStyle: "italic", margin: 0 }}>{line}</p>
@@ -143,7 +143,7 @@ export default function LiturgyPage() {
 
         {/* ── SALVE REGINA (Compline only) ── */}
         {hour.antiphon && (
-          <PrayerBlock title="Antiphon — Salve Regina" icon="🌙" color={hour.color}>
+          <PrayerBlock title="Antiphon — Salve Regina" icon="✦" color={hour.color}>
             <p style={{ ...textStyle, fontStyle: "italic" }}>{hour.antiphon}</p>
           </PrayerBlock>
         )}

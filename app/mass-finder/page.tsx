@@ -41,12 +41,12 @@ export default function MassFinderPage() {
     : "https://www.masstimes.org";
 
   const infoCards = [
-    { icon: "🌙", title: "Vigil Mass", time: "Saturday evening", desc: "A Saturday evening Mass fulfills the Sunday obligation. Times vary but are typically 5:00–7:00 PM." },
-    { icon: "☀️", title: "Sunday Masses", time: "Sunday morning", desc: "Most parishes offer multiple Sunday Masses — typically 7:00, 9:00, 11:00 AM and sometimes an afternoon Mass." },
-    { icon: "📖", title: "Daily Mass", time: "Weekdays", desc: "Most parishes offer a weekday Mass, usually 7:00–8:00 AM or 12:00 PM. A beautiful habit to build." },
-    { icon: "✝️", title: "Confession", time: "Before Sunday Mass", desc: "Confession is typically offered 30–60 minutes before a Sunday Mass. Many parishes also offer it Saturday afternoon." },
-    { icon: "⛪", title: "Holy Days of Obligation", time: "Varies", desc: "Catholics are required to attend Mass on Christmas, Immaculate Conception, Assumption, and other holy days." },
-    { icon: "📿", title: "Traditional Latin Mass", time: "Varies by parish", desc: "The Traditional Latin Mass (Extraordinary Form) is offered in many dioceses. Check your diocese's TLM schedule." },
+    { label: "I", title: "Vigil Mass", time: "Saturday evening", desc: "A Saturday evening Mass fulfills the Sunday obligation. Times vary but are typically 5:00–7:00 PM." },
+    { label: "II", title: "Sunday Masses", time: "Sunday morning", desc: "Most parishes offer multiple Sunday Masses — typically 7:00, 9:00, 11:00 AM and sometimes an afternoon Mass." },
+    { label: "III", title: "Daily Mass", time: "Weekdays", desc: "Most parishes offer a weekday Mass, usually 7:00–8:00 AM or 12:00 PM. A beautiful habit to build." },
+    { label: "IV", title: "Confession", time: "Before Sunday Mass", desc: "Confession is typically offered 30–60 minutes before a Sunday Mass. Many parishes also offer it Saturday afternoon." },
+    { label: "V", title: "Holy Days of Obligation", time: "Varies", desc: "Catholics are required to attend Mass on Christmas, Immaculate Conception, Assumption, and other holy days." },
+    { label: "VI", title: "Traditional Latin Mass", time: "Varies by parish", desc: "The Traditional Latin Mass (Extraordinary Form) is offered in many dioceses. Check your diocese’s TLM schedule." },
   ];
 
   return (
@@ -96,7 +96,7 @@ export default function MassFinderPage() {
                 Locating…
               </>
             ) : (
-              <>📍 Find Mass Near Me</>
+              <>Find Mass Near Me</>
             )}
           </button>
         )}
@@ -156,7 +156,7 @@ export default function MassFinderPage() {
                 disabled={loading}
                 style={{ background: "var(--navy)", color: "#fff", border: "none", padding: "0.65rem 1.5rem", borderRadius: "10px", fontSize: "0.9rem", fontWeight: 600, cursor: "pointer" }}
               >
-                📍 Use My Location
+                Use My Location
               </button>
             </div>
           )}
@@ -175,7 +175,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "opacity 0.2s",
               }}
             >
-              🗺️ Search on Google Maps
+              Search on Google Maps
             </a>
             <a
               href={massTimesUrl}
@@ -189,7 +189,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "opacity 0.2s",
               }}
             >
-              ⏰ MassTimes.org
+              MassTimes.org
             </a>
             <a
               href="https://www.catholicdirectory.org"
@@ -204,7 +204,7 @@ export default function MassFinderPage() {
                 textDecoration: "none", transition: "all 0.2s",
               }}
             >
-              📋 Catholic Directory
+              Catholic Directory
             </a>
             <a
               href="https://www.latinmassdir.org"
@@ -239,7 +239,7 @@ export default function MassFinderPage() {
               padding: "1.25rem",
               boxShadow: "0 1px 6px rgba(0,0,0,0.04)",
             }}>
-              <span style={{ fontSize: "1.75rem", display: "block", marginBottom: "0.5rem" }}>{item.icon}</span>
+              <span style={{ fontSize: "0.8rem", fontWeight: 800, color: "var(--gold)", letterSpacing: "0.05em", display: "block", marginBottom: "0.5rem" }}>{item.label}</span>
               <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--navy)", fontSize: "1rem", marginBottom: "0.25rem" }}>{item.title}</h3>
               <p style={{ color: "var(--gold-dark)", fontSize: "0.75rem", fontWeight: 700, marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.time}</p>
               <p style={{ color: "var(--text-muted)", fontSize: "0.85rem", lineHeight: 1.65, margin: 0 }}>{item.desc}</p>

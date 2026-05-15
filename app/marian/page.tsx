@@ -60,12 +60,12 @@ const apparitions = [
 ];
 
 const titles = [
-  { title: "Our Lady, Star of the Sea", latin: "Stella Maris", meaning: "Mary as the guiding light for sailors and all who navigate life's storms. Invoked by seafarers for protection since the early Church.", feast: "— ", icon: "★" },
+  { title: "Our Lady, Star of the Sea", latin: "Stella Maris", meaning: "Mary as the guiding light for sailors and all who navigate life's storms. Invoked by seafarers for protection since the early Church.", feast: "— ", icon: "✦" },
   { title: "Our Lady of Perpetual Help", latin: "Mater de Perpetuo Succursu", meaning: "Depicted in the famous Byzantine icon, Mary holds the Child Jesus who clings to her after seeing Angels holding instruments of the Passion. She is the ever-ready helper in all our needs.", feast: "June 27", icon: "" },
   { title: "Our Lady of Sorrows", latin: "Mater Dolorosa", meaning: "The seven sorrows of Mary: the Prophecy of Simeon, the Flight into Egypt, the Loss of Jesus in the Temple, meeting Jesus on the Way of the Cross, the Crucifixion, the Descent from the Cross, and the Burial.", feast: "September 15", icon: "" },
-  { title: "Our Lady of Mount Carmel", latin: "Domina Nostra de Monte Carmelo", meaning: "Patroness of the Carmelite Order. Devotion includes wearing the Brown Scapular, promised by Our Lady to St. Simon Stock in 1251 as a sign of her protection and a guarantee of final perseverance for those who wear it devotedly.", feast: "July 16", icon: "☩" },
-  { title: "Immaculate Heart of Mary", latin: "Cor Immaculatum Mariae", meaning: "Mary's heart, free from all sin, burning with love for God and souls. Consecration to the Immaculate Heart was requested at Fátima. The First Saturday devotion of reparation is connected to this devotion.", feast: "Saturday after Sacred Heart", icon: "♡" },
-  { title: "Our Lady, Queen of Heaven", latin: "Regina Caeli", meaning: "Honoured as Queen of Heaven and Earth, crowned by the Holy Trinity. The Regina Caeli prayer is prayed during Eastertide. Mary's queenship flows from her divine motherhood and her cooperation in redemption.", feast: "August 22", icon: "♛" },
+  { title: "Our Lady of Mount Carmel", latin: "Domina Nostra de Monte Carmelo", meaning: "Patroness of the Carmelite Order. Devotion includes wearing the Brown Scapular, promised by Our Lady to St. Simon Stock in 1251 as a sign of her protection and a guarantee of final perseverance for those who wear it devotedly.", feast: "July 16", icon: "✦" },
+  { title: "Immaculate Heart of Mary", latin: "Cor Immaculatum Mariae", meaning: "Mary's heart, free from all sin, burning with love for God and souls. Consecration to the Immaculate Heart was requested at Fátima. The First Saturday devotion of reparation is connected to this devotion.", feast: "Saturday after Sacred Heart", icon: "✦" },
+  { title: "Our Lady, Queen of Heaven", latin: "Regina Caeli", meaning: "Honoured as Queen of Heaven and Earth, crowned by the Holy Trinity. The Regina Caeli prayer is prayed during Eastertide. Mary\u2019s queenship flows from her divine motherhood and her cooperation in redemption.", feast: "August 22", icon: "✦" },
 ];
 
 const consecrationSteps = [
