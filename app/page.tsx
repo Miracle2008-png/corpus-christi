@@ -4,6 +4,8 @@ import CursorParticles from "@/components/CursorParticles";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Corpus Christi — Catholic Ministry Platform",
   description:
@@ -22,25 +24,69 @@ const saintQuotes = [
 ];
 
 const features = [
-  { href: "/saints", icon: "+", label: "Saints", desc: "Biographies, miracles & patronages" },
-  { href: "/popes", icon: "+", label: "Popes", desc: "St. Peter to Pope Leo XIV" },
-  { href: "/sacraments", icon: "+", label: "Sacraments", desc: "The 7 holy sacraments explained" },
-  { href: "/stations", icon: "+", label: "Stations", desc: "Immersive Way of the Cross" },
-  { href: "/rosary", icon: "+", label: "Holy Rosary", desc: "Guided prayer with mysteries" },
-  { href: "/readings", icon: "+", label: "Daily Readings", desc: "Scripture for today" },
-  { href: "/calendar", icon: "+", label: "Calendar", desc: "Liturgical seasons & feasts" },
-  { href: "/miracles", icon: "+", label: "Miracles", desc: "Verified signs and wonders" },
-  { href: "/mass", icon: "+", label: "Mass & Confession", desc: "Full liturgical breakdown" },
-  { href: "/history", icon: "+", label: "Church History", desc: "Rome to today — 2000 years" },
-  { href: "/priesthood", icon: "+", label: "Holy Orders", desc: "The three sacred degrees" },
-  { href: "/incorruptibles", icon: "+", label: "Incorruptibles", desc: "Bodies that defy decay" },
-  { href: "/intentions", icon: "+", label: "Prayer Wall", desc: "Submit & pray for others" },
+  { href: "/saints", icon: "✦", label: "Saints", desc: "Biographies, miracles & patronages" },
+  { href: "/popes", icon: "⛪", label: "Popes", desc: "St. Peter to Pope Leo XIV" },
+  { href: "/sacraments", icon: "💧", label: "Sacraments", desc: "The 7 holy sacraments explained" },
+  { href: "/stations", icon: "✝", label: "Stations", desc: "Immersive Way of the Cross" },
+  { href: "/rosary", icon: "📿", label: "Holy Rosary", desc: "Guided prayer with mysteries" },
+  { href: "/readings", icon: "📖", label: "Daily Readings", desc: "Scripture for today" },
+  { href: "/calendar", icon: "📅", label: "Calendar", desc: "Liturgical seasons & feasts" },
+  { href: "/miracles", icon: "✨", label: "Miracles", desc: "Verified signs and wonders" },
+  { href: "/mass", icon: "🕊", label: "Mass & Confession", desc: "Full liturgical breakdown" },
+  { href: "/history", icon: "🏛", label: "Church History", desc: "Rome to today — 2000 years" },
+  { href: "/priesthood", icon: "🙏", label: "Holy Orders", desc: "The three sacred degrees" },
+  { href: "/incorruptibles", icon: "🌹", label: "Incorruptibles", desc: "Bodies that defy decay" },
+  { href: "/intentions", icon: "💫", label: "Prayer Wall", desc: "Submit & pray for others" },
 ];
 
 // Pick today's quote by day of year
 function getTodaysQuote() {
   const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
   return saintQuotes[dayOfYear % saintQuotes.length];
+}
+
+// Calculate the real liturgical season
+function getLiturgicalSeason(): string {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1; // 1-12
+  const day = now.getDate();
+  const md = month * 100 + day; // e.g. 1225 = Dec 25
+
+  // Easter calculation (Anonymous Gregorian algorithm)
+  const a = year % 19;
+  const b = Math.floor(year / 100);
+  const c = year % 100;
+  const d = Math.floor(b / 4);
+  const e = b % 4;
+  const f = Math.floor((b + 8) / 25);
+  const g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4);
+  const k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const easterMonth = Math.floor((h + l - 7 * m + 114) / 31);
+  const easterDay = ((h + l - 7 * m + 114) % 31) + 1;
+  const easter = new Date(year, easterMonth - 1, easterDay);
+
+  const dayOfYear = Math.floor((now.getTime() - new Date(year, 0, 1).getTime()) / 86400000);
+  const easterDoy = Math.floor((easter.getTime() - new Date(year, 0, 1).getTime()) / 86400000);
+  const diff = dayOfYear - easterDoy;
+
+  // Advent: 4 Sundays before Christmas
+  const christmasDow = new Date(year, 11, 25).getDay();
+  const adventStart = new Date(year, 11, 25 - christmasDow - 21);
+  const adventDoy = Math.floor((adventStart.getTime() - new Date(year, 0, 1).getTime()) / 86400000);
+
+  if (diff >= -46 && diff < -6) return "Lent";
+  if (diff >= -6 && diff < 0) return "Holy Week";
+  if (diff === 0) return "Easter Sunday";
+  if (diff > 0 && diff <= 49) return "Easter";
+  if (diff === 49) return "Pentecost";
+  if (dayOfYear >= adventDoy) return "Advent";
+  if (md >= 1225 || md <= 112) return "Christmas";
+  return "Ordinary Time";
 }
 
 // Get today's reading from lectionary data
@@ -69,6 +115,7 @@ export default function HomePage() {
   const todaysQuote = getTodaysQuote();
   const todaysGospel = getTodaysGospel();
   const today = new Date().toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  const season = getLiturgicalSeason();
 
   return (
     <>
@@ -109,7 +156,7 @@ export default function HomePage() {
       {/* ========== TODAY'S DATE BANNER ========== */}
       <div style={{ background: "var(--gold)", padding: "0.75rem 1.5rem", textAlign: "center" }}>
         <p style={{ color: "var(--navy-dark)", fontSize: "0.875rem", fontWeight: 600, letterSpacing: "0.05em" }}>
-          {today} · Ordinary Time
+          {today} · {season}
         </p>
       </div>
 
