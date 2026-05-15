@@ -147,7 +147,7 @@ export default function MassFinderPage() {
               marginBottom: "1.25rem",
               boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
             }}>
-              <span style={{ fontSize: "3rem" }}>⛪</span>
+              <span style={{ fontSize: "2.5rem", color: "var(--gold)", letterSpacing: "0.1em" }}>✦</span>
               <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", textAlign: "center", maxWidth: "320px", lineHeight: 1.6 }}>
                 Click &ldquo;Find Mass Near Me&rdquo; above to locate nearby Catholic churches, or use one of the links below.
               </p>
