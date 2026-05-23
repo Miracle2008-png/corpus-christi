@@ -1,94 +1,50 @@
-const CACHE_NAME = "corpus-christi-v1";
-const OFFLINE_CACHE = "corpus-christi-offline-v1";
-
-const STATIC_ASSETS = [
-  "/",
-  "/manifest.json",
-  "/rosary",
-  "/readings",
-  "/saints",
-  "/sacraments",
-  "/stations",
-];
-
-const OFFLINE_FALLBACK_PAGES = [
-  "/offline",
-  "/_next/static/css/",
-  "/_next/static/chunks/",
-];
-
-// Install event - cache static assets
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS).catch(() => {});
-    })
-  );
   self.skipWaiting();
 });
 
-// Activate event - clean old caches
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys
-          .filter((key) => key !== CACHE_NAME && key !== OFFLINE_CACHE)
-          .map((key) => caches.delete(key))
-      )
-    )
-  );
-  self.clients.claim();
+  event.waitUntil(self.clients.claim());
 });
 
-// Fetch event - offline-first for devotional content, network-first for API
-self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-
-  // Skip non-GET requests
-  if (event.request.method !== "GET") return;
-
-  // API routes — network first, then offline JSON fallback
-  if (url.pathname.startsWith("/api/")) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          const clone = response.clone();
-          caches.open(OFFLINE_CACHE).then((cache) => cache.put(event.request, clone));
-          return response;
-        })
-        .catch(() => caches.match(event.request))
-    );
-    return;
+self.addEventListener("push", (event) => {
+  let data = { title: "Corpus Christi", body: "A new message from Corpus Christi." };
+  
+  if (event.data) {
+    try {
+      data = event.data.json();
+    } catch (e) {
+      data.body = event.data.text();
+    }
   }
 
-  // Static assets — cache first
-  if (
-    url.pathname.startsWith("/_next/static/") ||
-    url.pathname.startsWith("/icons/") ||
-    url.pathname.endsWith(".png") ||
-    url.pathname.endsWith(".jpg") ||
-    url.pathname.endsWith(".svg")
-  ) {
-    event.respondWith(
-      caches.match(event.request).then(
-        (cached) => cached || fetch(event.request).then((res) => {
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, res.clone()));
-          return res;
-        })
-      )
-    );
-    return;
-  }
+  const options = {
+    body: data.body,
+    icon: "/icon-192x192.png", // Assuming this exists or falls back gracefully
+    badge: "/icon-192x192.png",
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1,
+      url: data.url || "/",
+    },
+  };
 
-  // Pages — Network First to ensure auth state is fresh
-  event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        const clone = response.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-        return response;
-      })
-      .catch(() => caches.match(event.request))
+  event.waitUntil(self.registration.showNotification(data.title, options));
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  event.waitUntil(
+    self.clients.matchAll({ type: "window" }).then((clientList) => {
+      const url = event.notification.data.url || "/";
+      for (const client of clientList) {
+        if (client.url === url && "focus" in client) {
+          return client.focus();
+        }
+      }
+      if (self.clients.openWindow) {
+        return self.clients.openWindow(url);
+      }
+    })
   );
 });

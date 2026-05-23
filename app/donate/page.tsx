@@ -88,7 +88,7 @@ export default function DonatePage() {
 
               <div>
                 <span style={{ display: "block", color: "var(--text-muted)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.25rem" }}>Account Number</span>
-                <span style={{ display: "block", color: "var(--navy)", fontSize: "1.4rem", fontWeight: 800, letterSpacing: "0.05em", background: "rgba(26,39,68,0.05)", padding: "0.5rem 0.75rem", borderRadius: "6px", display: "inline-block" }}>[0000000000]</span>
+                <span style={{ display: "inline-block", color: "var(--navy)", fontSize: "1.4rem", fontWeight: 800, letterSpacing: "0.05em", background: "rgba(26,39,68,0.05)", padding: "0.5rem 0.75rem", borderRadius: "6px" }}>[0000000000]</span>
               </div>
             </div>
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 import { signOut, useSession } from "next-auth/react";
+import PushNotificationBell from "@/components/PushNotificationBell";
 
 const navGroups = [
   {
@@ -36,7 +37,7 @@ const navGroups = [
     label: "Explore",
     icon: "✦",
     children: [
-      { href: "/bible/passages", label: "Bible Passages", desc: "Key Scripture" },
+      { href: "/bible", label: "Holy Bible", desc: "Read the 73 books" },
       { href: "/bible/stories", label: "Bible Stories", desc: "Narrative retellings" },
       { href: "/miracles", label: "Miracles", desc: "Signs & wonders" },
       { href: "/incorruptibles", label: "Incorruptible Saints", desc: "Bodies that defy decay" },
@@ -217,8 +218,9 @@ export default function Navbar() {
             </div>
           ))}
 
-          {/* Auth buttons */}
+          {/* Auth buttons & Push */}
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.5rem" }}>
+            <PushNotificationBell />
             {session ? (
               <div style={{ position: "relative" }} onMouseLeave={() => setAuthDropdownOpen(false)}>
                 <button
