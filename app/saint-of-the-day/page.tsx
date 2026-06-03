@@ -1,5 +1,5 @@
 "use client";
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const saints = [
@@ -23,10 +23,20 @@ function getTodaySaint(month: number, day: number) {
 }
 
 export default function SaintOfTheDayPage() {
-  const today = new Date();
-  const saint = useMemo(() => getTodaySaint(today.getMonth() + 1, today.getDate()), []);
+  const [mounted, setMounted] = useState(false);
+  const [saint, setSaint] = useState(saints[0]);
+  const [dateStr, setDateStr] = useState("");
 
-  const dateStr = today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  useEffect(() => {
+    const today = new Date();
+    setSaint(getTodaySaint(today.getMonth() + 1, today.getDate()));
+    setDateStr(today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" }));
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div style={{ minHeight: "100vh", background: "var(--ivory)" }} />;
+  }
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--ivory)", paddingBottom: "5rem" }}>
