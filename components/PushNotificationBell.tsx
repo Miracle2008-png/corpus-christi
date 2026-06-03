@@ -2,10 +2,11 @@
 import { useState, useEffect } from "react";
 
 export default function PushNotificationBell() {
+  const [mounted, setMounted] = useState(false);
   const [permission, setPermission] = useState<NotificationPermission>("default");
 
   useEffect(() => {
-    if ("Notification" in window) {
+    if (typeof window !== "undefined" && "Notification" in window) {
       setPermission(Notification.permission);
       
       // Register service worker if not already
@@ -13,6 +14,7 @@ export default function PushNotificationBell() {
         navigator.serviceWorker.register("/sw.js").catch(console.error);
       }
     }
+    setMounted(true);
   }, []);
 
   const requestPermission = async () => {
@@ -32,8 +34,8 @@ export default function PushNotificationBell() {
     }
   };
 
-  if (permission === "granted" || !("Notification" in window)) {
-    return null; // Hide if already granted or not supported
+  if (!mounted || permission === "granted" || !("Notification" in window)) {
+    return null; // Hide if already granted, not supported, or during SSR
   }
 
   return (
