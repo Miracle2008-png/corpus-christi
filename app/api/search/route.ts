@@ -4,6 +4,7 @@ import Saint from "@/models/Saint";
 import Pope from "@/models/Pope";
 import LibraryBook from "@/models/LibraryBook";
 import Prayer from "@/models/Prayer";
+import { HOLY_SITES } from "@/data/holy-sites";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -15,6 +16,11 @@ export async function GET(req: NextRequest) {
     await connectToDatabase();
     const regex = new RegExp(query, "i");
 
+    // Search static holy sites first (synchronous)
+    const holySites = HOLY_SITES.filter(
+      (s) => s.name.toLowerCase().includes(query.toLowerCase()) || s.location.toLowerCase().includes(query.toLowerCase())
+    ).slice(0, 3);
+
     // Search across collections in parallel
     const [saints, popes, books, prayers] = await Promise.all([
       Saint.find({ name: regex }).limit(3).select("name slug category").lean(),
@@ -24,6 +30,7 @@ export async function GET(req: NextRequest) {
     ]);
 
     const results = [
+      ...holySites.map((s) => ({ title: s.name, type: "Holy Site", url: `/pilgrimage` })),
       ...saints.map((s: any) => ({ title: s.name, type: "Saint", url: `/saints/${s.slug}` })),
       ...popes.map((p: any) => ({ title: p.name, type: "Pope", url: `/popes/${p.slug}` })),
       ...books.map((b: any) => ({ title: b.title, type: "Book", url: `/library/${b.slug}` })),

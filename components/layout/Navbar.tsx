@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 
 import { signOut, useSession } from "next-auth/react";
 import PushNotificationBell from "@/components/PushNotificationBell";
-
+import GlobalSearch from "@/components/layout/GlobalSearch";
 const navGroups = [
   {
     label: "Pray",
@@ -220,6 +220,7 @@ export default function Navbar() {
 
           {/* Auth buttons & Push */}
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginLeft: "0.5rem" }}>
+            <GlobalSearch />
             <PushNotificationBell />
             {session ? (
               <div style={{ position: "relative" }} onMouseLeave={() => setAuthDropdownOpen(false)}>
@@ -375,6 +376,10 @@ export default function Navbar() {
           overflowY: "auto",
           WebkitOverflowScrolling: "touch",
         }}>
+          <div style={{ marginBottom: "1.5rem", display: "flex", justifyContent: "center" }}>
+            <GlobalSearch />
+          </div>
+
           {/* Prominent CTA */}
           <Link
             href="/readings"
