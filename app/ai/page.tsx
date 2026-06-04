@@ -101,15 +101,7 @@ export default function AIAssistantPage() {
         <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem", maxWidth: "560px", margin: "0 auto" }}>
           Ask anything about Scripture, the saints, Catholic doctrine, the sacraments, or Church history.
         </p>
-        <div style={{
-          display: "inline-flex", alignItems: "center", gap: "0.5rem",
-          marginTop: "1rem", background: "rgba(201,168,76,0.1)",
-          border: "1px solid rgba(201,168,76,0.25)", borderRadius: "999px",
-          padding: "0.35rem 1rem", fontSize: "0.8rem", color: "rgba(201,168,76,0.9)",
-        }}>
-          <span style={{ width: "6px", height: "6px", background: "#4ade80", borderRadius: "50%", display: "inline-block" }} />
-          Powered by Google Gemini · Grounded in the Catechism &amp; Scripture
-        </div>
+
       </div>
 
       {/* Chat Area */}
