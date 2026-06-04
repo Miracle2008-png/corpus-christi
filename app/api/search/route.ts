@@ -4,6 +4,7 @@ import Saint from "@/models/Saint";
 import Pope from "@/models/Pope";
 import LibraryBook from "@/models/LibraryBook";
 import Prayer from "@/models/Prayer";
+import Hymn from "@/models/Hymn";
 import { HOLY_SITES } from "@/data/holy-sites";
 
 export async function GET(req: NextRequest) {
@@ -21,12 +22,12 @@ export async function GET(req: NextRequest) {
       (s) => s.name.toLowerCase().includes(query.toLowerCase()) || s.location.toLowerCase().includes(query.toLowerCase())
     ).slice(0, 3);
 
-    // Search across collections in parallel
-    const [saints, popes, books, prayers] = await Promise.all([
+    const [saints, popes, books, prayers, hymns] = await Promise.all([
       Saint.find({ name: regex }).limit(3).select("name slug category").lean(),
       Pope.find({ name: regex }).limit(3).select("name slug").lean(),
       LibraryBook.find({ title: regex }).limit(3).select("title slug author").lean(),
       Prayer.find({ title: regex }).limit(3).select("title").lean(),
+      Hymn.find({ title: regex }).limit(3).select("title slug").lean(),
     ]);
 
     const results = [
@@ -35,6 +36,7 @@ export async function GET(req: NextRequest) {
       ...popes.map((p: any) => ({ title: p.name, type: "Pope", url: `/popes/${p.slug}` })),
       ...books.map((b: any) => ({ title: b.title, type: "Book", url: `/library/${b.slug}` })),
       ...prayers.map((p: any) => ({ title: p.title, type: "Prayer", url: `/prayers` })),
+      ...hymns.map((h: any) => ({ title: h.title, type: "Hymn", url: `/hymns/${h.slug}` })),
     ];
 
     return NextResponse.json(results.slice(0, 8)); // Max 8 results

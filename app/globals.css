@@ -79,6 +79,13 @@
   box-shadow: 0 6px 16px rgba(26,39,68,0.15) !important;
 }
 
+/* Hymn card hover (server component safe) */
+.hymn-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 24px rgba(26,39,68,0.1) !important;
+  border-color: var(--gold) !important;
+}
+
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
