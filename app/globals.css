@@ -71,6 +71,14 @@
   box-shadow: 0 8px 28px rgba(26,39,68,0.14);
 }
 
+/* Bible chapter link hover (server component safe) */
+.chapter-link:hover {
+  background: var(--navy) !important;
+  color: #fff !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 16px rgba(26,39,68,0.15) !important;
+}
+
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;

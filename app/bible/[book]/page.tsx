@@ -147,6 +147,7 @@ export default async function BookIndexPage({ params }: PageProps) {
             <Link
               key={chapter}
               href={`/bible/${bookSlug}/${chapter}`}
+              className="chapter-link"
               style={{
                 background: "#fff",
                 border: "1px solid rgba(26,39,68,0.15)",
@@ -161,8 +162,6 @@ export default async function BookIndexPage({ params }: PageProps) {
                 boxShadow: "0 2px 4px rgba(0,0,0,0.02)",
                 transition: "all 0.2s"
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--navy)"; e.currentTarget.style.color = "#fff"; e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 6px 16px rgba(26,39,68,0.15)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.color = "var(--navy)"; e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 2px 4px rgba(0,0,0,0.02)"; }}
             >
               {chapter}
             </Link>
