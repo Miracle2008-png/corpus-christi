@@ -20,7 +20,10 @@ export default function RegisterPage() {
     e.preventDefault();
     setError("");
     if (form.password !== form.confirm) return setError("Passwords do not match.");
-    if (form.password.length < 8) return setError("Password must be at least 8 characters.");
+    if (form.password.length < 6) return setError("Password must be at least 6 characters.");
+    if (!/\d/.test(form.password) || !/[!@#$%^&*(),.?":{}|<>]/.test(form.password)) {
+      return setError("Password must contain at least one number and one symbol.");
+    }
     setLoading(true);
     try {
       const res = await fetch("/api/register", {

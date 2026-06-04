@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PWARegister from "@/components/PWARegister";
 import { Providers } from "@/components/Providers";
+import SessionTimeoutWrapper from "@/components/auth/SessionTimeoutWrapper";
 import { auth } from "@/lib/auth";
 
 export const metadata: Metadata = {
@@ -65,12 +66,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className="bg-parchment">
         <Providers session={session}>
-          <PWARegister />
-          <Navbar />
-          <main id="main-content" role="main">
-            {children}
-          </main>
-          <Footer />
+          <SessionTimeoutWrapper>
+            <PWARegister />
+            <Navbar />
+            <main id="main-content" role="main">
+              {children}
+            </main>
+            <Footer />
+          </SessionTimeoutWrapper>
         </Providers>
       </body>
     </html>
