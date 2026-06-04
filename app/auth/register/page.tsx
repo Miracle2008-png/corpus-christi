@@ -10,12 +10,7 @@ export default function RegisterPage() {
   const { data: session, status } = useSession();
   const ADMIN_EMAILS = ["miraclechimdindu2008@gmail.com", "miraclechimdindu2025@gmail.com"];
   
-  useEffect(() => {
-    if (status === "authenticated") {
-      const isAdmin = session?.user?.email && ADMIN_EMAILS.includes(session.user.email);
-      router.push(isAdmin ? "/admin" : "/dashboard");
-    }
-  }, [status, session, router]);
+  // Redirect removed: Allow signed-in users (like admins) to create new accounts
 
   const [form, setForm] = useState({ name: "", email: "", password: "", confirm: "" });
   const [error, setError] = useState("");
