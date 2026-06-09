@@ -5,7 +5,7 @@ import Prayer from "@/models/Prayer";
 const stBridgetPrayer = {
   title: "The 12-Year Prayers of St. Bridget",
   slug: "st-bridget-12-year-prayers",
-  category: "novena", // Using novena/devotion category
+  category: "novena" as const, // Fix TS error
   explanation: "These prayers were given to St. Bridget of Sweden by Jesus. He promised that whoever prays these daily for 12 years will receive five special graces, including that they will not suffer purgatory, and will be accepted among the martyrs as if they had shed their blood for the faith.",
   occasion: "Daily devotion for 12 years",
   english_text: `Prayer 1: The Circumcision
