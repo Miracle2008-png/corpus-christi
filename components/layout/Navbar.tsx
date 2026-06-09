@@ -40,7 +40,6 @@ const navGroups = [
       { href: "/bible", label: "Holy Bible", desc: "Read the 73 books" },
       { href: "/bible/stories", label: "Bible Stories", desc: "Narrative retellings" },
       { href: "/miracles", label: "Miracles", desc: "Signs & wonders" },
-      { href: "/hymns", label: "Sacred Hymns", desc: "Traditional Catholic chants" },
       { href: "/incorruptibles", label: "Incorruptible Saints", desc: "Bodies that defy decay" },
       { href: "/marian", label: "Marian Devotions", desc: "Our Lady" },
       { href: "/library", label: "Catholic Library", desc: "Free classic texts" },
@@ -51,6 +50,7 @@ const navGroups = [
     label: "Community",
     icon: "✦",
     children: [
+      { href: "/hymns", label: "Sacred Hymns", desc: "Traditional Catholic chants" },
       { href: "/mass", label: "Mass & Confession", desc: "Liturgical guide" },
       { href: "/confession", label: "Confession Guide", desc: "Examine your conscience" },
       { href: "/mass-finder", label: "Find Mass Near Me", desc: "Locate a parish" },
