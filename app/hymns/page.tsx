@@ -1,21 +1,17 @@
 import { headers } from "next/headers";
 import HymnsList from "./HymnsList";
+import connectDB from "@/lib/mongodb";
+import Hymn from "@/models/Hymn";
 
 export const dynamic = "force-dynamic";
 
 export default async function HymnsIndexPage() {
-  const headersList = await headers();
-  const host = headersList.get("host") || "localhost:3000";
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  
   let hymns = [];
   try {
-    const res = await fetch(`${protocol}://${host}/api/hymns`, {
-      cache: "no-store"
-    });
-    if (res.ok) {
-      hymns = await res.json();
-    }
+    await connectDB();
+    const dbHymns = await Hymn.find({}).sort({ title: 1 }).lean();
+    // Serialize to pass to client component safely
+    hymns = JSON.parse(JSON.stringify(dbHymns));
   } catch (error) {
     console.error("Failed to load hymns:", error);
   }
