@@ -1,0 +1,908 @@
+
+> catholic-platform@0.1.0 lint
+> eslint
+
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\add_saints.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\add_saints2.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\add_treasury.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx
+   4:7   warning  'SEASONS' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  26:10  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:26:10
+  24 |
+  25 |       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
+> 26 |         <Card label="Total Users" value={stats?.totalUsers ?? "—"} color="#c9a84c" />
+     |          ^^^^ This component is created during render
+  27 |         <Card label="New This Week" value={stats?.newUsersThisWeek ?? "—"} color="#3498db" />
+  28 |         <Card label="Total Donations" value={stats?.totalDonations ?? "—"} color="#27ae60" />
+  29 |         <Card label="Total Revenue" value={`₦${(stats?.totalRevenue ?? 0).toLocaleString()}`} color="#9b59b6" />
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:11:16
+   9 |   useEffect(() => { fetch("/api/admin/stats").then(r => r.json()).then(setStats); }, []);
+  10 |
+> 11 |   const Card = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |     <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)", borderLeft: `4px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |       <p style={{ color: "#888", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0:0 0.4rem" }}>{label}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |       <p style={{ fontSize: "2rem", fontWeight: 700, color: "#1a2744", margin: 0 }}>{value}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   );
+     | ^^^^ The component is created during render here
+  17 |
+  18 |   return (
+  19 |     <div>                                                                                                   react-hooks/static-components
+  27:10  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:27:10
+  25 |       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
+  26 |         <Card label="Total Users" value={stats?.totalUsers ?? "—"} color="#c9a84c" />
+> 27 |         <Card label="New This Week" value={stats?.newUsersThisWeek ?? "—"} color="#3498db" />
+     |          ^^^^ This component is created during render
+  28 |         <Card label="Total Donations" value={stats?.totalDonations ?? "—"} color="#27ae60" />
+  29 |         <Card label="Total Revenue" value={`₦${(stats?.totalRevenue ?? 0).toLocaleString()}`} color="#9b59b6" />
+  30 |         <Card label="Liturgical Readings" value={stats?.totalReadings ?? "—"} color="#e67e22" />
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:11:16
+   9 |   useEffect(() => { fetch("/api/admin/stats").then(r => r.json()).then(setStats); }, []);
+  10 |
+> 11 |   const Card = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |     <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)", borderLeft: `4px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |       <p style={{ color: "#888", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0:0 0.4rem" }}>{label}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |       <p style={{ fontSize: "2rem", fontWeight: 700, color: "#1a2744", margin: 0 }}>{value}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   );
+     | ^^^^ The component is created during render here
+  17 |
+  18 |   return (
+  19 |     <div>  react-hooks/static-components
+  28:10  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:28:10
+  26 |         <Card label="Total Users" value={stats?.totalUsers ?? "—"} color="#c9a84c" />
+  27 |         <Card label="New This Week" value={stats?.newUsersThisWeek ?? "—"} color="#3498db" />
+> 28 |         <Card label="Total Donations" value={stats?.totalDonations ?? "—"} color="#27ae60" />
+     |          ^^^^ This component is created during render
+  29 |         <Card label="Total Revenue" value={`₦${(stats?.totalRevenue ?? 0).toLocaleString()}`} color="#9b59b6" />
+  30 |         <Card label="Liturgical Readings" value={stats?.totalReadings ?? "—"} color="#e67e22" />
+  31 |         <Card label="Prayer Intentions" value={stats?.totalIntentions ?? "—"} color="#e74c3c" />
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:11:16
+   9 |   useEffect(() => { fetch("/api/admin/stats").then(r => r.json()).then(setStats); }, []);
+  10 |
+> 11 |   const Card = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |     <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)", borderLeft: `4px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |       <p style={{ color: "#888", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0:0 0.4rem" }}>{label}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |       <p style={{ fontSize: "2rem", fontWeight: 700, color: "#1a2744", margin: 0 }}>{value}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   );
+     | ^^^^ The component is created during render here
+  17 |
+  18 |   return (
+  19 |     <div>                                          react-hooks/static-components
+  29:10  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:29:10
+  27 |         <Card label="New This Week" value={stats?.newUsersThisWeek ?? "—"} color="#3498db" />
+  28 |         <Card label="Total Donations" value={stats?.totalDonations ?? "—"} color="#27ae60" />
+> 29 |         <Card label="Total Revenue" value={`₦${(stats?.totalRevenue ?? 0).toLocaleString()}`} color="#9b59b6" />
+     |          ^^^^ This component is created during render
+  30 |         <Card label="Liturgical Readings" value={stats?.totalReadings ?? "—"} color="#e67e22" />
+  31 |         <Card label="Prayer Intentions" value={stats?.totalIntentions ?? "—"} color="#e74c3c" />
+  32 |       </div>
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:11:16
+   9 |   useEffect(() => { fetch("/api/admin/stats").then(r => r.json()).then(setStats); }, []);
+  10 |
+> 11 |   const Card = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |     <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)", borderLeft: `4px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |       <p style={{ color: "#888", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0:0 0.4rem" }}>{label}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |       <p style={{ fontSize: "2rem", fontWeight: 700, color: "#1a2744", margin: 0 }}>{value}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   );
+     | ^^^^ The component is created during render here
+  17 |
+  18 |   return (
+  19 |     <div>                                                                                                                   react-hooks/static-components
+  30:10  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:30:10
+  28 |         <Card label="Total Donations" value={stats?.totalDonations ?? "—"} color="#27ae60" />
+  29 |         <Card label="Total Revenue" value={`₦${(stats?.totalRevenue ?? 0).toLocaleString()}`} color="#9b59b6" />
+> 30 |         <Card label="Liturgical Readings" value={stats?.totalReadings ?? "—"} color="#e67e22" />
+     |          ^^^^ This component is created during render
+  31 |         <Card label="Prayer Intentions" value={stats?.totalIntentions ?? "—"} color="#e74c3c" />
+  32 |       </div>
+  33 |
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:11:16
+   9 |   useEffect(() => { fetch("/api/admin/stats").then(r => r.json()).then(setStats); }, []);
+  10 |
+> 11 |   const Card = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |     <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)", borderLeft: `4px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |       <p style={{ color: "#888", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0:0 0.4rem" }}>{label}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |       <p style={{ fontSize: "2rem", fontWeight: 700, color: "#1a2744", margin: 0 }}>{value}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   );
+     | ^^^^ The component is created during render here
+  17 |
+  18 |   return (
+  19 |     <div>                                                                                                                                                                                                                 react-hooks/static-components
+  31:10  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:31:10
+  29 |         <Card label="Total Revenue" value={`₦${(stats?.totalRevenue ?? 0).toLocaleString()}`} color="#9b59b6" />
+  30 |         <Card label="Liturgical Readings" value={stats?.totalReadings ?? "—"} color="#e67e22" />
+> 31 |         <Card label="Prayer Intentions" value={stats?.totalIntentions ?? "—"} color="#e74c3c" />
+     |          ^^^^ This component is created during render
+  32 |       </div>
+  33 |
+  34 |       <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)" }}>
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\analytics\page.tsx:11:16
+   9 |   useEffect(() => { fetch("/api/admin/stats").then(r => r.json()).then(setStats); }, []);
+  10 |
+> 11 |   const Card = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |     <div style={{ background: "#fff", borderRadius: "10px", padding: "1.5rem", border: "1px solid rgba(0,0,0,0.07)", borderLeft: `4px solid ${color}` }}>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 13 |       <p style={{ color: "#888", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", margin: "0:0 0.4rem" }}>{label}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 14 |       <p style={{ fontSize: "2rem", fontWeight: 700, color: "#1a2744", margin: 0 }}>{value}</p>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 15 |     </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   );
+     | ^^^^ The component is created during render here
+  17 |
+  18 |   return (
+  19 |     <div>                                                                                                                                                                                     react-hooks/static-components
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\donations\page.tsx
+  17:21  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\donations\page.tsx:17:21
+  15 |   };
+  16 |
+> 17 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  18 |
+  19 |   const exportCSV = () => {
+  20 |     const headers = ["Name", "Email", "Amount", "Currency", "Reference", "Status", "Date"];  react-hooks/set-state-in-effect
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\holy-sites\page.tsx
+  19:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\holy-sites\page.tsx:19:21
+  17 |   }, [search]);
+  18 |
+> 19 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  20 |
+  21 |   const save = async () => {
+  22 |     setSaving(true);  react-hooks/set-state-in-effect
+  19:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\intentions\page.tsx
+  17:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\intentions\page.tsx:17:21
+  15 |   }, [filter]);
+  16 |
+> 17 |   useEffect(() => { load(1); }, [filter]);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  18 |
+  19 |   const act = async (_id: string, action: string) => {
+  20 |     setActing(_id + action);  react-hooks/set-state-in-effect
+  17:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\layout.tsx
+  14:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\library\page.tsx
+  20:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\library\page.tsx:20:21
+  18 |   }, [search]);
+  19 |
+> 20 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  21 |
+  22 |   const save = async () => {
+  23 |     setSaving(true);  react-hooks/set-state-in-effect
+  20:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\mass-finder\page.tsx
+  19:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\mass-finder\page.tsx:19:21
+  17 |   }, [search]);
+  18 |
+> 19 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  20 |
+  21 |   const save = async () => {
+  22 |     setSaving(true);  react-hooks/set-state-in-effect
+  19:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\popes\page.tsx
+  17:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\popes\page.tsx:17:21
+  15 |   }, [search]);
+  16 |
+> 17 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  18 |   const save = async () => { setSaving(true); await fetch("/api/admin/popes",{method:editing?"PUT":"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(editing?{...form,_id:editing}:form)}); setSaving(false); setShowForm(false); setEditing(null); setForm(empty); load(page); };
+  19 |   const del = async (_id:string) => { if(!confirm("Delete this pope?"))return; await fetch("/api/admin/popes",{method:"DELETE",headers:{"Content-Type":"application/json"},body:JSON.stringify({_id})}); load(page); };
+  20 |   const edit = (item:Item) => { setForm(item as unknown as Record<string,unknown>); setEditing(item._id); setShowForm(true); };  react-hooks/set-state-in-effect
+  17:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\prayers\page.tsx
+  18:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\prayers\page.tsx:18:21
+  16 |   }, [search]);
+  17 |
+> 18 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  19 |   const save = async () => { setSaving(true); await fetch("/api/admin/prayers",{method:editing?"PUT":"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(editing?{...form,_id:editing}:form)}); setSaving(false); setShowForm(false); setEditing(null); setForm(empty); load(page); };
+  20 |   const del = async (_id:string) => { if(!confirm("Delete this prayer?"))return; await fetch("/api/admin/prayers",{method:"DELETE",headers:{"Content-Type":"application/json"},body:JSON.stringify({_id})}); load(page); };
+  21 |   const edit = (item:Item) => { setForm(item as unknown as Record<string,unknown>); setEditing(item._id); setShowForm(true); };  react-hooks/set-state-in-effect
+  18:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\readings\page.tsx
+  34:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\readings\page.tsx:34:21
+  32 |   };
+  33 |
+> 34 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  35 |
+  36 |   const save = async () => {
+  37 |     setSaving(true);  react-hooks/set-state-in-effect
+  34:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\saints\page.tsx
+  20:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\saints\page.tsx:20:21
+  18 |   }, [search]);
+  19 |
+> 20 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  21 |
+  22 |   const save = async () => {
+  23 |     setSaving(true);  react-hooks/set-state-in-effect
+  20:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\users\page.tsx
+  23:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\admin\users\page.tsx:23:21
+  21 |   }, [search]);
+  22 |
+> 23 |   useEffect(() => { load(1); }, []);
+     |                     ^^^^ Avoid calling setState() directly within an effect
+  24 |
+  25 |   const act = async (userId: string, action: string) => {
+  26 |     setActing(userId + action);  react-hooks/set-state-in-effect
+  23:33  warning  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\ai\page.tsx
+  2:28  warning  'useEffect' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\admin\holy-sites\route.ts
+   8:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  49:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  59:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\admin\library\route.ts
+   8:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  49:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  59:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\admin\mass-finder\route.ts
+   8:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  49:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  59:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\admin\seed-readings\route.ts
+  11:28  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  14:28  warning  'req' is defined but never used           @typescript-eslint/no-unused-vars
+  21:48  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  26:15  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\cron\send-newsletter\route.ts
+  39:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\donations\route.ts
+  9:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\newsletter\route.ts
+  18:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\prayers-db\route.ts
+  15:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\search\route.ts
+  35:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  36:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\seed-hymns\route.ts
+  408:11  warning  'authHeader' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\seed-readings\route.ts
+  223:9  error  'startDate' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\seed-st-bridget\route.ts
+  42:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\api\user\bookmarks\route.ts
+   6:27  warning  'req' is defined but never used           @typescript-eslint/no-unused-vars
+  27:15  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:15  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\auth\register\page.tsx
+   5:10  warning  'useEffect' is defined but never used              @typescript-eslint/no-unused-vars
+  10:17  warning  'session' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  10:26  warning  'status' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  11:9   warning  'ADMIN_EMAILS' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\bible\[book]\[chapter]\page.tsx
+  66:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  96:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\bible\page.tsx
+  200:40  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  200:54  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\calendar\page.tsx
+  3:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\catechism\page.tsx
+  120:10  warning  'openPoints' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  120:22  warning  'setOpenPoints' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\confession\page.tsx
+  176:119  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\dashboard\page.tsx
+  9:7  warning  'ADMIN_EMAILS' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\hymns\HymnsList.tsx
+  11:69  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  24:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\hymns\[slug]\page.tsx
+  38:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  90:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\hymns\page.tsx
+  1:10  warning  'headers' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\intentions\page.tsx
+   28:5   error    Error: Cannot access variable before it is declared
+
+`fetchIntentions` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\intentions\page.tsx:28:5
+  26 |
+  27 |   useEffect(() => {
+> 28 |     fetchIntentions();
+     |     ^^^^^^^^^^^^^^^ `fetchIntentions` accessed before it is declared
+  29 |   }, []);
+  30 |
+  31 |   const fetchIntentions = async () => {
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\intentions\page.tsx:31:3
+  29 |   }, []);
+  30 |
+> 31 |   const fetchIntentions = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |     try {
+     | ^^^^^^^^^
+> 33 |       const res = await fetch("/api/intentions");
+     …
+     | ^^^^^^^^^
+> 40 |     }
+     | ^^^^^^^^^
+> 41 |   };
+     | ^^^^^ `fetchIntentions` is declared here
+  42 |
+  43 |   const handlePostIntention = async (e: React.FormEvent) => {
+  44 |     e.preventDefault();  react-hooks/immutability
+   36:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   60:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   91:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  105:13  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react/no-unescaped-entities
+  105:77  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\layout.tsx
+  60:9  warning  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\liturgy\page.tsx
+  13:16  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\liturgy\page.tsx:13:16
+  11 |   useEffect(() => {
+  12 |     const h = new Date().getHours();
+> 13 |     if (h < 6) setActiveHour("vigils");
+     |                ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  14 |     else if (h < 9) setActiveHour("lauds");
+  15 |     else if (h < 12) setActiveHour("terce");
+  16 |     else if (h < 13) setActiveHour("sext");  react-hooks/set-state-in-effect
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\marian\page.tsx
+  102:114  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  170:187  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\novenas\page.tsx
+  130:180  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\pilgrimage\page.tsx
+  33:17  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\pilgrimage\page.tsx:33:17
+  31 |   useEffect(() => {
+  32 |     const stored = localStorage.getItem("pilgrimage-visited");
+> 33 |     if (stored) setPrayerDone(new Set(JSON.parse(stored)));
+     |                 ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  34 |   }, []);
+  35 |
+  36 |   useEffect(() => {  react-hooks/set-state-in-effect
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\prayers\page.tsx
+   11:10   warning  'showLatin' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  127:27   error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  129:31   error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  132:27   error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  134:31   error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  143:27   error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  146:122  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\profile\page.tsx
+  44:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\readings\page.tsx
+  20:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\sacraments\[slug]\page.tsx
+  112:135  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\saint-of-the-day\page.tsx
+  32:5    error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\saint-of-the-day\page.tsx:32:5
+  30 |   useEffect(() => {
+  31 |     const today = new Date();
+> 32 |     setSaint(getTodaySaint(today.getMonth() + 1, today.getDate()));
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |     setDateStr(today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" }));
+  34 |     setMounted(true);
+  35 |   }, []);  react-hooks/set-state-in-effect
+  58:168  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\saints\[slug]\page.tsx
+  31:14  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\sitemap.ts
+  56:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  65:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  74:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\stations\page.tsx
+  74:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\app\virtues\page.tsx
+  113:296  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  230:17   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  230:164  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\AudioPlayer.tsx
+  53:6  warning  React Hook useEffect has a missing dependency: 'isPlaying'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\AudioReader.tsx
+  15:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\AudioReader.tsx:15:5
+  13 |
+  14 |   useEffect(() => {
+> 15 |     setSupported(typeof window !== "undefined" && "speechSynthesis" in window);
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |     return () => { if (typeof window !== "undefined") window.speechSynthesis.cancel(); };
+  17 |   }, []);
+  18 |  react-hooks/set-state-in-effect
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\CursorParticles.tsx
+  12:9  error  'particles' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\GlobalSearch.tsx
+  14:9   warning  'router' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  25:29  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\GlobalSearch.tsx:25:29
+  23 |
+  24 |   useEffect(() => {
+> 25 |     if (query.length < 2) { setResults([]); return; }
+     |                             ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  26 |     const delay = setTimeout(async () => {
+  27 |       setLoading(true);
+  28 |       try {  react-hooks/set-state-in-effect
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\PushNotificationBell.tsx
+  10:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\PushNotificationBell.tsx:10:7
+   8 |   useEffect(() => {
+   9 |     if (typeof window !== "undefined" && "Notification" in window) {
+> 10 |       setPermission(Notification.permission);
+     |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  11 |       
+  12 |       // Register service worker if not already
+  13 |       if ("serviceWorker" in navigator) {  react-hooks/set-state-in-effect
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\SafeImage.tsx
+   4:53  warning  'sizes' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   4:88  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  41:5   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  44:29  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\auth\SessionTimeoutWrapper.tsx
+  8:17  warning  'session' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\layout\GlobalSearch.tsx
+   19:9   warning  'router' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   51:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\components\layout\GlobalSearch.tsx:51:7
+  49 |   useEffect(() => {
+  50 |     if (!query || query.length < 2) {
+> 51 |       setResults([]);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |       return;
+  53 |     }
+  54 |  react-hooks/set-state-in-effect
+  180:36  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react/no-unescaped-entities
+  180:44  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react/no-unescaped-entities
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\download_popes.js
+   1:15  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   3:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  12:65  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\download_saints.js
+   1:15  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   3:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  26:47  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\fix_pope_images.js
+   1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   3:15  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  60:18  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\fix_rosary.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\fix_saint_images.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\fix_saints.js
+   1:15  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   3:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  18:65  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\generate-lectionary.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\hardcode_popes.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\lib\auth.ts
+    4:8   warning  'AppleProvider' is defined but never used  @typescript-eslint/no-unused-vars
+    8:18  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+   74:20  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  101:26  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\lib\email.ts
+  5:68  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\lib\mongodb.ts
+  16:3  warning  Unused eslint-disable directive (no problems were reported from 'no-var')
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\make_admin.js
+  1:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:18  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\public\sw.js
+   1:35  warning  'event' is defined but never used  @typescript-eslint/no-unused-vars
+  15:14  warning  'e' is defined but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\download-assets.js
+  1:12  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  2:15  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+  3:7   warning  'path' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  3:14  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\download-missing-assets.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\fetch-pope-images.js
+   1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  32:14  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\fix-broken-images.js
+   1:12  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   2:14  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+   3:15  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  24:20  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+  26:23  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\fix-remaining.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  5:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\generate-authentic.js
+  1:12  error    A `require()` style import is forbidden       @typescript-eslint/no-require-imports
+  3:7   warning  'seasons' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\prefetch-texts.js
+  5:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  6:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  7:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  9:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-api.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-pageimages.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-proxy-fetch.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-proxy-local.js
+  1:7   warning  'http' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  1:14  error    A `require()` style import is forbidden    @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-proxy.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-wiki-url.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-wiki-url2.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-wiki-url3.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\scripts\test-wiki-url4.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\seed.js
+  1:1   error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:18  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  4:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\seed_readings.js
+  1:18  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:16  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\strip_all_emojis.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\strip_emojis.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_api.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_cache.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_content.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_icon.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_images.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_live.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_live_code.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_live_update.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_pope.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_readings.js
+   1:15  error    A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  10:13  warning  'e' is defined but never used            @typescript-eslint/no-unused-vars
+
+C:\Users\victus\OneDrive\Desktop\claude n antigravity\catholic-platform\test_wiki.js
+  1:15  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+✖ 224 problems (174 errors, 50 warnings)
+  2 errors and 1 warning potentially fixable with the `--fix` option.
+
