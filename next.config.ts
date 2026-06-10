@@ -17,9 +17,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   async headers() {
     return [
       {
