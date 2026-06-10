@@ -40,4 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# vercel
 .vercel
+
+# debug/temp files
+build_output.txt
+commits.json
+deployments.json
+dev.log
+lint_output.txt
