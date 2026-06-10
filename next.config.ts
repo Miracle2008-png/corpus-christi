@@ -14,9 +14,6 @@ const nextConfig: NextConfig = {
     ],
     minimumCacheTTL: 2592000,
   },
-  experimental: {
-    optimizeCss: true,
-  },
   async headers() {
     return [
       {
