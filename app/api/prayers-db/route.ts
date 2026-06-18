@@ -15,7 +15,7 @@ export async function GET() {
     const prayers = dbPrayers.map((p: any) => ({
       title: p.title,
       latin: p.latin_text,
-      category: p.category === "novena" ? "Novenas" : "Admin Added",
+      category: p.category || "Catholic Treasury",
       text: p.english_text || p.text,
       note: p.explanation || p.note,
       source: p.occasion || p.source,

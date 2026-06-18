@@ -5,7 +5,7 @@ import Prayer from "@/models/Prayer";
 const stBridgetPrayer = {
   title: "The 12-Year Prayers of St. Bridget",
   slug: "st-bridget-12-year-prayers",
-  category: "novena" as const, // Fix TS error
+  category: "Catholic Treasury" as const, // Put inside Catholic Treasury tab
   explanation: "These prayers were given to St. Bridget of Sweden by Jesus. He promised that whoever prays these daily for 12 years will receive five special graces, including that they will not suffer purgatory, and will be accepted among the martyrs as if they had shed their blood for the faith.",
   occasion: "Daily devotion for 12 years",
   english_text: `Prayer 1: The Circumcision
@@ -43,13 +43,11 @@ export async function GET(request: NextRequest) {
   try {
     await connectDB();
     
-    // Check if it already exists
-    const existing = await Prayer.findOne({ slug: stBridgetPrayer.slug });
-    if (existing) {
-      return NextResponse.json({ message: "St. Bridget 12-Year Prayer already exists in the database." });
-    }
-
-    await Prayer.create(stBridgetPrayer);
+    await Prayer.findOneAndUpdate(
+      { slug: stBridgetPrayer.slug },
+      { $set: stBridgetPrayer },
+      { upsert: true, new: true }
+    );
     
     return NextResponse.json({
       success: true,
