@@ -4,6 +4,8 @@ import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
+import React from "react";
+import { closingPrayers, litanyOfLoreto } from "@/data/rosary-prayers";
 
 interface Mystery {
   n: number;
@@ -46,26 +48,7 @@ const DECADE_PRAYERS = [
   { step: 5, title: "Fatima Prayer", text: "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those most in need of Thy mercy. Amen." },
 ];
 
-const CLOSING_PRAYERS = [
-  {
-    title: "Hail Holy Queen (Salve Regina)",
-    latin: "Salve, Regina, Mater misericordiae; vita, dulcedo et spes nostra, salve...",
-    text: "Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy towards us, and after this our exile, show unto us the blessed Fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary!\n\nPray for us, O holy Mother of God, that we may be made worthy of the promises of Christ. Amen."
-  },
-  {
-    title: "The Rosary Prayer (Benediction)",
-    text: "Let us pray. O God, whose only-begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life: grant, we beseech Thee, that meditating upon these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise. Through the same Christ our Lord. Amen."
-  },
-  {
-    title: "Prayer to St. Michael",
-    text: "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do thou, O Prince of the Heavenly Host, by the power of God, cast into hell Satan and all the evil spirits who roam throughout the world seeking the ruin of souls. Amen."
-  },
-  {
-    title: "Litany of the Blessed Virgin Mary (abbreviated)",
-    text: "Lord, have mercy. Christ, have mercy. Lord, have mercy.\nHoly Mary — Pray for us.\nHoly Mother of God — Pray for us.\nHoly Virgin of virgins — Pray for us.\nMother of Christ — Pray for us.\nMother of the Church — Pray for us.\nMother of divine grace — Pray for us.\nMother most pure — Pray for us.\nMother most chaste — Pray for us.\nMother inviolate — Pray for us.\nMother most amiable — Pray for us.\nMother of good counsel — Pray for us.\nMother of our Creator — Pray for us.\nMother of our Saviour — Pray for us.\nVirgin most prudent — Pray for us.\nVirgin most venerable — Pray for us.\nVirgin most renowned — Pray for us.\nVirgin most powerful — Pray for us.\nVirgin most merciful — Pray for us.\nVirgin most faithful — Pray for us.\nMirror of justice — Pray for us.\nSeat of wisdom — Pray for us.\nCause of our joy — Pray for us.\nSpiritual vessel — Pray for us.\nVessel of honour — Pray for us.\nSingular vessel of devotion — Pray for us.\nMystical rose — Pray for us.\nTower of David — Pray for us.\nTower of ivory — Pray for us.\nHouse of gold — Pray for us.\nArk of the covenant — Pray for us.\nGate of heaven — Pray for us.\nMorning star — Pray for us.\nHealth of the sick — Pray for us.\nRefuge of sinners — Pray for us.\nComforter of the afflicted — Pray for us.\nHelp of Christians — Pray for us.\nQueen of Angels — Pray for us.\nQueen of Patriarchs — Pray for us.\nQueen of Prophets — Pray for us.\nQueen of Apostles — Pray for us.\nQueen of Martyrs — Pray for us.\nQueen of Confessors — Pray for us.\nQueen of Virgins — Pray for us.\nQueen of all Saints — Pray for us.\nQueen conceived without original sin — Pray for us.\nQueen assumed into heaven — Pray for us.\nQueen of the most holy Rosary — Pray for us.\nQueen of families — Pray for us.\nQueen of peace — Pray for us.\n\nLamb of God, who takest away the sins of the world — Spare us, O Lord.\nLamb of God, who takest away the sins of the world — Graciously hear us, O Lord.\nLamb of God, who takest away the sins of the world — Have mercy on us.\n\nPray for us, O holy Mother of God, that we may be made worthy of the promises of Christ.\n\nGrant, we beseech Thee, O Lord God, that we Thy servants may enjoy perpetual health of mind and body; and by the glorious intercession of the Blessed Mary, ever Virgin, be delivered from present sorrow, and obtain eternal joy. Through Christ our Lord. Amen."
-  },
-];
-
+// CLOSING_PRAYERS have been moved to @/data/rosary-prayers
 export default async function MysteryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const flat = getFlatMysteries();
@@ -198,13 +181,42 @@ export default async function MysteryDetailPage({ params }: { params: Promise<{ 
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: "var(--gold)", marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
               <span></span> Closing Prayers
             </h2>
-            {CLOSING_PRAYERS.map((p, i) => (
+            {closingPrayers.map((p, i) => (
               <div key={i} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderLeft: "4px solid var(--gold)", borderRadius: "0 12px 12px 0", padding: "1.75rem", marginBottom: "1.25rem" }}>
                 <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.1rem", marginBottom: "1rem" }}>{p.title}</h3>
                 {p.latin && <p style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.8rem", fontStyle: "italic", marginBottom: "0.75rem" }}>{p.latin}</p>}
-                <p style={{ color: "rgba(255,255,255,0.82)", lineHeight: 1.95, fontFamily: "var(--font-serif)", fontSize: "0.97rem", whiteSpace: "pre-line" }}>{p.text}</p>
+                <p style={{ color: "rgba(255,255,255,0.82)", lineHeight: 1.95, fontFamily: "var(--font-serif)", fontSize: "0.97rem", whiteSpace: "pre-wrap" }}>{p.text}</p>
               </div>
             ))}
+
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: "var(--gold)", marginTop: "3rem", marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span></span> {litanyOfLoreto.title}
+            </h2>
+            <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderLeft: "4px solid var(--gold)", borderRadius: "0 12px 12px 0", padding: "1.75rem", marginBottom: "1.25rem" }}>
+              <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.85rem", fontStyle: "italic", marginBottom: "1.5rem", textAlign: "center" }}>{litanyOfLoreto.when}</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", alignItems: "center", marginBottom: "2rem" }}>
+                {litanyOfLoreto.lines.map((line, i) => (
+                  <React.Fragment key={`litany-${i}`}>
+                    <div style={{ color: "rgba(255,255,255,0.9)", textAlign: "right", paddingRight: "1rem", borderRight: "1px solid rgba(201,168,76,0.2)" }}>{line.call}</div>
+                    <div style={{ color: "var(--gold)", fontStyle: "italic", paddingLeft: "0.5rem" }}>{line.resp}</div>
+                  </React.Fragment>
+                ))}
+              </div>
+              
+              <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(201,168,76,0.2)" }}>
+                <div style={{ display: "flex", gap: "1rem", marginBottom: "0.5rem" }}>
+                  <span style={{ color: "var(--gold)", fontWeight: "bold" }}>V.</span>
+                  <span style={{ color: "rgba(255,255,255,0.9)" }}>{litanyOfLoreto.conclusion.v}</span>
+                </div>
+                <div style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
+                  <span style={{ color: "var(--gold)", fontWeight: "bold" }}>R.</span>
+                  <span style={{ color: "rgba(255,255,255,0.9)" }}>{litanyOfLoreto.conclusion.r}</span>
+                </div>
+                <p style={{ fontFamily: "var(--font-serif)", color: "rgba(255,255,255,0.85)", fontSize: "1rem", lineHeight: 1.95, whiteSpace: "pre-wrap" }}>
+                  {litanyOfLoreto.conclusion.prayer}
+                </p>
+              </div>
+            </div>
           </div>
         )}
 

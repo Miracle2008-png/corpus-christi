@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const MARY_IMAGE = "/images/mary.jpg";
@@ -7,15 +7,7 @@ const MARY_IMAGE = "/images/mary.jpg";
 import mysteries from "@/data/rosary.json";
 import Link from "next/link";
 
-const prayers = [
-  { title: "The Apostles' Creed", when: "Begin the Rosary", latin: "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae...", text: "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, His only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; He descended into hell; on the third day He rose again from the dead; He ascended into heaven, and is seated at the right hand of God the Father almighty; from there He will come to judge the living and the dead. I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen." },
-  { title: "Our Father", when: "Once per decade", latin: "Pater noster, qui es in caelis, sanctificetur nomen tuum...", text: "Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen." },
-  { title: "Hail Mary", when: "Ten times per decade", latin: "Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus...", text: "Hail Mary, full of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen." },
-  { title: "Glory Be", when: "After each decade", latin: "Gloria Patri et Filio et Spiritui Sancto...", text: "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen." },
-  { title: "Fatima Prayer", when: "After each Glory Be", latin: "O mi Jesu, dimitte nobis debita nostra...", text: "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those most in need of Thy mercy. Amen." },
-  { title: "Hail Holy Queen (Salve Regina)", when: "Close the Rosary", latin: "Salve, Regina, Mater misericordiae; vita, dulcedo et spes nostra, salve...", text: "Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious Advocate, thine eyes of mercy towards us, and after this our exile, show unto us the blessed Fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary! Pray for us, O holy Mother of God, that we may be made worthy of the promises of Christ. Amen." },
-  { title: "The Benediction", when: "Final blessing", latin: "Beatissima Virgo Maria...", text: "Let us pray. O God, whose only-begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life: grant, we beseech Thee, that meditating upon these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise. Through the same Christ our Lord. Amen.\n\nMay the divine assistance remain always with us. And may the souls of the faithful departed, through the mercy of God, rest in peace. Amen." },
-];
+import { introductoryPrayers, decadeInstructions, closingPrayers, litanyOfLoreto } from "@/data/rosary-prayers";
 
 const rosaryMiracles = [
   { title: "Battle of Lepanto, 1571", desc: "Pope Pius V called all of Europe to pray the Rosary before the Battle of Lepanto on October 7, 1571. The Christian fleet, vastly outnumbered by the Ottoman armada, won a decisive victory that saved Western civilization. Pope Pius V, hundreds of miles away in Rome, reportedly had a vision of the victory before any messenger arrived. He attributed the victory entirely to the Rosary and established October 7 as the Feast of Our Lady of Victory, now Our Lady of the Rosary.", youtube: "https://www.youtube.com/watch?v=LZ3gfbZMfkU" },
@@ -185,17 +177,71 @@ export default function RosaryPage() {
               {showLatin ? "Show English" : "Show Latin"}
             </button>
           </div>
-          {prayers.map((p, i) => (
-            <div key={i} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderRadius: "16px", padding: "1.75rem", marginBottom: "1.25rem" }}>
+          {/* Introductory Prayers */}
+          <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.5rem", marginBottom: "1.5rem", textAlign: "center", borderBottom: "1px solid rgba(201,168,76,0.2)", paddingBottom: "0.5rem" }}>Introductory Prayers</h2>
+          {introductoryPrayers.map((p, i) => (
+            <div key={`intro-${i}`} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderRadius: "16px", padding: "1.75rem", marginBottom: "1.25rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.5rem", marginBottom: "1rem" }}>
                 <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.15rem" }}>{p.title}</h3>
                 <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.75rem", fontStyle: "italic" }}>{p.when}</span>
               </div>
               <p style={{ fontFamily: "var(--font-serif)", color: "rgba(255,255,255,0.85)", fontSize: "1rem", lineHeight: 1.95, whiteSpace: "pre-wrap" }}>
-                {showLatin ? p.latin : p.text}
+                {showLatin && p.latin ? p.latin : p.text}
               </p>
             </div>
           ))}
+
+          {/* The Decades */}
+          <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.5rem", marginTop: "3rem", marginBottom: "1.5rem", textAlign: "center", borderBottom: "1px solid rgba(201,168,76,0.2)", paddingBottom: "0.5rem" }}>{decadeInstructions.title}</h2>
+          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderRadius: "16px", padding: "1.75rem", marginBottom: "2.5rem" }}>
+            <ul style={{ color: "rgba(255,255,255,0.85)", lineHeight: 1.95, paddingLeft: "1.2rem" }}>
+              {decadeInstructions.instructions.map((inst, i) => (
+                <li key={`dec-${i}`} style={{ marginBottom: "0.5rem" }}>{inst}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Closing Prayers */}
+          <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.5rem", marginTop: "3rem", marginBottom: "1.5rem", textAlign: "center", borderBottom: "1px solid rgba(201,168,76,0.2)", paddingBottom: "0.5rem" }}>Closing Prayers</h2>
+          {closingPrayers.map((p, i) => (
+            <div key={`close-${i}`} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderRadius: "16px", padding: "1.75rem", marginBottom: "1.25rem" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.5rem", marginBottom: "1rem" }}>
+                <h3 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.15rem" }}>{p.title}</h3>
+                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.75rem", fontStyle: "italic" }}>{p.when}</span>
+              </div>
+              <p style={{ fontFamily: "var(--font-serif)", color: "rgba(255,255,255,0.85)", fontSize: "1rem", lineHeight: 1.95, whiteSpace: "pre-wrap" }}>
+                {showLatin && p.latin ? p.latin : p.text}
+              </p>
+            </div>
+          ))}
+
+          {/* Litany of Loreto */}
+          <h2 style={{ fontFamily: "var(--font-serif)", color: "var(--gold)", fontSize: "1.5rem", marginTop: "3rem", marginBottom: "1.5rem", textAlign: "center", borderBottom: "1px solid rgba(201,168,76,0.2)", paddingBottom: "0.5rem" }}>{litanyOfLoreto.title}</h2>
+          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderRadius: "16px", padding: "1.75rem", marginBottom: "1.25rem" }}>
+            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.85rem", fontStyle: "italic", marginBottom: "1.5rem", textAlign: "center" }}>{litanyOfLoreto.when}</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", alignItems: "center", marginBottom: "2rem" }}>
+              {litanyOfLoreto.lines.map((line, i) => (
+                <React.Fragment key={`litany-${i}`}>
+                  <div style={{ color: "rgba(255,255,255,0.9)", textAlign: "right", paddingRight: "1rem", borderRight: "1px solid rgba(201,168,76,0.2)" }}>{line.call}</div>
+                  <div style={{ color: "var(--gold)", fontStyle: "italic", paddingLeft: "0.5rem" }}>{line.resp}</div>
+                </React.Fragment>
+              ))}
+            </div>
+            
+            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(201,168,76,0.2)" }}>
+              <div style={{ display: "flex", gap: "1rem", marginBottom: "0.5rem" }}>
+                <span style={{ color: "var(--gold)", fontWeight: "bold" }}>V.</span>
+                <span style={{ color: "rgba(255,255,255,0.9)" }}>{litanyOfLoreto.conclusion.v}</span>
+              </div>
+              <div style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
+                <span style={{ color: "var(--gold)", fontWeight: "bold" }}>R.</span>
+                <span style={{ color: "rgba(255,255,255,0.9)" }}>{litanyOfLoreto.conclusion.r}</span>
+              </div>
+              <p style={{ fontFamily: "var(--font-serif)", color: "rgba(255,255,255,0.85)", fontSize: "1rem", lineHeight: 1.95, whiteSpace: "pre-wrap" }}>
+                {litanyOfLoreto.conclusion.prayer}
+              </p>
+            </div>
+          </div>
         </div>
       )}
 
