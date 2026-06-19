@@ -41,46 +41,6 @@ function LoginForm() {
 
   return (
     <div className="animated-auth-bg" style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem", position: "relative" }}>
-      <style>{`
-        @keyframes sacredGradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animated-auth-bg {
-          background: linear-gradient(-45deg, #0F1A30, #1A2744, #121c32, #0a1120);
-          background-size: 400% 400%;
-          animation: sacredGradient 15s ease infinite;
-          overflow: hidden;
-        }
-        .auth-glow-1 {
-          position: absolute;
-          width: 800px;
-          height: 800px;
-          background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 60%);
-          border-radius: 50%;
-          top: -20%;
-          left: -10%;
-          pointer-events: none;
-          animation: pulseGlow 10s ease-in-out infinite alternate;
-        }
-        .auth-glow-2 {
-          position: absolute;
-          width: 600px;
-          height: 600px;
-          background: radial-gradient(circle, rgba(201,168,76,0.03) 0%, transparent 60%);
-          border-radius: 50%;
-          bottom: -10%;
-          right: -10%;
-          pointer-events: none;
-          animation: pulseGlow 8s ease-in-out infinite alternate-reverse;
-        }
-        @keyframes pulseGlow {
-          0% { transform: scale(1); opacity: 0.5; }
-          100% { transform: scale(1.3); opacity: 1; }
-        }
-      `}</style>
-      
       <div className="auth-glow-1" />
       <div className="auth-glow-2" />
 
