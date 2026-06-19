@@ -1,5 +1,15 @@
 "use client";
 import { useState } from "react";
+import dynamic from "next/dynamic";
+
+const ChurchMap = dynamic(() => import("@/components/ChurchMap"), { 
+  ssr: false,
+  loading: () => (
+    <div style={{ width: "100%", height: "500px", background: "rgba(26,39,68,0.05)", borderRadius: "16px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <p style={{ color: "var(--navy)", fontWeight: 600 }}>Loading map...</p>
+    </div>
+  )
+});
 
 export default function MassFinderPage() {
   const [locationGranted, setLocationGranted] = useState(false);
@@ -26,11 +36,6 @@ export default function MassFinderPage() {
       }
     );
   };
-
-  // OpenStreetMap embed — free, no API key required
-  const osmUrl = coords
-    ? `https://www.openstreetmap.org/export/embed.html?bbox=${coords.lng - 0.08},${coords.lat - 0.06},${coords.lng + 0.08},${coords.lat + 0.06}&layer=mapnik&marker=${coords.lat},${coords.lng}`
-    : null;
 
   const googleMapsUrl = coords
     ? `https://www.google.com/maps/search/Catholic+church/@${coords.lat},${coords.lng},14z`
@@ -119,18 +124,11 @@ export default function MassFinderPage() {
       {/* ── MAP ── */}
       <div style={{ padding: "2rem 1.5rem" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          {locationGranted && osmUrl ? (
-            <div style={{ borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(26,39,68,0.1)", boxShadow: "0 4px 24px rgba(0,0,0,0.1)", marginBottom: "1.25rem" }}>
-              <iframe
-                width="100%"
-                height="500"
-                style={{ border: 0, display: "block" }}
-                loading="lazy"
-                src={osmUrl}
-                title="Your location on the map"
-              />
-              <div style={{ background: "rgba(26,39,68,0.04)", padding: "0.75rem 1.25rem", borderTop: "1px solid rgba(26,39,68,0.06)", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-                Map data © <a href="https://openstreetmap.org" target="_blank" rel="noopener noreferrer" style={{ color: "var(--navy)" }}>OpenStreetMap</a> contributors. Use the links below to search for Catholic churches.
+          {locationGranted && coords ? (
+            <div style={{ marginBottom: "1.25rem" }}>
+              <ChurchMap userCoords={coords} />
+              <div style={{ background: "rgba(26,39,68,0.04)", padding: "0.75rem 1.25rem", borderTop: "1px solid rgba(26,39,68,0.06)", fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.5rem", borderRadius: "8px" }}>
+                Map data provided by <a href="https://openstreetmap.org" target="_blank" rel="noopener noreferrer" style={{ color: "var(--navy)", fontWeight: 600 }}>OpenStreetMap</a>. Use the links below to cross-reference mass times on external directories.
               </div>
             </div>
           ) : (
