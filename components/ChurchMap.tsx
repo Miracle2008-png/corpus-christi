@@ -125,7 +125,7 @@ export default function ChurchMap({ userCoords }: Props) {
   }, [userCoords]);
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "500px", borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(26,39,68,0.1)", boxShadow: "0 4px 24px rgba(0,0,0,0.1)" }}>
+    <div style={{ position: "relative", zIndex: 1, width: "100%", height: "500px", borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(26,39,68,0.1)", boxShadow: "0 4px 24px rgba(0,0,0,0.1)" }}>
       <MapContainer
         center={[userCoords.lat, userCoords.lng]}
         zoom={13}
