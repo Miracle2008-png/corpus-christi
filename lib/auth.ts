@@ -4,6 +4,14 @@ import GoogleProvider from "next-auth/providers/google";
 import AppleProvider from "next-auth/providers/apple";
 import { connectDB } from "@/lib/mongodb";
 import User from "@/models/User";
+import { CredentialsSignin } from "next-auth";
+
+class CustomAuthError extends CredentialsSignin {
+  constructor(code: string) {
+    super();
+    this.code = code;
+  }
+}
 
 const providers: any[] = [
   Credentials({
@@ -17,9 +25,9 @@ const providers: any[] = [
       try {
         await connectDB();
         const user = await User.findOne({ email: credentials.email }).select("+password_hash");
-        if (!user) return null;
+        if (!user) throw new CustomAuthError("UserNotFound");
         const isValid = await user.comparePassword(credentials.password as string);
-        if (!isValid) return null;
+        if (!isValid) throw new CustomAuthError("InvalidPassword");
         await User.findByIdAndUpdate(user._id, { lastLogin: new Date() });
         return {
           id: user._id.toString(),

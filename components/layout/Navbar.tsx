@@ -292,7 +292,10 @@ export default function Navbar() {
                     </Link>
                     <div style={{ height: "1px", background: "rgba(255,255,255,0.1)", margin: "0.5rem 0" }} />
                     <button
-                      onClick={() => { setAuthDropdownOpen(false); signOut({ callbackUrl: "/" }); }}
+                      onClick={() => { 
+                        setAuthDropdownOpen(false); 
+                        signOut({ redirect: false }).then(() => { window.location.href = "/"; });
+                      }}
                       style={{
                         display: "block", width: "100%", textAlign: "left", padding: "0.6rem 1.25rem",
                         color: "var(--crimson)", background: "transparent", border: "none", cursor: "pointer",
@@ -459,7 +462,10 @@ export default function Navbar() {
                 <Link href="/dashboard" onClick={() => setMobileOpen(false)} style={{ display: "block", textAlign: "center", padding: "0.75rem", color: "var(--white)", textDecoration: "none", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600 }}>
                   Dashboard
                 </Link>
-                <button onClick={() => { setMobileOpen(false); signOut({ callbackUrl: "/" }); }} style={{ display: "block", width: "100%", textAlign: "center", padding: "0.75rem", color: "var(--crimson)", background: "transparent", border: "1px solid rgba(255,0,0,0.3)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600, cursor: "pointer" }}>
+                <button onClick={() => { 
+                  setMobileOpen(false); 
+                  signOut({ redirect: false }).then(() => { window.location.href = "/"; });
+                }} style={{ display: "block", width: "100%", textAlign: "center", padding: "0.75rem", color: "var(--crimson)", background: "transparent", border: "1px solid rgba(255,0,0,0.3)", borderRadius: "8px", fontSize: "0.95rem", fontWeight: 600, cursor: "pointer" }}>
                   Sign Out
                 </button>
               </>

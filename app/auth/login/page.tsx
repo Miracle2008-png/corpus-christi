@@ -26,7 +26,13 @@ function LoginForm() {
     });
     setLoading(false);
     if (result?.error) {
-      setError("Invalid email or password. Please try again.");
+      if (result.error.includes("UserNotFound")) {
+        setError("This email does not exist. Please sign up.");
+      } else if (result.error.includes("InvalidPassword")) {
+        setError("Invalid password. Please try again.");
+      } else {
+        setError("Invalid email or password. Please try again.");
+      }
     } else {
       router.push("/admin");
       router.refresh();
