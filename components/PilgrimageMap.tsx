@@ -73,7 +73,7 @@ export default function PilgrimageMap({ sites, selected, onSelect, visited }: Pr
   };
 
   return (
-    <div style={{ borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", height: "520px" }}>
+    <div style={{ position: "relative", zIndex: 1, borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.08)", height: "520px" }}>
       <MapContainer
         center={[30, 15]}
         zoom={2}
