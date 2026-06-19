@@ -153,7 +153,7 @@ export default function ChurchMap({ userCoords }: Props) {
               <div style={{ textAlign: "center", minWidth: "150px" }}>
                 <h3 style={{ margin: "0 0 8px 0", fontSize: "14px", color: "var(--navy-dark)" }}>{church.name}</h3>
                 <a 
-                  href={\`https://www.google.com/maps/dir/?api=1&destination=\${church.lat},\${church.lon}\`}
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${church.lat},${church.lon}`}
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{
