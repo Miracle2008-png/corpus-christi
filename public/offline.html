@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpus Christi — Offline</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #FAF7F0;
+      color: #1A2744;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      color: #C9A84C;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #6B6B80;
+      line-height: 1.6;
+      max-width: 400px;
+      margin-bottom: 2rem;
+    }
+    .prayers {
+      background: white;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: left;
+      max-width: 400px;
+    }
+    .prayers h2 {
+      font-size: 1.2rem;
+      color: #1A2744;
+      margin-top: 0;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .prayers h3 {
+      font-size: 1rem;
+      color: #C9A84C;
+      margin-bottom: 0.2rem;
+    }
+    .prayers p {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+    .retry-btn {
+      margin-top: 2rem;
+      background: #1A2744;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div style="font-size: 3rem; color: #C9A84C; margin-bottom: 1rem;">✝</div>
+  <h1>No Internet Connection</h1>
+  <p>Corpus Christi requires an internet connection to access the database, AI, and Mass maps.</p>
+  
+  <div class="prayers">
+    <h2>Basic Prayers</h2>
+    <h3>The Sign of the Cross</h3>
+    <p>In the name of the Father, and of the Son, and of the Holy Spirit. Amen.</p>
+    
+    <h3>Hail Mary</h3>
+    <p>Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</p>
+
+    <h3>Our Father</h3>
+    <p>Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</p>
+  </div>
+
+  <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
+</body>
+</html>

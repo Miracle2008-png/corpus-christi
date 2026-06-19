@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Corpus Christi</string>
+    <string name="title_activity_main">Corpus Christi</string>
+    <string name="package_name">app.vercel.corpuschristi</string>
+    <string name="custom_url_scheme">app.vercel.corpuschristi</string>
+</resources>
