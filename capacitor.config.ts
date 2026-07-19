@@ -10,6 +10,22 @@ const config: CapacitorConfig = {
     cleartext: true,
     errorPath: 'offline.html'
   },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 3000,
+      launchAutoHide: true,
+      backgroundColor: "#1A2744",
+      androidSplashResourceName: "splash",
+      androidScaleType: "CENTER_CROP",
+      showSpinner: false,
+      splashFullScreen: true,
+      splashImmersive: true,
+    },
+    StatusBar: {
+      style: "DARK",
+      backgroundColor: "#1A2744",
+    }
+  }
 };
 
 export default config;
